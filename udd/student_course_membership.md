@@ -1704,7 +1704,7 @@ String (255)
 
 ##ACTIVE_MEMBERSHIP
 ###Description
-Indicates whether the student_course_membership record of which this property is a part identifies the course a student is actively studying on or intending to study on at the moment the data was extracted. 
+This property indicates whether the associated student_course_membership record identifies the course a student is actively studying on, or intending to study on, at the moment the data was extracted. 
 
 ###Purpose
 Display purposes.
