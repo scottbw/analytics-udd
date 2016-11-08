@@ -1704,7 +1704,7 @@ String (255)
 
 ##ACTIVE_MEMBERSHIP
 ###Description
-Indicates whether the student_course_membership record of which this property is a part is the current student course membership.
+Indicates whether the student_course_membership record of which this property is a part identifies the course a student is actively studying on or intending to study on at the moment the data was extracted. 
 
 ###Purpose
 Display purposes.
@@ -1721,12 +1721,12 @@ Jisc
             </tr>
             <tr>
                 <td>1</td>
-                <td>current</td>
+                <td>active</td>
                 <td> </td>
             </tr>
             <tr>
                 <td>2</td>
-                <td>not current</td>
+                <td>not active</td>
                 <td> </td>
             </tr>
             <tr>
@@ -1742,4 +1742,8 @@ Jisc
 String (1)
 
 ###Notes
-The student_course_membership record with ACTIVE_MEMBERSHIP=1 also needs to have a STUDENT_COURSE_MEMBERSHIP_SEQ of the highest sequential value of all student_course_membership records with the same STUDENT_ID + STUDENT_COURSE_MEMBERSHIP_ID combination. This record will generally also be the record with the most recent COURSE_JOIN_DATE. This attribute will be compulsory in UDD v1.3.
+The purpose of this property is to easily identify, if there are several student_course_membership records for a given STUDENT_ID or COURSE_ID and STUDENT_ID combination, which of these records is the last known to have been actively used.
+
+A record with ACTIVE_MEMBERSHIP=1 will generally also be the record with the most recent COURSE_JOIN_DATE. The only exceptions would be cases where a students starts on one course, switches to another, and then reverts to the original.
+
+When updating student_course_membership records, the ACTIVE_MEMBERSHIP property may need to be updated on all records associated with one STUDENT_ID, not just one. The exception would be those cases where a student pursues more than one course simultaneously.
