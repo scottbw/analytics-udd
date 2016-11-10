@@ -4,7 +4,6 @@
 * [DOB](#dob) [0..1]
 * [ETHNICITY](#ethnicity) [0..1]
 * [SEXID](#sexid) [0..1]
-* [AGE](#age) [0..1]
 * [DIFFLEARN1] (#difflearn1) [0..1]
 * [DIFFLEARN2] (#difflearn2) [0..1]
 * [LEARN_DIF](#learn_dif) [0..1]
@@ -308,19 +307,6 @@ Please Note - N/A denotes that no mapping value is applicable and the SEXID prop
 ###Notes
 If sexid data is not supplied, this property should be omitted.
 Omitting this property may hinder the development or use of an effective analytics model.
-
-##AGE
-###Description
-The current age of the learner/ student
-
-###Purpose
-To be used purely for display purposes within the Learning Analytics software suite.
-
-###Format
-Int
-
-###Notes
-This will typically auto-calculated on a daily basis, based on DOB property. The LA system will provide this field.
 
 ##DIFFLEARN1
 
