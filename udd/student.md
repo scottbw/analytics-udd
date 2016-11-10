@@ -553,7 +553,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
 
 
 ###Format
-Int
+String (256)
 
 ###Notes
 Because of the changing nature of this field, it is only really suitable for analyses within a sector or institution, and within an academic year. For use cases outside of that narrow set, use the [DIFFLEARN](#difflearn) property.
@@ -701,7 +701,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
 Please Note - N/A denotes that no mapping value is applicable (and should not be confused with NULL)  
 
 ###Format
-Int
+String (256)
 
 ###Notes
 Because of the changing nature of this field, it is only really suitable for analyses within a sector or institution, and within an academic year. For use cases outside of that narrow set, use the [DIFFLEARN](#difflearn) property.
@@ -711,7 +711,7 @@ As of the 2016-2017 academic year, LLDDHEALTHPROB has replaced both LEARNDIF and
 ##DISABILITY2
 
 ###Description
-This property holds the source data value of the HESA DISABILITY1 field, and the disability parts of the HESA LLDDHEALTHPROB and FEILR LLDDCat fields. Each of these source values concern self-declared disabilities. The value of this property can be seen as their secondary disability.
+This property holds the source data value of the HESA DISABILITY2 field, and the disability parts of the HESA LLDDHEALTHPROB and FEILR LLDDCat fields. Each of these source values concern self-declared disabilities. The value of this property can be seen as their secondary disability.
 
 ###Purpose
 For detailed in-year analysis or intervention purposes within Learning Analytics eg. Data Insight Tool. 
@@ -846,7 +846,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
 </table>
 
 ###Format
-Int
+String (256)
 
 ###Notes
 Because of the changing nature of this field, it is only really suitable for analyses within a sector or institution, and within an academic year. For use cases outside of that narrow set, use the [DIFFLEARN](#difflearn) property.
