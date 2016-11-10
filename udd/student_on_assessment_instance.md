@@ -1,10 +1,11 @@
 #student_on_assessment_instance
-* [STUDENT_ID](student.md#student_id) [1]
-* [STUDENT_COURSE_MEMBERSHIP_ID](student_course_membership.md#student_course_membership_id) [1]
-* [STUDENT_COURSE_MEMBERSHIP_SEQ](student_course_membership.md#student_course_membership_seq) [1]
+
+* [STUDENT_COURSE_MEMBERSHIP_ID](student_course_membership.md#student_course_membership_id) [1] *
+* [ASSESS_INSTANCE_ID](assessment_instance.md#assess_instance_id) [1] *
+* [ASSESS_SEQ_ID](#assess_seq_id) [1] *
+* [STUDENT_COURSE_MEMBERSHIP_SEQ](student_course_membership.md#student_course_membership_seq) [1] *
 * [MOD_INSTANCE_ID](module_instance.md#mod_instance_id) [1]
-* [ASSESS_INSTANCE_ID](assessment_instance.md#assess_instance_id) [1]
-* [ASSESS_SEQ_ID](#assess_seq_id) [1]
+* [STUDENT_ID](student.md#student_id) [1]
 * [ASSESS_DUE_DATE](#assess_due_date) [0..1]
 * [ASSESS_RETAKE](#assess_retake) [0..1]
 * [ASSESS_AGREED_MARK](#assess_agreed_mark) [0..1]
@@ -20,9 +21,7 @@
 * [X_MOD_ID](#x_mod_id) [0..1]
 * [X_MOD_ACADEMIC_YEAR](#x_mod_academic_year) [0..1]
 
-Primary key: ('STUDENT_COURSE_MEMBERSHIP_ID', 'STUDENT_COURSE_MEMBERSHIP_SEQ', 'ASSESS_INSTANCE_ID', 'ASSESS_SEQ_ID')
-
-For more information about which properties are required for particular purposes or under particular conditions, please consult the [guide to mandatory properties in the UDD](../mandatory.md).
+\* indicates that the property is part of a composite primary key for this entity.
 
 ##ASSESS_SEQ_ID
 ###Description.
@@ -88,7 +87,7 @@ String (256)
 
 ##ASSESS_ACTUAL_MARK
 ###Description.
-The initial mark given for the assessment attempt prior to moderation.
+The mark awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
 
 ###Purpose
 Analytics
@@ -103,11 +102,12 @@ Jisc
 Decimal
 
 ###Notes
+ASSESS_ACTUAL_MARK should only be part of a UDD compliant dataset if there is a moderation process and if the result of that process is available in the source data. 
 
 
 ##ASSESS_AGREED_MARK
 ###Description.
-The mark agreed for the assessment attempt after moderation.
+The mark recorded after any moderation or confirmation processes, or the only recorded mark if there are no moderation or confirmation processes.
 
 ###Purpose
 Analytics
@@ -122,11 +122,12 @@ Jisc
 Decimal
 
 ###Notes
+ASSESS_AGREED_MARK is expected to be present in any UDD compliant dataset as soon as it becomes available.
 
 
 ##ASSESS_ACTUAL_GRADE
 ###Description.
-The initial grade given for the assessment attempt before moderation.
+The grade awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
 
 ###Purpose
 Analytics
@@ -141,11 +142,12 @@ Any
 String (255)
 
 ###Notes
+ASSESS_ACTUAL_GRADE should only be part of a UDD compliant dataset if there is a moderation process and if the result of that process is available in the source data.
 
 
 ##ASSESS_AGREED_GRADE
 ###Description.
-The grade agreed for the assessment attempt after moderation.
+The grade recorded after any moderation or confirmation processes, or the only recorded grade if there are no moderation or confirmation processes. 
 
 ###Purpose
 Analytics
@@ -160,6 +162,7 @@ Any
 String (255)
 
 ###Notes
+ASSESS_AGREED_GRADE is expected to be present in any UDD compliant dataset as soon as it becomes available.
 
 
 ##ASSESSMENT_CURRENT_ATTEMPT

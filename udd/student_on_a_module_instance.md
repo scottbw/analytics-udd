@@ -1,9 +1,10 @@
 #student_on_a_module_instance
+
+* [STUDENT_COURSE_MEMBERSHIP_ID](student_course_membership.md#student_course_membership_id) [1] *
+* [COURSE_INSTANCE_ID](course_instance.md#course_instance_id) [1] *
+* [MOD_INSTANCE_ID](module_instance.md#mod_instance_id) [1] *
+* [STUDENT_COURSE_MEMBERSHIP_SEQ](student_course_membership.md#student_course_membership_seq) [1] *
 * [STUDENT_ID](student.md#student_id) [1]
-* [STUDENT_COURSE_MEMBERSHIP_ID](student_course_membership.md#student_course_membership_id) [1]
-* [STUDENT_COURSE_MEMBERSHIP_SEQ](student_course_membership.md#student_course_membership_seq) [1]
-* [COURSE_INSTANCE_ID](course_instance.md#course_instance_id) [1]
-* [MOD_INSTANCE_ID](module_instance.md#mod_instance_id) [1]
 * [MOD_GRADE](#mod_grade) [0..1] deprecated
 * [MOD_RESULT](#mod_result) [0..1]
 * [MOD_RETAKE](#mod_retake) [0..1]
@@ -21,9 +22,7 @@
 * [X_MOD_NAME](#x_mod_name) [0..1]
 * [X_MOD_ACADEMIC_YEAR](#x_mod_academic_year) [0..1]
 
-Primary key: ('STUDENT_COURSE_MEMBERSHIP_ID', 'STUDENT_COURSE_MEMBERSHIP_SEQ', 'COURSE_INSTANCE_ID', 'MOD_INSTANCE_ID')
-
-For more information about which properties are required for particular purposes or under particular conditions, please consult the [guide to mandatory properties in the UDD](../mandatory.md).
+\* indicates that the property is part of a composite primary key for this entity.
 
 ##MOD_GRADE (deprecated)
 ###Description.
@@ -141,7 +140,7 @@ Omitting this property could impair the functionality of analytics applications 
 
 ##MOD_FIRST_MARK
 ###Description
-The first or initial mark a student achieved on the module.
+The mark awarded by the initial marker prior to any moderation process.
 
 ###Purpose
 Analytics
@@ -156,11 +155,12 @@ Jisc
 Decimal
 
 ###Notes
-
+MOD_FIRST_MARK should only be part of a UDD compliant dataset if there is a moderation process and the input mark is available in the source data.
+If a marking process involves concurrent initial marking, the reconciled result should be recorded in MOD_ACTUAL_MARK.
 
 ##MOD_ACTUAL_MARK
 ###Description
-The mark that was initially given prior to exam board ratification.
+The mark awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
 
 ###Purpose
 Analytics
@@ -175,11 +175,12 @@ Jisc
 Decimal
 
 ###Notes
+MOD_ACTUAL_MARK should only be part of a UDD compliant dataset if there is a moderation process and if the result of that process is available in the source data.
 
 
 ##MOD_AGREED_MARK
 ###Description
-The mark that was confirmed for a student following exam boards.
+The mark recorded after any moderation or confirmation processes, or the only recorded mark if there are no moderation or confirmation processes. This mark is typically the one used to determine degree classification.
 
 ###Purpose
 Analytics
@@ -194,14 +195,15 @@ Jisc
 Decimal
 
 ###Notes
+MOD_AGREED_MARK is expected to be present in any UDD compliant dataset as soon as it becomes available.
 
 
 ##MOD_FIRST_GRADE
 ###Description
-The first or initial grade a student achieved on the module.
+The grade awarded by the initial marker prior to any moderation process.
 
 ###Purpose
-Analytics
+Analytics. The first grade a student receives on the module is used to help monitor what changes to marks are made during the re-assessment process.
 
 ###Derivation
 Jisc
@@ -213,12 +215,13 @@ Any
 String (255)
 
 ###Notes
-The first grade a student receives on the module is used to help monitor what changes to marks are made during the re-assessment process.
+MOD_FIRST_GRADE should only be part of a UDD compliant dataset if there is a moderation process and the input grade is available in the source data.
+If a marking process involves concurrent initial marking, the reconciled result should be recorded in MOD_ACTUAL_GRADE.
 
 
 ##MOD_ACTUAL_GRADE
 ###Description
-The grade that was initially given prior to exam board ratification.
+The grade awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
 
 ###Purpose
 Analytics
@@ -233,11 +236,12 @@ Any
 String (255)
 
 ###Notes
+MOD_ACTUAL_GRADE should only be part of a UDD compliant dataset if there is a moderation process and if the result of that process is available in the source data.
 
 
 ##MOD_AGREED_GRADE
 ###Description
-The grade that was confirmed for a student following exam boards.
+The grade recorded after any moderation or confirmation processes, or the only recorded grade if there are no moderation or confirmation processes. This grade is typically the one used to determine degree classification.
 
 ###Purpose
 Analytics
@@ -252,7 +256,7 @@ Any
 String (255)
 
 ###Notes
-
+MOD_AGREED_GRADE is expected to be present in any UDD compliant dataset as soon as it becomes available.
 
 ##MOD_CREDITS_ACHIEVED
 ###Description
