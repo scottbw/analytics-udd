@@ -380,7 +380,7 @@ Omitting this property may hinder the development or use of an effective analyti
 
 ##COURSE_GRADE
 ###Description
-Class of award achieved by the student on this course_instance. Based on HESA codeset for CLASS (HE conformity to be confirmed)
+Class of award achieved by the student on this course. Based on HESA codeset for CLASS (HE conformity to be confirmed)
 
 ###Purpose
 For analytics
