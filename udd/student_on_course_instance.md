@@ -233,13 +233,14 @@ For analytics
 https://www.hesa.ac.uk/collection/c16051/a/COMDATE
 
 ###Valid Values
-YYYY-MM-DD
+Year in ISO 8601 format - YYYY
 
 ###Format
-ISO 8601
+String in ISO 8601 Year format - YYYY
 
 ###Notes
 Use [COURSE_JOIN_DATE on student_course_membership](student_course_membership.md#course_join_date) instead.
+
 
 ##YEAR_PRG
 ###Description
@@ -278,6 +279,7 @@ String (256)
 
 ###Notes
 Omitting this property may hinder the development or use of an effective analytics model.
+
 
 ##COURSE_LOCATION
 ###Description

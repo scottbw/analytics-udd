@@ -84,10 +84,10 @@ https://www.hesa.ac.uk/collection/c16051/a/BIRTHDTE
 ###References
 
 ###Valid Values
-YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ###Format
-ISO8601
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
 If date of birth is not known or not supplied, this property should be omitted.

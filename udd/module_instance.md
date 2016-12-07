@@ -81,14 +81,15 @@ Analytics
 Jisc
 
 ###Valid Values
-Int
+Year in ISO 8601 format - YYYY
 
 ###Format
-ISO 8601 year
+String in ISO 8601 Year format - YYYY
 
 ###Notes
 This is the starting year for the academic year.
 Omitting this property may hinder the development or use of an effective analytics model.
+
 ##MOD_OPTIONAL
 ###Description
 Whether this instance relates to an optional module or not.

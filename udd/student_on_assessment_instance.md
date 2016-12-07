@@ -54,10 +54,10 @@ Analytics and display
 Jisc
 
 ###Valid Values
-YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ###Format
-ISO 8601
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
 
@@ -221,10 +221,10 @@ Analytics
 Jisc
 
 ###Valid Values
-YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ###Format
-ISO 8601
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
 This is the date when a grade has been moderated and agreed, but before exam board confirmation. It is typically the date at which the grade is entered in a SRS.
@@ -301,10 +301,10 @@ Analytics
 Jisc
 
 ###Valid Values
-4 digit year
+Year in ISO 8601 format - YYYY
 
 ###Format
-Int
+String in ISO 8601 Year format - YYYY
 
 ###Notes
 This is the starting year for the academic year.

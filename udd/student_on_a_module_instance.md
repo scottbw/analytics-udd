@@ -107,10 +107,10 @@ Analytics and display
 Jisc
 
 ###Valid Values
-YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ###Format
-ISO 8601 Full
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
 The start and end date of a module_instance MUST align with the start and end date of a course_instance.
@@ -128,10 +128,10 @@ Analytics and display
 Jisc
 
 ###Valid Values
-YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ###Format
-ISO 8601 Full
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
 The start and end date of a module_instance MUST align with the start and end date of a course_instance.
@@ -345,10 +345,10 @@ Analytics
 Jisc
 
 ###Valid Values
-4 digit year
+Year in ISO 8601 format - YYYY
 
 ###Format
-Int
+String in ISO 8601 Year format - YYYY
 
 ###Notes
 This is the starting year for the academic year.

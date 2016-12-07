@@ -36,10 +36,10 @@ For analytics
 Jisc
 
 ###Valid Values
-Date in ISO8601 format - YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ###Format
-String (255)
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
@@ -55,10 +55,10 @@ For analytics
 Jisc
 
 ###Valid Values
-Date in ISO8601 format - YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ###Format
-String (255)
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
@@ -74,10 +74,10 @@ For display and analysis purposes
 Jisc
 
 ###Valid Values
-Year as four digit - ie year that the academic year starts in.
+Year in ISO 8601 format - YYYY; ie year that the academic year starts in.
 
 ###Format
-ISO 8601 Year
+String in ISO 8601 Year format - YYYY
 
 ###Notes
 Could be derived, but academic year calendars may be different between institutions. This field could also be sourced directly from the SRS.

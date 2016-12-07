@@ -66,6 +66,7 @@ In cases where a sequence ID is not readily available – which includes most si
 Note that the ACTIVE_MEMBERSHIP property indicates whether this student_course_membership record is the last known active one.
 
 This property will be deprecated in the next revision of the UDD.
+
 ##WITHDRAWAL_REASON
 ###Description
 The reason a student has withdrawn from a course (if they have)
@@ -121,10 +122,10 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/449779
 https://www.hesa.ac.uk/collection/c16051/a/ENDDATE
 
 ###Valid Values
-YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ###Format
-ISO 8601 Date
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
 Would normally utilise ENDDATE (HE/ HESA) or potentially LearnActEndDate (FE/ ILR - to be confirmed) when relevant fields denote that the learner/ student has withdrawn from the learning aim/ course.
@@ -1590,12 +1591,12 @@ Analytics and display
 Jisc
 
 ###Valid values
-YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ###References
 
 ###Format
-ISO 8601 full
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
 Omitting this property may hinder the development or use of an effective analytics model.
@@ -1611,12 +1612,12 @@ Analytics and display
 Jisc
 
 ###Valid values
-YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ###References
 
 ###Format
-ISO 8601 Full
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
 Note that there may be many reasons why a student leaves a course. This is recorded in WITHDRAWAL_REASON.
@@ -1656,12 +1657,12 @@ HESA COMDATE
 https://www.hesa.ac.uk/collection/c16051/a/COMDATE
 
 ###Valid values
-YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ###References
 
 ###Format
-ISO 8601 Full
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
 
