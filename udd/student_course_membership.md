@@ -14,6 +14,7 @@
 * [COURSE_MARK](#course_mark) [0..1]
 * [COURSE_EXPECTED_END_DATE](#course_expected_end_date) [0..1]
 * [COURSE_END_DATE](#course_end_date) [0..1]
+* [COURSE_DURATION] (#course_duration) [0..1]
 * [COURSE_JOIN_DATE](#course_join_date) [0..1]
 * [COURSE_JOIN_AGE](#course_join_age) [0..1]
 * [COHORT_ID](#cohort_id) [0..1]
@@ -1619,6 +1620,29 @@ ISO 8601 Full
 
 ###Notes
 Note that there may be many reasons why a student leaves a course. This is recorded in WITHDRAWAL_REASON.
+
+
+##COURSE_DURATION
+###Description
+The expected length of time in months that the student will take to complete the course.
+
+###Purpose
+Analysis
+
+###Derivation
+Commonly held in Student Record Systems.
+
+###Valid values
+0-120
+
+###References
+
+###Format
+Int
+
+###Notes
+If actual number of months is not stored in source data, then for years, multiply by 12 to give approximate months value; for weeks, divide by 4.3 and round to nearest integer to give approximate months value.
+
 
 ##COURSE_JOIN_DATE
 ###Description
