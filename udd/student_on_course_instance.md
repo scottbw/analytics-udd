@@ -356,7 +356,7 @@ HESA CSTAT (Completion status)
 ###Valid Values & Mappings
 <table>
             <tr>
-                <td>UDD code</td>
+                <td>PROGRESSION</td>
                 <td>HESA CSTAT code</td>
                 <td>Description(English)</td>
                 <td>Description(Welsh)</td>
