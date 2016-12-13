@@ -11,6 +11,8 @@
 * [COURSE_LOCATION](#course_location) [0..1]
 * [X_COURSE_AVERAGE_MARK](#x_course_average_mark) [0..1]
 * [X_YEAR_AVERAGE_MARK](#x_year_average_mark) [0..1]
+* [PROGRESSION](#progression) [0..1]
+* [PROGRESSION_SOURCE](#progression_source) [0..1]
 
 \* indicates that the property is part of a composite primary key for this entity.
 
@@ -339,3 +341,85 @@ Float
 
 ###Notes
 This data is generated internally to the learning record warehouse from existing data, and does not need to be supplied by an institution.
+
+
+##PROGRESSION
+###Description
+This property indicates the status of the student on the current course_instance (stage of the course).  It is mapped to common UDD values from source data that may be stored in progression_source.
+
+###Purpose
+Enables tracking of the student's continuation or otherwise from one stage of a course to another.
+
+###Derivation
+HESA CSTAT (Completion status)
+
+###Valid Values & Mappings
+<table>
+            <tr>
+                <td>UDD code</td>
+                <td>HESA CSTAT code</td>
+                <td>Description(English)</td>
+                <td>Description(Welsh)</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>The student is continuing or intending to continue on the course.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>The student has completed all the learning activities of the course.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>3</td>
+                <td>The student has withdrawn from the course. This may have been for academic or non-academic reasons.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>4</td>
+                <td>The student has transferred to a new course. That is the student has withdrawn from this course & as a direct result has at the same time started studying on another course.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>N/A</td>
+                <td>The student has failed this stage of the course and is repeating modules or the whole stage.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>6</td>
+                <td>Learner has temporarily withdrawn from the aim due to an agreed break in learning</td>
+                <td></td>
+            </tr>
+</table> 
+
+###Format
+String (256)
+
+###Notes
+Omitting this property may hinder the development or use of an effective analytics model.
+
+##PROGRESSION_SOURCE
+###Description
+This property holds the source data value from the institution's student record system that shows the student's status at the end of the course_instance with respect to the whole course.
+
+###Purpose
+For analysis of key aspects of progression from one stage of a course to another.
+
+###Derivation
+Student record systems
+
+###Valid Values
+Any
+
+###Format
+String (256)
+
+###Notes
+This property is likely to contain proprietary data with respect to individual institutions and systems.  Therefore it is likely to be suitable for analyses only within a sector or institution.
