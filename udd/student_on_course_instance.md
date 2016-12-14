@@ -345,7 +345,7 @@ This data is generated internally to the learning record warehouse from existing
 
 ##PROGRESSION
 ###Description
-This property indicates the status of the student on the current course_instance (stage of the course).  It is mapped to common UDD values from source data that may be stored in progression_source.
+This property indicates the status of the student on the current course_instance.  It is mapped to common UDD values from source data that may be stored in progression_source.
 
 ###Purpose
 Enables tracking of the student's continuation or otherwise from one stage of a course to another.
@@ -407,7 +407,7 @@ Omitting this property may hinder the development or use of an effective analyti
 
 ##PROGRESSION_SOURCE
 ###Description
-This property holds the source data value from the institution's student record system that shows the student's status at the end of the course_instance with respect to the whole course.
+This property holds the source data value from the institution's student record system that shows the student's status during the course_instance.
 
 ###Purpose
 For analysis of key aspects of progression from one stage of a course to another.
