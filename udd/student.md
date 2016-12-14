@@ -290,7 +290,7 @@ For equal opportunities monitoring within learning analytics / data modelling.
 https://www.hesa.ac.uk/collection/c16051/a/SEXID
 
 ###Format
-String (256)
+String (255)
 
 ###Valid Values & Mappings
 
@@ -353,7 +353,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
 </table>
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 If a learner's learning difficulty is unknown, then code '1' should be used for those cases.
@@ -405,7 +405,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
 </table>
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 If a learner's learning difficulty is unknown, then code '1' should be used for those cases.
@@ -539,7 +539,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
 
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 Because of the changing nature of this field, it is only really suitable for analyses within a sector or institution, and within an academic year. For use cases outside of that narrow set, use the [DIFFLEARN](#difflearn) property.
@@ -687,7 +687,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
 Please Note - N/A denotes that no mapping value is applicable (and should not be confused with NULL)  
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 Because of the changing nature of this field, it is only really suitable for analyses within a sector or institution, and within an academic year. For use cases outside of that narrow set, use the [DIFFLEARN](#difflearn) property.
@@ -832,7 +832,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
 </table>
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 Because of the changing nature of this field, it is only really suitable for analyses within a sector or institution, and within an academic year. For use cases outside of that narrow set, use the [DIFFLEARN](#difflearn) property.
@@ -2216,7 +2216,7 @@ https://www.hesa.ac.uk/collection/c16051/a/TTACCOM
 Please Note - N/A denotes that no mapping value is applicable (it should not be confused with NULL), and this property should be omitted.
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 If current term time accomodation type data is not supplied, this property should be omitted.
@@ -2244,7 +2244,7 @@ https://www.hesa.ac.uk/collection/c16051/a/PARED
 </table>
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 If parents higher education qualification data is not supplied, this property should be omitted.  This information may not be available for FE/ ILR institutions, and only HE.
@@ -2276,7 +2276,7 @@ https://www.hesa.ac.uk/collection/c16051/a/SEC
 </table>  
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 If the socio-economic classification data is not supplied, this property should be omitted.
@@ -2305,7 +2305,7 @@ Jisc
 </table>  
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 If this student classification data is not supplied, this property should be omitted.
@@ -2327,7 +2327,7 @@ https://www.internet2.edu/media/medialibrary/2013/09/04/internet2-mace-dir-edupe
 Not specified
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 There may be a more general AIM_ID property later that can be used for any UK Federation service provider ID, not just the Jisc analytics student app Shibboleth - JWT gateway.
@@ -2347,7 +2347,7 @@ Jisc
 Not specified
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 Note that this is not a universal user ID; there may be several VLEs, or records from other types of tools.

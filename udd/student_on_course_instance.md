@@ -214,7 +214,7 @@ https://www.hesa.ac.uk/collection/c16051/a/MODE
 </table>  
 
 ###Format
-String (256)
+String (255)
 
 ###Compulsory
 Yes (if applicable)
@@ -258,7 +258,7 @@ https://www.hesa.ac.uk/collection/c16051/a/YEARPRG
 Any
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 Omitting this property may hinder the development or use of an effective analytics model.
@@ -277,7 +277,7 @@ https://www.hesa.ac.uk/collection/c16051/a/YEARSTU
 Any
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 Omitting this property may hinder the development or use of an effective analytics model.
@@ -400,7 +400,7 @@ HESA CSTAT (Completion status)
 </table> 
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 Omitting this property may hinder the development or use of an effective analytics model.
@@ -419,7 +419,7 @@ Student record systems
 Any
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 This property is likely to contain proprietary data with respect to individual institutions and systems.  Therefore it is likely to be suitable for analyses only within a sector or institution.

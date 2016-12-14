@@ -80,7 +80,7 @@ Jisc
 </table>  
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 
@@ -203,7 +203,7 @@ Jisc; student_on_a_module_instance.MOD_RESULT
 </table>  
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 Code 3 is applied in all cases where the outcome is either not known (yet), or doesn't apply because the student hasn't been assessed yet. Code 4 is deprecated because deferral or withdrawal is indicated by WITHDRAWAL_REASON in student_course_membership. 
@@ -244,7 +244,7 @@ Jisc
 Not specified
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 The value can be any alphanumeric used by any type of marking scale. E.g. 80%, B11 or 'excellent'. There is also the similar MAX_MARKS property on assessment_instance, which is for analytic purposes. It only accepts decimal data.

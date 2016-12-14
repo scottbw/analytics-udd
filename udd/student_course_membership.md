@@ -106,7 +106,7 @@ https://www.hesa.ac.uk/collection/c16051/a/RSNEND
 </table>  
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 
@@ -213,7 +213,7 @@ https://www.hesa.ac.uk/collection/c16051/a/QUALENT3
 </table>
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 Omitting this property may hinder the development or use of an effective analytics model.
@@ -375,7 +375,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/449779
         </table>
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 Omitting this property may hinder the development or use of an effective analytics model.
@@ -438,7 +438,7 @@ https://www.hesa.ac.uk/collection/c16051/a/CLASS
 </table>
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.

@@ -42,7 +42,7 @@ Jisc
 Any
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 It is expected that sites / organisations will have their own code lists for MOD_PERIOD values.
@@ -65,7 +65,7 @@ Jisc
 </table>  
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 Omitting this property may hinder the development or use of an effective analytics model.
@@ -109,7 +109,7 @@ Jisc
 </table>  
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 

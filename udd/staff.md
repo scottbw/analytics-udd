@@ -167,7 +167,7 @@ https://www.internet2.edu/media/medialibrary/2013/09/04/internet2-mace-dir-edupe
 Not specified
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 There may be a more general AIM_ID property later that can be used for any UK Federation service provider ID, not just the Jisc staff dashboard.

@@ -38,7 +38,7 @@ Jisc
 Any
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 Use MOD_AGREED_GRADE instead of MOD_GRADE
@@ -65,7 +65,7 @@ Jisc
 </table>  
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 Code 3 is applied in all cases where the outcome is either not known (yet), or doesn't apply because the student hasn't been assessed yet. Code 4 is deprecated because deferral or withdrawal is indicated by WITHDRAWAL_REASON in student_course_membership.
@@ -91,7 +91,7 @@ Jisc
 </table>  
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 
