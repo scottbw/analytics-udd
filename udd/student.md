@@ -2629,18 +2629,19 @@ This will be the unique identifier/ primary key for the member of staff who is r
 
 ##ENTRY_POSTCODE
 ###Description.
-Identifies the postcode of the student's permanent or home address prior to entry to the course. It is not necessarily the correspondence address of the student.
+Identifies the postal code of the student's permanent or home address prior to entry to the course. It is not necessarily the correspondence address of the student.
 
 ###Purpose
-Analytics 
+Analytics
 
 ###Derivation
-https://www.hesa.ac.uk/collection/c16051/a/postcode/
+https://www.hesa.ac.uk/collection/c16051/a/postcode/. Extended to include international postal codes.
 
 ###Valid Values
-[See HESA definition for particulars](https://www.hesa.ac.uk/collection/c16051/a/postcode/)
+Any
 
 ###Format
-String (8)
+String (10)
 
 ###Notes
+HESA's fields only include UK domiciled students, whereas UDD may require overseas postal codes.  Therefore, this property has been extended to 10 characters and any valid values.
