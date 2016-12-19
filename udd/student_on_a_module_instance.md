@@ -279,7 +279,7 @@ Integer
 
 ##MOD_CURRENT_ATTEMPT
 ###Description
-Number of attempts taken by a student so far on a module_instance.
+The number of times so far that a student has taken a module_instance, whether assessed or not. For example: regardless of assessment or result, for the 1st attempt the value would be '1'; a non-assessed 2nd attempt with no recorded result would have a value of '2'; and a 3rd attempt with an agreed result would have a value of '3'.
 
 ###Purpose
 Analytics
@@ -298,7 +298,7 @@ Omitting this property may hinder the development or use of an effective analyti
 
 ##MOD_COMPLETED_ATTEMPT
 ###Description
-Number of attempts taken by a student to complete a module_instance.
+The number of assessed attempts taken by a student to complete a module_instance. For example: if a student completes a module_instance at the 2nd assessed attempt with an agreed result, the MOD_COMPLETED_ATTEMPT property would have a value of '2', even if MOD_CURRENT_ATTEMPT has a value of '3', owing to a non-assessed 2nd attempt.
 
 ###Purpose
 Analytics
