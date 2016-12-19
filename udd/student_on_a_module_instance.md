@@ -113,7 +113,7 @@ Date in ISO 8601 format - YYYY-MM-DD
 String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
-The start and end date of a module_instance MUST align with the start and end date of a course_instance.
+The start and end date of a module_instance MUST fall at or between the start and end date of a course_instance.
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
 
 
@@ -134,7 +134,7 @@ Date in ISO 8601 format - YYYY-MM-DD
 String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
-The start and end date of a module_instance MUST align with the start and end date of a course_instance.
+The start and end date of a module_instance MUST fall at or between the start and end date of a course_instance.
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
 
 
