@@ -2516,17 +2516,16 @@ For display. Used by Student Success Planner
 
 ###Derivation
 Jisc
-https://www.hesa.ac.uk/collection/c16051/a/TTPCODE
+https://www.hesa.ac.uk/collection/c16051/a/TTPCODE. Extended to include overseas postal codes, for example for distance learners, those at overseas campuses of providers, and so on.
 
 ###Valid Values
-See [HESA definition for details.](https://www.hesa.ac.uk/collection/c16051/a/TTPCODE)
+Any, but for UK postcodes, see [HESA definition for details.](https://www.hesa.ac.uk/collection/c16051/a/TTPCODE)
 
 ###Format
-String (8)
+String (10)
 
 ###Notes
-This should relate to the term-time postcode of the student's residency, and NOT the entry postcode onto the student's learning instance
-
+This should relate to the term-time postcode of the student's residency, and NOT the entry postcode onto the student's learning instance.
 
 ##PRIMARY_EMAIL_ADDRESS
 ###Description
@@ -2638,7 +2637,7 @@ Analytics
 https://www.hesa.ac.uk/collection/c16051/a/postcode/. Extended to include international postal codes.
 
 ###Valid Values
-Any
+Any, but for UK postcodes [see HESA definition for particulars.] (https://www.hesa.ac.uk/collection/c16051/a/postcode/)
 
 ###Format
 String (10)
