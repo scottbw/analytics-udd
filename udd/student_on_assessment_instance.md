@@ -195,7 +195,7 @@ Analytics
 Jisc; student_on_a_module_instance.MOD_RESULT
 
 <table>
-<tr><td>MOD_RESULT</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)  </td></tr>
+<tr><td>ASSESSMENT_RESULT</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)  </td></tr>
 <tr><td>1</td><td>Pass</td><td>  </td></tr>
 <tr><td>2</td><td>Fail</td><td>  </td></tr>
 <tr><td>3</td><td>Not known</td><td> </td></tr>
