@@ -491,7 +491,7 @@ https://www.hesa.ac.uk/collection/c15051/a/disable/
 
 <table>
 <tr>
-<td>DISABILITY1</td>
+<td>DISABILITY2</td>
 <td>DESCRIPTION (ENGLISH)</td>
 <td>DESCRIPTION (WELSH)</td>
 <td>HESA 2015/2016 (DISABLE)</td>
