@@ -28,8 +28,7 @@
 A unique sequence number to indicate the order of assessments taken by a student on the assessment instance.
 
 ###Purpose
-To help identify the latest assessment and the order of assessments for a student, especially for those in reassessment.
-This could differ from the ASSESS_CURRENT_ATTEMPT/ASSESS_COMPLETED_ATTEMPT attributes when a student has mitigating circumstances.
+To identify the latest assessment taken by a student, regardless of whether or not results were achieved, especially for those being reassessed. Each assessment attempt should have a unique student_on_assessment_instance record, regardless of mitigating circumstances or results.
 
 ###Derivation
 Jisc
@@ -64,7 +63,7 @@ String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ##ASSESS_RETAKE
 ###Description.
-Whether this is a retake of the asessment for that student.
+States whether this is a retake of the assessment for that student as a result of mitigating circumstances.
 
 ###Purpose
 Analytics
@@ -167,7 +166,7 @@ ASSESS_AGREED_GRADE is expected to be present in any UDD compliant dataset as so
 
 ##ASSESSMENT_CURRENT_ATTEMPT
 ###Description.
-Number of attempts taken by a student so far on an assessment instance.
+Number of attempts taken by a student so far on an assessment instance, that are recognised by the institution as separate attempts.
 
 ###Purpose
 Analytics
@@ -182,6 +181,7 @@ Any
 Integer
 
 ###Notes
+Some institutions' regulations permit attempts with mitigating circumstances to be ignored as attempts, for example where a second attempt might otherwise limit the maximum mark available.
 Omitting this property may hinder the development or use of an effective analytics model.
 
 ##ASSESSMENT_RESULT
