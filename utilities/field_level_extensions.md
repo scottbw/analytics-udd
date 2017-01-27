@@ -15,11 +15,11 @@ The data must be in the following JSON format:
 
 ?Is the UDD entity name from the md file OK for this?
 
-AAAAAA
-bbbbbb: { // any data here
-	bbbbbbext1: "cccccc",
-	bbbbbbext2: "dddddd"
-}
+	AAAAAA
+	bbbbbb: { // any data here
+		bbbbbbext1: "cccccc",
+		bbbbbbext2: "dddddd"
+	}
 
 where
 - AAAAAA is the UDD entity name exactly as stated in the UDD MD file.
