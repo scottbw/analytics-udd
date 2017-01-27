@@ -22,12 +22,12 @@ bbbbbb: { // any data here
 }
 
 where
-	- AAAAAA is the UDD entity name exactly as stated in the UDD MD file.
-	- bbbbbb is the vendor's name (or institution if using own software).  This name should be a single unique string for each vendor.
-	- bbbbbbext1 is the field name for the first extension.
-	- cccccc is the data value in the first extension field.
-	- bbbbbbext2 is the field name for the second extension.
-	- dddddd is the data value in the second extension field.
+- AAAAAA is the UDD entity name exactly as stated in the UDD MD file.
+- bbbbbb is the vendor's name (or institution if using own software).  This name should be a single unique string for each vendor.
+- bbbbbbext1 is the field name for the first extension.
+- cccccc is the data value in the first extension field.
+- bbbbbbext2 is the field name for the second extension.
+- dddddd is the data value in the second extension field.
 
 ##Example
 
