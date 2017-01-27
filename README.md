@@ -9,7 +9,9 @@ Along with xAPI recipes, the UDD makes up the core data specification of the Jis
 The development of 1.2 involved a number of additions and changes. [This overview page](differences.md) provides a mapped listing of each change, with links through to the relevant pages in the UDD 1.1 and 1.2 documentation.
 
 ##Data format
-No particular data format is prescribed yet for UDD data sets, but both JSON and CSV are popular have been used. Regardless of the fileformat, any UDD dataset needs to be UTF8 encoded.
+UDD data must be UTF-8 encoded.  JSON is the preferred data format, but XML data is also supported. Other formats are not supported.
+
+When providing UDD data, supply the data for different entities in separate files, 1 file per entity, using the [UDD filename conventions](https://github.com/jiscdev/analytics-udd/blob/master/filename_conventions.md). 
 
 ##Diagram
 An [entity relation diagram of the whole UDD 1.2](diagram.md) provides a one page overview of the specification.
