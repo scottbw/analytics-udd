@@ -13,6 +13,7 @@
 * [X_YEAR_AVERAGE_MARK](#x_year_average_mark) [0..1]
 * [PROGRESSION](#progression) [0..1]
 * [PROGRESSION_SOURCE](#progression_source) [0..1]
+* [LOCATION_OF_STUDY](#location_of_study) [0..1]
 
 \* indicates that the property is part of a composite primary key for this entity.
 
@@ -440,3 +441,101 @@ String (255)
 
 ###Notes
 This property is likely to contain proprietary data with respect to individual institutions and systems.  Therefore it is likely to be suitable for analyses only within a sector or institution.
+
+##LOCATION_OF_STUDY
+###Description
+This property indicateS whether the student is based on campus, is studying abroad, on placement, and so on.
+
+###Purpose
+For analytics
+
+###Derivation
+https://www.hesa.ac.uk/collection/c16051/a/locsdy/
+
+###Valid Values & Mappings
+<table>
+            <tr>
+                <td>LOCATION_OF_STUDY</td>
+                <td>HESA LOCSDY code</td>
+                <td>Description(English)</td>
+                <td>Description(Welsh)</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>6</td>
+                <td>Distance learning - UK based student</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>9</td>
+                <td>Distance learning - Non-UK based student</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>C</td>
+                <td>NVQ delivered entirely in the workplace</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>D</td>
+                <td>On industrial (or other) placement for the year as a whole</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>E</td>
+                <td>On industrial (or other) placement for a proportion of the year</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>H</td>
+                <td>H</td>
+                <td>Classroom</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>J</td>
+                <td>J</td>
+                <td>Workshop</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>K</td>
+                <td>K</td>
+                <td>Workplace</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>S</td>
+                <td>S</td>
+                <td>Studying abroad and included in the Student record as student has spent or will spend more than 8 weeks in the UK</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>T</td>
+                <td>T</td>
+                <td>Abroad for the whole year</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>U</td>
+                <td>U</td>
+                <td>Abroad for a proportion of the year</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Z</td>
+                <td>Z</td>
+                <td>At institution or a partner for the whole year</td>
+                <td></td>
+            </tr>
+</table>
+
+###Format
+String (255)
+
+###Notes
+For the name of a building, a site or a campus at which the student is studying, see COURSE_LOCATION property.
