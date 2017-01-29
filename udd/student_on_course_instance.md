@@ -362,39 +362,56 @@ HESA CSTAT (Completion status)
                 <td>Description(Welsh)</td>
             </tr>
             <tr>
-                <td>1</td>
+                <td>10</td>
                 <td>1</td>
                 <td>The student is continuing or intending to continue on the course.</td>
                 <td></td>
             </tr>
             <tr>
-                <td>2</td>
+                <td>15</td>
+                <td>N/A</td>
+                <td>The student is continuing on the course and is repeating some modules from this stage alongside the next stage modules.</td>
+                <td></td>
+            </tr>            <tr>
+                <td>20</td>
                 <td>2</td>
                 <td>The student has completed all the learning activities of the course.</td>
                 <td></td>
             </tr>
             <tr>
-                <td>3</td>
+                <td>30</td>
                 <td>3</td>
                 <td>The student has withdrawn from the course. This may have been for academic or non-academic reasons.</td>
                 <td></td>
             </tr>
             <tr>
-                <td>4</td>
+                <td>40</td>
                 <td>4</td>
                 <td>The student has transferred to a new course. That is the student has withdrawn from this course & as a direct result has at the same time started studying on another course.</td>
                 <td></td>
             </tr>
             <tr>
-                <td>5</td>
+                <td>50</td>
                 <td>N/A</td>
-                <td>The student has failed this stage of the course and is repeating modules or the whole stage.</td>
+                <td>The student has failed this stage of the course and is repeating some modules, but not the whole stage.</td>
                 <td></td>
             </tr>
             <tr>
+                <td>55</td>
+                <td>N/A</td>
+                <td>The student has failed this stage of the course and is repeating the whole stage.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>60</td>
                 <td>6</td>
-                <td>6</td>
-                <td>Learner has temporarily withdrawn from the aim due to an agreed break in learning</td>
+                <td>Learner has temporarily withdrawn from the aim due to an agreed break in learning.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>70</td>
+                <td>N/A</td>
+                <td>Learner has failed this stage and has withdrawn from the course.</td>
                 <td></td>
             </tr>
 </table> 
