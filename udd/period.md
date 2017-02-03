@@ -1,69 +1,52 @@
 #Period
-* [PERIOD_ID](#period_id) [1] *
-* [PERIOD_TYPE](#period_type) [1]
+* [MOD_PERIOD](#mod_period) [1] *
+* [ACADEMIC_YEAR](#academic_year) [1] *
 * [PERIOD_START_DATE](#period_start_date) [1]
 * [PERIOD_END_DATE](#period_end_date) [1]
-* [TENANT_ID](institution.md#tenant_id) [0..1]
 
 \* indicates that the property is the primary key for this entity.
 
 ###Description
-A period describes a provider's official start date and end date of time slices, such as academic years, terms and semesters that are used in the UDD data.
+A period describes a provider's official start date and end date of time slices, such as academic years, terms and semesters that are used in the UDD data.  For the dates of an academic year, the MOD_PERIOD uses the fixed string "Academic Year".  For other periods, MOD_PERIOD uses institution-defined string values in conjunction with the 4-digit value of the ACADEMIC_YEAR property to record the start and end dates of the specified periods.
 
-##PERIOD_ID
+##MOD_PERIOD
 ###Description
-The provider's own label for the period.
+The provider's own unique label for the period (e.g. semester 1)
 
 ###Purpose
-To identify the period record.
+To enable identification of the time period using the institution's terminology.
 
 ###Derivation
-
+Institution
 
 ###Valid Values
-Any
+Where this record sets the dates for the institution's academic year, MOD_PERIOD should be set to "Academic Year".
+Otherwise any.
 
 ###Format
 String (255)
 
 ###Notes
-Examples: "semester 1, 2017", "2017-18 Academic Year".
+Examples: "semester 1", "Spring term".
 
 
-##PERIOD_TYPE
+##ACADEMIC_YEAR
 ###Description
-Controlled text description for the time slice, for example ACADEMIC_YEAR, MOD_PERIOD.  Must match the property name in the UDD entity to which it refers.
+The year in which the beginning of the relevant academic year starts.
 
 ###Purpose
-To enable identification of the time slice in UDD context.
+For display and analysis purposes
 
 ###Derivation
-
+Jisc
 
 ###Valid Values
-<table>
-            <tr>
-                <td>PERIOD_TYPE</td>
-            </tr>
-            <tr>
-                <td>ACADEMIC_YEAR</td>
-            </tr>
-            <tr>
-                <td>MOD_PERIOD</td>
-            </tr>
-            <tr>
-                <td>TERM</td>
-            </tr>
-            <tr>
-                <td>SEMESTER</td>
-            </tr>
-</table> 
+Year in ISO 8601 format - YYYY; ie year that the academic year starts in.
 
 ###Format
-String (255)
+String in ISO 8601 Year format - YYYY
 
 ###Notes
-Could be extended to include other periods as required.
 
 
 ##PERIOD_START_DATE
