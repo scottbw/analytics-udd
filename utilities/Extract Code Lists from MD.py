@@ -20,14 +20,23 @@ file_names.sort()
 for file_name in file_names:
     if file_name.endswith(".md"):
         try:
-            df_list = pd.read_html(file_name, header=0)#, index_col=0)
+            index_col = ""
+            df_list = pd.read_html(file_name, header=0, encoding='utf-8')#, index_col=0)
             #hack the col headings
             for df in df_list:
-                df.columns = [c.replace('DESCRIPTION', '').lstrip().rstrip().upper().replace('(ENGLISH)', 'en').replace('(WELSH)', 'cy') for c in df.columns.values]
+                df.columns = [c.upper().replace('DESCRIPTION', '').lstrip().rstrip().replace('(ENGLISH)', 'en').replace('(WELSH)', 'cy') for c in df.columns.values]
             for df in df_list:
                 index_col = df.columns.values[0]
                 if index_col == "CODE":
                     raise Exception("Markdown contains a table header containing the word 'CODE' rather than an attribute name in {}".format(file_name))
+                if index_col == "UNNAMED: 0":
+                    print "Found a table with an empty first header field in {}. Assumed to be a non-codelist table. Skipping".format(file_name)
+                    continue
+                elif index_col in ['en', 'cy']:
+                    print "Found a table with a langauge for the first header field in {}. Assumed to be a non-codelist table. Skipping".format(file_name)
+                    continue
+                else:
+                    print "Found a table for {} in {}.".format(index_col, file_name)
                 #remove NULL as a code and re-type index (pandas forces cols with NA to np.float64)
 				# this could be avoided if the UDD doc didn;t include NULL in code list table
                 df.dropna(subset=[index_col], inplace=True)
@@ -41,12 +50,12 @@ for file_name in file_names:
                     code_lists[lang_code][df.index.name] = json.loads(df[lang_code].T.to_json())
             print "{} processed\n".format(file_name)
         except ValueError as e:
-            print "{} not processed due to: {}\n".format(file_name, e)
+            print "{} not processed due to: {} when doing {}\n".format(file_name, e, index_col)
 
 # output separate language files
 for lang_code in code_lists.keys():
     json_filename = 'udd_codelists_{}.json'.format(lang_code)
     with file(json_filename, 'w') as f:
-        json.dump(code_lists[lang_code], f)
+        json.dump(code_lists[lang_code], f, encoding='utf-8')
         print "saved code list:", json_filename
 
