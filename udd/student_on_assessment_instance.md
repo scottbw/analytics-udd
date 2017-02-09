@@ -28,8 +28,7 @@
 A unique sequence number to indicate the order of assessments taken by a student on the assessment instance.
 
 ###Purpose
-To help identify the latest assessment and the order of assessments for a student, especially for those in reassessment.
-This could differ from the ASSESS_CURRENT_ATTEMPT/ASSESS_COMPLETED_ATTEMPT attributes when a student has mitigating circumstances.
+To identify the latest assessment taken by a student, regardless of whether or not results were achieved, especially for those being reassessed. Each assessment attempt should have a unique student_on_assessment_instance record, regardless of mitigating circumstances or results.
 
 ###Derivation
 Jisc
@@ -54,17 +53,17 @@ Analytics and display
 Jisc
 
 ###Valid Values
-YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ###Format
-ISO 8601
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
 
 
 ##ASSESS_RETAKE
 ###Description.
-Whether this is a retake of the asessment for that student.
+States whether this is a retake of the assessment for that student as a result of mitigating circumstances.
 
 ###Purpose
 Analytics
@@ -80,7 +79,7 @@ Jisc
 </table>  
 
 ###Format
-Integer
+String (255)
 
 ###Notes
 
@@ -167,7 +166,7 @@ ASSESS_AGREED_GRADE is expected to be present in any UDD compliant dataset as so
 
 ##ASSESSMENT_CURRENT_ATTEMPT
 ###Description.
-Number of attempts taken by a student so far on an assessment instance.
+Number of attempts taken by a student so far on an assessment instance, that are recognised by the institution as separate attempts.
 
 ###Purpose
 Analytics
@@ -182,6 +181,7 @@ Any
 Integer
 
 ###Notes
+Some institutions' regulations permit attempts with mitigating circumstances to be ignored as attempts, for example where a second attempt might otherwise limit the maximum mark available.
 Omitting this property may hinder the development or use of an effective analytics model.
 
 ##ASSESSMENT_RESULT
@@ -203,7 +203,7 @@ Jisc; student_on_a_module_instance.MOD_RESULT
 </table>  
 
 ###Format
-Int
+String (255)
 
 ###Notes
 Code 3 is applied in all cases where the outcome is either not known (yet), or doesn't apply because the student hasn't been assessed yet. Code 4 is deprecated because deferral or withdrawal is indicated by WITHDRAWAL_REASON in student_course_membership. 
@@ -221,10 +221,10 @@ Analytics
 Jisc
 
 ###Valid Values
-Not specified
+Date in ISO 8601 format - YYYY-MM-DD
 
 ###Format
-Date (ISO format) - YYYY-MM-DD
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
 This is the date when a grade has been moderated and agreed, but before exam board confirmation. It is typically the date at which the grade is entered in a SRS.
@@ -244,7 +244,7 @@ Jisc
 Not specified
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 The value can be any alphanumeric used by any type of marking scale. E.g. 80%, B11 or 'excellent'. There is also the similar MAX_MARKS property on assessment_instance, which is for analytic purposes. It only accepts decimal data.
@@ -301,10 +301,10 @@ Analytics
 Jisc
 
 ###Valid Values
-4 digit year
+Year in ISO 8601 format - YYYY
 
 ###Format
-Int
+String in ISO 8601 Year format - YYYY
 
 ###Notes
 This is the starting year for the academic year.

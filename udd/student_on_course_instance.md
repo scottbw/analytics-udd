@@ -11,6 +11,9 @@
 * [COURSE_LOCATION](#course_location) [0..1]
 * [X_COURSE_AVERAGE_MARK](#x_course_average_mark) [0..1]
 * [X_YEAR_AVERAGE_MARK](#x_year_average_mark) [0..1]
+* [PROGRESSION](#progression) [0..1]
+* [PROGRESSION_SOURCE](#progression_source) [0..1]
+* [LOCATION_OF_STUDY](#location_of_study) [0..1]
 
 \* indicates that the property is part of a composite primary key for this entity.
 
@@ -212,7 +215,7 @@ https://www.hesa.ac.uk/collection/c16051/a/MODE
 </table>  
 
 ###Format
-Int
+String (255)
 
 ###Compulsory
 Yes (if applicable)
@@ -233,13 +236,14 @@ For analytics
 https://www.hesa.ac.uk/collection/c16051/a/COMDATE
 
 ###Valid Values
-Any
+Year in ISO 8601 format - YYYY
 
 ###Format
-Int
+String in ISO 8601 Year format - YYYY
 
 ###Notes
 Use [COURSE_JOIN_DATE on student_course_membership](student_course_membership.md#course_join_date) instead.
+
 
 ##YEAR_PRG
 ###Description
@@ -255,7 +259,7 @@ https://www.hesa.ac.uk/collection/c16051/a/YEARPRG
 Any
 
 ###Format
-Int
+String (255)
 
 ###Notes
 Omitting this property may hinder the development or use of an effective analytics model.
@@ -274,10 +278,11 @@ https://www.hesa.ac.uk/collection/c16051/a/YEARSTU
 Any
 
 ###Format
-Int
+String (255)
 
 ###Notes
 Omitting this property may hinder the development or use of an effective analytics model.
+
 
 ##COURSE_LOCATION
 ###Description
@@ -337,3 +342,200 @@ Float
 
 ###Notes
 This data is generated internally to the learning record warehouse from existing data, and does not need to be supplied by an institution.
+
+
+##PROGRESSION
+###Description
+This property indicates the status of the student on the current course_instance.  It is mapped to common UDD values from source data that may be stored in progression_source.
+
+###Purpose
+Enables tracking of the student's continuation or otherwise from one stage of a course to another.
+
+###Derivation
+HESA CSTAT (Completion status)
+
+###Valid Values & Mappings
+<table>
+            <tr>
+                <td>PROGRESSION</td>
+                <td>HESA CSTAT code</td>
+                <td>Description(English)</td>
+                <td>Description(Welsh)</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>1</td>
+                <td>The student is continuing or intending to continue on the course.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>N/A</td>
+                <td>The student is continuing on the course and is repeating some modules from this stage alongside the next stage modules.</td>
+                <td></td>
+            </tr>            <tr>
+                <td>20</td>
+                <td>2</td>
+                <td>The student has completed all the learning activities of the course.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>3</td>
+                <td>The student has withdrawn from the course. This may have been for academic or non-academic reasons.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>40</td>
+                <td>4</td>
+                <td>The student has transferred to a new course. That is the student has withdrawn from this course & as a direct result has at the same time started studying on another course.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>50</td>
+                <td>N/A</td>
+                <td>The student has failed this stage of the course and is repeating some modules, but not the whole stage.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>55</td>
+                <td>N/A</td>
+                <td>The student has failed this stage of the course and is repeating the whole stage.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>60</td>
+                <td>6</td>
+                <td>Learner has temporarily withdrawn from the aim due to an agreed break in learning.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>70</td>
+                <td>N/A</td>
+                <td>Learner has failed this stage and has withdrawn from the course.</td>
+                <td></td>
+            </tr>
+</table> 
+
+###Format
+String (255)
+
+###Notes
+Omitting this property may hinder the development or use of an effective analytics model.
+
+##PROGRESSION_SOURCE
+###Description
+This property holds the source data value from the institution's student record system that shows the student's status during the course_instance.
+
+###Purpose
+For analysis of key aspects of progression from one stage of a course to another.
+
+###Derivation
+Student record systems
+
+###Valid Values
+Any
+
+###Format
+String (255)
+
+###Notes
+This property is likely to contain proprietary data with respect to individual institutions and systems.  Therefore it is likely to be suitable for analyses only within a sector or institution.
+
+##LOCATION_OF_STUDY
+###Description
+This property indicateS whether the student is based on campus, is studying abroad, on placement, and so on.
+
+###Purpose
+For analytics
+
+###Derivation
+https://www.hesa.ac.uk/collection/c16051/a/locsdy/
+
+###Valid Values & Mappings
+<table>
+            <tr>
+                <td>LOCATION_OF_STUDY</td>
+                <td>HESA LOCSDY code</td>
+                <td>Description(English)</td>
+                <td>Description(Welsh)</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>6</td>
+                <td>Distance learning - UK based student</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>9</td>
+                <td>Distance learning - Non-UK based student</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>C</td>
+                <td>NVQ delivered entirely in the workplace</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>D</td>
+                <td>On industrial (or other) placement for the year as a whole</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>E</td>
+                <td>On industrial (or other) placement for a proportion of the year</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>H</td>
+                <td>H</td>
+                <td>Classroom</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>J</td>
+                <td>J</td>
+                <td>Workshop</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>K</td>
+                <td>K</td>
+                <td>Workplace</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>S</td>
+                <td>S</td>
+                <td>Studying abroad and included in the Student record as student has spent or will spend more than 8 weeks in the UK</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>T</td>
+                <td>T</td>
+                <td>Abroad for the whole year</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>U</td>
+                <td>U</td>
+                <td>Abroad for a proportion of the year</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Z</td>
+                <td>Z</td>
+                <td>At institution or a partner for the whole year</td>
+                <td></td>
+            </tr>
+</table>
+
+###Format
+String (255)
+
+###Notes
+For the name of a building, a site or a campus at which the student is studying, see COURSE_LOCATION property.

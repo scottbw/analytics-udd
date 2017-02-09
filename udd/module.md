@@ -117,6 +117,6 @@ Jisc
 </table> 	
 
 ###Format
-String(1)
+String (1)
 
 ###Notes

@@ -38,7 +38,7 @@ Jisc
 Any
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 Use MOD_AGREED_GRADE instead of MOD_GRADE
@@ -65,7 +65,7 @@ Jisc
 </table>  
 
 ###Format
-Int
+String (255)
 
 ###Notes
 Code 3 is applied in all cases where the outcome is either not known (yet), or doesn't apply because the student hasn't been assessed yet. Code 4 is deprecated because deferral or withdrawal is indicated by WITHDRAWAL_REASON in student_course_membership.
@@ -91,7 +91,7 @@ Jisc
 </table>  
 
 ###Format
-Int
+String (255)
 
 ###Notes
 
@@ -107,13 +107,13 @@ Analytics and display
 Jisc
 
 ###Valid Values
-ISO 8601 - YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ###Format
-Date
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
-The start and end date of a module_instance MUST align with the start and end date of a course_instance.
+The start and end date of a module_instance MUST fall at or between the start and end date of a course_instance.
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
 
 
@@ -128,13 +128,13 @@ Analytics and display
 Jisc
 
 ###Valid Values
-ISO 8601 - YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ###Format
-Date
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
-The start and end date of a module_instance MUST align with the start and end date of a course_instance.
+The start and end date of a module_instance MUST fall at or between the start and end date of a course_instance.
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
 
 
@@ -279,7 +279,7 @@ Integer
 
 ##MOD_CURRENT_ATTEMPT
 ###Description
-Number of attempts taken by a student so far on a module_instance.
+The number of times so far that a student has taken a module_instance, whether assessed or not. For example: regardless of assessment or result, for the 1st attempt the value would be '1'; a non-assessed 2nd attempt with no recorded result would have a value of '2'; and a 3rd attempt with an agreed result would have a value of '3'.
 
 ###Purpose
 Analytics
@@ -298,7 +298,7 @@ Omitting this property may hinder the development or use of an effective analyti
 
 ##MOD_COMPLETED_ATTEMPT
 ###Description
-Number of attempts taken by a student to complete a module_instance.
+The number of assessed attempts taken by a student to complete a module_instance. For example: if a student completes a module_instance at the 2nd assessed attempt with an agreed result, the MOD_COMPLETED_ATTEMPT property would have a value of '2', even if MOD_CURRENT_ATTEMPT has a value of '3', owing to a non-assessed 2nd attempt.
 
 ###Purpose
 Analytics
@@ -345,10 +345,10 @@ Analytics
 Jisc
 
 ###Valid Values
-4 digit year
+Year in ISO 8601 format - YYYY
 
 ###Format
-Int
+String in ISO 8601 Year format - YYYY
 
 ###Notes
 This is the starting year for the academic year.

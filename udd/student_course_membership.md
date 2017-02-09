@@ -14,6 +14,7 @@
 * [COURSE_MARK](#course_mark) [0..1]
 * [COURSE_EXPECTED_END_DATE](#course_expected_end_date) [0..1]
 * [COURSE_END_DATE](#course_end_date) [0..1]
+* [COURSE_DURATION] (#course_duration) [0..1]
 * [COURSE_JOIN_DATE](#course_join_date) [0..1]
 * [COURSE_JOIN_AGE](#course_join_age) [0..1]
 * [COHORT_ID](#cohort_id) [0..1]
@@ -65,6 +66,7 @@ In cases where a sequence ID is not readily available – which includes most si
 Note that the ACTIVE_MEMBERSHIP property indicates whether this student_course_membership record is the last known active one.
 
 This property will be deprecated in the next revision of the UDD.
+
 ##WITHDRAWAL_REASON
 ###Description
 The reason a student has withdrawn from a course (if they have)
@@ -104,7 +106,7 @@ https://www.hesa.ac.uk/collection/c16051/a/RSNEND
 </table>  
 
 ###Format
-Int
+String (255)
 
 ###Notes
 
@@ -120,10 +122,10 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/449779
 https://www.hesa.ac.uk/collection/c16051/a/ENDDATE
 
 ###Valid Values
-YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ###Format
-ISO 8601 Date
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
 Would normally utilise ENDDATE (HE/ HESA) or potentially LearnActEndDate (FE/ ILR - to be confirmed) when relevant fields denote that the learner/ student has withdrawn from the learning aim/ course.
@@ -211,7 +213,7 @@ https://www.hesa.ac.uk/collection/c16051/a/QUALENT3
 </table>
 
 ###Format
-Alphanumeric
+String (255)
 
 ###Notes
 Omitting this property may hinder the development or use of an effective analytics model.
@@ -373,14 +375,14 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/449779
         </table>
 
 ###Format
-Int
+String (255)
 
 ###Notes
 Omitting this property may hinder the development or use of an effective analytics model.
 
 ##COURSE_GRADE
 ###Description
-Class of award achieved by the student on this course_instance. Based on HESA codeset for CLASS (HE conformity to be confirmed)
+Class of award achieved by the student on this course. Based on HESA codeset for CLASS (HE conformity to be confirmed)
 
 ###Purpose
 For analytics
@@ -436,7 +438,7 @@ https://www.hesa.ac.uk/collection/c16051/a/CLASS
 </table>
 
 ###Format
-Int
+String (255)
 
 ###Notes
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
@@ -1551,7 +1553,7 @@ body</td>
 ###References
 
 ###Format
-String(255)
+String (255)
 
 ###Notes
 All course levels are denoted here (TBC with FE college, for final implementation). Specific use of the LARS codeset for FE (from ILR) may need to be considered, or a mapping/ amalgamation with the HESA codeset. This is to be discussed in consultation with the FE sector.
@@ -1589,12 +1591,12 @@ Analytics and display
 Jisc
 
 ###Valid values
-YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ###References
 
 ###Format
-ISO 8601
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
 Omitting this property may hinder the development or use of an effective analytics model.
@@ -1610,15 +1612,38 @@ Analytics and display
 Jisc
 
 ###Valid values
-YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ###References
 
 ###Format
-ISO 8601
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
 Note that there may be many reasons why a student leaves a course. This is recorded in WITHDRAWAL_REASON.
+
+
+##COURSE_DURATION
+###Description
+The expected length of time in months that the student will take to complete the course.
+
+###Purpose
+Analysis
+
+###Derivation
+Commonly held in Student Record Systems.
+
+###Valid values
+0-120
+
+###References
+
+###Format
+Int
+
+###Notes
+If actual number of months is not stored in source data, then for years, multiply by 12 to give approximate months value; for weeks, divide by 4.3 and round to nearest integer to give approximate months value.
+
 
 ##COURSE_JOIN_DATE
 ###Description
@@ -1632,12 +1657,12 @@ HESA COMDATE
 https://www.hesa.ac.uk/collection/c16051/a/COMDATE
 
 ###Valid values
-YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ###References
 
 ###Format
-ISO 8601
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ###Notes
 

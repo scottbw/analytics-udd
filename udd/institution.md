@@ -1,6 +1,7 @@
 #institution
 * [TENANT_ID](#tenant_id) [1] *
 * [TENANT_NAME](#tenant_name) [0..1]
+* [UDD_VERSION] (#udd_version) [1]
 
 \* indicates that the property is the primary key for this entity.
 
@@ -40,3 +41,21 @@ String (255)
 
 ###Notes
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
+
+##UDD_VERSION
+###Description
+Version number of this UDD specification.
+
+###Purpose
+Enables the UDD to be self-declaring of its version.
+
+###Derivation
+UDD specification in use by the institution
+
+###References
+
+###Format
+String (8)
+
+###Notes
+Value will be the current version number of the UDD.  Example: if the data uses UDD v1.3, value will "1.3".

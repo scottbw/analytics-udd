@@ -42,7 +42,7 @@ Jisc
 Any
 
 ###Format
-String (256)
+String (255)
 
 ###Notes
 It is expected that sites / organisations will have their own code lists for MOD_PERIOD values.
@@ -65,7 +65,7 @@ Jisc
 </table>  
 
 ###Format
-Int
+String (255)
 
 ###Notes
 Omitting this property may hinder the development or use of an effective analytics model.
@@ -81,14 +81,15 @@ Analytics
 Jisc
 
 ###Valid Values
-4 digit year
+Year in ISO 8601 format - YYYY
 
 ###Format
-Int
+String in ISO 8601 Year format - YYYY
 
 ###Notes
 This is the starting year for the academic year.
 Omitting this property may hinder the development or use of an effective analytics model.
+
 ##MOD_OPTIONAL
 ###Description
 Whether this instance relates to an optional module or not.
@@ -108,7 +109,7 @@ Jisc
 </table>  
 
 ###Format
-Int
+String (255)
 
 ###Notes
 
