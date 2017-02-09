@@ -1800,11 +1800,6 @@ String (2)
 		<td></td>
 	</tr>
 	<tr>
-		<td>ZZ</td>
-		<td>Not known</td>
-		<td></td>
-	</tr>
-	<tr>
 		<td>PS</td>
 		<td>Occupied Palestinian Territories [Palestine, State of] {formerly West Bank (including East Jerusalem) and Gaza Strip}</td>
 		<td></td>
@@ -2227,6 +2222,7 @@ String (2)
 	<tr>
 		<td>ZZ</td>
 		<td>Unknown</td>
+		<td></td>
 	</tr>
 </table>
 
