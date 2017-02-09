@@ -327,7 +327,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
 
 <table>
     <tr>
-        <td>UDD code</td><td>Description (English)</td><td>Description (Welsh)</td><td>HESA DISABLE 15/16</td><td>HESA DISABLE 16/17</td><td>LLDDHEALTHPROB 16/17</td><td>HESA LEARNDIF 15/16</td><td>ILR 16/17</td>
+        <td>DIFFLEARN1</td><td>Description (English)</td><td>Description (Welsh)</td><td>HESA DISABLE 15/16</td><td>HESA DISABLE 16/17</td><td>LLDDHEALTHPROB 16/17</td><td>HESA LEARNDIF 15/16</td><td>ILR 16/17</td>
     </tr>
     <tr>
         <td>1</td><td>No known difficulty</td><td></td><td>00, 97, 98, 99</td><td>00</td><td>0, 98, 99</td><td>98, 99</td><td>98, 99</td>
@@ -379,7 +379,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
 
 <table>
     <tr>
-        <td>UDD code</td><td>Description (English)</td><td>Description (Welsh)</td><td>HESA DISABLE 15/16</td><td>HESA DISABLE 16/17</td><td>LLDDHEALTHPROB 16/17</td><td>HESA LEARNDIF 15/16</td><td>ILR 16/17</td>
+        <td>DIFFLEARN2</td><td>Description (English)</td><td>Description (Welsh)</td><td>HESA DISABLE 15/16</td><td>HESA DISABLE 16/17</td><td>LLDDHEALTHPROB 16/17</td><td>HESA LEARNDIF 15/16</td><td>ILR 16/17</td>
     </tr>
     <tr>
         <td>1</td><td>No known difficulty</td><td></td><td>00, 97, 98, 99</td><td>00</td><td>0, 98, 99</td><td>98, 99</td><td>98, 99</td>
@@ -432,6 +432,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
 
 <table>
     <tr>
+		<td></td>
         <td>DESCRIPTION (ENGLISH)</td>
         <td>DESCRIPTION (WELSH)</td>
         <td>HESA 2015 (LEARNDIF)</td>
@@ -440,6 +441,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>FEILR 2016 (LLDDCAT)</td>
     </tr>
     <tr>
+		<td></td>
         <td>Moderate learning difficulty</td>
         <td></td>
         <td>01</td>
@@ -448,6 +450,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>10</td>
     </tr>
     <tr>
+		<td></td>
         <td>Severe learning difficulty</td>
         <td></td>
         <td>02</td>
@@ -456,6 +459,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>11</td>
     </tr>
     <tr>
+		<td></td>
         <td>Dyslexia</td>
         <td></td>
         <td>10</td>
@@ -464,6 +468,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>12</td>
     </tr>
     <tr>
+		<td></td>
         <td>Dyscalculia</td>
         <td></td>
         <td>11</td>
@@ -472,6 +477,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>13</td>
     </tr>
     <tr>
+		<td></td>
         <td>Other specific learning difficulty</td>
         <td></td>
         <td>19</td>
@@ -480,6 +486,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>94</td>
     </tr>
     <tr>
+		<td></td>
         <td>Other learning difficulty</td>
         <td></td>
         <td>N/A</td>
@@ -488,6 +495,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>96</td>
     </tr>
     <tr>
+		<td></td>
         <td>Autism spectrum disorder</td>
         <td></td>
         <td>20</td>
@@ -496,6 +504,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>14</td>
     </tr>
     <tr>
+		<td></td>
         <td>Multiple learning difficulties</td>
         <td></td>
         <td>90</td>
@@ -504,6 +513,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>N/A</td>
     </tr>
     <tr>
+		<td></td>
         <td>Other learning difficulty</td>
         <td></td>
         <td>97</td>
@@ -512,6 +522,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>96</td>
     </tr>
     <tr>
+		<td></td>
         <td>No learning difficulty</td>
         <td></td>
         <td>98</td>
@@ -520,6 +531,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>N/A</td>
     </tr>
     <tr>
+		<td></td>
         <td>Not known / information not provided</td>
         <td></td>
         <td>99</td>
@@ -528,6 +540,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>98</td>
     </tr>
     <tr>
+		<td></td>
         <td>prefer not to say</td>
         <td></td>
         <td>N/A</td>
@@ -567,6 +580,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
 
 <table>
     <tr>
+		<td></td>
         <td>DESCRIPTION (ENGLISH)</td>
         <td>DESCRIPTION (WELSH)</td>
         <td>HESA 2015 (DISABLE)</td>
@@ -574,6 +588,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>FEILR (LLDDCat) </td>
     </tr>
     <tr>
+		<td></td>
         <td>No known disability</td>
         <td>Dim Anabledd</td>
         <td>00</td>
@@ -581,6 +596,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>N/A </td>
     </tr>
     <tr>
+		<td></td>
         <td>Personal care support</td>
         <td></td>
         <td>05</td>
@@ -588,6 +604,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>N/A </td>
     </tr>
     <tr>
+		<td></td>
         <td>An unseen disability, e.g. diabetes, epilepsy, asthma</td>
         <td></td>
         <td>07</td>
@@ -595,6 +612,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>95</td>
     </tr>
     <tr>
+		<td></td>
 <td>Two or more impairments and/or disabling medical conditions</td>
         <td></td>
         <td>08</td>
@@ -602,6 +620,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>2</td>
     </tr>
     <tr>
+		<td></td>
         <td>A specific learning difficulty such as dyslexia dyspraxia or AD(H)D</td>
         <td></td>
         <td>11</td>
@@ -609,6 +628,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>12</td>
     </tr>
     <tr>
+		<td></td>
         <td>A social/communication impairment such as Asperger's syndrome/other autistic
             spectrum disorder</td>
         <td></td>
@@ -617,6 +637,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>15, 1, 17</td>
     </tr>
     <tr>
+		<td></td>
         <td>A long standing illness or health condition such as cancer, HIV, diabetes, chronic
             heart disease or epilepsy</td>
         <td></td>
@@ -625,6 +646,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>95 </td>
     </tr>
     <tr>
+		<td></td>
         <td>A mental health condition such as depression schizophrenia or anxiety
             disorder</td>
         <td></td>
@@ -633,6 +655,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>9</td>
     </tr>
     <tr>
+		<td></td>
         <td>A physical impairment or mobility issues such as difficulty using arms or using
             a wheelchair or crutches</td>
         <td></td>
@@ -641,6 +664,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>6, 93</td>
     </tr>
     <tr>
+		<td></td>
         <td>Deaf or a serious hearing impairment</td>
         <td></td>
         <td>03, 57</td>
@@ -648,6 +672,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>5</td>
     </tr>
     <tr>
+		<td></td>
         <td>Blind or a serious visual impairment uncorrected by glasses</td>
         <td></td>
         <td>02, 58</td>
@@ -655,6 +680,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>4</td>
     </tr>
     <tr>
+		<td></td>
         <td>A disability impairment or medical condition that is not listed above</td>
         <td></td>
         <td>96</td>
@@ -662,6 +688,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>7, 8, 16, 97</td>
     </tr>
     <tr>
+		<td></td>
         <td>Information refused</td>
         <td></td>
         <td>97</td>
@@ -669,6 +696,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>98 </td>
     </tr>
     <tr>
+		<td></td>
         <td>Information not sought</td>
         <td></td>
         <td>98</td>
@@ -676,6 +704,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>N/A</td>
     </tr>
     <tr>
+		<td></td>
         <td>Not known / not provided</td>
         <td>Anhysbys</td>
         <td>99</td>
@@ -714,6 +743,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
 ###Valid Values & Mappings
 <table>
     <tr>
+		<td></td>
         <td>DESCRIPTION (ENGLISH)</td>
         <td>DESCRIPTION (WELSH)</td>
         <td>HESA 2015 (DISABLE)</td>
@@ -721,6 +751,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>FEILR (LLDDCat) </td>
     </tr>
     <tr>
+		<td></td>
         <td>No known disability</td>
         <td>Dim Anabledd</td>
         <td>00</td>
@@ -728,6 +759,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>N/A </td>
     </tr>
     <tr>
+		<td></td>
         <td>Personal care support</td>
         <td></td>
         <td>05</td>
@@ -735,6 +767,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>N/A </td>
     </tr>
     <tr>
+		<td></td>
         <td>An unseen disability, e.g. diabetes, epilepsy, asthma</td>
         <td></td>
         <td>07</td>
@@ -742,6 +775,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>95</td>
     </tr>
     <tr>
+		<td></td>
 <td>Two or more impairments and/or disabling medical conditions</td>
         <td></td>
         <td>08</td>
@@ -749,6 +783,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>2</td>
     </tr>
     <tr>
+		<td></td>
         <td>A specific learning difficulty such as dyslexia dyspraxia or AD(H)D</td>
         <td></td>
         <td>11</td>
@@ -756,6 +791,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>12</td>
     </tr>
     <tr>
+		<td></td>
         <td>A social/communication impairment such as Asperger's syndrome/other autistic
             spectrum disorder</td>
         <td></td>
@@ -764,6 +800,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>15, 1, 17</td>
     </tr>
     <tr>
+		<td></td>
         <td>A long standing illness or health condition such as cancer, HIV, diabetes, chronic
             heart disease or epilepsy</td>
         <td></td>
@@ -772,6 +809,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>95 </td>
     </tr>
     <tr>
+		<td></td>
         <td>A mental health condition such as depression schizophrenia or anxiety
             disorder</td>
         <td></td>
@@ -780,6 +818,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>9</td>
     </tr>
     <tr>
+		<td></td>
         <td>A physical impairment or mobility issues such as difficulty using arms or using
             a wheelchair or crutches</td>
         <td></td>
@@ -788,6 +827,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>6, 93</td>
     </tr>
     <tr>
+		<td></td>
         <td>Deaf or a serious hearing impairment</td>
         <td></td>
         <td>03, 57</td>
@@ -795,6 +835,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>5</td>
     </tr>
     <tr>
+		<td></td>
         <td>Blind or a serious visual impairment uncorrected by glasses</td>
         <td></td>
         <td>02, 58</td>
@@ -802,6 +843,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>4</td>
     </tr>
     <tr>
+		<td></td>
         <td>A disability impairment or medical condition that is not listed above</td>
         <td></td>
         <td>96</td>
@@ -809,6 +851,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>7, 8, 16, 97</td>
     </tr>
     <tr>
+		<td></td>
         <td>Information refused</td>
         <td></td>
         <td>97</td>
@@ -816,6 +859,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>98 </td>
     </tr>
     <tr>
+		<td></td>
         <td>Information not sought</td>
         <td></td>
         <td>98</td>
@@ -823,6 +867,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
         <td>N/A</td>
     </tr>
     <tr>
+		<td></td>
         <td>Not known / not provided</td>
         <td>Anhysbys</td>
         <td>99</td>
