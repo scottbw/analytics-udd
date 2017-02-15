@@ -371,7 +371,7 @@ HESA CSTAT (Completion status)
             <tr>
                 <td>15</td>
                 <td>N/A</td>
-                <td>The student is continuing on the course and is repeating some modules from this stage alongside the next stage modules.</td>
+                <td>The student is continuing on the course and is repeating some modules from this stage alongside the next stage modules; the student has not failed the stage.</td>
                 <td></td>
             </tr>            <tr>
                 <td>20</td>
@@ -394,7 +394,7 @@ HESA CSTAT (Completion status)
             <tr>
                 <td>50</td>
                 <td>N/A</td>
-                <td>The student has failed this stage of the course and is repeating some modules, but not the whole stage.</td>
+                <td>The student has failed this stage of the course and is repeating some modules, but not the whole stage; the student is not yet continuing to the next stage.</td>
                 <td></td>
             </tr>
             <tr>
