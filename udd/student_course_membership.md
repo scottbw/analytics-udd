@@ -1,7 +1,6 @@
 #student_course_membership
 
 * [STUDENT_COURSE_MEMBERSHIP_ID](#student_course_membership_id) [1] *
-* [STUDENT_COURSE_MEMBERSHIP_SEQ](#student_course_membership_seq) [1] *
 * [STUDENT_ID](student.md#student_id) [1]
 * [COURSE_ID](course.md#course_id) [1]
 * [WITHDRAWAL_REASON](#withdrawal_reason) [0..1]
@@ -20,7 +19,7 @@
 * [COHORT_ID](#cohort_id) [0..1]
 * [ACTIVE_MEMBERSHIP](#active_membership) [0..1]
 
-\* indicates that the property is part of a composite primary key for this entity.
+\* indicates that the property is the primary key for this entity.
 
 ##STUDENT_COURSE_MEMBERSHIP_ID
 ###Description
@@ -40,32 +39,6 @@ String (255)
 ###Notes
 The student_course_membership is designed to deal with the fact that some students are enrolled on more than one course in their time at a provider. Drawing together data on their student ID alone could therefore be misleading, or at least be significantly different from students who have only ever been registered on one course. STUDENT_COURSE_MEMBERSHIP_ID partitions the study careers of those who are on multiple courses, and makes them comparable to those who have only ever been enrolled on one course.
 
-##STUDENT_COURSE_MEMBERSHIP_SEQ
-###Description
-A sequence indicator that uniquely identifies the combination of the student and the course_instance they are assigned to, to allow for cases where there is more than one such combination.
-
-###Purpose
-Together with STUDENT_COURSE_MEMBERSHIP_ID, the purpose of STUDENT_COURSE_MEMBERSHIP_SEQ is to provide a unique course_instance code for a student, for use in joining a student to course_instance/enrolment records.
-
-###Derivation
-As defined by the Student Record System.
-
-###Valid Values
-Either a letter or digit that increments for each student - course_instance pair.
-
-###References
-
-###Format
-String (255)
-
-###Notes
-The student_course_membership sequence ID is designed to deal with the fact that some students drop out off or enroll on more than one instance of the same course. 
-
-In cases where a sequence ID is not readily available – which includes most sites that do not use Tribal SITS –, the correct value for all instances of this student_course_membership entity is likely to be "1". The reason is that, in such cases, STUDENT_COURSE_MEMBERSHIP_ID is already unique on its own, and the sequence number of that unique instance is, therefore, 1.
-
-Note that the ACTIVE_MEMBERSHIP property indicates whether this student_course_membership record is the last known active one.
-
-This property will be deprecated in the next revision of the UDD.
 
 ##WITHDRAWAL_REASON
 ###Description
