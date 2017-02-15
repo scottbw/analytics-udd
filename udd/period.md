@@ -1,41 +1,41 @@
 #Period
-* [MOD_PERIOD](#mod_period) [1] *
+* [PERIOD_CODE](#period_code) [1] *
 * [ACADEMIC_YEAR](#academic_year) [1] *
+* [PERIOD_NAME](#period_name) [1]
 * [PERIOD_START_DATE](#period_start_date) [1]
 * [PERIOD_END_DATE](#period_end_date) [1]
 
 \* indicates that the property is the primary key for this entity.
 
 ###Description
-A period describes a provider's official start date and end date of time slices, such as academic years, terms and semesters that are used in the UDD data.  For the dates of an academic year, the MOD_PERIOD uses the fixed string "Academic Year".  For other periods, MOD_PERIOD uses institution-defined string values in conjunction with the 4-digit value of the ACADEMIC_YEAR property to record the start and end dates of the specified periods.
+A period describes a institution's official start date and end date of time slices, such as academic years, terms and semesters.  For the dates of an academic year, the PERIOD_CODE uses the fixed string "ACADYR".  For other periods, PERIOD_CODE uses institution-defined code values in conjunction with the 4-digit value of the ACADEMIC_YEAR property to record the start and end dates of the specified periods.
 
-##MOD_PERIOD
+##PERIOD_CODE
 ###Description
-The provider's own unique label for the period (e.g. semester 1)
+The institution's own code for the period.
 
 ###Purpose
-To enable identification of the time period using the institution's terminology.
+To enable identification of the time period using the institution's own code, unique in any 1 academic year.
 
 ###Derivation
 Institution
 
 ###Valid Values
-Where this record sets the dates for the institution's academic year, MOD_PERIOD should be set to "Academic Year".
+Where this record sets the dates for the institution's academic year, PERIOD_CODE should be set to "ACADYR".
 Otherwise any.
 
 ###Format
 String (255)
 
 ###Notes
-Examples: "semester 1", "Spring term".
 
 
 ##ACADEMIC_YEAR
 ###Description
-The year in which the beginning of the relevant academic year starts.
+The year in which the start of the relevant academic year happens.
 
 ###Purpose
-For display and analysis purposes
+For lookup and analysis purposes.
 
 ###Derivation
 Jisc
@@ -47,6 +47,26 @@ Year in ISO 8601 format - YYYY; ie year that the academic year starts in.
 String in ISO 8601 Year format - YYYY
 
 ###Notes
+
+
+##PERIOD_NAME
+###Description
+The institution's own human readable label for the period (e.g. "Spring Term, AY 2016-17").
+
+###Purpose
+To display the time period using the institution's terminology.
+
+###Derivation
+Institution
+
+###Valid Values
+Any.
+
+###Format
+String (255)
+
+###Notes
+This value is intended to display the period, so that a human reader can understand it.  For clarity the relevant academic year should be included, as in this example: "Semester 2, AY 2016/17".
 
 
 ##PERIOD_START_DATE
