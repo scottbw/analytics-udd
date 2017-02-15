@@ -8,7 +8,7 @@
 \* indicates that the property is the primary key for this entity.
 
 ###Description
-A period describes a institution's official start date and end date of time slices, such as academic years, terms and semesters.  For the dates of an academic year, the PERIOD_CODE uses the fixed string "ACADYR".  For other periods, PERIOD_CODE uses institution-defined code values in conjunction with the 4-digit value of the ACADEMIC_YEAR property to record the start and end dates of the specified periods.
+A period describes an institution's official start date and end date of time slices, such as academic years, terms and semesters.
 
 ##PERIOD_CODE
 ###Description
@@ -21,13 +21,13 @@ To enable identification of the time period using the institution's own code, un
 Institution
 
 ###Valid Values
-Where this record sets the dates for the institution's academic year, PERIOD_CODE should be set to "ACADYR".
-Otherwise any.
+Where the period record states the dates for the institution's academic year, PERIOD_CODE must use the fixed string "ACADYR". For other periods, PERIOD_CODE uses institution-defined code values. Each different code value in module_instance.MOD_PERIOD must have a matching code value in PERIOD_CODE. Where the same code values are used across different academic years, the specific period record can be identified by reference to the PERIOD_CODE together with the ACADEMIC_YEAR property; these properties together form the primary key.
 
 ###Format
 String (255)
 
 ###Notes
+Examples: "SEM1", "WHOLE YEAR", "TRMS1+2"
 
 
 ##ACADEMIC_YEAR
