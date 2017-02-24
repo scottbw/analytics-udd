@@ -10,26 +10,29 @@ The records in the extension entity consist of 5 parts, described here.  The pur
 Tribal, student, ST123456, SPORTS_TEAM_FLAG, Y
 ```
 
-* [VENDOR](#vendor) [1] *
+* [ORGANISATION](#organisation) [1] *
 * [ENTITY](#entity) [1] *
-* [PRIMARY_KEY](#primary_key) [1] *
+* [REF_KEY](#ref_key) [1] *
 * [PROPERTY_NAME](#property_name) [1] *
 * [PROPERTY_VALUE](#property_value) [1]
 
-##VENDOR
+\* indicates that the property is part of a composite primary key for this entity.
+
+##ORGANISATION
 ###Description
-Identifies the vendor to which this extension applies.
+Identifies the controlling agent for this extension.  This will normally be a software vendor, institution or Jisc.
 
 ###Valid Values
-Standard list of vendor identifiers to be used.
+Standard list of identifiers to be drawn up.  TBD.
 
 ###Purpose
-Enables identification of a group of extensions by vendor.
+Enables identification of a group of extensions by controlling organisation.
 
 ###Format
 String (255)
 
 ###Notes
+
 
 ##ENTITY
 ###Description
@@ -98,12 +101,12 @@ String (255)
 
 ###Notes
 
-##PRIMARY_KEY
+##REF_KEY
 ###Description
-Holds the unique single primary key identifying the record to which the extension applies.
+Holds the unique single primary key identifying the record in the UDD entity to which the extension applies.
 
 ###Purpose
-Identifies the relevant extended record.
+Identifies the relevant extended record in the ENTITY.
 
 ###Valid Values
 Any
@@ -123,7 +126,7 @@ Label for the extension.
 Identifies the extension used.
 
 ###Valid Values
-Label drawn from a vocabulary of valid labels for extensions.
+Label drawn from a vocabulary of valid labels for extensions maintained by ORGANISATION.
 
 ###Format
 String (255)
@@ -133,17 +136,17 @@ String (255)
 
 ##PROPERTY_VALUE
 ###Description
-Data held against the extension for the specific record identified by the ENTITY and PRIMARY_KEY.
+Data held against the extension for the specific record identified by the ENTITY and REF_KEY.
 
 ###Purpose
-Holds the extended data.
+Holds the data for the extension.
 
 ###Valid Values
 Any
 
 ###Format
-Any
+String (255)
 
 ###Notes
-
+The value of this property is held as a string.  However, it should be parsable into the appropriate format for use in the extension defined in PROPERTY_NAME by ORGANISATION.
 
