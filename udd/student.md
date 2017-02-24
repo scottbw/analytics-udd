@@ -34,6 +34,9 @@
 
 \* indicates that the property is the primary key for this entity.
 
+##Description of student entity
+A student element describes a person undertaking one or more courses.
+
 ##STUDENT_ID
 ###Description
 The institution's own unique identifier of the student. In the case or event of requiring to provide anonymous data for trial/ evaluation purposes with JISC, institutions should use a suitable method or algorithm (which can be reversed by that institution, for evaluation purposes thereafter) to ensure that this studentid provided is different to that actual ID held locally.
@@ -356,6 +359,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
 String (255)
 
 ###Notes
+**DIFFLEARN1 and DIFFLEARN2 are the preferred approach for recording such impacts on learning.  The additional properties of LEARN_DIF, DISABILITY1 and DISABILITY2 are included for use only where it is necessary to provid more detail in addition to DIFFLEARN1 and DIFFLEARN2.**
 If a learner's learning difficulty is unknown, then code '1' should be used for those cases.
 Omitting this property may hinder the development or use of an effective analytics model.
 Note that source values for the DIFFLEARN1 property are recorded in the [LEARN_DIF](#learndif) and [DISABILITY1](#disability1) properties.
@@ -408,6 +412,7 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675
 String (255)
 
 ###Notes
+**DIFFLEARN1 and DIFFLEARN2 are the preferred approach for recording such impacts on learning.  The additional properties of LEARN_DIF, DISABILITY1 and DISABILITY2 are included for use only where it is necessary to provid more detail in addition to DIFFLEARN1 and DIFFLEARN2.**
 If a learner's learning difficulty is unknown, then code '1' should be used for those cases.
 Omitting this property may hinder the development or use of an effective analytics model.
 Note that source values for the DIFFLEARN2 property are recorded in the [LEARN_DIF](#learndif) and [DISABILITY2](#disability2) properties.
@@ -2232,7 +2237,7 @@ Omitting this property may hinder the development or use of an effective analyti
 
 ##TERMTIME_ACCOM
 ###Description
-The current term time accomodation type of student
+The current term time accommodation type of student
 
 ###Purpose
 For detailed analysis within Learning Analytics/ Data Modelling.
@@ -2260,7 +2265,7 @@ Please Note - N/A denotes that no mapping value is applicable (it should not be 
 String (255)
 
 ###Notes
-If current term time accomodation type data is not supplied, this property should be omitted.
+If current term time accommodation type data is not supplied, this property should be omitted.
 Omitting this property may hinder the development or use of an effective analytics model.
 
 ##PARENTS_ED
@@ -2590,7 +2595,7 @@ Will be input/ batched directly from central IT or identification management sys
 
 ##HOME_PHONE
 ###Description
-Students home telephone number. This can refer to the landline telephone number of their term-time or non term-time accomodation.
+Students home telephone number. This can refer to the landline telephone number of their term-time or non term-time accommodation.
 
 ###Purpose
 For display and contact purposes. Used by Student Success Planner

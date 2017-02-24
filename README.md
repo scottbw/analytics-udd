@@ -54,7 +54,6 @@ There are also files of code lists extracted from the MD files for machine proce
 ###[UDD code lists in Welsh](udd/udd_codelists_cy.json)
 ###[UDD code lists in English](udd/udd_codelists_en.json)
 
-
 ##Mandatory and optional properties
 The properties of the UDD are required in compliant datasets to different degrees. The _Mandatory properties in the UDD guide_ outlines the different categories of UDD property. It is available as both [Excel](media/UDDmandatoryFieldGuide.xls) and [ODF](media/UDDmandatoryFieldGuide.ods) spreadsheets.
 
