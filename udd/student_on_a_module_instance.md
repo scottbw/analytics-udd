@@ -21,7 +21,7 @@
 * [X_MOD_NAME](#x_mod_name) [0..1]
 * [MOD_ACADEMIC_YEAR](module_instance.md#mod_academic_year) [0..1]
 
-\** indicates that the property is the primary key for this entity.
+\** indicates that the property is the primary key for this entity.  
 \* indicates that the property is part of a uniqueness constraint for this entity.
 
 ##Description of student_on_a_module_instance entity
