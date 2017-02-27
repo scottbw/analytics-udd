@@ -1,11 +1,17 @@
 #Module
-* [MOD_ID](#mod_id) [1] *
+* [MOD_ID](#mod_id) [1] **
 * [MOD_NAME](#mod_name) [0..1]
 * [MOD_SUBJECT](#mod_subject) [0..1]
 * [MOD_CREDITS](#mod_credits) [0..1]
 * [MOD_LEVEL](#mod_level) [0..1]
 
-\* indicates that the property is the primary key for this entity.
+\** indicates that the property is the primary key for this entity.
+
+##Description of module entity
+A module is a self-contained, formally structured unit of study, with a coherent and explicit set of learning outcomes and assessment criteria.
+
+##Notes
+This description is the same as the description for the Module entity in the HEDIIP Data Language.
 
 ##MOD_ID
 ###Description

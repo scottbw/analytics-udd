@@ -1,11 +1,14 @@
 #course_instance
-* [COURSE_INSTANCE_ID](#course_instance_id) [1] *
+* [COURSE_INSTANCE_ID](#course_instance_id) [1] **
 * [COURSE_ID](course.md#course_id) [1]
 * [START_DATE](#start_date) [0..1]
 * [END_DATE](#end_date) [0..1]
 * [ACADEMIC_YEAR](#academic_year) [0..1]
 
-\* indicates that the property is the primary key for this entity.
+\** indicates that the property is the primary key for this entity.
+
+##Description of course_instance entity
+A course_instance is a stage of a course with a start date and an end date, often marked by a progression decision point at the end.  Example: a single academic year in a 3 year Honours degree course.
 
 ##COURSE_INSTANCE_ID
 ###Description

@@ -1,10 +1,10 @@
 #student_on_a_module_instance
 
+* [STUDENT_ON_A_MODULE_INSTANCE_ID](#student_on_a_module_instance_id) [1] **
 * [STUDENT_COURSE_MEMBERSHIP_ID](student_course_membership.md#student_course_membership_id) [1] *
 * [COURSE_INSTANCE_ID](course_instance.md#course_instance_id) [1] *
 * [MOD_INSTANCE_ID](module_instance.md#mod_instance_id) [1] *
 * [STUDENT_ID](student.md#student_id) [1]
-* [MOD_GRADE](#mod_grade) [0..1] deprecated
 * [MOD_RESULT](#mod_result) [0..1]
 * [MOD_RETAKE](#mod_retake) [0..1]
 * [MOD_START_DATE](#mod_start_date) [0..1]
@@ -19,29 +19,33 @@
 * [MOD_CURRENT_ATTEMPT](#mod_current_attempt) [0..1]
 * [MOD_COMPLETED_ATTEMPT](#mod_completed_attempt) [0..1]
 * [X_MOD_NAME](#x_mod_name) [0..1]
-* [X_MOD_ACADEMIC_YEAR](#x_mod_academic_year) [0..1]
+* [MOD_ACADEMIC_YEAR](module_instance.md#mod_academic_year) [0..1]
 
-\* indicates that the property is part of a composite primary key for this entity.
+\** indicates that the property is the primary key for this entity.
+\* indicates that the property is part of a uniqueness constraint for this entity.
 
-##MOD_GRADE (deprecated)
-###Description.
-Final grade student achieved on the module.
+##Description of student_on_a_module_instance entity
+A student_on_a_module_instance describes a student's performance on a specific module.
+
+##Notes
+This entity is similar to a HESA StudentOnModule element or a HEDIIP Module Instance entity.
+
+##STUDENT_ON_A_MODULE_INSTANCE_ID
+###Description
+UDD generated identifier for student_on_a_module_instance. 
 
 ###Purpose
-Analytics
+Enables easy reference to student_on_a_module_instance.
 
 ###Derivation
 Jisc
 
-###Valid Values
-Any
-
 ###Format
-String (255)
+UDD generated.  Do not include when supplying data.
+String(255)
 
 ###Notes
-Use MOD_AGREED_GRADE instead of MOD_GRADE
-
+UDD generated.  Do not include when supplying data.
 
 ##MOD_RESULT
 ###Description.
@@ -60,15 +64,13 @@ Jisc
 <tr><td>1</td><td>Pass</td><td>  </td></tr>
 <tr><td>2</td><td>Fail</td><td>  </td></tr>
 <tr><td>3</td><td>Not known</td><td> </td></tr>
-<tr><td>4</td><td>deprecated (was: 'deferred')</td><td> </td></tr>
 </table>  
 
 ###Format
 String (255)
 
 ###Notes
-Code 3 is applied in all cases where the outcome is either not known (yet), or doesn't apply because the student hasn't been assessed yet. Code 4 is deprecated because deferral or withdrawal is indicated by WITHDRAWAL_REASON in student_course_membership.
-Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
+Code 3 is applied in all cases where the outcome is either not known (yet), or doesn't apply because the student hasn't been assessed yet. Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
 
 
 ##MOD_RETAKE
@@ -333,21 +335,3 @@ String (255)
 ###Notes
 This data is generated internally from existing data, and does not need to be supplied by an institution.
 
-##X_MOD_ACADEMIC_YEAR
-###Description
-An extra implementation optimisation that isn't part of the UDD model. Its value is identical to that of MOD_ACADEMIC_YEAR on the mod_instance identified by the relevant MOD_INSTANCE_ID.
-
-###Purpose
-Analytics
-
-###Derivation
-Jisc
-
-###Valid Values
-Year in ISO 8601 format - YYYY
-
-###Format
-String in ISO 8601 Year format - YYYY
-
-###Notes
-This is the starting year for the academic year.

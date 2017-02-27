@@ -1,10 +1,10 @@
 #student_on_course_instance
 
+* [STUDENT_ON_COURSE_INSTANCE_ID](#student_on_course_instance_id) [1] **
 * [STUDENT_COURSE_MEMBERSHIP_ID](student_course_membership.md#student_course_membership_id) [1] *
 * [COURSE_INSTANCE_ID](course_instance.md#course_instance_id) [1] *
 * [STUDENT_ID](student.md#student_id) [1]
 * [MODE](#mode) [0..1]
-* [YEAR_COM](#year_com) [0..1] deprecated
 * [YEAR_PRG](#year_prg) [0..1]
 * [YEAR_STU](#year_stu) [0..1]
 * [COURSE_LOCATION](#course_location) [0..1]
@@ -13,8 +13,35 @@
 * [PROGRESSION](#progression) [0..1]
 * [PROGRESSION_SOURCE](#progression_source) [0..1]
 * [LOCATION_OF_STUDY](#location_of_study) [0..1]
+* [ACADEMIC_YEAR](course_instance.md#academic_year) [0..1]
 
-\* indicates that the property is part of a composite primary key for this entity.
+\** indicates that the property is the primary key for this entity.
+\* indicates that the property is part of a uniqueness constraint for this entity.
+
+##Description of student_on_course_instance entity
+A student_on_course_instance describes a student's engagement with a specific stage of a course.
+
+##Notes
+This entity has some similarities to a HESA Instance element, but deals with only a single academic year or stage without reference to the whole course, which is covered in student_course_membership.  It is similar to a HEDIIP Data Language Student Course Session entity.
+
+##STUDENT_ON_COURSE_INSTANCE_ID
+###Description
+UDD generated identifier for student_on_course_instance. 
+
+###Purpose
+Enables easy reference to student_on_course_instance.
+
+###Derivation
+Jisc
+
+###Format
+UDD generated.  Do not include when supplying data.
+String(255)
+
+###Notes
+UDD generated.  Do not include when supplying data.
+
+
 
 ##MODE
 ###Description
@@ -222,26 +249,6 @@ Yes (if applicable)
 ###Notes
 Mapping based on HESA codeset, and ILE (FE) initial mapping suggested above on ILR field 'PlanLearnHours'. HESA 2015 'mode' does not have code 98, but HESA 2016 'mode' does.
 Omitting this property may hinder the development or use of an effective analytics model.
-
-
-##YEAR_COM (deprecated)
-###Description
-This field indicates the year number that the learning aim/ course started. It duplicates COURSE_JOIN_DATE on student_course_membership.
-
-###Purpose
-For analytics
-
-###Derivation
-https://www.hesa.ac.uk/collection/c16051/a/COMDATE
-
-###Valid Values
-Year in ISO 8601 format - YYYY
-
-###Format
-String in ISO 8601 Year format - YYYY
-
-###Notes
-Use [COURSE_JOIN_DATE on student_course_membership](student_course_membership.md#course_join_date) instead.
 
 
 ##YEAR_PRG

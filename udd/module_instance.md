@@ -1,5 +1,5 @@
 #module_instance
-* [MOD_INSTANCE_ID](#mod_instance_id) [1] *
+* [MOD_INSTANCE_ID](#mod_instance_id) [1] **
 * [MOD_ID](module.md#mod_id) [1]
 * [MOD_PERIOD](#mod_period) [0..1]
 * [MOD_ONLINE](#mod_online) [0..1]
@@ -7,7 +7,10 @@
 * [MOD_OPTIONAL](#mod_optional) [0..1]
 * [MOD_LOCATION](#mod_location) [0..1]
 
-\* indicates that the property is the primary key for this entity.
+\** indicates that the property is the primary key for this entity.
+
+##Description of module_instance entity
+A module_instance is the specific offer of a module to students. It therefore has a specific venue and defined assessments.
 
 ##MOD_INSTANCE_ID
 ###Description

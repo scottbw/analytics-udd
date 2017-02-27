@@ -1,10 +1,9 @@
 #student_course_membership
 
-* [STUDENT_COURSE_MEMBERSHIP_ID](#student_course_membership_id) [1] *
+* [STUDENT_COURSE_MEMBERSHIP_ID](#student_course_membership_id) [1] **
 * [STUDENT_ID](student.md#student_id) [1]
 * [COURSE_ID](course.md#course_id) [1]
 * [WITHDRAWAL_REASON](#withdrawal_reason) [0..1]
-* [WITHDRAWAL_DATE](#withdrawal_date) [0..1] deprecated
 * [ENTRY_QUALS](#entry_quals) [0..1]
 * [ENTRY_POINTS](#entry_points) [0..1]
 * [COURSE_OUTCOME](#course_outcome) [0..1]
@@ -19,7 +18,13 @@
 * [COHORT_ID](#cohort_id) [0..1]
 * [ACTIVE_MEMBERSHIP](#active_membership) [0..1]
 
-\* indicates that the property is the primary key for this entity.
+\** indicates that the property is the primary key for this entity.
+
+##Description of student_course_membership entity
+A student_course_membership describes a student's enrolment on a course.  It is designed to deal with the fact that some students are enrolled on more than one course in their time at an institution.
+
+##Notes
+This entity is similar to a HESA Instance element and a HEDIIP Data Language Student Registration entity.
 
 ##STUDENT_COURSE_MEMBERSHIP_ID
 ###Description
@@ -82,28 +87,6 @@ https://www.hesa.ac.uk/collection/c16051/a/RSNEND
 String (255)
 
 ###Notes
-
-##WITHDRAWAL_DATE
-###Description
-The date a student has withdrawn from a course (if they have)
-
-###Purpose
-For analytics
-
-###Derivation
-https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/449779/ILRSpecification2015_16_v3_July2015.pdf
-https://www.hesa.ac.uk/collection/c16051/a/ENDDATE
-
-###Valid Values
-Date in ISO 8601 format - YYYY-MM-DD
-
-###Format
-String in ISO 8601 Date extended format - YYYY-MM-DD
-
-###Notes
-Would normally utilise ENDDATE (HE/ HESA) or potentially LearnActEndDate (FE/ ILR - to be confirmed) when relevant fields denote that the learner/ student has withdrawn from the learning aim/ course.
-
-This property is deprecated, use student_course_membership.COURSE_END_DATE and student_course_membership.COURSE_OUTCOME instead.
 
 ##ENTRY_QUALS
 ###Description

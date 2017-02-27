@@ -1,5 +1,5 @@
 #Student
-* [STUDENT_ID](#student_id) [1] *
+* [STUDENT_ID](#student_id) [1] **
 * [ULN](#uln) [0..1]
 * [DOB](#dob) [0..1]
 * [ETHNICITY](#ethnicity) [0..1]
@@ -32,7 +32,7 @@
 * [TUTOR_STAFF_ID](#tutor_staff_id) [0..1]
 * [ENTRY_POSTCODE](#entry_postcode) [0..1]
 
-\* indicates that the property is the primary key for this entity.
+\** indicates that the property is the primary key for this entity.
 
 ##Description of student entity
 A student element describes a person undertaking one or more courses.

@@ -1,5 +1,6 @@
 #student_on_assessment_instance
 
+* [STUDENT_ON_ASSESSMENT_INSTANCE_ID](#student_on_assessment_instance_id) [1] **
 * [STUDENT_COURSE_MEMBERSHIP_ID](student_course_membership.md#student_course_membership_id) [1] *
 * [ASSESS_INSTANCE_ID](assessment_instance.md#assess_instance_id) [1] *
 * [ASSESS_SEQ_ID](#assess_seq_id) [1] *
@@ -20,7 +21,28 @@
 * [X_MOD_ID](#x_mod_id) [0..1]
 * [X_MOD_ACADEMIC_YEAR](#x_mod_academic_year) [0..1]
 
-\* indicates that the property is part of a composite primary key for this entity.
+\** indicates that the property is the primary key for this entity.
+\* indicates that the property is part of a uniqueness constraint for this entity.
+
+##Description of student_on_assessment_instance entity
+A student_on_assessment_instance describes a student's performance on a specific assessment.
+
+##STUDENT_ON_ASSESSMENT_INSTANCE_ID
+###Description
+UDD generated identifier for student_on_assessment_instance. 
+
+###Purpose
+Enables easy reference to student_on_assessment_instance.
+
+###Derivation
+Jisc
+
+###Format
+UDD generated.  Do not include when supplying data.
+String(255)
+
+###Notes
+UDD generated.  Do not include when supplying data.
 
 ##ASSESS_SEQ_ID
 ###Description.
@@ -198,14 +220,13 @@ Jisc; student_on_a_module_instance.MOD_RESULT
 <tr><td>1</td><td>Pass</td><td>  </td></tr>
 <tr><td>2</td><td>Fail</td><td>  </td></tr>
 <tr><td>3</td><td>Not known</td><td> </td></tr>
-<tr><td>4</td><td>deprecated (was: 'deferred')</td><td> </td></tr>
 </table>  
 
 ###Format
 String (255)
 
 ###Notes
-Code 3 is applied in all cases where the outcome is either not known (yet), or doesn't apply because the student hasn't been assessed yet. Code 4 is deprecated because deferral or withdrawal is indicated by WITHDRAWAL_REASON in student_course_membership. 
+Code 3 is applied in all cases where the outcome is either not known (yet), or doesn't apply because the student hasn't been assessed yet. 
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
 
 

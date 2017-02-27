@@ -1,14 +1,36 @@
 #Period
+
+* [PERIOD_ID](#period_id) [1] **
 * [PERIOD_CODE](#period_code) [1] *
 * [ACADEMIC_YEAR](#academic_year) [1] *
 * [PERIOD_NAME](#period_name) [1]
 * [PERIOD_START_DATE](#period_start_date) [1]
 * [PERIOD_END_DATE](#period_end_date) [1]
 
-\* indicates that the property is the primary key for this entity.
+\** indicates that the property is the primary key for this entity.
+\* indicates that the property is part of a uniqueness constraint for this entity.
 
-###Description
+##Description
 A period describes an institution's official start date and end date of time slices, such as academic years, terms and semesters.
+
+##PERIOD_ID
+###Description
+UDD generated identifier for period. 
+
+###Purpose
+Enables easy reference to period.
+
+###Derivation
+Jisc
+
+###Format
+UDD generated.  Do not include when supplying data.
+String(255)
+
+###Notes
+UDD generated.  Do not include when supplying data.
+
+
 
 ##PERIOD_CODE
 ###Description

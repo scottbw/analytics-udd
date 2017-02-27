@@ -1,5 +1,5 @@
 #assessment_instance
-* [ASSESS_INSTANCE_ID](#assess_instance_id) [1] *
+* [ASSESS_INSTANCE_ID](#assess_instance_id) [1] **
 * [MOD_INSTANCE_ID](module_instance.md#mod_instance_id) [1] 
 * [ASSESS_TYPE_ID](#assess_type_id) [0..1]
 * [ASSESS_TYPE_NAME](#assess_type_name) [0..1]
@@ -7,13 +7,13 @@
 * [ASSESS_WEIGHT](#assess_weight) [0..1]
 * [MAX_MARKS](#max_marks) [0..1]
 
-\* indicates that the property is the primary key for this entity.
+\** indicates that the property is the primary key for this entity.
 
-###Description
-An assessment_instance is any assessed learning activity that is part of a wider module or course that gets a grade and/or mark. The assumption is that an assessment_instance is summative.
+##Description of assessment_instance entity
+An assessment_instance is any learning activity in a module, for which a student receives a grade and/or mark. The assumption is that grades and/or marks in assessment_instances are summative.
 
 ##ASSESS_INSTANCE_ID
-###Description.
+###Description
 An institution's unique identifier for an assessment_instance
 
 ###Purpose
