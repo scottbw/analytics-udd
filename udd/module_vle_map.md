@@ -4,8 +4,7 @@
 *  [MOD_INSTANCE_ID](module_instance.md#mod_instance_id) [1] *
 *  [VLE_MOD_ID](#vle_mod_id) [1] *
 
-\** indicates that the property is the primary key for this entity.
-
+\** indicates that the property is the primary key for this entity.  
 \* indicates that the property is part of a uniqueness constraint for this entity.
 
 ##Description of module_VLE_map entity
