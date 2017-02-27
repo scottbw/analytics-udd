@@ -21,7 +21,7 @@
 * [X_MOD_ID](#x_mod_id) [0..1]
 * [X_MOD_ACADEMIC_YEAR](#x_mod_academic_year) [0..1]
 
-\** indicates that the property is the primary key for this entity.
+\** indicates that the property is the primary key for this entity.  
 \* indicates that the property is part of a uniqueness constraint for this entity.
 
 ##Description of student_on_assessment_instance entity
