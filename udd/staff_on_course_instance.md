@@ -12,7 +12,7 @@ A staff_on_course_instance links a member of staff to a course_instance.
 
 ##STAFF_ON_COURSE_INSTANCE_ID
 ###Description
-UDD generated identifier for staff_on_course_instance. 
+Primary key. Where not supplied by data provider, the primary key will be UDD generated.
 
 ###Purpose
 Enables easy reference to staff_on_course_instance.
@@ -21,9 +21,9 @@ Enables easy reference to staff_on_course_instance.
 Jisc
 
 ###Format
-UDD generated.  Do not include when supplying data.
+Concatenation of STAFF_ID and COURSE_INSTANCE_ID, separated by a tilde (~).
 String(255)
 
 ###Notes
-UDD generated.  Do not include when supplying data.
+Where not supplied by data provider, the primary key will be UDD generated.
 

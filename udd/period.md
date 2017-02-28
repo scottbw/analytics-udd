@@ -15,7 +15,7 @@ A period describes an institution's official start date and end date of time sli
 
 ##PERIOD_ID
 ###Description
-UDD generated identifier for period. 
+Primary key. Where not supplied by data provider, the primary key will be UDD generated.
 
 ###Purpose
 Enables easy reference to period.
@@ -24,11 +24,11 @@ Enables easy reference to period.
 Jisc
 
 ###Format
-UDD generated.  Do not include when supplying data.
+Concatenation of PERIOD_CODE and ACADEMIC_YEAR, separated by a tilde (~).
 String(255)
 
 ###Notes
-UDD generated.  Do not include when supplying data.
+Where not supplied by data provider, the primary key will be UDD generated.
 
 
 

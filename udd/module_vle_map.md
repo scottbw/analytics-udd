@@ -12,7 +12,7 @@ A module_VLE_map links a module in a student record system with module materials
 
 ##MODULE_VLE_MAP_ID
 ###Description
-UDD generated identifier for map between module and VLE. 
+Primary key. Where not supplied by data provider, the primary key will be UDD generated.
 
 ###Purpose
 Enables easy reference to the map between module and VLE.
@@ -21,11 +21,11 @@ Enables easy reference to the map between module and VLE.
 Jisc
 
 ###Format
-UDD generated.  Do not include when supplying data.
+Concatenation of MOD_INSTANCE_ID and VLE_MOD_ID, separated by a tilde (~).
 String(255)
 
 ###Notes
-UDD generated.  Do not include when supplying data.
+Where not supplied by data provider, the primary key will be UDD generated.
 
 
 ##VLE_MOD_ID

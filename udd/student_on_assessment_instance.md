@@ -29,7 +29,7 @@ A student_on_assessment_instance describes a student's performance on a specific
 
 ##STUDENT_ON_ASSESSMENT_INSTANCE_ID
 ###Description
-UDD generated identifier for student_on_assessment_instance. 
+Primary key. Where not supplied by data provider, the primary key will be UDD generated. 
 
 ###Purpose
 Enables easy reference to student_on_assessment_instance.
@@ -38,11 +38,11 @@ Enables easy reference to student_on_assessment_instance.
 Jisc
 
 ###Format
-UDD generated.  Do not include when supplying data.
+Concatenation of STUDENT_COURSE_MEMBERSHIP_ID, ASSESS_INSTANCE_ID and ASSESS_SEQ_ID, separated by a tilde (~).
 String(255)
 
 ###Notes
-UDD generated.  Do not include when supplying data.
+Where not supplied by data provider, the primary key will be UDD generated.
 
 ##ASSESS_SEQ_ID
 ###Description.

@@ -32,7 +32,7 @@ This entity is similar to a HESA StudentOnModule element or a HEDIIP Module Inst
 
 ##STUDENT_ON_A_MODULE_INSTANCE_ID
 ###Description
-UDD generated identifier for student_on_a_module_instance. 
+Primary key. Where not supplied by data provider, the primary key will be UDD generated.
 
 ###Purpose
 Enables easy reference to student_on_a_module_instance.
@@ -41,11 +41,11 @@ Enables easy reference to student_on_a_module_instance.
 Jisc
 
 ###Format
-UDD generated.  Do not include when supplying data.
+Concatenation of STUDENT_COURSE_MEMBERSHIP_ID, COURSE_INSTANCE_ID and MOD_INSTANCE_ID, separated by a tilde (~).
 String(255)
 
 ###Notes
-UDD generated.  Do not include when supplying data.
+Where not supplied by data provider, the primary key will be UDD generated.
 
 ##MOD_RESULT
 ###Description.
