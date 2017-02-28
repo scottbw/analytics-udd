@@ -17,6 +17,8 @@
 * [COURSE_JOIN_AGE](#course_join_age) [0..1]
 * [COHORT_ID](#cohort_id) [0..1]
 * [ACTIVE_MEMBERSHIP](#active_membership) [0..1]
+* [PREDICTED_OUTCOME](#predicted_outcome) [0..1]
+* [ATTAINMENT_TARGET](#attainment_target) [0..1]
 
 \** indicates that the property is the primary key for this entity.
 
@@ -1732,3 +1734,42 @@ The purpose of this property is to easily identify, if there are several student
 A record with ACTIVE_MEMBERSHIP=1 will generally also be the record with the most recent COURSE_JOIN_DATE. The only exceptions would be cases where a students starts on one course, switches to another, and then reverts to the original.
 
 When updating student_course_membership records, the ACTIVE_MEMBERSHIP property may need to be updated on all records associated with one STUDENT_ID, not just one. The exception would be those cases where a student pursues more than one course simultaneously.
+
+
+##PREDICTED_OUTCOME
+###Description
+The institution's prediction of the final mark or grade for the student in this course.
+
+###Purpose
+Analysis.
+
+###Derivation
+Institution
+
+###Valid values
+Any
+
+###Format
+String (255)
+
+###Notes
+
+##ATTAINMENT_TARGET
+###Description
+Mark or grade acting as a target of attainment for the student.
+
+###Purpose
+Analysis.
+
+###Derivation
+Institution
+
+###Valid values
+Any
+
+###Format
+String (255)
+
+###Notes
+
+
