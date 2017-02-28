@@ -17,6 +17,16 @@ When providing UDD data, supply the data for different entities in separate file
 An [entity relation diagram of the whole UDD 1.3](diagram.md) provides a one page overview of the specification.
 
 ## Core sections
+
+###Primary keys
+Some entities have uniqueness constraints across multiple properties; for example student_on_course_instance has STUDENT_COURSE_MEMBERSHIP_ID plus COURSE_INSTANCE_ID. The MD files for these entities contain a note to this effect. For ease of processing and to enable field-level extensibility, these entities have a primary key that consists of a concatenation of the components of the composite key separated by a tilde (~).  **The tilde (~) is therefore a reserved character and must not be used elsewhere in these values.**
+
+Where this type of primary key is not provided by the data supplier, the LRW loading mechanism will create it. For example: the student_on_course_instance entity's primary key consists of:
+'''xxxxxx~yyyyyy
+where xxxxxx is the STUDENT_COURSE_MEMBERSHIP_ID, ~ is the tilde reserved character, and yyyyyy is the COURSE_INSTANCE_ID.
+
+Other entities have a conventional primary key.
+
 ###[assessment_instance](udd/assessment_instance.md)
 
 ###[course](udd/course.md)
