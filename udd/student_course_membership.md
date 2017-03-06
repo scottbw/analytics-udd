@@ -19,6 +19,10 @@
 * [ACTIVE_MEMBERSHIP](#active_membership) [0..1]
 * [PREDICTED_OUTCOME](#predicted_outcome) [0..1]
 * [ATTAINMENT_TARGET](#attainment_target) [0..1]
+* [PRIOR_GRADE_ENGLISH](#prior_grade_english) [0..1]
+* [PRIOR_GRADE_MATHEMATICS](#prior_grade_mathematics) [0..1]
+* [INITIAL_ASSESSMENT_ENGLISH](#initial_assessment_english) [0..1]
+* [INITIAL_ASSESSMENT_MATHEMATICS](#initial_assessment_mathematics) [0..1]
 
 \** indicates that the property is the primary key for this entity.
 
@@ -1772,4 +1776,62 @@ String (255)
 
 ###Notes
 
+##PRIOR_GRADE_ENGLISH
+###Description
+States the best relevant qualification grade in English Language or Literature achieved by the student before enrolling.
 
+###Purpose
+Analytics
+
+###Valid Values
+Conforming with relevant qualification grade values
+
+###Format
+String (10)
+
+###Notes
+
+##PRIOR_GRADE_MATHEMATICS
+###Description
+States the best relevant qualification grade in Mathematics achieved by the student before enrolling.
+
+###Purpose
+Analytics
+
+###Valid Values
+Conforming with relevant qualification grade values
+
+###Format
+String (10)
+
+###Notes
+
+##INITIAL_ASSESSMENT_ENGLISH
+###Description
+States a numerical value of the institution's measure of the student's capability in English at the start of their programme of learning.
+
+###Purpose
+Analytics
+
+###Valid Values
+Any numeric
+
+###Format
+Numeric
+
+###Notes
+
+##INITIAL_ASSESSMENT_MATHEMATICS
+###Description
+States a numerical value of the institution's measure of the student's capability in Mathematics at the start of their programme of learning.
+
+###Purpose
+Analytics
+
+###Valid Values
+Any numeric
+
+###Format
+Numeric
+
+###Notes

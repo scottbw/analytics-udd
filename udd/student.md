@@ -1,4 +1,4 @@
-#Student
+#student
 * [STUDENT_ID](#student_id) [1] **
 * [ULN](#uln) [0..1]
 * [DOB](#dob) [0..1]
@@ -15,7 +15,7 @@
 * [SOCIO_EC](#socio_ec) [0..1]
 * [OVERSEAS](#overseas) [0..1]
 * [APPSHIB_ID](#appshib_id) [0..1]
-* [VLE_ID](#vle_id) [0..*]
+* [VLE_ID](#vle_id) [0..1]
 * [HUSID](#husid) [0..1]
 * [USERNAME](#username) [0..1]
 * [LAST_NAME](#last_name) [0..1]
@@ -31,10 +31,6 @@
 * [PHOTO_URL](#photo_url) [0..1]
 * [TUTOR_STAFF_ID](#tutor_staff_id) [0..1]
 * [ENTRY_POSTCODE](#entry_postcode) [0..1]
-* [PRIOR_ATTAINMENT_ENGLISH](#prior_attainment_english) [0..1]
-* [PRIOR_ATTAINMENT_MATHEMATICS](#prior_attainment_mathematics) [0..1]
-* [INITIAL_ASSESSMENT_ENGLISH](#initial_assessment_english) [0..1]
-* [INITIAL_ASSESSMENT_MATHEMATICS](#initial_assessment_mathematics) [0..1]
 
 \** indicates that the property is the primary key for this entity.
 
@@ -2385,7 +2381,7 @@ There may be a more general AIM_ID property later that can be used for any UK Fe
 
 ##VLE_ID
 ###Description.
-The ID assigned to a student by the VLE.
+The ID assigned to a student by the main VLE.
 
 ###Purpose
 Analytics
@@ -2400,7 +2396,7 @@ Not specified
 String (255)
 
 ###Notes
-Note that this is not a universal user ID; there may be several VLEs, or records from other types of tools.
+Note that this is not a universal user ID; there may be several VLEs, or records from other types of tools.  For mappings of the STUDENT_ID property to the user IDs attached to a student, refer to the student_id_map entity. This VLE_ID is the IDENTIFIER value in student_id_map where the DOMAIN value = "VLE_1".
 
 
 ##HUSID
@@ -2694,63 +2690,3 @@ String (10)
 
 ###Notes
 HESA's fields only include UK domiciled students, whereas UDD may require overseas postal codes.  Therefore, this property has been extended to 10 characters and any valid values.
-
-##PRIOR_ATTAINMENT_ENGLISH
-###Description
-States the best GCSE grade in English Language or Literature achieved by the student before enrolling.
-
-###Purpose
-Analytics
-
-###Valid Values
-Conforming with GCSE grade values
-
-###Format
-String (2)
-
-###Notes
-
-##PRIOR_ATTAINMENT_MATHEMATICS
-###Description
-States the best GCSE grade in Mathematics achieved by the student before the start of their programme of learning.
-
-###Purpose
-Analytics
-
-###Valid Values
-Conforming with GCSE grade values
-
-###Format
-String (2)
-
-###Notes
-
-##INITIAL_ASSESSMENT_ENGLISH
-###Description
-States the value (usually numeric) of the institution's measure of the student's capability in English at the start of their programme of learning.
-
-###Purpose
-Analytics
-
-###Valid Values
-Any
-
-###Format
-String (255)
-
-###Notes
-
-##INITIAL_ASSESSMENT_MATHEMATICS
-###Description
-States the value (usually numeric) of the institution's measure of the student's capability in Mathematics at the start of their programme of learning.
-
-###Purpose
-Analytics
-
-###Valid Values
-Any
-
-###Format
-String (255)
-
-###Notes

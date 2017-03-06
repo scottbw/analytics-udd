@@ -1,4 +1,4 @@
-#Student_id_map
+#student_id_map
 * [STUDENT_ID](student.md#udd_student_id) [1] *
 * [DOMAIN](#domain) [1] *
 * [IDENTIFIER](#identifier) [1] *
@@ -27,12 +27,6 @@ Efficient processing of IDs, and lookup of data in xAPI statements.
 		<td>ULN</td>
 	</tr>
 	<tr>
-		<td>SRS_1</td>
-	</tr>
-	<tr>
-		<td>SRS_2</td>
-	</tr>
-	<tr>
 		<td>VLE_1</td>
 	</tr>
 	<tr>
@@ -47,6 +41,7 @@ Efficient processing of IDs, and lookup of data in xAPI statements.
 String(255)
 
 ###Notes
+The value of IDENTIFIER where DOMAIN value = "VLE_1" is the VLE_ID in the student entity; "VLE_1" is the main VLE. 
 
 
 ##IDENTIFIER

@@ -1,4 +1,4 @@
-#Course
+#course
 * [COURSE_ID](#course_id) [1] **
 * [SUBJECT](#subject) [0..1]
 * [TITLE](#title) [0..1]

@@ -1,4 +1,4 @@
-#Period
+#period
 
 * [PERIOD_ID](#period_id) [1] **
 * [PERIOD_CODE](#period_code) [1] *

@@ -1,4 +1,4 @@
-#Module
+#module
 * [MOD_ID](#mod_id) [1] **
 * [MOD_NAME](#mod_name) [0..1]
 * [MOD_SUBJECT](#mod_subject) [0..1]
