@@ -17,8 +17,10 @@
 * [COURSE_JOIN_AGE](#course_join_age) [0..1]
 * [COHORT_ID](#cohort_id) [0..1]
 * [ACTIVE_MEMBERSHIP](#active_membership) [0..1]
-* [PREDICTED_OUTCOME](#predicted_outcome) [0..1]
-* [ATTAINMENT_TARGET](#attainment_target) [0..1]
+* [PREDICTED_OUTCOME_GRADE](#predicted_outcome_grade) [0..1]
+* [ATTAINMENT_TARGET_grade](#attainment_target_grade) [0..1]
+* [PREDICTED_OUTCOME_MARK](#predicted_outcome_mark) [0..1]
+* [ATTAINMENT_TARGET_MARK](#attainment_target_mark) [0..1]
 * [PRIOR_GRADE_ENGLISH](#prior_grade_english) [0..1]
 * [PRIOR_GRADE_MATHEMATICS](#prior_grade_mathematics) [0..1]
 * [INITIAL_ASSESSMENT_ENGLISH](#initial_assessment_english) [0..1]
@@ -1740,9 +1742,9 @@ A record with ACTIVE_MEMBERSHIP=1 will generally also be the record with the mos
 When updating student_course_membership records, the ACTIVE_MEMBERSHIP property may need to be updated on all records associated with one STUDENT_ID, not just one. The exception would be those cases where a student pursues more than one course simultaneously.
 
 
-##PREDICTED_OUTCOME
+##PREDICTED_OUTCOME_GRADE
 ###Description
-The institution's prediction of the final mark or grade for the student in this course.
+The institution's prediction of the final grade for the student in this course.
 
 ###Purpose
 Analysis.
@@ -1751,16 +1753,16 @@ Analysis.
 Institution
 
 ###Valid values
-Any
+Any string
 
 ###Format
 String (255)
 
 ###Notes
 
-##ATTAINMENT_TARGET
+##ATTAINMENT_TARGET_GRADE
 ###Description
-Mark or grade acting as a target of attainment for the student.
+Grade acting as a target of attainment for the student.
 
 ###Purpose
 Analysis.
@@ -1769,12 +1771,51 @@ Analysis.
 Institution
 
 ###Valid values
-Any
+Any string
 
 ###Format
 String (255)
 
 ###Notes
+
+##PREDICTED_OUTCOME_MARK
+###Description
+The institution's prediction of the final numerical mark for the student in this course.
+
+###Purpose
+For display purposes and further analysis
+
+###Derivation
+SRS Systems
+
+###Valid values
+Any decimal
+
+###References
+
+###Format
+Decimal
+
+Notes
+
+##ATTAINMENT_TARGET_MARK
+###Description
+Numerical mark acting as a target of attainment for the student.
+
+###Purpose
+For display purposes and further analysis
+
+###Derivation
+SRS Systems
+
+###Valid values
+Any decimal
+
+###Format
+Decimal
+
+###Notes
+
 
 ##PRIOR_GRADE_ENGLISH
 ###Description
@@ -1814,10 +1855,10 @@ States a numerical value of the institution's measure of the student's capabilit
 Analytics
 
 ###Valid Values
-Any numeric
+Any decimal
 
 ###Format
-Numeric
+Decimal
 
 ###Notes
 
@@ -1829,9 +1870,9 @@ States a numerical value of the institution's measure of the student's capabilit
 Analytics
 
 ###Valid Values
-Any numeric
+Any decimal
 
 ###Format
-Numeric
+Decimal
 
 ###Notes
