@@ -4,7 +4,7 @@ An additional data entity
 * [STAFF_ID](#staff_id) [1] **
 * [FIRST_NAME](#first_name) [0..1]
 * [LAST_NAME](#last_name) [0..1]
-* [TITLE](#title) [0..*]
+* [TITLE](#title) [0..1]
 * [PRIMARY_EMAIL_ADDRESS](#primary_email_address) [0..1]
 * [HESA_STAFF_ID](#hesa_staff_id) [0..1]
 * [DASH_SHIB_ID](#dash_shib_id) [0..1]
