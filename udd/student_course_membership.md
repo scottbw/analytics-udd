@@ -18,7 +18,7 @@
 * [COHORT_ID](#cohort_id) [0..1]
 * [ACTIVE_MEMBERSHIP](#active_membership) [0..1]
 * [PREDICTED_OUTCOME_GRADE](#predicted_outcome_grade) [0..1]
-* [ATTAINMENT_TARGET_grade](#attainment_target_grade) [0..1]
+* [ATTAINMENT_TARGET_GRADE](#attainment_target_grade) [0..1]
 * [PREDICTED_OUTCOME_MARK](#predicted_outcome_mark) [0..1]
 * [ATTAINMENT_TARGET_MARK](#attainment_target_mark) [0..1]
 * [PRIOR_GRADE_ENGLISH](#prior_grade_english) [0..1]
