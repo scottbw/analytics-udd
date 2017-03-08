@@ -184,7 +184,7 @@ Omitting this property may hinder the development or use of an effective analyti
 
 ##ENTRY_POINTS
 ###Description
-This field indicates the entry points gained by the student/ learner prior to entry to the institution. This is currently based on the UCAS entry points system. This field must be adapted or used to represent those points for entry into FE eg. using a formula to combine & calculate points to represent Maths and English qualifications upon entry for example
+This field indicates the entry points gained by the student prior to entry to the institution. This is currently based on the UCAS entry points system. This field must be adapted or used to represent those points for entry into FE, for example using a formula to combine and calculate points to represent Maths and English qualifications upon entry.
 
 ###Purpose
 For analytics
@@ -1652,34 +1652,12 @@ Int
 ###Notes
 This value is designed to be a secondary source to check COURSE_JOIN_DATE minus DOB. In cases where COURSE_JOIN_AGE is not stored separately, it should be calculated at the ETL stage.
 
-
 ##COHORT_ID
 ###Description
 An identifier for a group of students in a year cohort.
 
 ###Purpose
-Display and grouping purposes, and but analysis.
-
-###Derivation
-Jisc
-
-###Valid values
-Any
-
-###References
-
-###Format
-String (255)
-
-###Notes
-
-
-##COHORT_ID
-###Description
-An identifier for a group of students in a year cohort.
-
-###Purpose
-Display and grouping purposes, and but analysis.
+Display and grouping purposes, and analysis.
 
 ###Derivation
 Jisc
@@ -1697,10 +1675,10 @@ String (255)
 
 ##ACTIVE_MEMBERSHIP
 ###Description
-This property indicates whether the associated student_course_membership record identifies the course a student is actively studying on, or intending to study on, at the moment the data was extracted. 
+This property indicates whether the associated student_course_membership record identifies the course a student was actively studying on, or intending to study on, at the moment the data was loaded into the LRW. 
 
 ###Purpose
-Display purposes.
+To identify whether or not the student was studying or enrolled to study on the course, at the time the data was loaded into the LRW.
 
 ###Derivation
 Jisc
@@ -1711,20 +1689,21 @@ Jisc
                 <td>ACTIVE_MEMBERSHIP</td>
                 <td>DESCRIPTION (ENGLISH)</td>
                 <td>DESCRIPTION (WELSH)</td>
+                <td>MEANING</td>
             </tr>
             <tr>
                 <td>1</td>
-                <td>active</td>
+                <td>active - The student is studying on the course, or enrolled to study on the course.</td>
                 <td> </td>
             </tr>
             <tr>
                 <td>2</td>
-                <td>not active</td>
+                <td>not active - The student has finished the course, or has withdrawn from, left or transferred out of the course for any reason.</td>
                 <td> </td>
             </tr>
             <tr>
                 <td>3</td>
-                <td>unknown</td>
+                <td>unknown - It is not known whether the student is 'active' or 'not active' in relation to this course.</td>
                 <td> </td>
             </tr>
         </table>
@@ -1735,11 +1714,7 @@ Jisc
 String (1)
 
 ###Notes
-The purpose of this property is to easily identify, if there are several student_course_membership records for a given STUDENT_ID or COURSE_ID and STUDENT_ID combination, which of these records is the last known to have been actively used.
-
-A record with ACTIVE_MEMBERSHIP=1 will generally also be the record with the most recent COURSE_JOIN_DATE. The only exceptions would be cases where a students starts on one course, switches to another, and then reverts to the original.
-
-When updating student_course_membership records, the ACTIVE_MEMBERSHIP property may need to be updated on all records associated with one STUDENT_ID, not just one. The exception would be those cases where a student pursues more than one course simultaneously.
+A student may have sequential student_course_membership records with only 1 active record, or may be pursuing more than 1 course and therefore have more than 1 active record. When updating student_course_membership records, the ACTIVE_MEMBERSHIP property may need to be updated on more than one record.
 
 
 ##PREDICTED_OUTCOME_GRADE
