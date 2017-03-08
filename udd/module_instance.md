@@ -43,7 +43,7 @@ Jisc
 
 ###Valid Values
 Any
-Each different code value in MOD_PERIOD must have a matching code value in period.PERIOD_CODE.
+Each different code value in MOD_PERIOD should have a matching code value in period.PERIOD_CODE.
 
 ###Format
 String (255)
