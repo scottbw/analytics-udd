@@ -19,7 +19,7 @@
 * [X_ASSESS_DETAIL](#x_assess_detail) [0..1]
 * [X_MOD_NAME](student_on_a_module_instance.md#x_mod_name) [0..1]
 * [X_MOD_ID](#x_mod_id) [0..1]
-* [X_MOD_ACADEMIC_YEAR](#x_mod_academic_year) [0..1]
+* [MOD_ACADEMIC_YEAR](#mod_academic_year) [0..1]
 
 \** indicates that the property is the primary key for this entity.  
 \* indicates that the property is part of a uniqueness constraint for this entity.
@@ -312,9 +312,9 @@ String (255)
 This data is generated internally from existing data, and does not need to be supplied by an institution.
 
 
-##X_MOD_ACADEMIC_YEAR
+##MOD_ACADEMIC_YEAR
 ###Description
-An extra implementation optimisation that isn't part of the UDD model. Its value is identical to that of MOD_ACADEMIC_YEAR on the mod_instance identified by the relevant MOD_INSTANCE_ID.
+Property for optimisation. Its value is identical to that of MOD_ACADEMIC_YEAR on the mod_instance identified by the relevant MOD_INSTANCE_ID.
 
 ###Purpose
 Analytics
