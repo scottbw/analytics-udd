@@ -1689,7 +1689,6 @@ Jisc
                 <td>ACTIVE_MEMBERSHIP</td>
                 <td>DESCRIPTION (ENGLISH)</td>
                 <td>DESCRIPTION (WELSH)</td>
-                <td>MEANING</td>
             </tr>
             <tr>
                 <td>1</td>
