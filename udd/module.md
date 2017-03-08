@@ -76,7 +76,7 @@ Omitting this property may hinder the development or use of an effective analyti
 
 ##MOD_CREDITS
 ###Description
-Number of credits award for the module
+Number of credits awarded for the module
 
 ###Purpose
 For analytics
