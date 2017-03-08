@@ -46,10 +46,10 @@ Where not supplied by data provider, the primary key will be UDD generated.
 
 ##ASSESS_SEQ_ID
 ###Description.
-A unique sequence number to indicate the order of assessments taken by a student on the assessment instance.
+A unique sequence number to indicate the order of opportunities afforded to a student against the assessment indicated by assess_instance_id.  These opportunities might be referred to as "attempts" at an assessment, but should include all opportunities, even if the attempt was not in fact made, owing to illness for example.
 
 ###Purpose
-To identify the latest assessment taken by a student, regardless of whether or not results were achieved, especially for those being reassessed. Each assessment attempt should have a unique student_on_assessment_instance record, regardless of mitigating circumstances or results.
+To identify the latest assessment attempt by a student, regardless of whether or not results were achieved, especially for those being reassessed. Each assessment attempt should have a unique student_on_assessment_instance record, regardless of mitigating circumstances or results.
 
 ###Derivation
 Jisc
@@ -61,7 +61,9 @@ Any
 Integer
 
 ###Notes
-The ASSESS_SEQ_ID number needs to increment with the chronological order of assessments.
+The ASSESS_SEQ_ID number should be incremented in line with the chronological order of assessment opportunities afforded to the student in respect of the specified assessment.
+The first attempt or assessment opportunity would have ASSESS_SEQ_ID = 1.
+This property relates to the number of times a student has taken, or had the opportunity to take, an assessment, not the sequence of all the assessments on a module.
 
 ##ASSESS_DUE_DATE
 ###Description.
