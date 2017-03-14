@@ -1883,7 +1883,7 @@ SRS systems
 </table>
 
 ###Format
-Int
+String (1)
 
 ###Notes
 Code list may be extended in future.
