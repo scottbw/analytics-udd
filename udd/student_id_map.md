@@ -16,32 +16,15 @@ Identifies the system within which IDENTIFIER exists.
 Efficient processing of IDs, and lookup of data in xAPI statements.
 
 ###Valid values
-<table>
-	<tr>
-		<td>DOMAIN</td>
-	</tr>
-	<tr>
-		<td>HUSID</td>
-	</tr>
-	<tr>
-		<td>ULN</td>
-	</tr>
-	<tr>
-		<td>VLE_1</td>
-	</tr>
-	<tr>
-		<td>VLE_2</td>
-	</tr>
-	<tr>
-		<td>VLE_3</td>
-	</tr>
-</table>
+Values should be one of the following:
+HUSID
+ULN
+a URL that identifies the system within which IDENTIFIER exists, for example a VLE
 
 ###Format
 String(255)
 
 ###Notes
-The value of IDENTIFIER where DOMAIN value = "VLE_1" is the VLE_ID in the student entity; "VLE_1" is the main VLE. 
 
 
 ##IDENTIFIER
