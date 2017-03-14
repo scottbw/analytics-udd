@@ -7,44 +7,44 @@
 \** indicates that the property is the primary key for this entity.  
 \* indicates that the property is part of a uniqueness constraint for this entity.
 
-##Description of module_VLE_map entity
+## Description of module_VLE_map entity
 A module_VLE_map links a module in a student record system with module materials in a VLE.
 
-##MODULE_VLE_MAP_ID
-###Description
+## MODULE_VLE_MAP_ID
+### Description
 Primary key. Where not supplied by data provider, the primary key will be UDD generated.
 
-###Purpose
+### Purpose
 Enables easy reference to the map between module and VLE.
 
-###Derivation
+### Derivation
 Jisc
 
-###Format
+### Format
 Concatenation of MOD_INSTANCE_ID and VLE_MOD_ID, separated by a tilde (~).
 String(255)
 
-###Notes
+### Notes
 Where not supplied by data provider, the primary key will be UDD generated.
 
 
-##VLE_MOD_ID
-###Description
+## VLE_MOD_ID
+### Description
 An unique identifier for a course area in the VLE. 
 
-###Purpose
+### Purpose
 Display in student app and staff dashboard
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid values
+### Valid values
 Any
 
-###References
+### References
 
-###Format
+### Format
 String(255)
 
-###Notes
+### Notes
 The VLE course area may or may not correspond to one module.

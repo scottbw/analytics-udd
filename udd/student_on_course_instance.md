@@ -1,4 +1,4 @@
-#student_on_course_instance
+# student_on_course_instance
 
 * [STUDENT_ON_COURSE_INSTANCE_ID](#student_on_course_instance_id) [1] **
 * [STUDENT_COURSE_MEMBERSHIP_ID](student_course_membership.md#student_course_membership_id) [1] *
@@ -18,41 +18,41 @@
 \** indicates that the property is the primary key for this entity.  
 \* indicates that the property is part of a uniqueness constraint for this entity.
 
-##Description of student_on_course_instance entity
+## Description of student_on_course_instance entity
 A student_on_course_instance describes a student's engagement with a specific stage of a course.
 
-##Notes
+## Notes
 This entity has some similarities to a HESA Instance element, but deals with only a single academic year or stage without reference to the whole course, which is covered in student_course_membership.  It is similar to a HEDIIP Data Language Student Course Session entity.
 
-##STUDENT_ON_COURSE_INSTANCE_ID
-###Description
+## STUDENT_ON_COURSE_INSTANCE_ID
+### Description
 Primary key. Where not supplied by data provider, the primary key will be UDD generated.
 
-###Purpose
+### Purpose
 Enables easy reference to student_on_course_instance.
 
-###Derivation
+### Derivation
 Jisc
 
-###Format
+### Format
 Concatenation of STUDENT_COURSE_MEMBERSHIP_ID and COURSE_INSTANCE_ID, separated by a tilde (~).
 String(255)
 
-###Notes
+### Notes
 Where not supplied by data provider, the primary key will be UDD generated.
 
 
-##MODE
-###Description
+## MODE
+### Description
 Mode of study (eg part-time or full time)
 
-###Purpose
+### Purpose
 For analytics
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/MODE
 
-###Valid Values & Mappings
+### Valid Values & Mappings
 
 <table>
             <tr>
@@ -239,127 +239,127 @@ https://www.hesa.ac.uk/collection/c16051/a/MODE
             </tr>
 </table>  
 
-###Format
+### Format
 String (255)
 
-###Compulsory
+### Compulsory
 Yes (if applicable)
 
-###Notes
+### Notes
 Mapping based on HESA codeset, and ILE (FE) initial mapping suggested above on ILR field 'PlanLearnHours'. HESA 2015 'mode' does not have code 98, but HESA 2016 'mode' does.
 Omitting this property may hinder the development or use of an effective analytics model.
 
 
-##YEAR_PRG
-###Description
+## YEAR_PRG
+### Description
 This field indicates the year number of the course that the student is currently studying. This could be different from the year of student if the student has changed course or re-taken a year.
 
-###Purpose
+### Purpose
 For analytics
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/YEARPRG
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 Omitting this property may hinder the development or use of an effective analytics model.
 
-##YEAR_STU
-###Description
+## YEAR_STU
+### Description
 Year number that the student is in since enrolling for a course
 
-###Purpose
+### Purpose
 For analytics
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/YEARSTU
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 Omitting this property may hinder the development or use of an effective analytics model.
 
 
-##COURSE_LOCATION
-###Description
+## COURSE_LOCATION
+### Description
 Identifies the location with which a student on a course_instance is associated, be it a building, a site or a campus.
 
-###Purpose
+### Purpose
 For analytics (predictive model building) and for presenting analytics.
 
-###Derivation
+### Derivation
 Loosely based on
 https://www.hesa.ac.uk/collection/c16051/a/CAMPID
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 
 
-##X_COURSE_AVERAGE_MARK
-###Description
+## X_COURSE_AVERAGE_MARK
+### Description
 The current (LIVE) average of all module marks from across a learner's whole course.
 
-###Purpose
+### Purpose
 For analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 0-1
 
-###Format
+### Format
 Float
 
-###Notes
+### Notes
 This data is generated internally to the learning record warehouse from existing data, and does not need to be supplied by an institution.
 
 
-##X_YEAR_AVERAGE_GRADE
-###Description
+## X_YEAR_AVERAGE_GRADE
+### Description
 The current (LIVE) average of all of this academic year's module marks from across a learner's whole course.
 
-###Purpose
+### Purpose
 For analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 0-1
 
-###Format
+### Format
 Float
 
-###Notes
+### Notes
 This data is generated internally to the learning record warehouse from existing data, and does not need to be supplied by an institution.
 
 
-##PROGRESSION
-###Description
+## PROGRESSION
+### Description
 This property indicates the status of the student on the current course_instance.  It is mapped to common UDD values from source data that may be stored in progression_source.
 
-###Purpose
+### Purpose
 Enables tracking of the student's continuation or otherwise from one stage of a course to another.
 
-###Derivation
+### Derivation
 HESA CSTAT (Completion status)
 
-###Valid Values & Mappings
+### Valid Values & Mappings
 <table>
             <tr>
                 <td>PROGRESSION</td>
@@ -422,42 +422,42 @@ HESA CSTAT (Completion status)
             </tr>
 </table> 
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 Omitting this property may hinder the development or use of an effective analytics model.
 
-##PROGRESSION_SOURCE
-###Description
+## PROGRESSION_SOURCE
+### Description
 This property holds the source data value from the institution's student record system that shows the student's status during the course_instance.
 
-###Purpose
+### Purpose
 For analysis of key aspects of progression from one stage of a course to another.
 
-###Derivation
+### Derivation
 Student record systems
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 This property is likely to contain proprietary data with respect to individual institutions and systems.  Therefore it is likely to be suitable for analyses only within a sector or institution.
 
-##LOCATION_OF_STUDY
-###Description
+## LOCATION_OF_STUDY
+### Description
 This property indicateS whether the student is based on campus, is studying abroad, on placement, and so on.
 
-###Purpose
+### Purpose
 For analytics
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/locsdy/
 
-###Valid Values & Mappings
+### Valid Values & Mappings
 <table>
             <tr>
                 <td>LOCATION_OF_STUDY</td>
@@ -539,8 +539,8 @@ https://www.hesa.ac.uk/collection/c16051/a/locsdy/
             </tr>
 </table>
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 For the name of a building, a site or a campus at which the student is studying, see COURSE_LOCATION property.

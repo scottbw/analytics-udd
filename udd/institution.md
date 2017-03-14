@@ -1,64 +1,64 @@
-#institution
+# institution
 * [TENANT_ID](#tenant_id) [1] **
 * [TENANT_NAME](#tenant_name) [0..1]
 * [UDD_VERSION] (#udd_version) [1]
 
 \** indicates that the property is the primary key for this entity.
 
-##Description of institution entity
+## Description of institution entity
 An institution is the overall provider of one or more courses.  Example: University of Gloucestershire.
 
-##TENANT_ID
-###Description
+## TENANT_ID
+### Description
 This field records the unique identifier for the University College concerned - using the UK Provider Reference Number (UKRPN) which is the unique identifier allocated to institutions by the UK Register of Learning Providers (UKRLP).
 
-###Purpose
+### Purpose
 To identify the organisation.
 
-###Derivation
+### Derivation
 UK Register of Learning Providers (UKRLP).
 
-###References
+### References
 
-###Format
+### Format
 String (8)
 
-###Notes
+### Notes
 Further information (on UKPRN) available at www.ukrlp.co.uk
 
 
-##TENANT_NAME
-###Description
+## TENANT_NAME
+### Description
 Institution's official legal name. This should match the name indicated in the UKRLP database, as used for TENANT_ID
 
-###Purpose
+### Purpose
 To identify the organisation.
 
-###Derivation
+### Derivation
 Institution
 
-###References
+### References
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
 
-##UDD_VERSION
-###Description
+## UDD_VERSION
+### Description
 Version number of this UDD specification.
 
-###Purpose
+### Purpose
 Enables the UDD to be self-declaring of its version.
 
-###Derivation
+### Derivation
 UDD specification in use by the institution
 
-###References
+### References
 
-###Format
+### Format
 String (8)
 
-###Notes
+### Notes
 Value will be the current version number of the UDD.  Example: if the data uses UDD v1.3, value will "1.3".

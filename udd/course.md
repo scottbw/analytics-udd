@@ -1,4 +1,4 @@
-#course
+# course
 * [COURSE_ID](#course_id) [1] **
 * [SUBJECT](#subject) [0..1]
 * [TITLE](#title) [0..1]
@@ -11,84 +11,84 @@
 
 \** indicates that the property is the primary key for this entity.
 
-##Description of course entity
+## Description of course entity
 A course is a learning opportunity that defines a student's learning activities and aim. It is run by an institution and is usually validated to continue over several years with several intakes. A course will usually have a qualification aim.  Example: BA Honours degree in French.
 
-##Notes
+## Notes
 The properties of the course entity do not include start date, study mode or location, because the course is at a high level in the UDD structure.  These properties of a learning opportunity are differentiated in the course_instance, student_course_membership and student_on_course_instance entities.
 
-##COURSE_ID
-###Description
+## COURSE_ID
+### Description
 The providers own ID for the course
 
-###Purpose
+### Purpose
 To link relational database tables
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/owncourseid/
 https://www.hesa.ac.uk/collection/c16054/e/course_courseid/
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 HE guidance - this field could relate to actual HESA COURSEID field or the HE institution's OWNCOURSEID field for cross-referencing purposes.
 
-##SUBJECT
-###Description
+## SUBJECT
+### Description
 Subject of study coding using JACS3.
 
-###Purpose
+### Purpose
 For display purposes
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/sbjca/
 
 https://www.hesa.ac.uk/support/documentation/jacs
 
-###Valid Values
+### Valid Values
 [JACS3 CSV](../media/jacs3-valid-entries.csv)
 
-###Format
+### Format
 String (10) - Usually 4 characters, number followed by three digits
 
-###Notes
+### Notes
 The JACS3 coding will be used here initially, from the HE (HESA) model. Further discussion will be required around this, to discuss subject classifications for FE/ ILR.
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
 
-##TITLE
-###Description
+## TITLE
+### Description
 Course Name or Title
 
-###Purpose
+### Purpose
 For display purposes
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/ctitle/
 
-###Valid Value
+### Valid Value
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 Omitting this property could severely impair the functionality of analytics applications such as student apps or dashboards.
 
-##COURSE_AIM
-###Description
+## COURSE_AIM
+### Description
 The qualification which the learner/ student is aiming for at the provider
 
-###Purpose
+### Purpose
 For display purposes and further analysis
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/courseaim/
 
-###Valid Values
+### Valid Values
 <table>
  <tr>
   <td>COURSE_AIM</td>
@@ -1186,89 +1186,89 @@ body</td>
 </table>
  
 
-###References
+### References
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 This field uses the HESA "COURSEAIM" codeset initially - with the addition of new code 'X98' to denote 'No formal qualification aim, below FE level' for FE equivalent denotation to HE code 'X99'. All course levels are denoted here (TBC with FE college, for final implementation). Specific use of the LARS codeset for FE (from ILR) may need to be considered, or a mapping/ amalgamation with the HESA codeset. This is to be discussed in consultation with the FE sector.
 Omitting this property may hinder the development or use of an effective analytics model.
 
 
-##INST_TIER_1
+## INST_TIER_1
 Details the top level of an institutional structure (e.g. Faculty Details)
 
-###Purpose
+### Purpose
 For display purposes and further analysis
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16041/a/tier1/
 
-###Valid Values
+### Valid Values
 Any
 
-###References
+### References
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 
 
-##INST_TIER_2
+## INST_TIER_2
 Details the middle level of an institutional structure (e.g. department details)
 
-###Purpose
+### Purpose
 For display purposes and further analysis
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16041/a/tier2/
 
-###Valid Values
+### Valid Values
 Any
 
-###References
+### References
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 
 
-##INST_TIER_3
+## INST_TIER_3
 Details the lower level of an institutional structure (e.g. department details)
 
-###Purpose
+### Purpose
 For display purposes and further analysis
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16041/a/DEPARTMENT
 
-###Valid Values
+### Valid Values
 Any
 
-###References
+### References
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 
-##AWARDING_BODY
+## AWARDING_BODY
 The name of the organisation responsible for the qualification.
 
-###Purpose
+### Purpose
 For display purposes and further analysis
 
-###Derivation
+### Derivation
 Institution
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 Each name should be consistent across the data from one INSTITUTION.

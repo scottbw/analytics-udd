@@ -1,4 +1,4 @@
-#course_instance
+# course_instance
 * [COURSE_INSTANCE_ID](#course_instance_id) [1] **
 * [COURSE_ID](course.md#course_id) [1]
 * [START_DATE](#start_date) [0..1]
@@ -7,82 +7,82 @@
 
 \** indicates that the property is the primary key for this entity.
 
-##Description of course_instance entity
+## Description of course_instance entity
 A course_instance is a stage of a course with a start date and an end date, often marked by a progression decision point at the end.  Example: a single academic year in a 3 year Honours degree course.
 
-##COURSE_INSTANCE_ID
-###Description
+## COURSE_INSTANCE_ID
+### Description
 Institution's identifier for this course_instance
 
-###Purpose
+### Purpose
 To link student to course, and course to course_instance
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 
-##START_DATE
-###Description
+## START_DATE
+### Description
 Start date for this course_instance
 
-###Purpose
+### Purpose
 For analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Date in ISO 8601 format - YYYY-MM-DD
 
-###Format
+### Format
 String in ISO 8601 Date extended format - YYYY-MM-DD
 
-###Notes
+### Notes
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
 
-##END_DATE
-###Description
+## END_DATE
+### Description
 End date for this course_instance
 
-##Purpose
+## Purpose
 For analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Date in ISO 8601 format - YYYY-MM-DD
 
-###Format
+### Format
 String in ISO 8601 Date extended format - YYYY-MM-DD
 
-###Notes
+### Notes
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
 
-##ACADEMIC_YEAR
-###Description
+## ACADEMIC_YEAR
+### Description
 Academic year to which the course_instance relates. 
 
-###Purpose
+### Purpose
 For display and analysis purposes
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Year in ISO 8601 format - YYYY; ie year that the academic year starts in.
 
-###Format
+### Format
 String in ISO 8601 Year format - YYYY
 
-###Notes
+### Notes
 Could be derived, but academic year calendars may be different between institutions. This field could also be sourced directly from the SRS.
 
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.

@@ -7,23 +7,23 @@
 \** indicates that the property is the primary key for this entity.  
 \* indicates that the property is part of a uniqueness constraint for this entity.
 
-##Description of staff_on_mod_instance entity
+## Description of staff_on_mod_instance entity
 A staff_on_mod_instance links a member of staff to a module_instance.
 
-##STAFF_ON_MOD_INSTANCE_ID
-###Description
+## STAFF_ON_MOD_INSTANCE_ID
+### Description
 Primary key. Where not supplied by data provider, the primary key will be UDD generated.
 
-###Purpose
+### Purpose
 Enables easy reference to staff_on_mod_instance.
 
-###Derivation
+### Derivation
 Jisc
 
-###Format
+### Format
 Concatenation of STAFF_ID and MOD_INSTANCE_ID, separated by a tilde (~).
 String(255)
 
-###Notes
+### Notes
 Where not supplied by data provider, the primary key will be UDD generated.
 

@@ -1,7 +1,7 @@
-#Extension
+# Extension
 This section does not form a part of the formal UDD specification.
 
-##Description
+## Description
 There is provision here for data extensions at the level of property (in other words, "field-level extensions").  The purpose of this is to enable institutions and vendors to experiment with new or proprietary properties in any UDD entity that may be relevant only to one or a few institutions, and may be specific to a vendor.  For example, an institution may wish to introduce a flag on student to indicate that a student was a member of an institution's sports team.
 
 It is not envisaged that there will be a proliferation of extensions, but rather that these will be used sparingly and with good reason.  In addition, the various values in this entity should be carefully managed by the body identified in ORGANISATION.
@@ -20,30 +20,30 @@ Tribal, student, ST123456, SPORTS_TEAM_FLAG, Y
 
 \* indicates that the property is part of a composite primary key for this entity.
 
-##ORGANISATION
-###Description
+## ORGANISATION
+### Description
 Identifies the controlling agent for this extension.  This will normally be a software vendor, institution or Jisc.
 
-###Valid Values
+### Valid Values
 String (255)
 
-###Purpose
+### Purpose
 Enables identification of a group of extensions by controlling organisation.
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 
 
-##ENTITY
-###Description
+## ENTITY
+### Description
 Names the UDD entity extended by this record.
 
-###Purpose
+### Purpose
 Identifies the relevant entity using the UDD entity name from its MD file.
 
-###Valid Values
+### Valid Values
 <table>
 	<tr>
 		<td>ENTITY</td>
@@ -98,57 +98,57 @@ Identifies the relevant entity using the UDD entity name from its MD file.
 	</tr>
 </table>
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 
-##REF_KEY
-###Description
+## REF_KEY
+### Description
 Holds the unique single primary key identifying the record in the UDD entity to which the extension applies.
 
-###Purpose
+### Purpose
 Identifies the relevant extended record in the ENTITY.
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 Must use the single primary key, not a composite key.
 
 
-##PROPERTY_NAME
-###Description
+## PROPERTY_NAME
+### Description
 Label for the extension.
 
-###Purpose
+### Purpose
 Identifies the extension used.
 
-###Valid Values
+### Valid Values
 Label drawn from a vocabulary of valid labels for extensions maintained by ORGANISATION.
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 
 
-##PROPERTY_VALUE
-###Description
+## PROPERTY_VALUE
+### Description
 Data held against the extension for the specific record identified by the ENTITY and REF_KEY.
 
-###Purpose
+### Purpose
 Holds the data for the extension.
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 The value of this property is held as a string.  However, it should be parsable into the appropriate format for use in the extension defined in PROPERTY_NAME by ORGANISATION.
 
