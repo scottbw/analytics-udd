@@ -12,7 +12,7 @@
 * [COURSE_MARK](#course_mark) [0..1]
 * [COURSE_EXPECTED_END_DATE](#course_expected_end_date) [0..1]
 * [COURSE_END_DATE](#course_end_date) [0..1]
-* [COURSE_DURATION] (#course_duration) [0..1]
+* [COURSE_DURATION](#course_duration) [0..1]
 * [COURSE_JOIN_DATE](#course_join_date) [0..1]
 * [COURSE_JOIN_AGE](#course_join_age) [0..1]
 * [COHORT_ID](#cohort_id) [0..1]
