@@ -1,4 +1,4 @@
-#module_instance
+# module_instance
 * [MOD_INSTANCE_ID](#mod_instance_id) [1] *
 * [MOD_ID](module.md#mod_id) [1]
 * [MOD_PERIOD](#mod_period) [0..1]
@@ -9,97 +9,97 @@
 
 \* indicates that the property is the primary key for this entity.
 
-##MOD_INSTANCE_ID
-###Description
+## MOD_INSTANCE_ID
+### Description
 Institutions unique identifier for this module_instance
 
-###Purpose
+### Purpose
 For link a module_instance to a student
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 
 
-##MOD_PERIOD
-###Description
+## MOD_PERIOD
+### Description
 Period to which module_instance relates (e.g. semester 1)
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (256)
 
-###Notes
+### Notes
 It is expected that sites / organisations will have their own code lists for MOD_PERIOD values.
 
-##MOD_ONLINE
-###Description
+## MOD_ONLINE
+### Description
 Whether this module_instance is delivered wholly online
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 <table>
 <tr><td>MOD_ONLINE</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)  </td></tr>
 <tr><td>1</td><td>Yes</td><td>Ie  </td></tr>
 <tr><td>2</td><td>No</td><td>Na</td></tr>
 </table>  
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 Omitting this property may hinder the development or use of an effective analytics model.
 
-##MOD_ACADEMIC_YEAR
-###Description
+## MOD_ACADEMIC_YEAR
+### Description
 Academic year that this module runs within - this must represent the start year of that specific academic year eg. for 2014-15 this would be 2014
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 4 digit year
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 This is the starting year for the academic year.
 Omitting this property may hinder the development or use of an effective analytics model.
-##MOD_OPTIONAL
-###Description
+## MOD_OPTIONAL
+### Description
 Whether this instance relates to an optional module or not.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 
 <table>
 <tr><td>MOD_OPTIONAL</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)  </td></tr>
@@ -107,26 +107,26 @@ Jisc
 <tr><td>2</td><td>No</td><td>Na</td></tr>
 </table>  
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 
 
-##MOD_LOCATION
-###Description
+## MOD_LOCATION
+### Description
 Identifies where a module is to be run. This could be campus, country, or building depending on the needs of the institutions config. Allows modules to be have a different location from the one identified at the course level detail (COURSE_LOCATION).
 
-###Purpose
+### Purpose
 To provide details about a module and how it may differ from similar coded modules.
 
-###Derivation
+### Derivation
 As defined by the institution and their SRS
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes

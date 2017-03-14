@@ -1,4 +1,4 @@
-#student_on_course_instance
+# student_on_course_instance
 
 * [STUDENT_COURSE_MEMBERSHIP_ID](student_course_membership.md#student_course_membership_id) [1] *
 * [COURSE_INSTANCE_ID](course_instance.md#course_instance_id) [1] *
@@ -14,17 +14,17 @@
 
 \* indicates that the property is part of a composite primary key for this entity.
 
-##MODE
-###Description
+## MODE
+### Description
 Mode of study (eg part-time or full time)
 
-###Purpose
+### Purpose
 For analytics
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/MODE
 
-###Valid Values & Mappings
+### Valid Values & Mappings
 
 <table>
             <tr>
@@ -211,129 +211,129 @@ https://www.hesa.ac.uk/collection/c16051/a/MODE
             </tr>
 </table>  
 
-###Format
+### Format
 Int
 
-###Compulsory
+### Compulsory
 Yes (if applicable)
 
-###Notes
+### Notes
 Mapping based on HESA codeset, and ILE (FE) initial mapping suggested above on ILR field 'PlanLearnHours'. HESA 2015 'mode' does not have code 98, but HESA 2016 'mode' does.
 Omitting this property may hinder the development or use of an effective analytics model.
 
 
-##YEAR_COM (deprecated)
-###Description
+## YEAR_COM (deprecated)
+### Description
 This field indicates the year number that the learning aim/ course started. It duplicates COURSE_JOIN_DATE on student_course_membership.
 
-###Purpose
+### Purpose
 For analytics
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/COMDATE
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 Use [COURSE_JOIN_DATE on student_course_membership](student_course_membership.md#course_join_date) instead.
 
-##YEAR_PRG
-###Description
+## YEAR_PRG
+### Description
 This field indicates the year number of the course that the student is currently studying. This could be different from the year of student if the student has changed course or re-taken a year.
 
-###Purpose
+### Purpose
 For analytics
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/YEARPRG
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 Omitting this property may hinder the development or use of an effective analytics model.
 
-##YEAR_STU
-###Description
+## YEAR_STU
+### Description
 Year number that the student is in since enrolling for a course
 
-###Purpose
+### Purpose
 For analytics
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/YEARSTU
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 Omitting this property may hinder the development or use of an effective analytics model.
 
-##COURSE_LOCATION
-###Description
+## COURSE_LOCATION
+### Description
 Identifies the location with which a student on a course_instance is associated, be it a building, a site or a campus.
 
-###Purpose
+### Purpose
 For analytics (predictive model building) and for presenting analytics.
 
-###Derivation
+### Derivation
 Loosely based on
 https://www.hesa.ac.uk/collection/c16051/a/CAMPID
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 
 
-##X_COURSE_AVERAGE_MARK
-###Description
+## X_COURSE_AVERAGE_MARK
+### Description
 The current (LIVE) average of all module marks from across a learner's whole course.
 
-###Purpose
+### Purpose
 For analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 0-1
 
-###Format
+### Format
 Float
 
-###Notes
+### Notes
 This data is generated internally to the learning record warehouse from existing data, and does not need to be supplied by an institution.
 
 
-##X_YEAR_AVERAGE_GRADE
-###Description
+## X_YEAR_AVERAGE_GRADE
+### Description
 The current (LIVE) average of all of this academic year's module marks from across a learner's whole course.
 
-###Purpose
+### Purpose
 For analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 0-1
 
-###Format
+### Format
 Float
 
-###Notes
+### Notes
 This data is generated internally to the learning record warehouse from existing data, and does not need to be supplied by an institution.

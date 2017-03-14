@@ -1,57 +1,57 @@
 # Jisc Learning Analytics Unified Data Definitions v1.2.7
 
-##Introduction
+## Introduction
 The Unified Data Definitions (UDD) of the Jisc analytics project is a vocabulary of the chief data entities of interest to learning analytics: students, courses, modules, etc. as well as their characteristics. The data coded with this vocabulary is typically extracted from the student record system of a particular college or university.
 
 Along with xAPI recipes, the UDD makes up the core data specification of the Jisc learning analytics architecture.
 
-##Differences between 1.1 and 1.2
+## Differences between 1.1 and 1.2
 The development of 1.2 involved a number of additions and changes. [This overview page](differences.md) provides a mapped listing of each change, with links through to the relevant pages in the UDD 1.1 and 1.2 documentation.
 
-##Data format
+## Data format
 UDD data must be UTF-8 encoded.  JSON is the preferred data format, but XML data is also supported. Other formats are not supported.
 
 When providing UDD data, supply the data for different entities in separate files, 1 file per entity, using the [UDD filename conventions](https://github.com/jiscdev/analytics-udd/blob/master/filename_conventions.md). 
 
-##Diagram
+## Diagram
 An [entity relation diagram of the whole UDD 1.2](diagram.md) provides a one page overview of the specification.
 
-## Core sections
-###[assessment_instance](udd/assessment_instance.md)
+##  Core sections
+### [assessment_instance](udd/assessment_instance.md)
 
-###[course](udd/course.md)
+### [course](udd/course.md)
 
-###[course_instance](udd/course_instance.md)
+### [course_instance](udd/course_instance.md)
 
-###[institution](udd/institution.md)
+### [institution](udd/institution.md)
 
-###[module](udd/module.md)
+### [module](udd/module.md)
 
-###[module_instance](udd/module_instance.md)
+### [module_instance](udd/module_instance.md)
 
-###[module_vle_map](udd/module_vle_map.md)
+### [module_vle_map](udd/module_vle_map.md)
 
-###[student](udd/student.md)
+### [student](udd/student.md)
 
-###[student_course_membership](udd/student_course_membership.md)
+### [student_course_membership](udd/student_course_membership.md)
 
-###[student_on_assessment_instance](udd/student_on_assessment_instance.md)
+### [student_on_assessment_instance](udd/student_on_assessment_instance.md)
 
-###[student_on_a_module_instance](udd/student_on_a_module_instance.md)
+### [student_on_a_module_instance](udd/student_on_a_module_instance.md)
 
-###[student_on_course_instance](udd/student_on_course_instance.md)
+### [student_on_course_instance](udd/student_on_course_instance.md)
 
-##Additional sections 
-###[staff](udd/staff.md)
+## Additional sections 
+### [staff](udd/staff.md)
 
-###[staff_on_course_instance](udd/staff_on_course_instance.md)
+### [staff_on_course_instance](udd/staff_on_course_instance.md)
 
-###[staff_on_mod_instance](udd/staff_on_mod_instance.md)
+### [staff_on_mod_instance](udd/staff_on_mod_instance.md)
 
-##Mandatory and optional properties
+## Mandatory and optional properties
 The properties of the UDD are required in compliant datasets to different degrees. The _Mandatory properties in the UDD guide_ outlines the different categories of UDD property. It is available as both [Excel](media/UDDmandatoryFieldGuide.xls) and [ODF](media/UDDmandatoryFieldGuide.ods) spreadsheets.
 
-##Specification development workflow
+## Specification development workflow
 The simplest way of contributing to the UDD works as follows:
 
 1. add an issue to the issue tracker to alert everyone to what you are working on and why
@@ -68,7 +68,7 @@ Versioning is done broadly as follows: major versions (majorVersion.minorVersion
 
 Note that some properties will be marked as 'deprecated'. This means that the property is still valid, but will be removed by the next minor version update.
 
-##Acknowledgements
+## Acknowledgements
 
 Many thanks to all contributors who have raised issues, sent pull requests, commented and made suggestions. The UDD specification is the achievement of all of you.
 
