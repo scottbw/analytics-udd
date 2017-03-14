@@ -25,6 +25,7 @@
 * [PRIOR_GRADE_MATHEMATICS](#prior_grade_mathematics) [0..1]
 * [INITIAL_ASSESSMENT_ENGLISH](#initial_assessment_english) [0..1]
 * [INITIAL_ASSESSMENT_MATHEMATICS](#initial_assessment_mathematics) [0..1]
+* [ADMISSIONS_ROUTE](#admissions_route) [0..1]
 
 \** indicates that the property is the primary key for this entity.
 
@@ -1850,3 +1851,39 @@ Any decimal
 Decimal
 
 ###Notes
+
+
+##ADMISSIONS_ROUTE
+###Description
+States whether the student was accepted via UCAS Clearing or via some other route.
+
+###Purpose
+Analytics
+
+###Derivation
+SRS systems
+
+###Valid Values
+ <table>
+            <tr>
+                <td>ADMISSIONS_ROUTE</td>
+                <td>DESCRIPTION (ENGLISH)</td>
+                <td>DESCRIPTION (WELSH)</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>Student was accepted onto the course via a route other than UCAS Clearing</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Student was accepted onto the course via UCAS Clearing</td>
+                <td> </td>
+            </tr>
+</table>
+
+###Format
+Int
+
+###Notes
+Code list may be extended in future.
