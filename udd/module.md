@@ -4,6 +4,7 @@
 * [MOD_SUBJECT](#mod_subject) [0..1]
 * [MOD_CREDITS](#mod_credits) [0..1]
 * [MOD_LEVEL](#mod_level) [0..1]
+* [CREDIT_BEARING](#credit_bearing) [0..1]
 
 \** indicates that the property is the primary key for this entity.
 
@@ -120,6 +121,27 @@ Jisc
 <tr><td>C</td><td>NVQ level 3 or equivalent</td><td> 	</td></tr>
 <tr><td>D</td><td>HND/Diploma HE</td><td> 	</td></tr>
 <tr><td>E</td><td>Ordinary degrees</td><td></td></tr>
+</table> 	
+
+###Format
+String (1)
+
+###Notes
+
+
+##CREDIT_BEARING
+###Description
+States whether or not the module carries a credit value.
+
+###Purpose
+Analytics
+
+###Valid Values
+<table>
+<tr><td>CREDIT_BEARING</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)  </td></tr>
+<tr><td>0</td><td>Not for credit</td><td>  </td></tr>
+<tr><td>1</td><td>For credit, see MOD_CREDITS and MOD_LEVEL for details.</td><td> 	</td></tr>
+<tr><td>2</td><td>for credit, but credit value unknown.</td><td> 	</td></tr>
 </table> 	
 
 ###Format
