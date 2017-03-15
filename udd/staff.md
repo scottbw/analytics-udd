@@ -11,123 +11,123 @@ An additional data entity
 
 \* indicates that the property is the primary key for this entity.
 
-##STAFF_ID
-###Description
+## STAFF_ID
+### Description
 An institution's unique identifier for a staff member. This could be their username.
 
-###Purpose
+### Purpose
 To show the staff member's name within SSP, SSP Dashboards, or Student Insight.
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid values
+### Valid values
 Any
 
-###References
+### References
 
-###Format
+### Format
 String(255)
 
-###Notes
+### Notes
 This will be the unique identifier/ primary key for the member of staff who is responsible for the student (course/year tutor) or the person responsible for managing cases or analysing dashboards which involve the student. This will typically be the staff/ HR/ payroll number for the member of academic staff, which links to their email address in the institutions identity management system.
 
 
-##FIRST_NAME
-###Description
+## FIRST_NAME
+### Description
 Staff given or first name.
 
-###Purpose
+### Purpose
 Display
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid values
+### Valid values
 Any
 
-###References
+### References
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 
 
-##LAST_NAME
-###Description
+## LAST_NAME
+### Description
 Staff family or surname.
 
-###Purpose
+### Purpose
 Display
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid values
+### Valid values
 Any
 
-###References
+### References
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 
 
-##TITLE
-###Description
+## TITLE
+### Description
 Staff Title as stored in the student record system
 
-###Purpose
+### Purpose
 Display
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid values
+### Valid values
 Any
 
-###References
+### References
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 
 
-##PRIMARY_EMAIL_ADDRESS
-###Description
+## PRIMARY_EMAIL_ADDRESS
+### Description
 Staff's primary email address
 
-###Purpose
+### Purpose
 Display, and as a user id and contact detail in analytics.
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid values
+### Valid values
 Any
 
-###References
+### References
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 
 
-##HESA_STAFF_ID
-###Description
+## HESA_STAFF_ID
+### Description
 A unique code allocated to staff when they are first entered onto the HESA Staff record. The code remains with the member of staff for the whole of their career within higher education
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c15025/a/staffid/
 
-###Valid values
+### Valid values
 First 2 characters:
 
 Year of entry into HEP (last 2 digits of calendar year). Those entering before 1 August 2003 and whose year of entry is unknown should use 'XX'.
@@ -144,30 +144,30 @@ Last character:
 
 Check digit. 
 
-###References
+### References
 
-###Format
+### Format
 String (13)
 
-###Notes
+### Notes
 
 
 
-##DASH_SHIB_ID
-###Description.
+## DASH_SHIB_ID
+### Description.
 The person identifier used by Shibboleth / The UK Access Management Federation to grant access to the Jisc analytics staff dashboard.
 
-###Purpose
+### Purpose
 Analytics 
 
-###Derivation
+### Derivation
 https://www.internet2.edu/media/medialibrary/2013/09/04/internet2-mace-dir-eduperson-200604.html
 
-###Valid Values
+### Valid Values
 Not specified
 
-###Format
+### Format
 String (256)
 
-###Notes
+### Notes
 There may be a more general AIM_ID property later that can be used for any UK Federation service provider ID, not just the Jisc staff dashboard.
