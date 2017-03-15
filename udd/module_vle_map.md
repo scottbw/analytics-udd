@@ -6,23 +6,23 @@ This entity connects a course area in a VLE or LMS with a module.
 
 \* indicates that the property is part of a composite primary key for this entity.
 
-##VLE_MOD_ID
-###Description
+## VLE_MOD_ID
+### Description
 An unique identifier for a course area in the VLE. 
 
-###Purpose
+### Purpose
 Display in student app and staff dashboard
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid values
+### Valid values
 Any
 
-###References
+### References
 
-###Format
+### Format
 String(255)
 
-###Notes
+### Notes
 The VLE course area may or may not correspond to one module.
