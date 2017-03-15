@@ -1,4 +1,4 @@
-#Module
+# Module
 * [MOD_ID](#mod_id) [1] *
 * [MOD_NAME](#mod_name) [0..1]
 * [MOD_SUBJECT](#mod_subject) [0..1]
@@ -7,97 +7,97 @@
 
 \* indicates that the property is the primary key for this entity.
 
-##MOD_ID
-###Description
+## MOD_ID
+### Description
 The unique identifier standard across SRS and LMS for the module.
 
-###Purpose
+### Purpose
 For analytics and to link module to module_instance
 
 Derivation
 https://www.hesa.ac.uk/collection/c16051/a/module_modid/
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 
 
-##MOD_NAME
-###Description
+## MOD_NAME
+### Description
 The actual name of the module
 
-###Purpose
+### Purpose
 For display purposes.
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/MTITLE
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
 
-##MOD_SUBJECT
-###Description
+## MOD_SUBJECT
+### Description
 Module subject - coded using JACS3 subject codes
 
-###Purpose
+### Purpose
 For display purposes and analytics.
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/modsbj/
 
 https://www.hesa.ac.uk/support/documentation/jacs
 
-###Valid Values
+### Valid Values
 [JACS3 CSV](../media/jacs3-valid-entries.csv)
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 For FE purposes, it will need be adapted to work with institutions specific codeset for Learning Activities. Details to be confirmed.
 Omitting this property may hinder the development or use of an effective analytics model.
 
 
-##MOD_CREDITS
-###Description
+## MOD_CREDITS
+### Description
 Number of credits award for the module
 
-###Purpose
+### Purpose
 For analytics
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/CRDTPTS
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 Omitting this property may hinder the development or use of an effective analytics model.
 
-##MOD_LEVEL
-###Description
+## MOD_LEVEL
+### Description
 Level of credit points - indicates the level of module the student is studying. This has been initially based on the HESA field LEVELPTS, however may be utilised and adapted to also cater for FE
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 
 <table>
 <tr><td>MOD_LEVEL</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)  </td></tr>
@@ -116,7 +116,7 @@ Jisc
 <tr><td>E</td><td>Ordinary degrees</td><td></td></tr>
 </table> 	
 
-###Format
+### Format
 String(1)
 
-###Notes
+### Notes
