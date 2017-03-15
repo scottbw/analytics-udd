@@ -1,4 +1,4 @@
-#student_on_a_module_instance
+# student_on_a_module_instance
 
 * [STUDENT_COURSE_MEMBERSHIP_ID](student_course_membership.md#student_course_membership_id) [1] *
 * [COURSE_INSTANCE_ID](course_instance.md#course_instance_id) [1] *
@@ -24,37 +24,37 @@
 
 \* indicates that the property is part of a composite primary key for this entity.
 
-##MOD_GRADE (deprecated)
-###Description.
+## MOD_GRADE (deprecated)
+### Description.
 Final grade student achieved on the module.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (256)
 
-###Notes
+### Notes
 Use MOD_AGREED_GRADE instead of MOD_GRADE
 
 
-##MOD_RESULT
-###Description.
+## MOD_RESULT
+### Description.
 Indicates whether the student passed the module, didn't pass the module, deferred the module or whether this information is not known because the module hasn't been completed yet.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 
 <table>
 <tr><td>MOD_RESULT</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)  </td></tr>
@@ -64,25 +64,25 @@ Jisc
 <tr><td>4</td><td>deprecated (was: 'deferred')</td><td> </td></tr>
 </table>  
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 Code 3 is applied in all cases where the outcome is either not known (yet), or doesn't apply because the student hasn't been assessed yet. Code 4 is deprecated because deferral or withdrawal is indicated by WITHDRAWAL_REASON in student_course_membership.
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
 
 
-##MOD_RETAKE
-###Description.
+## MOD_RETAKE
+### Description.
 Whether this is a retake of the module for that student.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 
 <table>
 <tr><td>MOD_RETAKE</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)  </td></tr>
@@ -90,265 +90,265 @@ Jisc
 <tr><td>2</td><td>No</td><td>Na</td></tr>
 </table>  
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 
 
-##MOD_START_DATE
-###Description
+## MOD_START_DATE
+### Description
 Start date of this module_instance
 
-###Purpose
+### Purpose
 Analytics and display
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 ISO 8601 - YYYY-MM-DD
 
-###Format
+### Format
 Date
 
-###Notes
+### Notes
 The start and end date of a module_instance MUST align with the start and end date of a course_instance.
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
 
 
-##MOD_END_DATE
-###Description
+## MOD_END_DATE
+### Description
 End date of this module_instance
 
-###Purpose
+### Purpose
 Analytics and display
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 ISO 8601 - YYYY-MM-DD
 
-###Format
+### Format
 Date
 
-###Notes
+### Notes
 The start and end date of a module_instance MUST align with the start and end date of a course_instance.
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
 
 
-##MOD_FIRST_MARK
-###Description
+## MOD_FIRST_MARK
+### Description
 The mark awarded by the initial marker prior to any moderation process.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 0-100
 
-###Format
+### Format
 Decimal
 
-###Notes
+### Notes
 MOD_FIRST_MARK should only be part of a UDD compliant dataset if there is a moderation process and the input mark is available in the source data.
 If a marking process involves concurrent initial marking, the reconciled result should be recorded in MOD_ACTUAL_MARK.
 
-##MOD_ACTUAL_MARK
-###Description
+## MOD_ACTUAL_MARK
+### Description
 The mark awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 0-100
 
-###Format
+### Format
 Decimal
 
-###Notes
+### Notes
 MOD_ACTUAL_MARK should only be part of a UDD compliant dataset if there is a moderation process and if the result of that process is available in the source data.
 
 
-##MOD_AGREED_MARK
-###Description
+## MOD_AGREED_MARK
+### Description
 The mark recorded after any moderation or confirmation processes, or the only recorded mark if there are no moderation or confirmation processes. This mark is typically the one used to determine degree classification.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 0-100
 
-###Format
+### Format
 Decimal
 
-###Notes
+### Notes
 MOD_AGREED_MARK is expected to be present in any UDD compliant dataset as soon as it becomes available.
 
 
-##MOD_FIRST_GRADE
-###Description
+## MOD_FIRST_GRADE
+### Description
 The grade awarded by the initial marker prior to any moderation process.
 
-###Purpose
+### Purpose
 Analytics. The first grade a student receives on the module is used to help monitor what changes to marks are made during the re-assessment process.
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 MOD_FIRST_GRADE should only be part of a UDD compliant dataset if there is a moderation process and the input grade is available in the source data.
 If a marking process involves concurrent initial marking, the reconciled result should be recorded in MOD_ACTUAL_GRADE.
 
 
-##MOD_ACTUAL_GRADE
-###Description
+## MOD_ACTUAL_GRADE
+### Description
 The grade awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 MOD_ACTUAL_GRADE should only be part of a UDD compliant dataset if there is a moderation process and if the result of that process is available in the source data.
 
 
-##MOD_AGREED_GRADE
-###Description
+## MOD_AGREED_GRADE
+### Description
 The grade recorded after any moderation or confirmation processes, or the only recorded grade if there are no moderation or confirmation processes. This grade is typically the one used to determine degree classification.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 MOD_AGREED_GRADE is expected to be present in any UDD compliant dataset as soon as it becomes available.
 
-##MOD_CREDITS_ACHIEVED
-###Description
+## MOD_CREDITS_ACHIEVED
+### Description
 The number of credits awarded for the module.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/crdtpts/
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 Integer
 
-###Notes
+### Notes
 
 
-##MOD_CURRENT_ATTEMPT
-###Description
+## MOD_CURRENT_ATTEMPT
+### Description
 Number of attempts taken by a student so far on a module_instance.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 Integer
 
-###Notes
+### Notes
 Omitting this property may hinder the development or use of an effective analytics model.
 
-##MOD_COMPLETED_ATTEMPT
-###Description
+## MOD_COMPLETED_ATTEMPT
+### Description
 Number of attempts taken by a student to complete a module_instance.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 Integer
 
-###Notes
+### Notes
 
 
-##X_MOD_NAME
-###Description
+## X_MOD_NAME
+### Description
 An extra implementation optimisation that isn't part of the UDD model. Its value is identical to that of the relevant module.MOD_NAME.
 
-###Purpose
+### Purpose
 Implementation optimisation
 
-###Derivation
+### Derivation
 Jisc; module.MOD_NAME
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 This data is generated internally from existing data, and does not need to be supplied by an institution.
 
-##X_MOD_ACADEMIC_YEAR
-###Description
+## X_MOD_ACADEMIC_YEAR
+### Description
 An extra implementation optimisation that isn't part of the UDD model. Its value is identical to that of MOD_ACADEMIC_YEAR on the mod_instance identified by the relevant MOD_INSTANCE_ID.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 4 digit year
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 This is the starting year for the academic year.
