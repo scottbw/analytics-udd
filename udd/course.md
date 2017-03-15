@@ -1217,6 +1217,7 @@ String (255)
 
 
 ## INST_TIER_2
+### Description
 Details the middle level of an institutional structure (e.g. department details)
 
 ### Purpose
@@ -1237,6 +1238,7 @@ String (255)
 
 
 ## INST_TIER_3
+### Description
 Details the lower level of an institutional structure (e.g. department details)
 
 ### Purpose
@@ -1256,19 +1258,22 @@ String (255)
 ### Notes
 
 ## AWARDING_BODY
-The name of the organisation responsible for the qualification.
+### Description
+The UKPRN or trading name of the organisation responsible for the award of the qualification.
 
 ### Purpose
 For display purposes and further analysis
 
 ### Derivation
-Institution
+UK Register of Learning Providers (UKRLP)
 
 ### Valid Values
-Any
+UKPRN: 8-digit string
+Other: Any
 
 ### Format
 String (255)
 
 ### Notes
-Each name should be consistent across the data from one INSTITUTION.
+Each value for an awarding body should be consistent across the data from one institution.
+If the institution running the course is also the awarding body, enter the institution's UKPRN, as given in institution.TENANT_ID.
