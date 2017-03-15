@@ -17,9 +17,9 @@ Efficient processing of IDs, and lookup of data in xAPI statements.
 
 ### Valid values
 Values should be one of the following:
-HUSID
-ULN
-a URL that identifies the system within which IDENTIFIER exists, for example a VLE
+- HUSID 
+- ULN 
+- a URL that identifies the system within which IDENTIFIER exists, for example a VLE
 
 ### Format
 String(255)
