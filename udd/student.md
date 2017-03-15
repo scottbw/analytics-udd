@@ -1,4 +1,4 @@
-#Student
+# Student
 * [STUDENT_ID](#student_id) [1] *
 * [ULN](#uln) [0..1]
 * [DOB](#dob) [0..1]
@@ -33,77 +33,77 @@
 
 \* indicates that the property is the primary key for this entity.
 
-##STUDENT_ID
-###Description
+## STUDENT_ID
+### Description
 The institution's own unique identifier of the student. In the case or event of requiring to provide anonymous data for trial/ evaluation purposes with JISC, institutions should use a suitable method or algorithm (which can be reversed by that institution, for evaluation purposes thereafter) to ensure that this studentid provided is different to that actual ID held locally.
 
-###Purpose
+### Purpose
 To identify the student across multiple records within an institution.
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/OWNSTU
 
-###References
+### References
 
-###Format
+### Format
 String 255
 
-###Notes
+### Notes
 
 
-##ULN
-###Description
+## ULN
+### Description
 Unique Learner Number. For initial trial and data model development for the predictive model, this field should be left out.
 
-###Purpose
+### Purpose
 For future use, tracking student journey.
 
-###Derivation
+### Derivation
 Skills Funding Agency: See https://www.gov.uk/government/publications/lrs-unique-learner-numbers
 
-###References
+### References
 
-###Format
+### Format
 String (10)
 
-###Notes
+### Notes
 The ULN can be provided as an additional point of reference, however the STUDENT_ID will always take precedence as the unique learner/ student identifier.
 
 
-##DOB
-###Description
+## DOB
+### Description
 Student's date of birth
 
-###Purpose
+### Purpose
 For analytics comparisons.
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/BIRTHDTE
 
-###References
+### References
 
-###Format
+### Format
 ISO8601 format of YYYY-MM-DD
 
-###Notes
+### Notes
 If date of birth is not known or not supplied, this property should be omitted.
 Omitting this property may hinder the development or use of an effective analytics model.
 This property is used to calculate AGE.
 
-##ETHNICITY
-###Description
+## ETHNICITY
+### Description
 This field records the ethnicity of the student, on the basis of their own self-assessment.
 
-###Purpose
+### Purpose
 To allow equal opportunities monitoring, within detailed learning analytics/ data modelling.
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/ETHNIC
 
-###Format
+### Format
 String (10)
 
-###Valid Values & Mappings:  
+### Valid Values & Mappings:  
 
 <table>
             <tr>
@@ -271,24 +271,24 @@ String (10)
 
 Please Note - N/A denotes that no mapping value is applicable and the ETHNICITY property should be omitted.
 
-###Notes
+### Notes
 If ethnicity data is not supplied, this property should be omitted.
 Omitting this property may hinder the development or use of an effective analytics model.
 
-##SEXID
-###Description
+## SEXID
+### Description
 To record a Learner's current sex, on the basis of their own self-assessment.
 
-###Purpose
+### Purpose
 For equal opportunities monitoring within learning analytics / data modelling.
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/SEXID
 
-###Format
+### Format
 Int
 
-###Valid Values & Mappings
+### Valid Values & Mappings
 
 <table>
 <tr><td>SEXID</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)</td><td>HESA(SEXID)</td><td>FEILR(SEX)</td></tr>
@@ -300,35 +300,35 @@ Int
 
 Please Note - N/A denotes that no mapping value is applicable and the SEXID property should be omitted.   
 
-###Notes
+### Notes
 If sexid data is not supplied, this property should be omitted.
 Omitting this property may hinder the development or use of an effective analytics model.
 
-##AGE
-###Description
+## AGE
+### Description
 The current age of the learner/ student
 
-###Purpose
+### Purpose
 To be used purely for display purposes within the Learning Analytics software suite.
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 This will typically auto-calculated on a daily basis, based on DOB property. The LA system will provide this field.
 
 
-##LEARN_DIF
-###Description
+## LEARN_DIF
+### Description
 This field records whether a learner considers themselves to have a learning difficulty.
 
-###Purpose
+### Purpose
 For detailed analysis or intervention purposes within Learning Analytics eg. Data Insight Tool.
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c15051/a/learndif/
 
-###Valid Values & Mappings
+### Valid Values & Mappings
 
 <table>
 <tr><td>LEARN_DIF</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)</td><td>HESA 2015/2016 (LEARNDIF)</td><td>FE ILR 2014 (LLDDCAT)</td></tr>
@@ -345,25 +345,25 @@ https://www.hesa.ac.uk/collection/c15051/a/learndif/
 </table>
   
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 If the learner's learning difficulty data is not supplied, this property should be omitted.
 
 As of the 2016-2017 academic year, LLDDHEALTHPROB has replaced LEARN_DIF in the HESA student returns. Also, LLDDCAT in FE ILR post 2014 has a different value space. Both of these vocabularies will be supported in a forthcoming field in v1.3. Data with HESA LLDDHEALTHPROB and LLDDCAT in FE ILR post 2014 can't, therefore, be submitted prior to UDD v1.3
 
-##DISABILITY1
-###Description
+## DISABILITY1
+### Description
 Whether the student is indicated as being disabled, according to their own self-assessment. This will be their primary disability.
 
-###Purpose
+### Purpose
 For equal opportunities monitoring within Learning Analytics/ Data Modelling.
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c15051/a/disable/
 
-###Valid Values & Mappings
+### Valid Values & Mappings
 
 <table>
 <tr>
@@ -484,25 +484,25 @@ a wheelchair or crutches</td>
 </tr>
 </table>  
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 If the learner's disability data is not supplied, this property should be omitted.
 
 As of the 2016-2017 academic year, HESA DISABILITY has a different value space in the HESA student returns. Also, LLDDCAT in FE ILR post 2014 has a different value space from later versions. Both of these vocabularies will be supported in a forthcoming field in v1.3. Data with HESA DISABLE and LLDDCAT in FE ILR post 2014 can't, therefore, be submitted prior to UDD v1.3
 
-##DISABILITY2
-###Description
+## DISABILITY2
+### Description
 Whether the student is indicated as being disabled, according to their own self-assessment. This will be their primary disability.
 
-###Purpose
+### Purpose
 For equal opportunities monitoring within Learning Analytics/ Data Modelling.
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c15051/a/disable/
 
-###Valid Values & Mappings
+### Valid Values & Mappings
 
 <table>
 <tr>
@@ -623,28 +623,28 @@ a wheelchair or crutches</td>
 </tr>
 </table>  
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 If the learner's disability data is not supplied, this property should be omitted.
 
 As of the 2016-2017 academic year, HESA DISABILITY has a different value space in the HESA student returns. Also, LLDDCAT in FE ILR post 2014 has a different value space from later versions. Both of these vocabularies will be supported in a forthcoming field in v1.3. Data with HESA DISABLE and LLDDCAT in FE ILR post 2014 can't, therefore, be submitted prior to UDD v1.3
 
-##DOMICILE
-###Description
+## DOMICILE
+### Description
 This property holds the country code of the student's permanent home address prior to entry to the course. It is not necessarily the correspondence address of the student.
 
-###Purpose
+### Purpose
 For detailed analysis within Learning Analytics/ Data Modelling.
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/DOMICILE
 
-###Format
+### Format
 String (2)
 
-###Valid Values (No Mappings)
+### Valid Values (No Mappings)
 <table>
 	<tr>
 		<td>DOMICILE</td>
@@ -1977,21 +1977,21 @@ String (2)
 	</tr>
 </table>
 
-###Notes
+### Notes
 If domicile country data is not supplied, this property should be omitted.
 Omitting this property may hinder the development or use of an effective analytics model.
 
-##TERMTIME_ACCOM
-###Description
+## TERMTIME_ACCOM
+### Description
 The current term time accomodation type of student
 
-###Purpose
+### Purpose
 For detailed analysis within Learning Analytics/ Data Modelling.
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/TTACCOM
 
-###Valid Values & Mappings
+### Valid Values & Mappings
 
 <table>
 <tr><td>TERMTIME_ACCOM</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)</td><td>HESA(TTACCOM)</td><td>FEILR(ACCOM)  </td></tr>
@@ -2007,24 +2007,24 @@ https://www.hesa.ac.uk/collection/c16051/a/TTACCOM
 
 Please Note - N/A denotes that no mapping value is applicable (it should not be confused with NULL), and this property should be omitted.
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 If current term time accomodation type data is not supplied, this property should be omitted.
 Omitting this property may hinder the development or use of an effective analytics model.
 
-##PARENTS_ED
-###Description
+## PARENTS_ED
+### Description
 Whether parents have higher education qualification.
 
-###Purpose
+### Purpose
 For detailed analysis within Learning Analytics/ Data Modelling.
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/PARED
 
-###Valid Values
+### Valid Values
 
 <table>
 <tr><td>PARENTS_ED</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)  </td></tr>
@@ -2035,24 +2035,24 @@ https://www.hesa.ac.uk/collection/c16051/a/PARED
 <tr><td>9</td><td>Information refused</td><td>Gwybodaeth wedi ei ddal yn ol  </td></tr>
 </table>
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 If parents higher education qualification data is not supplied, this property should be omitted.  This information may not be available for FE/ ILR institutions, and only HE.
 Omitting this property may hinder the development or use of an effective analytics model.
 
-##SOCIO_EC
-###Description
+## SOCIO_EC
+### Description
 This property collects the socio-economic classification of students participating in HE if 21 or over at the start of their course or parental classification if under 21.
 
-###Purpose
+### Purpose
 For detailed analysis within Learning Analytics/ Data Modelling.
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/SEC
 
-###Valid Values
+### Valid Values
 
 <table>
 <tr><td>SOCIO_EC</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)  </td></tr>
@@ -2067,26 +2067,26 @@ https://www.hesa.ac.uk/collection/c16051/a/SEC
 <tr><td>9</td><td>Not classified</td><td>Dim math</td></tr>
 </table>  
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 If the socio-economic classification data is not supplied, this property should be omitted.
 This information may not be available for FE/ ILR institutions, and only HE.
 Omitting this property may hinder the development or use of an effective analytics model.
 
 
-##OVERSEAS
-###Description
+## OVERSEAS
+### Description
 Whether the student is classified as a home student (UK), or European (EU) or as Overseas (rest of the world).
 
-###Purpose
+### Purpose
 For detailed analysis within Learning Analytics/ Data Modelling.
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 
 <table>
 <tr><td>OVERSEAS</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)</td></tr>
@@ -2096,343 +2096,343 @@ Jisc
 <tr><td>99</td><td>Not Known</td><td>Anhysbys</td></tr>
 </table>  
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 If this student classification data is not supplied, this property should be omitted.
 The mapping for these fields could be done using the Nationality indicator, or other relevant source within the HESA/ student records system database.
 Omitting this property may hinder the development or use of an effective analytics model.
 
 
-##APPSHIB_ID
-###Description.
+## APPSHIB_ID
+### Description.
 The person identifier used by Shibboleth / The UK Access Management Federation to grant access to the Jisc analytics student app via the Shibboleth - JWT gateway.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 https://www.internet2.edu/media/medialibrary/2013/09/04/internet2-mace-dir-eduperson-200604.html
 
-###Valid Values
+### Valid Values
 Not specified
 
-###Format
+### Format
 String (256)
 
-###Notes
+### Notes
 There may be a more general AIM_ID property later that can be used for any UK Federation service provider ID, not just the Jisc analytics student app Shibboleth - JWT gateway.
 
 
-##VLE_ID
-###Description.
+## VLE_ID
+### Description.
 The ID assigned to a student by the VLE.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Not specified
 
-###Format
+### Format
 String (256)
 
-###Notes
+### Notes
 Note that this is not a universal user ID; there may be several VLEs, or records from other types of tools.
 
 
-##HUSID
-###Description.
+## HUSID
+### Description.
 A HESA student identifier unique to each student. It is intended that the identifier is to be transferred with the student to each provider of higher education he or she may attend. The objective is that the use of this number will facilitate the accurate tracking of students throughout their experience within the sector for which HESA collects data.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/HUSID
 
-###Format of Valid Values
+### Format of Valid Values
 - First 2 digits:</td><td>Year of entry into provider (last 2 digits of year)
 - Next 4 digits:</td><td>HESA institution identifier + 1000
 - Next 6 digits:</td><td>6 digit reference number internally allocated by provider.
 - Last digit:</td><td>Check digit.
 
-###Format
+### Format
 String (13)
 
-###Notes
+### Notes
 
 
-##USERNAME
-###Description
+## USERNAME
+### Description
 This is the username for systems access at the Institution
 
-###Purpose
+### Purpose
 To be used for user login/ account lookup purposes
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 This will typically be imported and updated continuously from Institution identity management systems.
 
 
-##LAST_NAME
-###Description
+## LAST_NAME
+### Description
 Students family or surname.
 
-###Purpose
+### Purpose
 For display. Used by Student App, Student Success Planner, Tribal Insight
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String
 
-###Notes
+### Notes
 
 
-##FIRST_NAME
-###Description
+## FIRST_NAME
+### Description
 Students given or first name
 
-###Purpose
+### Purpose
 For display. Used by Student App, Student Success Planner, Tribal Insight
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String
 
-###Notes
+### Notes
 
 
-##ADDRESS_LINE_1
-###Description
+## ADDRESS_LINE_1
+### Description
 Address Line 1 - term-time accommodation
 
-###Purpose
+### Purpose
 For display. Used by Student Success Planner
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String
 
-###Notes
+### Notes
 This is usually imported from the Institution's SRS.
 
 
-##ADDRESS_LINE_2
-###Description
+## ADDRESS_LINE_2
+### Description
 Address Line 2 - term-time accommodation
 
-###Purpose
+### Purpose
 For display. Used by Student Success Planner
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String
 
-###Notes
+### Notes
 This is usually imported from the Institution's SRS.
 
 
-##ADDRESS_LINE_3
-###Description
+## ADDRESS_LINE_3
+### Description
 Address Line 3 - term-time accommodation
 
-###Purpose
+### Purpose
 For display. Used by Student Success Planner
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String
 
-###Notes
+### Notes
 This is usually imported from the Institution's SRS.
 
 
-##ADDRESS_LINE_4
-###Description
+## ADDRESS_LINE_4
+### Description
 Address Line 4 - term-time accommodation
 
-###Purpose
+### Purpose
 For display. Used by Student Success Planner
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String
 
-###Notes
+### Notes
 This is usually imported from the Institution's SRS.
 
 
-##POSTCODE
-###Description
+## POSTCODE
+### Description
 This is the current (term-time) postcode corresponding to the student's accommodation address provided
 
-###Purpose
+### Purpose
 For display. Used by Student Success Planner
 
-###Derivation
+### Derivation
 Jisc
 https://www.hesa.ac.uk/collection/c16051/a/TTPCODE
 
-###Valid Values
+### Valid Values
 See [HESA definition for details.](https://www.hesa.ac.uk/collection/c16051/a/TTPCODE)
 
-###Format
+### Format
 String (8)
 
-###Notes
+### Notes
 This should relate to the term-time postcode of the student's residency, and NOT the entry postcode onto the student's learning instance
 
 
-##PRIMARY_EMAIL_ADDRESS
-###Description
+## PRIMARY_EMAIL_ADDRESS
+### Description
 Students primary email address
 
-###Purpose
+### Purpose
 For display and contact via student success planner. Used by Student Success Planner
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String(255)
 
-###Notes
+### Notes
 Will be input/ batched directly from central IT or identification management systems at the institution
 
 
-##HOME_PHONE
-###Description
+## HOME_PHONE
+### Description
 Students home telephone number. This can refer to the landline telephone number of their term-time or non term-time accomodation.
 
-###Purpose
+### Purpose
 For display and contact purposes. Used by Student Success Planner
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String(255)
 
-###Notes
+### Notes
 This is usually imported from the Institution's SRS.
 
 
-##MOBILE_PHONE
-###Description
+## MOBILE_PHONE
+### Description
 Students mobile telephone number.
 
-###Purpose
+### Purpose
 For display and contact purposes. Used by Student Success Planner
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String(255)
 
-###Notes
+### Notes
 This is usually imported from the Institution's SRS.
 
 
-##PHOTO_URL
-###Description
+## PHOTO_URL
+### Description
 URL link provided to a latest/ recent photo of student
 
-###Purpose
+### Purpose
 For display purposes. Used by Student Success Planner
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 GIF or JPG (exact list of formats, and ideal (minimum) photo resolution, to be confirmed)
 
-###Notes
+### Notes
 This assumes that there is a way of securing access to the photo.
 
 
-##TUTOR_STAFF_ID
-###Description
+## TUTOR_STAFF_ID
+### Description
 This is the unique identification number for the learner's academic or course year supervisor/ tutor, or alternatively the id of the contact who will be responsible for handling Learning Analytics alerts and notification regarding the student
 
-###Purpose
+### Purpose
 For notification and alerts purposes for Learning Analytics SSP and other software tools
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c15025/a/OWNSTAFFID
 
-###References
+### References
 
-###Format
+### Format
 String(255)
 
-###Notes
+### Notes
 This will be the unique identifier/ primary key for the member of staff who is responsible for the student (course/ year tutor) or the person responsible for receiving alerts and notifications from the Learning Analytics software suite/ tools. This will typically be the staff/ HR/ payroll number for the member of academic staff, which links to their email address in the institutions identity management system.
 
 
-##ENTRY_POSTCODE
-###Description.
+## ENTRY_POSTCODE
+### Description.
 Identifies the postcode of the student's permanent or home address prior to entry to the course. It is not necessarily the correspondence address of the student.
 
-###Purpose
+### Purpose
 Analytics 
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/postcode/
 
-###Valid Values
+### Valid Values
 [See HESA definition for particulars](https://www.hesa.ac.uk/collection/c16051/a/postcode/)
 
-###Format
+### Format
 String (8)
 
-###Notes
+### Notes
