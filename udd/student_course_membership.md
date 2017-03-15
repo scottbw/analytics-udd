@@ -185,7 +185,7 @@ Omitting this property may hinder the development or use of an effective analyti
 
 ## ENTRY_POINTS
 ### Description
-This field indicates the entry points gained by the student prior to entry to the institution. This is currently based on the UCAS entry points system. This field must be adapted or used to represent those points for entry into FE, for example using a formula to combine and calculate points to represent Maths and English qualifications upon entry.
+This field indicates the entry points gained by the student prior to entry to the institution. This is currently based on the UCAS entry points system for HE institutions.  For FE institutions, it should be the average GCSE points score or similar numeric value where GCSEs are not relevant.
 
 ### Purpose
 For analytics
@@ -200,6 +200,7 @@ Any
 Int
 
 ### Notes
+Where an average GCSE points score system or similar scheme is used, the institution should use a single consistent scheme across all its data.  An example would be the Alps average GCSE scoring scheme.
 
 
 ## COURSE_OUTCOME
