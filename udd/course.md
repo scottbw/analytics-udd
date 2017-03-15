@@ -1,6 +1,5 @@
 # course
 * [COURSE_ID](#course_id) [1] **
-* [SUBJECT](#subject) [0..1]
 * [TITLE](#title) [0..1]
 * [COURSE_AIM](#course_aim) [0..1]
 * [INST_TIER_1](#inst_tier_1) [0..1]
@@ -37,27 +36,6 @@ String (255)
 ### Notes
 HE guidance - this field could relate to actual HESA COURSEID field or the HE institution's OWNCOURSEID field for cross-referencing purposes.
 
-## SUBJECT
-### Description
-Subject of study coding using JACS3.
-
-### Purpose
-For display purposes
-
-### Derivation
-https://www.hesa.ac.uk/collection/c16051/a/sbjca/
-
-https://www.hesa.ac.uk/support/documentation/jacs
-
-### Valid Values
-[JACS3 CSV](../media/jacs3-valid-entries.csv)
-
-### Format
-String (10) - Usually 4 characters, number followed by three digits
-
-### Notes
-The JACS3 coding will be used here initially, from the HE (HESA) model. Further discussion will be required around this, to discuss subject classifications for FE/ ILR.
-Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
 
 ## TITLE
 ### Description

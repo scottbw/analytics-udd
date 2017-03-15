@@ -1,7 +1,6 @@
 # module
 * [MOD_ID](#mod_id) [1] **
 * [MOD_NAME](#mod_name) [0..1]
-* [MOD_SUBJECT](#mod_subject) [0..1]
 * [MOD_CREDITS](#mod_credits) [0..1]
 * [MOD_LEVEL](#mod_level) [0..1]
 * [CREDIT_BEARING](#credit_bearing) [0..1]
@@ -51,28 +50,6 @@ String (255)
 
 ### Notes
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
-
-## MOD_SUBJECT
-### Description
-Module subject - coded using JACS3 subject codes
-
-### Purpose
-For display purposes and analytics.
-
-### Derivation
-https://www.hesa.ac.uk/collection/c16051/a/modsbj/
-
-https://www.hesa.ac.uk/support/documentation/jacs
-
-### Valid Values
-[JACS3 CSV](../media/jacs3-valid-entries.csv)
-
-### Format
-String (10)
-
-### Notes
-For FE purposes, it will need be adapted to work with institutions specific codeset for Learning Activities. Details to be confirmed.
-Omitting this property may hinder the development or use of an effective analytics model.
 
 
 ## MOD_CREDITS
