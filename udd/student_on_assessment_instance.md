@@ -23,175 +23,175 @@
 
 \* indicates that the property is part of a composite primary key for this entity.
 
-##ASSESS_SEQ_ID
-###Description.
+## ASSESS_SEQ_ID
+### Description.
 A unique sequence number to indicate the order of assessments taken by a student on the assessment instance.
 
-###Purpose
+### Purpose
 To help identify the latest assessment and the order of assessments for a student, especially for those in reassessment.
 This could differ from the ASSESS_CURRENT_ATTEMPT/ASSESS_COMPLETED_ATTEMPT attributes when a student has mitigating circumstances.
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 Integer
 
-###Notes
+### Notes
 The ASSESS_SEQ_ID number needs to increment with the chronological order of assessments.
 
-##ASSESS_DUE_DATE
-###Description.
+## ASSESS_DUE_DATE
+### Description.
 The date an assessment instance for a student was due for submission.
 
-###Purpose
+### Purpose
 Analytics and display
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 YYYY-MM-DD
 
-###Format
+### Format
 ISO 8601
 
-###Notes
+### Notes
 
 
-##ASSESS_RETAKE
-###Description.
+## ASSESS_RETAKE
+### Description.
 Whether this is a retake of the asessment for that student.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 <table>
 <tr><td>ASSESS_RETAKE</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)  </td></tr>
 <tr><td>1</td><td>Yes</td><td>Ie  </td></tr>
 <tr><td>2</td><td>No</td><td>Na</td></tr>
 </table>  
 
-###Format
+### Format
 Integer
 
-###Notes
+### Notes
 
 
-##ASSESS_ACTUAL_MARK
-###Description.
+## ASSESS_ACTUAL_MARK
+### Description.
 The mark awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 0-100
 
-###Format
+### Format
 Decimal
 
-###Notes
+### Notes
 ASSESS_ACTUAL_MARK should only be part of a UDD compliant dataset if there is a moderation process and if the result of that process is available in the source data. 
 
 
-##ASSESS_AGREED_MARK
-###Description.
+## ASSESS_AGREED_MARK
+### Description.
 The mark recorded after any moderation or confirmation processes, or the only recorded mark if there are no moderation or confirmation processes.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 0-100
 
-###Format
+### Format
 Decimal
 
-###Notes
+### Notes
 ASSESS_AGREED_MARK is expected to be present in any UDD compliant dataset as soon as it becomes available.
 
 
-##ASSESS_ACTUAL_GRADE
-###Description.
+## ASSESS_ACTUAL_GRADE
+### Description.
 The grade awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 ASSESS_ACTUAL_GRADE should only be part of a UDD compliant dataset if there is a moderation process and if the result of that process is available in the source data.
 
 
-##ASSESS_AGREED_GRADE
-###Description.
+## ASSESS_AGREED_GRADE
+### Description.
 The grade recorded after any moderation or confirmation processes, or the only recorded grade if there are no moderation or confirmation processes. 
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 ASSESS_AGREED_GRADE is expected to be present in any UDD compliant dataset as soon as it becomes available.
 
 
-##ASSESSMENT_CURRENT_ATTEMPT
-###Description.
+## ASSESSMENT_CURRENT_ATTEMPT
+### Description.
 Number of attempts taken by a student so far on an assessment instance.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 Integer
 
-###Notes
+### Notes
 Omitting this property may hinder the development or use of an effective analytics model.
 
-##ASSESSMENT_RESULT
-###Description.
+## ASSESSMENT_RESULT
+### Description.
 Indicates whether the student passed the assessment, didn't pass the assessment, deferred the assessment or whether this information is not known because the assessment hasn't been due yet.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc; student_on_a_module_instance.MOD_RESULT
 
 <table>
@@ -202,109 +202,109 @@ Jisc; student_on_a_module_instance.MOD_RESULT
 <tr><td>4</td><td>deprecated (was: 'deferred')</td><td> </td></tr>
 </table>  
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 Code 3 is applied in all cases where the outcome is either not known (yet), or doesn't apply because the student hasn't been assessed yet. Code 4 is deprecated because deferral or withdrawal is indicated by WITHDRAWAL_REASON in student_course_membership. 
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
 
 
-##GRADE_DATE
-###Description.
+## GRADE_DATE
+### Description.
 The date at which the grade result has been confirmed and awarded.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Not specified
 
-###Format
+### Format
 Date (ISO format) - YYYY-MM-DD
 
-###Notes
+### Notes
 This is the date when a grade has been moderated and agreed, but before exam board confirmation. It is typically the date at which the grade is entered in a SRS.
 
 
-##MAX_POINTS
-###Description.
+## MAX_POINTS
+### Description.
 The maximum points that an instructor can allocate to an assessment. Used to indicate the marking scale used for an assignment.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Not specified
 
-###Format
+### Format
 String (256)
 
-###Notes
+### Notes
 The value can be any alphanumeric used by any type of marking scale. E.g. 80%, B11 or 'excellent'. There is also the similar MAX_MARKS property on assessment_instance, which is for analytic purposes. It only accepts decimal data.
 
 
-##X_ASSESS_DETAIL
-###Description.
+## X_ASSESS_DETAIL
+### Description.
 An extra implementation optimisation that isn't part of the UDD model. It's value is identical to that of the relevant assessment_instance.ASSESS_DETAIL.
 
-###Purpose
+### Purpose
 Implementation optimisation
 
-###Derivation
+### Derivation
 Jisc; assessment_instance.ASSESS_DETAIL
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 This data is generated internally from existing data, and does not need to be supplied by an institution.
 
 
-##X_MOD_ID
-###Description.
+## X_MOD_ID
+### Description.
 An extra implementation optimisation that isn't part of the UDD model. Its value is identical to that of the relevant module.MOD_ID.
 
-###Purpose
+### Purpose
 Implementation optimisation
 
-###Derivation
+### Derivation
 Jisc; module.MOD_ID
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 This data is generated internally from existing data, and does not need to be supplied by an institution.
 
 
-##X_MOD_ACADEMIC_YEAR
-###Description
+## X_MOD_ACADEMIC_YEAR
+### Description
 An extra implementation optimisation that isn't part of the UDD model. Its value is identical to that of MOD_ACADEMIC_YEAR on the mod_instance identified by the relevant MOD_INSTANCE_ID.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 4 digit year
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 This is the starting year for the academic year.
