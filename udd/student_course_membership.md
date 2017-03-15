@@ -1,4 +1,4 @@
-#student_course_membership
+# student_course_membership
 
 * [STUDENT_COURSE_MEMBERSHIP_ID](#student_course_membership_id) [1] *
 * [STUDENT_COURSE_MEMBERSHIP_SEQ](#student_course_membership_seq) [1] *
@@ -21,43 +21,43 @@
 
 \* indicates that the property is part of a composite primary key for this entity.
 
-##STUDENT_COURSE_MEMBERSHIP_ID
-###Description
+## STUDENT_COURSE_MEMBERSHIP_ID
+### Description
 The institution's own unique identifier for the combination of one student and one course they are enrolled on.
 
-###Purpose
+### Purpose
 To provide a unique course code for a student, for use in correctly mapping to module and assessment records.
 
-###Derivation
+### Derivation
 As defined by the Student Record System.
 
-###References
+### References
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 The student_course_membership is designed to deal with the fact that some students are enrolled on more than one course in their time at a provider. Drawing together data on their student ID alone could therefore be misleading, or at least be significantly different from students who have only ever been registered on one course. STUDENT_COURSE_MEMBERSHIP_ID partitions the study careers of those who are on multiple courses, and makes them comparable to those who have only ever been enrolled on one course.
 
-##STUDENT_COURSE_MEMBERSHIP_SEQ
-###Description
+## STUDENT_COURSE_MEMBERSHIP_SEQ
+### Description
 A sequence indicator that uniquely identifies the combination of the student and the course_instance they are assigned to, to allow for cases where there is more than one such combination.
 
-###Purpose
+### Purpose
 Together with STUDENT_COURSE_MEMBERSHIP_ID, the purpose of STUDENT_COURSE_MEMBERSHIP_SEQ is to provide a unique course_instance code for a student, for use in joining a student to course_instance/enrolment records.
 
-###Derivation
+### Derivation
 As defined by the Student Record System.
 
-###Valid Values
+### Valid Values
 Either a letter or digit that increments for each student - course_instance pair.
 
-###References
+### References
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 The student_course_membership sequence ID is designed to deal with the fact that some students drop out off or enroll on more than one instance of the same course. 
 
 In cases where a sequence ID is not readily available – which includes most sites that do not use Tribal SITS –, the correct value for all instances of this student_course_membership entity is likely to be "1". The reason is that, in such cases, STUDENT_COURSE_MEMBERSHIP_ID is already unique on its own, and the sequence number of that unique instance is, therefore, 1.
@@ -65,14 +65,14 @@ In cases where a sequence ID is not readily available – which includes most si
 Note that the ACTIVE_MEMBERSHIP property indicates whether this student_course_membership record is the last known active one.
 
 This property will be deprecated in the next revision of the UDD.
-##WITHDRAWAL_REASON
-###Description
+## WITHDRAWAL_REASON
+### Description
 The reason a student has withdrawn from a course (if they have)
 
-###Purpose
+### Purpose
 For analytics
 
-###Derivation
+### Derivation
 Based on the ILR codeset used for 'WithdrawReason' - with HESA code '05' utilised. For further information visit:
 
 https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/449779/ILRSpecification2015_16_v3_July2015.pdf
@@ -81,7 +81,7 @@ https://www.hesa.ac.uk/collection/c16051/a/WITHDRAWREASON
 
 https://www.hesa.ac.uk/collection/c16051/a/RSNEND
 
-###Valid Values & Mappings
+### Valid Values & Mappings
 <table>
 <tr><td>WITHDRAWAL_REASON</td><td>DESCRIPTION (ENGLISH)</td><td>DESCRIPTION (WELSH)</td><td>HESA (WITHDRAWREASON)</td><td>HESA (RSNEND)</td><td>FEILR (WITHDRAWREASON)  </td></tr>
 <tr><td>2</td><td>Learner has transferred to another provider</td><td></td><td>02</td><td>03</td><td>2  </td></tr>
@@ -103,48 +103,48 @@ https://www.hesa.ac.uk/collection/c16051/a/RSNEND
 <tr><td>99</td><td>Completion of course - result unknown</td><td></td><td>N/A</td><td>98</td><td>N/A</td></tr>
 </table>  
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 
-##WITHDRAWAL_DATE
-###Description
+## WITHDRAWAL_DATE
+### Description
 The date a student has withdrawn from a course (if they have)
 
-###Purpose
+### Purpose
 For analytics
 
-###Derivation
+### Derivation
 https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/449779/ILRSpecification2015_16_v3_July2015.pdf
 https://www.hesa.ac.uk/collection/c16051/a/ENDDATE
 
-###Valid Values
+### Valid Values
 YYYY-MM-DD
 
-###Format
+### Format
 ISO 8601 Date
 
-###Notes
+### Notes
 Would normally utilise ENDDATE (HE/ HESA) or potentially LearnActEndDate (FE/ ILR - to be confirmed) when relevant fields denote that the learner/ student has withdrawn from the learning aim/ course.
 
 This property is deprecated, use student_course_membership.COURSE_END_DATE and student_course_membership.COURSE_OUTCOME instead.
 
-##ENTRY_QUALS
-###Description
+## ENTRY_QUALS
+### Description
 The classification of entry qualifications, prior to entry to the institution
 
-###Purpose
+### Purpose
 For display & analytics
 
-###Derivation
+### Derivation
 Based on HESA codings for QUALENT3, but merged with specific element of the FE ILR field 'PriorAttain'
 
 https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675/ILRSpecification2016_17_v2_April2016.pdf
 
 https://www.hesa.ac.uk/collection/c16051/a/QUALENT3
 
-###Valid Values & Mappings
+### Valid Values & Mappings
 <table>
 <tr><td>ENTRY_QUALS</td><td>DESCRIPTION (ENGLISH)</td><td>DESCRIPTION (WELSH)</td><td>HESA(QUALENT3)</td><td>FEILR (PRIORATTAIN)</td></tr>
 <tr><td>DUK</td><td>UK doctorate degree</td><td></td><td>DUK</td><td> 	</td></tr>
@@ -210,45 +210,45 @@ https://www.hesa.ac.uk/collection/c16051/a/QUALENT3
 <tr><td>X06</td><td>Not known</td><td></td><td>X06</td><td>98</td></tr>
 </table>
 
-###Format
+### Format
 Alphanumeric
 
-###Notes
+### Notes
 Omitting this property may hinder the development or use of an effective analytics model.
 
-##ENTRY_POINTS
-###Description
+## ENTRY_POINTS
+### Description
 This field indicates the entry points gained by the student/ learner prior to entry to the institution. This is currently based on the UCAS entry points system. This field must be adapted or used to represent those points for entry into FE eg. using a formula to combine & calculate points to represent Maths and English qualifications upon entry for example
 
-###Purpose
+### Purpose
 For analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid Values
+### Valid Values
 Any
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 
 
-##COURSE_OUTCOME
-###Description
+## COURSE_OUTCOME
+### Description
 This field indicates the outcome/ status of the learner's current course or learning aim. This is based on the information provided by HESA via the RSNEND field, however this has been adapted with the addition of fields to cater for FE (via the ILR CompStatus field), and can be used to fully cater for the outcomes in granular detail
 
-###Purpose
+### Purpose
 For analytics
 
-###Derivation
+### Derivation
 
 https://www.hesa.ac.uk/collection/c16051/a/rsnend/
 
 https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/449779/ILRSpecification2015_16_v3_July2015.pdf
 
-###Valid Values
+### Valid Values
  <table>
             <tr>
                 <td>COURSE_OUTCOME</td>
@@ -372,23 +372,23 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/449779
             </tr>
         </table>
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 Omitting this property may hinder the development or use of an effective analytics model.
 
-##COURSE_GRADE
-###Description
+## COURSE_GRADE
+### Description
 Class of award achieved by the student on this course_instance. Based on HESA codeset for CLASS (HE conformity to be confirmed)
 
-###Purpose
+### Purpose
 For analytics
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/CLASS
 
-###Valid Values
+### Valid Values
 
 <table>
 <tr><td>COURSE_GRADE</td><td>DESCRIPTION (ENGLISH)</td><td>DESCRIPTION (WELSH)  </td></tr>
@@ -435,23 +435,23 @@ https://www.hesa.ac.uk/collection/c16051/a/CLASS
 <tr><td>91</td><td>Not yet awarded</td><td>  </td></tr>
 </table>
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
 
-##COURSE_AIM_ATTAINED
-###Description
+## COURSE_AIM_ATTAINED
+### Description
 The Course Aim the student attained on the course of which they are a member.
 
-###Purpose
+### Purpose
 Allowing the analysis of whether a student achieved the award/aim associated with the course of which they are a member.
 
-###Derivation
+### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/courseaim/
 
-###Valid Values
+### Valid Values
 <table>
  <tr>
   <td>COURSE_AIM</td>
@@ -1548,175 +1548,175 @@ body</td>
  </tr>
 </table>
 
-###References
+### References
 
-###Format
+### Format
 String(255)
 
-###Notes
+### Notes
 All course levels are denoted here (TBC with FE college, for final implementation). Specific use of the LARS codeset for FE (from ILR) may need to be considered, or a mapping/ amalgamation with the HESA codeset. This is to be discussed in consultation with the FE sector.
 
 
-##COURSE_MARK
-###Description
+## COURSE_MARK
+### Description
 The overall mark a student attained on their course.
 
-###Purpose
+### Purpose
 For display purposes and further analysis
 
-###Derivation
+### Derivation
 SRS Systems
 
-###Valid values
+### Valid values
 0-100
 
-###References
+### References
 
-###Format
+### Format
 Decimal (IEEE 754)
 
-###Notes
+### Notes
 
 
-##COURSE_EXPECTED_END_DATE
-###Description
+## COURSE_EXPECTED_END_DATE
+### Description
 The end date the student was expected to complete a course when they enrolled. This will be used to identify students who extend beyond this date.
 
-###Purpose
+### Purpose
 Analytics and display
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid values
+### Valid values
 YYYY-MM-DD
 
-###References
+### References
 
-###Format
+### Format
 ISO 8601
 
-###Notes
+### Notes
 Omitting this property may hinder the development or use of an effective analytics model.
 
-##COURSE_END_DATE
-###Description
+## COURSE_END_DATE
+### Description
 The date on which the student left their course.
 
-###Purpose
+### Purpose
 Analytics and display
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid values
+### Valid values
 YYYY-MM-DD
 
-###References
+### References
 
-###Format
+### Format
 ISO 8601
 
-###Notes
+### Notes
 Note that there may be many reasons why a student leaves a course. This is recorded in WITHDRAWAL_REASON.
 
-##COURSE_JOIN_DATE
-###Description
+## COURSE_JOIN_DATE
+### Description
 This field indicates the date of the student's initial commencement of studies for this student_course_membership and may relate to a date prior to the current academic/financial year. Exchange-in students should have the date they commenced their studies at the reporting provider.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 HESA COMDATE
 https://www.hesa.ac.uk/collection/c16051/a/COMDATE
 
-###Valid values
+### Valid values
 YYYY-MM-DD
 
-###References
+### References
 
-###Format
+### Format
 ISO 8601
 
-###Notes
+### Notes
 
 
-##COURSE_JOIN_AGE
-###Description
+## COURSE_JOIN_AGE
+### Description
 The age of the student when they initially commenced their studies for this student_course_membership. Exchange-in students should have the age they commenced their studies at the reporting provider.
 
-###Purpose
+### Purpose
 Analytics
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid values
+### Valid values
 0-200
 
-###References
+### References
 
-###Format
+### Format
 Int
 
-###Notes
+### Notes
 This value is designed to be a secondary source to check COURSE_JOIN_DATE minus DOB. In cases where COURSE_JOIN_AGE is not stored separately, it should be calculated at the ETL stage.
 
 
-##COHORT_ID
-###Description
+## COHORT_ID
+### Description
 An identifier for a group of students in a year cohort.
 
-###Purpose
+### Purpose
 Display and grouping purposes, and but analysis.
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid values
+### Valid values
 Any
 
-###References
+### References
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 
 
-##COHORT_ID
-###Description
+## COHORT_ID
+### Description
 An identifier for a group of students in a year cohort.
 
-###Purpose
+### Purpose
 Display and grouping purposes, and but analysis.
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid values
+### Valid values
 Any
 
-###References
+### References
 
-###Format
+### Format
 String (255)
 
-###Notes
+### Notes
 
 
-##ACTIVE_MEMBERSHIP
-###Description
+## ACTIVE_MEMBERSHIP
+### Description
 This property indicates whether the associated student_course_membership record identifies the course a student is actively studying on, or intending to study on, at the moment the data was extracted. 
 
-###Purpose
+### Purpose
 Display purposes.
 
-###Derivation
+### Derivation
 Jisc
 
-###Valid values
+### Valid values
  <table>
             <tr>
                 <td>ACTIVE_MEMBERSHIP</td>
@@ -1740,12 +1740,12 @@ Jisc
             </tr>
         </table>
 
-###References
+### References
 
-###Format
+### Format
 String (1)
 
-###Notes
+### Notes
 The purpose of this property is to easily identify, if there are several student_course_membership records for a given STUDENT_ID or COURSE_ID and STUDENT_ID combination, which of these records is the last known to have been actively used.
 
 A record with ACTIVE_MEMBERSHIP=1 will generally also be the record with the most recent COURSE_JOIN_DATE. The only exceptions would be cases where a students starts on one course, switches to another, and then reverts to the original.
