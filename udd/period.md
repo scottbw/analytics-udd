@@ -1,13 +1,13 @@
 # period
 
-* [PERIOD_ID](#period_id) [1] **
+* [PERIOD_ID](#period_id) **
 * [PERIOD_CODE](#period_code) [1] *
 * [ACADEMIC_YEAR](#academic_year) [1] *
 * [PERIOD_NAME](#period_name) [1]
 * [PERIOD_START_DATE](#period_start_date) [1]
 * [PERIOD_END_DATE](#period_end_date) [1]
 
-\** indicates that the property is the primary key for this entity.
+\** indicates that the property is the primary key for this entity; if not provided by data supplier, will be LRW generated. 
 \* indicates that the property is part of a uniqueness constraint for this entity.
 
 ## Description

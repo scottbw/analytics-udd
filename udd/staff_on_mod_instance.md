@@ -1,10 +1,10 @@
 # staff_on_mod_instance
 
-*  [STAFF_ON_MOD_INSTANCE_ID](#staff_on_mod_instance_id) [1] **
+*  [STAFF_ON_MOD_INSTANCE_ID](#staff_on_mod_instance_id) **
 *  [STAFF_ID](staff.md#staff_id) [1] *
 *  [MOD_INSTANCE_ID](module_instance.md#mod_instance_id) [1] *
 
-\** indicates that the property is the primary key for this entity.  
+\** indicates that the property is the primary key for this entity; if not provided by data supplier, will be LRW generated.   
 \* indicates that the property is part of a uniqueness constraint for this entity.
 
 ## Description of staff_on_mod_instance entity

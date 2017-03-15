@@ -1,6 +1,6 @@
 # student_on_assessment_instance
 
-* [STUDENT_ON_ASSESSMENT_INSTANCE_ID](#student_on_assessment_instance_id) [1] **
+* [STUDENT_ON_ASSESSMENT_INSTANCE_ID](#student_on_assessment_instance_id) **
 * [STUDENT_COURSE_MEMBERSHIP_ID](student_course_membership.md#student_course_membership_id) [1] *
 * [ASSESS_INSTANCE_ID](assessment_instance.md#assess_instance_id) [1] *
 * [ASSESS_SEQ_ID](#assess_seq_id) [1] *
@@ -21,7 +21,7 @@
 * [X_MOD_ID](#x_mod_id) [0..1]
 * [MOD_ACADEMIC_YEAR](#mod_academic_year) [0..1]
 
-\** indicates that the property is the primary key for this entity.  
+\** indicates that the property is the primary key for this entity; if not provided by data supplier, will be LRW generated.   
 \* indicates that the property is part of a uniqueness constraint for this entity.
 
 ## Description of student_on_assessment_instance entity

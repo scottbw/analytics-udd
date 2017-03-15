@@ -1,10 +1,10 @@
 # staff_on_course_instance
 
-* [STAFF_ON_COURSE_INSTANCE_ID](#staff_on_course_instance_id) [1] **
+* [STAFF_ON_COURSE_INSTANCE_ID](#staff_on_course_instance_id) **
 * [STAFF_ID](staff.md#staff_id) [1] *
 * [COURSE_INSTANCE_ID](course_instance.md#course_instance_id) [1] *
 
-\** indicates that the property is the primary key for this entity.  
+\** indicates that the property is the primary key for this entity; if not provided by data supplier, will be LRW generated.   
 \* indicates that the property is part of a uniqueness constraint for this entity.
 
 ## Description of staff_on_course_instance entity
