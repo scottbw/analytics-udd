@@ -30,9 +30,11 @@
 \** indicates that the property is the primary key for this entity.
 
 ## Description of student_course_membership entity
-A student_course_membership describes a student's enrolment on a course.  It is designed to deal with the fact that some students are enrolled on more than one course in their time at an institution.
+A student_course_membership describes a student's enrolment on a course. It is designed to handle, not only a student enrolling on a single course in their time at an institution, but also with cases where a student is enrolled on more than one course, to study either two or more courses simultaneously or one after the other.
 
 ## Notes
+The student_course_membership entity carries critical data about the student's current studies and also acts as a historical record of course changes and previous studies.  For this reason, the WITHDRAWAL_REASON code and COURSE_END_DATE must be set when a student changes course, and typically the ACTIVE_MEMBERSHIP property is updated.
+
 This entity is similar to a HESA Instance element and a HEDIIP Data Language Student Registration entity.
 
 ## STUDENT_COURSE_MEMBERSHIP_ID
@@ -96,6 +98,7 @@ https://www.hesa.ac.uk/collection/c16051/a/RSNEND
 String (255)
 
 ### Notes
+This property should be set when a student changes course, so that historical records can be maintained and analysed later; in addition the COURSE_END_DATE should be set accordingly.
 
 ## ENTRY_QUALS
 ### Description
