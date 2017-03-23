@@ -27,15 +27,11 @@ Some entities have uniqueness constraints across multiple properties; for exampl
 
 ### [course_instance](udd/course_instance.md)
 
-### [course_subject](udd/course_subject.md)
-
 ### [institution](udd/institution.md)
 
 ### [module](udd/module.md)
 
 ### [module_instance](udd/module_instance.md)
-
-### [module_subject](udd/module_subject.md)
 
 ### [module_vle_map](udd/module_vle_map.md)
 
