@@ -6,6 +6,7 @@
 * [ASSESS_DETAIL](#assess_detail) [0..1]
 * [ASSESS_WEIGHT](#assess_weight) [0..1]
 * [MAX_MARKS](#max_marks) [0..1]
+* [MOD_ACADEMIC_YEAR](module_instance.md#mod_academic_year) [0..1]
 
 \** indicates that the property is the primary key for this entity.
 
