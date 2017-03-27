@@ -140,7 +140,7 @@ Omitting this property could impair the functionality of analytics applications 
 
 ## MOD_FIRST_MARK
 ### Description
-The mark awarded by the initial marker prior to any moderation process.
+The agreed mark a student was awarded on their first attempt at the module.
 
 ### Purpose
 Analytics
@@ -155,8 +155,8 @@ Jisc
 Decimal
 
 ### Notes
-MOD_FIRST_MARK should only be part of a UDD compliant dataset if there is a moderation process and the input mark is available in the source data.
-If a marking process involves concurrent initial marking, the reconciled result should be recorded in MOD_ACTUAL_MARK.
+This mark should not be changed after subsequent attempts at the same module, as it is used in analytics.
+
 
 ## MOD_ACTUAL_MARK
 ### Description
@@ -200,7 +200,7 @@ MOD_AGREED_MARK is expected to be present in any UDD compliant dataset as soon a
 
 ## MOD_FIRST_GRADE
 ### Description
-The grade awarded by the initial marker prior to any moderation process.
+The agreed grade a student was awarded on their first attempt at the module.
 
 ### Purpose
 Analytics. The first grade a student receives on the module is used to help monitor what changes to marks are made during the re-assessment process.
@@ -215,8 +215,8 @@ Any
 String (255)
 
 ### Notes
-MOD_FIRST_GRADE should only be part of a UDD compliant dataset if there is a moderation process and the input grade is available in the source data.
-If a marking process involves concurrent initial marking, the reconciled result should be recorded in MOD_ACTUAL_GRADE.
+This grade should not be changed after subsequent attempts at the same module, as it is used in analytics.
+
 
 
 ## MOD_ACTUAL_GRADE
