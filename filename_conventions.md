@@ -9,6 +9,7 @@ Use the following filenames, all lower case.  The only difference between the fi
 
 - institution.json
 - student.json
+- studentidmap.json
 - course.json
 - module.json
 - moduleinstance.json
@@ -19,6 +20,7 @@ Use the following filenames, all lower case.  The only difference between the fi
 - studentcourseinstance.json
 - studentmoduleinstance.json
 - modulevlemap.json
+- period.json
 - staff.json
 - staffmoduleinstance.json
 - staffcourseinstance.json
@@ -27,6 +29,7 @@ or
 
 - institution.xml
 - student.xml
+- studentidmap.xml
 - course.xml
 - module.xml
 - moduleinstance.xml
@@ -37,6 +40,7 @@ or
 - studentcourseinstance.xml
 - studentmoduleinstance.xml
 - modulevlemap.xml
+- period.xml
 - staff.xml
 - staffmoduleinstance.xml
 - staffcourseinstance.xml
