@@ -1,7 +1,7 @@
 # institution
 * [TENANT_ID](#tenant_id) [1] **
 * [TENANT_NAME](#tenant_name) [0..1]
-* [UDD_VERSION] (#udd_version) [1]
+* [UDD_VERSION](#udd_version) [1]
 
 \** indicates that the property is the primary key for this entity.
 
