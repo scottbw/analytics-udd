@@ -90,7 +90,7 @@ Versioning is done broadly as follows: major versions (majorVersion.minorVersion
 
 Note that some properties will be marked as 'deprecated'. This means that the property is still valid, but will be removed by the next minor version update.
 
-##Acknowledgements
+## Acknowledgements
 
 Many thanks to all contributors who have raised issues, sent pull requests, commented and made suggestions. The UDD specification is the achievement of all of you.
 
