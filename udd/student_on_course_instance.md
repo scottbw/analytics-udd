@@ -319,7 +319,7 @@ Float
 This data is generated internally to the learning record warehouse from existing data, and does not need to be supplied by an institution.
 
 
-## X_YEAR_AVERAGE_GRADE
+## X_YEAR_AVERAGE_MARK
 ### Description
 The current (LIVE) average of all of this academic year's module marks from across a learner's whole course.
 
