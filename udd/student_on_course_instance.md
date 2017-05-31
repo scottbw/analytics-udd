@@ -175,7 +175,7 @@ https://www.hesa.ac.uk/collection/c16051/a/MODE
                 <td>N/A </td>
             </tr>
             <tr>
-                <td>6</td>
+                <td>65</td>
                 <td>FE students continuous delivery day/daytime</td>
                 <td></td>
                 <td>65</td>
