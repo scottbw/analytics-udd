@@ -26,6 +26,7 @@
 * [INITIAL_ASSESSMENT_ENGLISH](#initial_assessment_english) [0..1]
 * [INITIAL_ASSESSMENT_MATHEMATICS](#initial_assessment_mathematics) [0..1]
 * [ADMISSIONS_ROUTE](#admissions_route) [0..1]
+* [COURSE_TRANSFERRED_FROM](#course_transferred_from) [0..1]
 
 \** indicates that the property is the primary key for this entity.
 
@@ -1891,3 +1892,19 @@ String (1)
 
 ### Notes
 Code list may be extended in future.
+
+## COURSE_TRANSFERRED_FROM
+### Description
+Identifies the Course from which the student transferred, if there has been a course change.
+
+### Purpose
+This property indicates that a student has transferred from 1 course to another, by identifying the course from which the student transferred.
+
+### Valid Values
+Any
+
+### Format
+String (255)
+
+### Notes
+This attribute must contain the COURSE_ID of the course transferred from, as given in the student_course_membership record.

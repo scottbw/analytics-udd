@@ -9,7 +9,7 @@
 * [YEAR_STU](#year_stu) [0..1]
 * [COURSE_LOCATION](#course_location) [0..1]
 * [X_COURSE_AVERAGE_MARK](#x_course_average_mark) [0..1]
-* [X_YEAR_AVERAGE_MARK](#x_year_average_mark) [0..1]
+* [X_YEAR_AVERAGE_MARK](#x_year_average_mark) [0..1] deprecated
 * [PROGRESSION](#progression) [0..1]
 * [PROGRESSION_SOURCE](#progression_source) [0..1]
 * [LOCATION_OF_STUDY](#location_of_study) [0..1]
@@ -202,7 +202,7 @@ https://www.hesa.ac.uk/collection/c16051/a/MODE
                 <td>N/A </td>
             </tr>
             <tr>
-                <td>6</td>
+                <td>65</td>
                 <td>FE students continuous delivery day/daytime</td>
                 <td></td>
                 <td>65</td>
@@ -328,7 +328,7 @@ Float
 This data is generated internally to the learning record warehouse from existing data, and does not need to be supplied by an institution.
 
 
-## X_YEAR_AVERAGE_GRADE
+## X_YEAR_AVERAGE_MARK
 ### Description
 The current (LIVE) average of all of this academic year's module marks from across a learner's whole course.
 
@@ -346,6 +346,7 @@ Float
 
 ### Notes
 This data is generated internally to the learning record warehouse from existing data, and does not need to be supplied by an institution.
+This property is deprecated.
 
 
 ## PROGRESSION
