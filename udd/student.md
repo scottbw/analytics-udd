@@ -6,9 +6,9 @@
 * [SEXID](#sexid) [0..1]
 * [DIFFLEARN1](#difflearn1) [0..1]
 * [DIFFLEARN2](#difflearn2) [0..1]
-* [LEARN_DIF](#learn_dif) [0..1]
-* [DISABILITY1](#disability1) [0..1]
-* [DISABILITY2](#disability2) [0..1]
+* [LEARN_DIF](#learn_dif) [0..1] deprecated
+* [DISABILITY1](#disability1) [0..1] deprecated
+* [DISABILITY2](#disability2) [0..1] deprecated
 * [DOMICILE](#domicile) [0..1]
 * [TERMTIME_ACCOM](#termtime_accom) [0..1]
 * [PARENTS_ED](#parents_ed) [0..1]
@@ -419,7 +419,7 @@ Note that source values for the DIFFLEARN2 property are recorded in the [LEARN_D
 
 ## LEARN_DIF
 ### Description
-This field records whether a learner considers themselves to have a learning difficulty. Note: this is the v1.2.7 version, in place while v1.3 version is under construction.
+This field records whether a learner considers themselves to have a learning difficulty. Note: this is the v1.2.7 version; this property is deprecated in v1.3.0.
 
 ### Purpose
 For detailed analysis or intervention purposes within Learning Analytics eg. Data Insight Tool.
@@ -450,11 +450,13 @@ Int
 ### Notes
 If the learner's learning difficulty data is not supplied, this property should be omitted.
 
-As of the 2016-2017 academic year, LLDDHEALTHPROB has replaced LEARN_DIF in the HESA student returns. Also, LLDDCAT in FE ILR post 2014 has a different value space. Both of these vocabularies will be supported in a forthcoming field in v1.3. Data with HESA LLDDHEALTHPROB and LLDDCAT in FE ILR post 2014 can't, therefore, be submitted prior to UDD v1.3
+As of the 2016-2017 academic year, LLDDHEALTHPROB has replaced LEARN_DIF in the HESA student returns. Also, LLDDCAT in FE ILR post 2014 has a different value space. Both of these vocabularies will be supported in a forthcoming field in v1.3. Data with HESA LLDDHEALTHPROB and LLDDCAT in FE ILR post 2014 can't, therefore, be submitted prior to UDD v1.3.
+
+This property is deprecated.
 
 ## DISABILITY1
 ### Description
-Whether the student is indicated as being disabled, according to their own self-assessment. This will be their primary disability.  Note: this is the v1.2.7 version, in place while v1.3 version is under construction.
+Whether the student is indicated as being disabled, according to their own self-assessment. This will be their primary disability.  Note: this is the v1.2.7 version; this property is deprecated in v1.3.0.
 
 ### Purpose
 For equal opportunities monitoring within Learning Analytics/ Data Modelling.
@@ -591,9 +593,11 @@ If the learner's disability data is not supplied, this property should be omitte
 
 As of the 2016-2017 academic year, HESA DISABILITY has a different value space in the HESA student returns. Also, LLDDCAT in FE ILR post 2014 has a different value space from later versions. Both of these vocabularies will be supported in a forthcoming field in v1.3. Data with HESA DISABLE and LLDDCAT in FE ILR post 2014 can't, therefore, be submitted prior to UDD v1.3
 
+This property is deprecated.
+
 ## DISABILITY2
 ### Description
-Whether the student is indicated as being disabled, according to their own self-assessment. This will be their secondary disability.  Note: this is the v1.2.7 version, in place while v1.3 version is under construction.
+Whether the student is indicated as being disabled, according to their own self-assessment. This will be their secondary disability.  Note: this is the v1.2.7 version; this property is deprecated in v1.3.0.
 
 ### Purpose
 For equal opportunities monitoring within Learning Analytics/ Data Modelling.
@@ -729,6 +733,8 @@ Int
 If the learner's disability data is not supplied, this property should be omitted.
 
 As of the 2016-2017 academic year, HESA DISABILITY has a different value space in the HESA student returns. Also, LLDDCAT in FE ILR post 2014 has a different value space from later versions. Both of these vocabularies will be supported in a forthcoming field in v1.3. Data with HESA DISABLE and LLDDCAT in FE ILR post 2014 can't, therefore, be submitted prior to UDD v1.3
+
+This property is deprecated.
 
 ## DOMICILE
 ### Description
