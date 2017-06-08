@@ -1898,7 +1898,7 @@ Code list may be extended in future.
 Identifies the Course from which the student transferred, if there has been a course change.
 
 ### Purpose
-A student may have more than 1 active student_course_membership record at one time. Where a student has transferred from 1 course to another without finishing the first course, this attribute clarifies the history of course changes by identifying the course from which the student transferred.
+This property indicates that a student has transferred from 1 course to another, by identifying the course from which the student transferred.
 
 ### Valid Values
 Any
