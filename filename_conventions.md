@@ -7,40 +7,40 @@ JSON is the preferred file type, but XML files can also be submitted.  Other for
 
 Use the following filenames, all lower case.  The only difference between the filename groups here is the suffix, json or xml, as appropriate.
 
-- institution.json
-- student.json
-- studentidmap.json
+- assessmentinstance.json
 - course.json
+- courseinstance.json
+- institution.json
 - module.json
 - moduleinstance.json
-- courseinstance.json
-- assessmentinstance.json
-- studentassessmentinstance.json
-- studentcoursemembership.json
-- studentcourseinstance.json
-- studentmoduleinstance.json
 - modulevlemap.json
 - period.json
 - staff.json
-- staffmoduleinstance.json
 - staffcourseinstance.json
+- staffmoduleinstance.json
+- student.json
+- studentassessmentinstance.json
+- studentcourseinstance.json
+- studentcoursemembership.json
+- studentidmap.json
+- studentmoduleinstance.json
 
 or
 
-- institution.xml
-- student.xml
-- studentidmap.xml
+- assessmentinstance.xml
 - course.xml
+- courseinstance.xml
+- institution.xml
 - module.xml
 - moduleinstance.xml
-- courseinstance.xml
-- assessmentinstance.xml
-- studentassessmentinstance.xml
-- studentcoursemembership.xml
-- studentcourseinstance.xml
-- studentmoduleinstance.xml
 - modulevlemap.xml
 - period.xml
 - staff.xml
-- staffmoduleinstance.xml
 - staffcourseinstance.xml
+- staffmoduleinstance.xml
+- student.xml
+- studentassessmentinstance.xml
+- studentcourseinstance.xml
+- studentcoursemembership.xml
+- studentidmap.xml
+- studentmoduleinstance.xml

@@ -54,6 +54,8 @@ Some entities have uniqueness constraints across multiple properties; for exampl
 
 ### [staff_on_mod_instance](udd/staff_on_mod_instance.md)
 
+### [student_id_map](udd/student_id_map.md)
+
 There are also files of code lists extracted from the MD files for machine processing.
 ### [UDD code lists in Welsh](udd/udd_codelists_cy.json)
 ### [UDD code lists in English](udd/udd_codelists_en.json)
@@ -90,7 +92,7 @@ Versioning is done broadly as follows: major versions (majorVersion.minorVersion
 
 Note that some properties will be marked as 'deprecated'. This means that the property is still valid, but will be removed by the next minor version update.
 
-##Acknowledgements
+## Acknowledgements
 
 Many thanks to all contributors who have raised issues, sent pull requests, commented and made suggestions. The UDD specification is the achievement of all of you.
 

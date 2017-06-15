@@ -77,10 +77,10 @@ For display and analysis purposes
 Jisc
 
 ### Valid Values
-Year in ISO 8601 format - YYYY; ie year that the academic year starts in.
+Year as four digits - year that the academic year starts in, with valid values being from 1900 onwards.
 
 ### Format
-String in ISO 8601 Year format - YYYY
+Int
 
 ### Notes
 Could be derived, but academic year calendars may be different between institutions. This field could also be sourced directly from the SRS.
