@@ -2,9 +2,7 @@
 This entity connects a course area in a VLE or LMS with a module.
 
 *  [MOD_INSTANCE_ID](module_instance.md#mod_instance_id) [1] *
-*  [VLE_MOD_ID](#vle_mod_id) [1] *
-
-\* indicates that the property is part of a composite primary key for this entity.
+*  [VLE_MOD_ID](#vle_mod_id) [1]
 
 ## VLE_MOD_ID
 ### Description
