@@ -79,7 +79,9 @@ String (255)
 
 ### Notes
 
+
 ## ENCODING_ID
+
 ### Description
 Prescribed name of the subject of study classification system used in SUBJECT_ID
 
