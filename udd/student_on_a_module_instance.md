@@ -155,6 +155,7 @@ Jisc
 Decimal
 
 ### Notes
+The value represents a percentage.
 This mark should not be changed after subsequent attempts at the same module, as it is used in analytics.
 
 
@@ -175,6 +176,7 @@ Jisc
 Decimal
 
 ### Notes
+The value represents a percentage.
 MOD_ACTUAL_MARK should only be part of a UDD compliant dataset if there is a moderation process and if the result of that process is available in the source data.
 
 
@@ -195,6 +197,7 @@ Jisc
 Decimal
 
 ### Notes
+The value represents a percentage.
 MOD_AGREED_MARK is expected to be present in any UDD compliant dataset as soon as it becomes available.
 
 

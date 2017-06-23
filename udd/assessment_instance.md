@@ -119,10 +119,10 @@ To enable student performance calculations.
 Jisc
 
 ### Valid Values
-Any
+Any decimal value
 
 ### Format
 Decimal
 
 ### Notes
-There is also the similar MAX_POINTS property on student_on_assessment_instance, which is for informational purposes. It has more a permissive format and value space.
+There is also the similar MAX_POINTS property on student_on_assessment_instance. The value does not necessarily represent a percentage.

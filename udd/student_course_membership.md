@@ -1545,9 +1545,10 @@ SRS Systems
 ### References
 
 ### Format
-Decimal (IEEE 754)
+Decimal
 
 ### Notes
+The value represents a percentage.
 
 
 ## COURSE_EXPECTED_END_DATE
@@ -1776,7 +1777,7 @@ Any decimal
 ### Format
 Decimal
 
-Notes
+### Notes
 
 ## ATTAINMENT_TARGET_MARK
 ### Description

@@ -10,6 +10,8 @@
 * [ASSESS_RETAKE](#assess_retake) [0..1]
 * [ASSESS_AGREED_MARK](#assess_agreed_mark) [0..1]
 * [ASSESS_ACTUAL_MARK](#assess_actual_mark) [0..1]
+* [RAW_ACTUAL_MARK](#raw_actual_mark) [0..1]
+* [RAW_AGREED_MARK](#raw_agreed_mark) [0..1]
 * [ASSESS_AGREED_GRADE](#assess_agreed_grade) [0..1]
 * [ASSESS_ACTUAL_GRADE](#assess_actual_grade) [0..1]
 * [ASSESSMENT_CURRENT_ATTEMPT](#assessment_current_attempt) [0..1]
@@ -108,7 +110,7 @@ String (255)
 
 ## ASSESS_ACTUAL_MARK
 ### Description.
-The mark awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
+The mark, expressed as a percentage, awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
 
 ### Purpose
 Analytics
@@ -123,12 +125,13 @@ Jisc
 Decimal
 
 ### Notes
-ASSESS_ACTUAL_MARK should only be part of a UDD compliant dataset if there is a moderation process and if the result of that process is available in the source data. 
+ASSESS_ACTUAL_MARK should only be part of a UDD compliant dataset if there is a moderation process and if the result of that process is available in the source data.
+The value represents a percentage. Can contain any decimal value between 0 and 100, for example "53", "64.5", and so on.
 
 
 ## ASSESS_AGREED_MARK
-### Description.
-The mark recorded after any moderation or confirmation processes, or the only recorded mark if there are no moderation or confirmation processes.
+### Description
+The mark, expressed as a percentage, recorded after any moderation or confirmation processes, or the only recorded mark if there are no moderation or confirmation processes.
 
 ### Purpose
 Analytics
@@ -144,6 +147,47 @@ Decimal
 
 ### Notes
 ASSESS_AGREED_MARK is expected to be present in any UDD compliant dataset as soon as it becomes available.
+The value represents a percentage. Can contain any decimal value between 0 and 100, for example "53", "64.5", and so on.
+
+
+## RAW_ACTUAL_MARK
+### Description
+The original mark scored by the student.
+
+### Purpose
+Storage of the original numerical score, typically from the VLE.
+
+### Derivation
+Institution
+
+### Valid Values
+Any decimal value
+
+### Format
+Decimal
+
+### Notes
+Can contain any decimal value, for example "59", "162.87", and so on; this value may or may not be a percentage. ASSESS_ACTUAL_MARK contains a representation of RAW_ACTUAL_MARK explicitly as a percentage.
+
+
+## RAW_AGREED_MARK
+### Description
+The mark scored by the student after any moderation or confirmation processes, or the only recorded mark if there are no moderation or confirmation processes.
+
+### Purpose
+Storage of the numerical score, typically as recorded in the student record system.
+
+### Derivation
+Institution
+
+### Valid Values
+Any decimal value
+
+### Format
+Decimal
+
+### Notes
+Can contain any decimal value, for example "59", "162.87", and so on; this value may or may not be a percentage. ASSESS_AGREED_MARK contains a representation of RAW_AGREED_MARK explicitly as a percentage.
 
 
 ## ASSESS_ACTUAL_GRADE
@@ -262,13 +306,13 @@ Analytics
 Jisc
 
 ### Valid Values
-Not specified
+Any decimal value
 
 ### Format
-String (255)
+Decimal
 
 ### Notes
-The value can be any alphanumeric used by any type of marking scale. E.g. 80%, B11 or 'excellent'. There is also the similar MAX_MARKS property on assessment_instance, which is for analytic purposes. It only accepts decimal data.
+This property can contain any decimal value. It will normally be an integer representing the highest mark obtainable.
 
 
 ## X_ASSESS_DETAIL
