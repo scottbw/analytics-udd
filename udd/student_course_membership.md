@@ -1548,7 +1548,7 @@ SRS Systems
 Decimal
 
 ### Notes
-The value represents a percentage.
+The value represents a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 
 
 ## COURSE_EXPECTED_END_DATE

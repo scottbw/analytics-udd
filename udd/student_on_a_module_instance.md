@@ -176,7 +176,7 @@ Jisc
 Decimal
 
 ### Notes
-The value represents a percentage.
+The value represents a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 MOD_ACTUAL_MARK should only be part of a UDD compliant dataset if there is a moderation process and if the result of that process is available in the source data.
 
 
@@ -197,7 +197,7 @@ Jisc
 Decimal
 
 ### Notes
-The value represents a percentage.
+The value represents a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 MOD_AGREED_MARK is expected to be present in any UDD compliant dataset as soon as it becomes available.
 
 

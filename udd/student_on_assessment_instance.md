@@ -126,7 +126,7 @@ Decimal
 
 ### Notes
 ASSESS_ACTUAL_MARK should only be part of a UDD compliant dataset if there is a moderation process and if the result of that process is available in the source data.
-The value represents a percentage. Can contain any decimal value between 0 and 100, for example "53", "64.5", and so on.
+The value represents a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 
 
 ## ASSESS_AGREED_MARK
@@ -147,7 +147,7 @@ Decimal
 
 ### Notes
 ASSESS_AGREED_MARK is expected to be present in any UDD compliant dataset as soon as it becomes available.
-The value represents a percentage. Can contain any decimal value between 0 and 100, for example "53", "64.5", and so on.
+The value represents a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 
 
 ## RAW_ACTUAL_MARK
