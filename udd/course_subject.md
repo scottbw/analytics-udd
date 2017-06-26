@@ -3,9 +3,9 @@
 * [COURSE_ID](course.md#course_id) [1] *
 * [SUBJECT_ID](#subject_id) [1] *
 * [SUBJECT_LABEL](#subject_label) [1]
-* [ENCODING_ID](#encoding_id] [1]
+* [ENCODING_ID](#encoding_id) [1]
 * [PROPORTION](#proportion) [0..1]
-* [SEQUENCE_ID](#sequence_id] [0..1]
+* [SEQUENCE_ID](#sequence_id) [0..1]
 
 \** indicates that the property is the primary key for this entity; if not provided by data supplier, will be LRW generated.   
 \* indicates that the property is part of a uniqueness constraint for this entity.
@@ -55,7 +55,7 @@ https://www.hesa.ac.uk/files/HECoS-Vocabulary_2016-07-28.xlsx
 String (10) - JACS: 4 characters, number followed by three digits; HECoS: 6 digits
 
 ### Notes
-In relation to any 1 course, an institution must supply subject of study data using only 1 classification system. Typically this will be either JACS3 or, in the future, HECoS. 
+If a course is associated with multiple subject codes, for example for combined studies/courses, the same subject coding scheme must be used for all codes. Typically this will be either JACS3 or, in the future, HECoS. 
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
 
 ## SUBJECT_LABEL
