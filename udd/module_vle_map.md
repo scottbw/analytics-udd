@@ -2,10 +2,10 @@
 
 *  [MODULE_VLE_MAP_ID](#module_vle_map_id) **
 *  [MOD_INSTANCE_ID](module_instance.md#mod_instance_id) [1] *
-*  [VLE_MOD_ID](#vle_mod_id) [1]
+*  [VLE_MOD_ID](#vle_mod_id) [1] *
 
 \** indicates that the property is the primary key for this entity; if not provided by data supplier, will be LRW generated.  
-\* indicates that the property *may have* a uniqueness constraint for this entity; the constraint in this case is driven by the values in the MODULE_VLE_MAP_MODE property in the institution entity. This mode is set at institution level.
+\* indicates that the property has a uniqueness constraint for this entity. The default is that MOD_INSTANCE_ID and VLE_MOD_ID forms a unique constraint. However, for some institutions a single VLE_MOD_ID maps to several MOD_INSTANCE_ID values, in other words an entry in the VLE is cross-listed against several modules in the Student Record System. In this case, the MOD_INSTANCE_ID values in module_VLE_map must be unique, so that several MOD_INSTANCE_ID values map to 1 VLE_MOD_ID value. This additional constraint is implemented through setting the MODULE_VLE_MAP_MODE property in the institution entity to "1".
 
 ## Description of module_VLE_map entity
 A module_VLE_map links a module in a student record system with module materials in a VLE.

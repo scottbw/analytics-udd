@@ -2,7 +2,7 @@
 * [TENANT_ID](#tenant_id) [1] **
 * [TENANT_NAME](#tenant_name) [0..1]
 * [UDD_VERSION](#udd_version) [1]
-* [MODULE_VLE_MAP_MODE](#module_vle_map_mode) [1]
+* [MODULE_VLE_MAP_MODE](#module_vle_map_mode) [0..1]
 
 \** indicates that the property is the primary key for this entity.
 
@@ -67,7 +67,9 @@ Value will be the current version number of the UDD preceded by "v".  Example: i
 
 ## MODULE_VLE_MAP_MODE
 ### Description
-This property prescribes for this institution how the mapping between MOD_INSTANCE_ID and VLE_MOD_ID works in the module_VLE_map entity. The modes are given in the valid values table.
+This property enables an institution to specify a 1 to many mapping between MOD_INSTANCE_ID and VLE_MOD_ID (see the module_VLE_map entity). By default, MOD_INSTANCE_ID plus VLE_MOD_ID form a unique constraint in module_VLE_map, showing that each module in the VLE maps to 1-and-only-1 module in the Student Record System. In this usual case, MODULE_VLE_MAP_MODE should be omitted from the institution entity.
+
+However, for some institutions a single VLE_MOD_ID maps to several MOD_INSTANCE_ID values, in other words an entry in the VLE is cross-listed against several modules in the Student Record System. In this case, the MOD_INSTANCE_ID values in module_VLE_map must be unique, so that several MOD_INSTANCE_ID values can map to 1 VLE_MOD_ID value. This additional constraint is implemented through setting the MODULE_VLE_MAP_MODE property to "1".
 
 ### Purpose
 To enable the constraints on the module_VLE_map entity to be varied between institutions.
@@ -76,15 +78,10 @@ To enable the constraints on the module_VLE_map entity to be varied between inst
 Jisc
 
 ### Valid Values
-<table>
-<tr><td>MODULE_VLE_MAP_MODE</td><td>DESCRIPTION (ENGLISH)</td><td>DESCRIPTION (WELSH)</td></tr>
-<tr><td>0</td><td>Default. 1 MOD_INSTANCE_ID value maps to 1 and only 1 VLE_MOD_ID value.</td><td></td></tr>
-<tr><td>1</td><td>1 MOD_INSTANCE_ID value maps to 1 or many VLE_MOD_ID values.</td><td></td></tr>
-<tr><td>2</td><td>1 VLE_MOD_ID value maps to 1 or many MOD_INSTANCE_ID values.</td><td></td></tr>
-</table>
+1
 
 ### Format
 Int
 
 ### Notes
-Default value is "0".
+This property will be either not present, or present and set to "1".
