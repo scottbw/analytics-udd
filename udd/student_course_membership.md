@@ -84,22 +84,22 @@ https://www.hesa.ac.uk/collection/c16051/a/RSNEND
 ### Valid Values & Mappings
 <table>
 <tr><td>WITHDRAWAL_REASON</td><td>DESCRIPTION (ENGLISH)</td><td>DESCRIPTION (WELSH)</td><td>HESA (WITHDRAWREASON)</td><td>HESA (RSNEND)</td><td>FEILR (WITHDRAWREASON)  </td></tr>
-<tr><td>2</td><td>Learner has transferred to another provider</td><td></td><td>02</td><td>03</td><td>2  </td></tr>
-<tr><td>3</td><td>Learner injury / illness</td><td></td><td>03</td><td>04</td><td>3   </td></tr>
-<tr><td>5</td><td>Death</td><td></td><td>N/A</td><td>05</td><td>N/A  </td></tr>
-<tr><td>7</td><td>Learner has transferred between providers due to intervention by the Skills Funding Agency</td><td></td><td>07</td><td>N/A</td><td>7  </td></tr>
-<tr><td>10</td><td>Gone into employment</td><td></td><td>N/A</td><td>10</td><td>N/A  </td></tr>
-<tr><td>28</td><td>OLASS learner withdrawn due to circumstances outside the providers’ control</td><td></td><td>N/A</td><td>N/A</td><td>28  </td></tr>
-<tr><td>29</td><td>Learner has been made redundant</td><td></td><td>29</td><td>N/A</td><td>29  </td></tr>
-<tr><td>40</td><td>Learner has transferred to a new learning aim with the same provider</td><td></td><td>40</td><td>N/A</td><td>40  </td></tr>
-<tr><td>41</td><td>Learner has transferred to another provider to undertake learning that meets a specific government strategy</td><td></td><td>41</td><td>N/A</td><td>41  </td></tr>
-<tr><td>42</td><td>Academic failure/left in bad standing/not permitted to progress – HE learning aims only</td><td></td><td>N/A</td><td>02</td><td>42  </td></tr>
-<tr><td>43</td><td>Financial reasons</td><td></td><td>N/A</td><td>06</td><td>43  </td></tr>
-<tr><td>44</td><td>Other personal reasons</td><td></td><td>N/A</td><td>07</td><td>44  </td></tr>
-<tr><td>45</td><td>Written off after lapse of time (HE learning aims only)</td><td></td><td>N/A</td><td>08</td><td>45  </td></tr>
-<tr><td>46</td><td>Exclusion</td><td></td><td>N/A</td><td>09</td><td>46  </td></tr>
-<tr><td>97</td><td>Other</td><td></td><td>97</td><td>11</td><td>97  </td></tr>
-<tr><td>98</td><td>Reason not known</td><td></td><td>98</td><td>99</td><td>98  </td></tr>
+<tr><td>2</td><td>Learner has transferred to another provider</td><td></td><td>02</td><td>03</td><td>2</td></tr>
+<tr><td>3</td><td>Learner injury / illness</td><td></td><td>03</td><td>04</td><td>3</td></tr>
+<tr><td>5</td><td>Death</td><td></td><td>N/A</td><td>05</td><td>N/A</td></tr>
+<tr><td>7</td><td>Learner has transferred between providers due to intervention by the Skills Funding Agency</td><td></td><td>07</td><td>N/A</td><td>7</td></tr>
+<tr><td>10</td><td>Gone into employment</td><td></td><td>N/A</td><td>10</td><td>N/A</td></tr>
+<tr><td>28</td><td>OLASS learner withdrawn due to circumstances outside the providers' control</td><td></td><td>N/A</td><td>N/A</td><td>28</td></tr>
+<tr><td>29</td><td>Learner has been made redundant</td><td></td><td>29</td><td>N/A</td><td>29</td></tr>
+<tr><td>40</td><td>Learner has transferred to a new learning aim with the same provider</td><td></td><td>40</td><td>N/A</td><td>40</td></tr>
+<tr><td>41</td><td>Learner has transferred to another provider to undertake learning that meets a specific government strategy</td><td></td><td>41</td><td>N/A</td><td>41</td></tr>
+<tr><td>42</td><td>Academic failure/left in bad standing/not permitted to progress - HE learning aims only</td><td></td><td>N/A</td><td>02</td><td>42</td></tr>
+<tr><td>43</td><td>Financial reasons</td><td></td><td>N/A</td><td>06</td><td>43</td></tr>
+<tr><td>44</td><td>Other personal reasons</td><td></td><td>N/A</td><td>07</td><td>44</td></tr>
+<tr><td>45</td><td>Written off after lapse of time (HE learning aims only)</td><td></td><td>N/A</td><td>08</td><td>45</td></tr>
+<tr><td>46</td><td>Exclusion</td><td></td><td>N/A</td><td>09</td><td>46</td></tr>
+<tr><td>97</td><td>Other</td><td></td><td>97</td><td>11</td><td>97</td></tr>
+<tr><td>98</td><td>Reason not known</td><td></td><td>98</td><td>99</td><td>98</td></tr>
 <tr><td>99</td><td>Completion of course - result unknown</td><td></td><td>N/A</td><td>98</td><td>N/A</td></tr>
 </table>  
 
