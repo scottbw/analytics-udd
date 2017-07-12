@@ -30,7 +30,7 @@ Further information (on UKPRN) available at www.ukrlp.co.uk
 
 ## TENANT_NAME
 ### Description
-Institution's official legal name. This should match the name indicated in the UKRLP database, as used for TENANT_ID
+Institution's official legal name. This should match the name indicated in the UKRLP database, as used for TENANT_ID.
 
 ### Purpose
 To identify the organisation.
@@ -62,7 +62,7 @@ UDD specification in use by the institution
 String (8)
 
 ### Notes
-Value will be the current version number of the UDD preceded by "v".  Example: if the data uses UDD v1.3.0, value will "v1.3.0".
+Value will be the current version number of the UDD preceded by "v".  Example: if the data uses UDD v1.3.1, value will "v1.3.1".
 
 
 ## MODULE_VLE_MAP_MODE

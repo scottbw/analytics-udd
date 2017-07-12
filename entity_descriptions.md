@@ -1,5 +1,4 @@
 # UDD Entity descriptions
-These are draft UDD entity descriptions. Once they have been agreed, they will be transferred to each md file.
 
 # assessment_instance
 ## Description of assessment_instance entity
@@ -37,7 +36,7 @@ A module_VLE_map links a module in a student record system with module materials
 
 # period
 ## Description of period entity
-A period describes an institution's official start date and end date of a time slice, such as academic year, term and semester that is used in the UDD data.
+A period describes an institution's official start date and end date of time slices, such as academic years, terms and semesters.
 
 # staff
 ## Description of staff entity
@@ -57,9 +56,11 @@ A student element describes a person undertaking one or more courses.
 
 # student_course_membership
 ## Description of student_course_membership entity
-A student_course_membership describes a student's enrolment on a course.  It is designed to deal with the fact that some students are enrolled on more than one course in their time at an institution.
+A student_course_membership describes a student's enrolment on a course.  It is designed to handle, not only a student enrolling on a single course in their time at an institution, but also with cases where a student is enrolled on more than one course, to study either two or more courses simultaneously or one after the other.
 
 ## Notes
+The student_course_membership entity carries critical data about the student's current studies and also acts as a historical record of course changes and previous studies. For this reason, the WITHDRAWAL_REASON code and COURSE_END_DATE must be set when a student changes course, and typically the ACTIVE_MEMBERSHIP property is updated.
+
 This entity is similar to a HESA Instance element and a HEDIIP Data Language Student Registration entity.
 
 # student_on_a_module_instance

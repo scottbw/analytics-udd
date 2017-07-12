@@ -108,7 +108,7 @@ To allow equal opportunities monitoring, within detailed learning analytics/ dat
 https://www.hesa.ac.uk/collection/c16051/a/ETHNIC
 
 ### Format
-String (10)
+String (255)
 
 ### Valid Values & Mappings:  
 
@@ -419,7 +419,7 @@ Note that source values for the DIFFLEARN2 property are recorded in the [LEARN_D
 
 ## LEARN_DIF
 ### Description
-This field records whether a learner considers themselves to have a learning difficulty. Note: this is the v1.2.7 version; this property is deprecated in v1.3.0.
+This field records whether a learner considers themselves to have a learning difficulty. Note: this is the v1.2.7 version; this property is deprecated in v1.3.1.
 
 ### Purpose
 For detailed analysis or intervention purposes within Learning Analytics eg. Data Insight Tool.
@@ -456,7 +456,7 @@ This property is deprecated.
 
 ## DISABILITY1
 ### Description
-Whether the student is indicated as being disabled, according to their own self-assessment. This will be their primary disability.  Note: this is the v1.2.7 version; this property is deprecated in v1.3.0.
+Whether the student is indicated as being disabled, according to their own self-assessment. This will be their primary disability.  Note: this is the v1.2.7 version; this property is deprecated in v1.3.1.
 
 ### Purpose
 For equal opportunities monitoring within Learning Analytics/ Data Modelling.
@@ -597,7 +597,7 @@ This property is deprecated.
 
 ## DISABILITY2
 ### Description
-Whether the student is indicated as being disabled, according to their own self-assessment. This will be their secondary disability.  Note: this is the v1.2.7 version; this property is deprecated in v1.3.0.
+Whether the student is indicated as being disabled, according to their own self-assessment. This will be their secondary disability.  Note: this is the v1.2.7 version; this property is deprecated in v1.3.1.
 
 ### Purpose
 For equal opportunities monitoring within Learning Analytics/ Data Modelling.
@@ -2247,7 +2247,7 @@ Note that this is not a universal user ID; there may be several VLEs, or records
 
 
 ## HUSID
-### Description.
+### Description
 A HESA student identifier unique to each student. It is intended that the identifier is to be transferred with the student to each provider of higher education he or she may attend. The objective is that the use of this number will facilitate the accurate tracking of students throughout their experience within the sector for which HESA collects data.
 
 ### Purpose
@@ -2284,7 +2284,7 @@ This will typically be imported and updated continuously from Institution identi
 
 ## LAST_NAME
 ### Description
-Students family or surname.
+Students family or surname
 
 ### Purpose
 For display. Used by Student App, Student Success Planner, Tribal Insight
@@ -2402,7 +2402,7 @@ This is usually imported from the Institution's SRS.
 
 ## POSTCODE
 ### Description
-This is the current (term-time) postcode corresponding to the student's accommodation address provided
+This is the current (term-time) postcode corresponding to the student's accommodation address provided.
 
 ### Purpose
 For display. Used by Student Success Planner
@@ -2434,10 +2434,10 @@ Jisc
 Any
 
 ### Format
-String(255)
+String (255)
 
 ### Notes
-Will be input/ batched directly from central IT or identification management systems at the institution
+Will be input/ batched directly from central IT or identification management systems at the institution.
 
 
 ## HOME_PHONE
@@ -2454,7 +2454,7 @@ Jisc
 Any
 
 ### Format
-String(255)
+String (255)
 
 ### Notes
 This is usually imported from the Institution's SRS.
@@ -2462,7 +2462,7 @@ This is usually imported from the Institution's SRS.
 
 ## MOBILE_PHONE
 ### Description
-Students mobile telephone number.
+Student's mobile telephone number
 
 ### Purpose
 For display and contact purposes. Used by Student Success Planner
@@ -2474,15 +2474,15 @@ Jisc
 Any
 
 ### Format
-String(255)
+String (255)
 
 ### Notes
-This is usually imported from the Institution's SRS.
+This is usually imported from the institution's SRS.
 
 
 ## PHOTO_URL
 ### Description
-URL link provided to a latest/ recent photo of student
+URL link provided to a latest/recent photo of the student
 
 ### Purpose
 For display purposes. Used by Student Success Planner
@@ -2502,7 +2502,7 @@ This assumes that there is a way of securing access to the photo.
 
 ## TUTOR_STAFF_ID
 ### Description
-This is the unique identification number for the learner's academic or course year supervisor/ tutor, or alternatively the id of the contact who will be responsible for handling Learning Analytics alerts and notification regarding the student
+This is the unique identification number for the learner's academic or course year supervisor/ tutor, or alternatively the id of the contact who will be responsible for handling Learning Analytics alerts and notification regarding the student.
 
 ### Purpose
 For notification and alerts purposes for Learning Analytics SSP and other software tools
@@ -2513,7 +2513,7 @@ https://www.hesa.ac.uk/collection/c15025/a/OWNSTAFFID
 ### References
 
 ### Format
-String(255)
+String (255)
 
 ### Notes
 This will be the unique identifier/ primary key for the member of staff who is responsible for the student (course/ year tutor) or the person responsible for receiving alerts and notifications from the Learning Analytics software suite/ tools. This will typically be the staff/ HR/ payroll number for the member of academic staff, which links to their email address in the institutions identity management system.
