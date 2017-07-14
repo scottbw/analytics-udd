@@ -5,6 +5,16 @@ The Unified Data Definitions (UDD) of the Jisc analytics project is a vocabulary
 
 Along with xAPI recipes, the UDD makes up the core data specification of the Jisc learning analytics architecture.
 
+The main folder (jiscdev/analytics-udd) contains:
+
+- this ReadMe file that gives an overview of the UDD
+- the details of the UDD licencing arrangements
+- a UDD entity-relationship diagram
+- a link to spreadsheets listing the differences between the previous version of the UDD and version 1.3
+- a consolidated list of the descriptions of each UDD entity. 
+
+In addition to the main folder, there are 4 sub-folders. The udd sub-folder is the heart of the specification, with a file for each entity, describing its properties in detail. Refer to these files to design data for import into the Learning Records Warehouse (LRW). The media sub-folder contains various supporting files, including the E-R diagram source, the changes spreadsheet, a Guide to the relative importance of UDD properties, and a copy of the JACS3 subject classification system. The utilities sub-folder has code fragments and snippets to support the development and use of the UDD. The LRW Implementation Information sub-folder describes matters that are not part of the formal UDD specification, but are closely related to it, for example a description of the mechanism for handling unofficial extensions to properties in the UDD, and filename conventions for adding data into the LRW.
+
 ## Differences between v1.2 and v1.3
 The development of v1.3 has involved a number of additions and changes. [This overview page](differences.md) provides a mapped listing of each change.
 
