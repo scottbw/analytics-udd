@@ -10,7 +10,7 @@
 * [DISABILITY1](#disability1) [0..1] deprecated
 * [DISABILITY2](#disability2) [0..1] deprecated
 * [DOMICILE](#domicile) [0..1]
-* [TERMTIME_ACCOM](#termtime_accom) [0..1]
+* [TERMTIME_ACCOM](student_on_course_instance.md#termtime_accom) [0..1] deprecated
 * [PARENTS_ED](#parents_ed) [0..1]
 * [SOCIO_EC](#socio_ec) [0..1]
 * [OVERSEAS](#overseas) [0..1]
@@ -2080,39 +2080,6 @@ String (2)
 
 ### Notes
 If domicile country data is not supplied, this property should be omitted.
-Omitting this property may hinder the development or use of an effective analytics model.
-
-## TERMTIME_ACCOM
-### Description
-The current term time accommodation type of student
-
-### Purpose
-For detailed analysis within Learning Analytics/ Data Modelling.
-
-### Derivation
-https://www.hesa.ac.uk/collection/c16051/a/TTACCOM
-
-### Valid Values & Mappings
-
-<table>
-<tr><td>TERMTIME_ACCOM</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)</td><td>HESA(TTACCOM)</td><td>FEILR(ACCOM)  </td></tr>
-<tr><td>1</td><td>Provider maintained property</td><td></td><td>1</td><td>5  </td></tr>
-<tr><td>2</td><td>Parental/guardian home</td><td></td><td>2</td><td>N/A  </td></tr>
-<tr><td>4</td><td>Other</td><td>Arall</td><td>4</td><td>NULL  </td></tr>
-<tr><td>5</td><td>Not known</td><td>Anhysbys</td><td>5</td><td>N/A  </td></tr>
-<tr><td>6</td><td>Not in attendance at the provider</td><td></td><td>6</td><td>N/A  </td></tr>
-<tr><td>7</td><td>Own residence</td><td></td><td>7</td><td>N/A  </td></tr>
-<tr><td>8</td><td>Other rented accommodation</td><td></td><td>8</td><td>N/A  </td></tr>
-<tr><td>9</td><td>Private-sector halls</td><td></td><td>9</td><td>N/A  </td></tr>
-</table>   
-
-Please Note - N/A denotes that no mapping value is applicable (it should not be confused with NULL), and this property should be omitted.
-
-### Format
-String (255)
-
-### Notes
-If current term time accommodation type data is not supplied, this property should be omitted.
 Omitting this property may hinder the development or use of an effective analytics model.
 
 ## PARENTS_ED
