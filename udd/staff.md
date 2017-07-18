@@ -1,15 +1,18 @@
 # staff
 An additional data entity
 
-* [STAFF_ID](#staff_id) [1] *
+* [STAFF_ID](#staff_id) [1] **
 * [FIRST_NAME](#first_name) [0..1]
 * [LAST_NAME](#last_name) [0..1]
-* [TITLE](#title) [0..*]
+* [TITLE](#title) [0..1]
 * [PRIMARY_EMAIL_ADDRESS](#primary_email_address) [0..1]
 * [HESA_STAFF_ID](#hesa_staff_id) [0..1]
 * [DASH_SHIB_ID](#dash_shib_id) [0..1]
 
-\* indicates that the property is the primary key for this entity.
+\** indicates that the property is the primary key for this entity.
+
+## Description of staff entity
+A staff element identifies a member of staff at an institution.
 
 ## STAFF_ID
 ### Description
@@ -167,7 +170,7 @@ https://www.internet2.edu/media/medialibrary/2013/09/04/internet2-mace-dir-edupe
 Not specified
 
 ### Format
-String (256)
+String (255)
 
 ### Notes
 There may be a more general AIM_ID property later that can be used for any UK Federation service provider ID, not just the Jisc staff dashboard.

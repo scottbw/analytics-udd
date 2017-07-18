@@ -1,5 +1,5 @@
 # module_instance
-* [MOD_INSTANCE_ID](#mod_instance_id) [1] *
+* [MOD_INSTANCE_ID](#mod_instance_id) [1] **
 * [MOD_ID](module.md#mod_id) [1]
 * [MOD_PERIOD](#mod_period) [0..1]
 * [MOD_ONLINE](#mod_online) [0..1]
@@ -7,7 +7,10 @@
 * [MOD_OPTIONAL](#mod_optional) [0..1]
 * [MOD_LOCATION](#mod_location) [0..1]
 
-\* indicates that the property is the primary key for this entity.
+\** indicates that the property is the primary key for this entity.
+
+## Description of module_instance entity
+A module_instance is the specific offer of a module to students. It therefore has a specific venue and defined assessments.
 
 ## MOD_INSTANCE_ID
 ### Description
@@ -40,9 +43,10 @@ Jisc
 
 ### Valid Values
 Any
+Each different code value in MOD_PERIOD should have a matching code value in period.PERIOD_CODE.
 
 ### Format
-String (256)
+String (255)
 
 ### Notes
 It is expected that sites / organisations will have their own code lists for MOD_PERIOD values.
@@ -65,7 +69,7 @@ Jisc
 </table>  
 
 ### Format
-Int
+String (255)
 
 ### Notes
 Omitting this property may hinder the development or use of an effective analytics model.
@@ -81,7 +85,7 @@ Analytics
 Jisc
 
 ### Valid Values
-4 digit year
+Year as four digits - year that the academic year starts in, with valid values being from 1900 onwards.
 
 ### Format
 Int
@@ -89,6 +93,7 @@ Int
 ### Notes
 This is the starting year for the academic year.
 Omitting this property may hinder the development or use of an effective analytics model.
+
 ## MOD_OPTIONAL
 ### Description
 Whether this instance relates to an optional module or not.
@@ -108,7 +113,7 @@ Jisc
 </table>  
 
 ### Format
-Int
+String (255)
 
 ### Notes
 

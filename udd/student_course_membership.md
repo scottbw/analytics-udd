@@ -1,11 +1,9 @@
 # student_course_membership
 
-* [STUDENT_COURSE_MEMBERSHIP_ID](#student_course_membership_id) [1] *
-* [STUDENT_COURSE_MEMBERSHIP_SEQ](#student_course_membership_seq) [1] *
+* [STUDENT_COURSE_MEMBERSHIP_ID](#student_course_membership_id) [1] **
 * [STUDENT_ID](student.md#student_id) [1]
 * [COURSE_ID](course.md#course_id) [1]
 * [WITHDRAWAL_REASON](#withdrawal_reason) [0..1]
-* [WITHDRAWAL_DATE](#withdrawal_date) [0..1] deprecated
 * [ENTRY_QUALS](#entry_quals) [0..1]
 * [ENTRY_POINTS](#entry_points) [0..1]
 * [COURSE_OUTCOME](#course_outcome) [0..1]
@@ -14,12 +12,31 @@
 * [COURSE_MARK](#course_mark) [0..1]
 * [COURSE_EXPECTED_END_DATE](#course_expected_end_date) [0..1]
 * [COURSE_END_DATE](#course_end_date) [0..1]
+* [COURSE_DURATION](#course_duration) [0..1]
 * [COURSE_JOIN_DATE](#course_join_date) [0..1]
 * [COURSE_JOIN_AGE](#course_join_age) [0..1]
 * [COHORT_ID](#cohort_id) [0..1]
 * [ACTIVE_MEMBERSHIP](#active_membership) [0..1]
+* [PREDICTED_OUTCOME_GRADE](#predicted_outcome_grade) [0..1]
+* [ATTAINMENT_TARGET_GRADE](#attainment_target_grade) [0..1]
+* [PREDICTED_OUTCOME_MARK](#predicted_outcome_mark) [0..1]
+* [ATTAINMENT_TARGET_MARK](#attainment_target_mark) [0..1]
+* [PRIOR_GRADE_ENGLISH](#prior_grade_english) [0..1]
+* [PRIOR_GRADE_MATHEMATICS](#prior_grade_mathematics) [0..1]
+* [INITIAL_ASSESSMENT_ENGLISH](#initial_assessment_english) [0..1]
+* [INITIAL_ASSESSMENT_MATHEMATICS](#initial_assessment_mathematics) [0..1]
+* [ADMISSIONS_ROUTE](#admissions_route) [0..1]
+* [COURSE_TRANSFERRED_FROM](#course_transferred_from) [0..1]
 
-\* indicates that the property is part of a composite primary key for this entity.
+\** indicates that the property is the primary key for this entity.
+
+## Description of student_course_membership entity
+A student_course_membership describes a student's enrolment on a course. It is designed to handle, not only a student enrolling on a single course in their time at an institution, but also with cases where a student is enrolled on more than one course, to study either two or more courses simultaneously or one after the other.
+
+## Notes
+The student_course_membership entity carries critical data about the student's current studies and also acts as a historical record of course changes and previous studies.  For this reason, the WITHDRAWAL_REASON code and COURSE_END_DATE must be set when a student changes course, and typically the ACTIVE_MEMBERSHIP property is updated.
+
+This entity is similar to a HESA Instance element and a HEDIIP Data Language Student Registration entity.
 
 ## STUDENT_COURSE_MEMBERSHIP_ID
 ### Description
@@ -39,32 +56,6 @@ String (255)
 ### Notes
 The student_course_membership is designed to deal with the fact that some students are enrolled on more than one course in their time at a provider. Drawing together data on their student ID alone could therefore be misleading, or at least be significantly different from students who have only ever been registered on one course. STUDENT_COURSE_MEMBERSHIP_ID partitions the study careers of those who are on multiple courses, and makes them comparable to those who have only ever been enrolled on one course.
 
-## STUDENT_COURSE_MEMBERSHIP_SEQ
-### Description
-A sequence indicator that uniquely identifies the combination of the student and the course_instance they are assigned to, to allow for cases where there is more than one such combination.
-
-### Purpose
-Together with STUDENT_COURSE_MEMBERSHIP_ID, the purpose of STUDENT_COURSE_MEMBERSHIP_SEQ is to provide a unique course_instance code for a student, for use in joining a student to course_instance/enrolment records.
-
-### Derivation
-As defined by the Student Record System.
-
-### Valid Values
-Either a letter or digit that increments for each student - course_instance pair.
-
-### References
-
-### Format
-String (255)
-
-### Notes
-The student_course_membership sequence ID is designed to deal with the fact that some students drop out off or enroll on more than one instance of the same course. 
-
-In cases where a sequence ID is not readily available – which includes most sites that do not use Tribal SITS –, the correct value for all instances of this student_course_membership entity is likely to be "1". The reason is that, in such cases, STUDENT_COURSE_MEMBERSHIP_ID is already unique on its own, and the sequence number of that unique instance is, therefore, 1.
-
-Note that the ACTIVE_MEMBERSHIP property indicates whether this student_course_membership record is the last known active one.
-
-This property will be deprecated in the next revision of the UDD.
 ## WITHDRAWAL_REASON
 ### Description
 The reason a student has withdrawn from a course (if they have)
@@ -84,51 +75,30 @@ https://www.hesa.ac.uk/collection/c16051/a/RSNEND
 ### Valid Values & Mappings
 <table>
 <tr><td>WITHDRAWAL_REASON</td><td>DESCRIPTION (ENGLISH)</td><td>DESCRIPTION (WELSH)</td><td>HESA (WITHDRAWREASON)</td><td>HESA (RSNEND)</td><td>FEILR (WITHDRAWREASON)  </td></tr>
-<tr><td>2</td><td>Learner has transferred to another provider</td><td></td><td>02</td><td>03</td><td>2</td></tr>
-<tr><td>3</td><td>Learner injury / illness</td><td></td><td>03</td><td>04</td><td>3</td></tr>
-<tr><td>5</td><td>Death</td><td></td><td>N/A</td><td>05</td><td>N/A</td></tr>
-<tr><td>7</td><td>Learner has transferred between providers due to intervention by the Skills Funding Agency</td><td></td><td>07</td><td>N/A</td><td>7</td></tr>
-<tr><td>10</td><td>Gone into employment</td><td></td><td>N/A</td><td>10</td><td>N/A</td></tr>
-<tr><td>28</td><td>OLASS learner withdrawn due to circumstances outside the providers' control</td><td></td><td>N/A</td><td>N/A</td><td>28</td></tr>
-<tr><td>29</td><td>Learner has been made redundant</td><td></td><td>29</td><td>N/A</td><td>29</td></tr>
-<tr><td>40</td><td>Learner has transferred to a new learning aim with the same provider</td><td></td><td>40</td><td>N/A</td><td>40</td></tr>
-<tr><td>41</td><td>Learner has transferred to another provider to undertake learning that meets a specific government strategy</td><td></td><td>41</td><td>N/A</td><td>41</td></tr>
-<tr><td>42</td><td>Academic failure/left in bad standing/not permitted to progress - HE learning aims only</td><td></td><td>N/A</td><td>02</td><td>42</td></tr>
-<tr><td>43</td><td>Financial reasons</td><td></td><td>N/A</td><td>06</td><td>43</td></tr>
-<tr><td>44</td><td>Other personal reasons</td><td></td><td>N/A</td><td>07</td><td>44</td></tr>
-<tr><td>45</td><td>Written off after lapse of time (HE learning aims only)</td><td></td><td>N/A</td><td>08</td><td>45</td></tr>
-<tr><td>46</td><td>Exclusion</td><td></td><td>N/A</td><td>09</td><td>46</td></tr>
-<tr><td>97</td><td>Other</td><td></td><td>97</td><td>11</td><td>97</td></tr>
-<tr><td>98</td><td>Reason not known</td><td></td><td>98</td><td>99</td><td>98</td></tr>
+<tr><td>2</td><td>Learner has transferred to another provider</td><td></td><td>02</td><td>03</td><td>2  </td></tr>
+<tr><td>3</td><td>Learner injury / illness</td><td></td><td>03</td><td>04</td><td>3   </td></tr>
+<tr><td>5</td><td>Death</td><td></td><td>N/A</td><td>05</td><td>N/A  </td></tr>
+<tr><td>7</td><td>Learner has transferred between providers due to intervention by the Skills Funding Agency</td><td></td><td>07</td><td>N/A</td><td>7  </td></tr>
+<tr><td>10</td><td>Gone into employment</td><td></td><td>N/A</td><td>10</td><td>N/A  </td></tr>
+<tr><td>28</td><td>OLASS learner withdrawn due to circumstances outside the provider's control</td><td></td><td>N/A</td><td>N/A</td><td>28  </td></tr>
+<tr><td>29</td><td>Learner has been made redundant</td><td></td><td>29</td><td>N/A</td><td>29  </td></tr>
+<tr><td>40</td><td>Learner has transferred to a new learning aim with the same provider</td><td></td><td>40</td><td>N/A</td><td>40  </td></tr>
+<tr><td>41</td><td>Learner has transferred to another provider to undertake learning that meets a specific government strategy</td><td></td><td>41</td><td>N/A</td><td>41  </td></tr>
+<tr><td>42</td><td>Academic failure/left in bad standing/not permitted to progress - HE learning aims only</td><td></td><td>N/A</td><td>02</td><td>42  </td></tr>
+<tr><td>43</td><td>Financial reasons</td><td></td><td>N/A</td><td>06</td><td>43  </td></tr>
+<tr><td>44</td><td>Other personal reasons</td><td></td><td>N/A</td><td>07</td><td>44  </td></tr>
+<tr><td>45</td><td>Written off after lapse of time (HE learning aims only)</td><td></td><td>N/A</td><td>08</td><td>45  </td></tr>
+<tr><td>46</td><td>Exclusion</td><td></td><td>N/A</td><td>09</td><td>46  </td></tr>
+<tr><td>97</td><td>Other</td><td></td><td>97</td><td>11</td><td>97  </td></tr>
+<tr><td>98</td><td>Reason not known</td><td></td><td>98</td><td>99</td><td>98  </td></tr>
 <tr><td>99</td><td>Completion of course - result unknown</td><td></td><td>N/A</td><td>98</td><td>N/A</td></tr>
 </table>  
 
 ### Format
-Int
+String (255)
 
 ### Notes
-
-## WITHDRAWAL_DATE
-### Description
-The date a student has withdrawn from a course (if they have)
-
-### Purpose
-For analytics
-
-### Derivation
-https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/449779/ILRSpecification2015_16_v3_July2015.pdf
-https://www.hesa.ac.uk/collection/c16051/a/ENDDATE
-
-### Valid Values
-YYYY-MM-DD
-
-### Format
-ISO 8601 Date
-
-### Notes
-Would normally utilise ENDDATE (HE/ HESA) or potentially LearnActEndDate (FE/ ILR - to be confirmed) when relevant fields denote that the learner/ student has withdrawn from the learning aim/ course.
-
-This property is deprecated, use student_course_membership.COURSE_END_DATE and student_course_membership.COURSE_OUTCOME instead.
+This property should be set when a student changes course, so that historical records can be maintained and analysed later; in addition the COURSE_END_DATE should be set accordingly.
 
 ## ENTRY_QUALS
 ### Description
@@ -211,14 +181,14 @@ https://www.hesa.ac.uk/collection/c16051/a/QUALENT3
 </table>
 
 ### Format
-Alphanumeric
+String (255)
 
 ### Notes
 Omitting this property may hinder the development or use of an effective analytics model.
 
 ## ENTRY_POINTS
 ### Description
-This field indicates the entry points gained by the student/ learner prior to entry to the institution. This is currently based on the UCAS entry points system. This field must be adapted or used to represent those points for entry into FE eg. using a formula to combine & calculate points to represent Maths and English qualifications upon entry for example
+This field indicates the entry points gained by the student prior to entry to the institution. This is currently based on the UCAS entry points system for HE institutions.  For FE institutions, it should be the average GCSE points score or similar numeric value where GCSEs are not relevant.
 
 ### Purpose
 For analytics
@@ -233,7 +203,7 @@ Any
 Int
 
 ### Notes
-
+Where an average GCSE points score system or similar scheme is used, the institution should use a single consistent scheme across all its data.  An example would be the Alps average GCSE scoring scheme.
 
 ## COURSE_OUTCOME
 ### Description
@@ -373,14 +343,14 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/449779
         </table>
 
 ### Format
-Int
+String (255)
 
 ### Notes
 Omitting this property may hinder the development or use of an effective analytics model.
 
 ## COURSE_GRADE
 ### Description
-Class of award achieved by the student on this course_instance. Based on HESA codeset for CLASS (HE conformity to be confirmed)
+Class of award achieved by the student on this course. Based on HESA codeset for CLASS (HE conformity to be confirmed)
 
 ### Purpose
 For analytics
@@ -436,7 +406,7 @@ https://www.hesa.ac.uk/collection/c16051/a/CLASS
 </table>
 
 ### Format
-Int
+String (255)
 
 ### Notes
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
@@ -1551,7 +1521,7 @@ body</td>
 ### References
 
 ### Format
-String(255)
+String (255)
 
 ### Notes
 All course levels are denoted here (TBC with FE college, for final implementation). Specific use of the LARS codeset for FE (from ILR) may need to be considered, or a mapping/ amalgamation with the HESA codeset. This is to be discussed in consultation with the FE sector.
@@ -1589,12 +1559,12 @@ Analytics and display
 Jisc
 
 ### Valid values
-YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ### References
 
 ### Format
-ISO 8601
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ### Notes
 Omitting this property may hinder the development or use of an effective analytics model.
@@ -1610,15 +1580,36 @@ Analytics and display
 Jisc
 
 ### Valid values
-YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ### References
 
 ### Format
-ISO 8601
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ### Notes
 Note that there may be many reasons why a student leaves a course. This is recorded in WITHDRAWAL_REASON.
+
+## COURSE_DURATION
+### Description
+The expected length of time in months that the student will take to complete the course.
+
+### Purpose
+Analysis
+
+### Derivation
+Commonly held in Student Record Systems.
+
+### Valid values
+0-120
+
+### References
+
+### Format
+Int
+
+### Notes
+If actual number of months is not stored in source data, then for years, multiply by 12 to give approximate months value; for weeks, divide by 4.3 and round to nearest integer to give approximate months value.
 
 ## COURSE_JOIN_DATE
 ### Description
@@ -1632,12 +1623,12 @@ HESA COMDATE
 https://www.hesa.ac.uk/collection/c16051/a/COMDATE
 
 ### Valid values
-YYYY-MM-DD
+Date in ISO 8601 format - YYYY-MM-DD
 
 ### References
 
 ### Format
-ISO 8601
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ### Notes
 
@@ -1663,34 +1654,12 @@ Int
 ### Notes
 This value is designed to be a secondary source to check COURSE_JOIN_DATE minus DOB. In cases where COURSE_JOIN_AGE is not stored separately, it should be calculated at the ETL stage.
 
-
 ## COHORT_ID
 ### Description
 An identifier for a group of students in a year cohort.
 
 ### Purpose
-Display and grouping purposes, and but analysis.
-
-### Derivation
-Jisc
-
-### Valid values
-Any
-
-### References
-
-### Format
-String (255)
-
-### Notes
-
-
-## COHORT_ID
-### Description
-An identifier for a group of students in a year cohort.
-
-### Purpose
-Display and grouping purposes, and but analysis.
+Display and grouping purposes, and analysis.
 
 ### Derivation
 Jisc
@@ -1708,10 +1677,10 @@ String (255)
 
 ## ACTIVE_MEMBERSHIP
 ### Description
-This property indicates whether the associated student_course_membership record identifies the course a student is actively studying on, or intending to study on, at the moment the data was extracted. 
+This property indicates whether the associated student_course_membership record identifies the course a student was actively studying on, or intending to study on, at the moment the data was loaded into the LRW. 
 
 ### Purpose
-Display purposes.
+To identify whether or not the student was studying or enrolled to study on the course, at the time the data was loaded into the LRW.
 
 ### Derivation
 Jisc
@@ -1725,17 +1694,17 @@ Jisc
             </tr>
             <tr>
                 <td>1</td>
-                <td>active</td>
+                <td>active - The student is studying on the course, or enrolled to study on the course.</td>
                 <td> </td>
             </tr>
             <tr>
                 <td>2</td>
-                <td>not active</td>
+                <td>not active - The student has finished the course, or has withdrawn from, left or transferred out of the course for any reason.</td>
                 <td> </td>
             </tr>
             <tr>
                 <td>3</td>
-                <td>unknown</td>
+                <td>unknown - It is not known whether the student is 'active' or 'not active' in relation to this course.</td>
                 <td> </td>
             </tr>
         </table>
@@ -1746,8 +1715,192 @@ Jisc
 String (1)
 
 ### Notes
-The purpose of this property is to easily identify, if there are several student_course_membership records for a given STUDENT_ID or COURSE_ID and STUDENT_ID combination, which of these records is the last known to have been actively used.
+A student may have sequential student_course_membership records with only 1 active record, or may be pursuing more than 1 course and therefore have more than 1 active record. When updating student_course_membership records, the ACTIVE_MEMBERSHIP property may need to be updated on more than one record.
 
-A record with ACTIVE_MEMBERSHIP=1 will generally also be the record with the most recent COURSE_JOIN_DATE. The only exceptions would be cases where a students starts on one course, switches to another, and then reverts to the original.
 
-When updating student_course_membership records, the ACTIVE_MEMBERSHIP property may need to be updated on all records associated with one STUDENT_ID, not just one. The exception would be those cases where a student pursues more than one course simultaneously.
+## PREDICTED_OUTCOME_GRADE
+### Description
+The institution's prediction of the final grade for the student in this course.
+
+### Purpose
+Analysis.
+
+### Derivation
+Institution
+
+### Valid values
+Any string
+
+### Format
+String (255)
+
+### Notes
+
+## ATTAINMENT_TARGET_GRADE
+### Description
+Grade acting as a target of attainment for the student.
+
+### Purpose
+Analysis.
+
+### Derivation
+Institution
+
+### Valid values
+Any string
+
+### Format
+String (255)
+
+### Notes
+
+## PREDICTED_OUTCOME_MARK
+### Description
+The institution's prediction of the final numerical mark for the student in this course.
+
+### Purpose
+For display purposes and further analysis
+
+### Derivation
+SRS Systems
+
+### Valid values
+Any decimal
+
+### References
+
+### Format
+Decimal
+
+### Notes
+
+## ATTAINMENT_TARGET_MARK
+### Description
+Numerical mark acting as a target of attainment for the student.
+
+### Purpose
+For display purposes and further analysis
+
+### Derivation
+SRS Systems
+
+### Valid values
+Any decimal
+
+### Format
+Decimal
+
+### Notes
+
+
+## PRIOR_GRADE_ENGLISH
+### Description
+States the best relevant qualification grade in English Language or Literature achieved by the student before enrolling.
+
+### Purpose
+Analytics
+
+### Valid Values
+Conforming with relevant qualification grade values
+
+### Format
+String (10)
+
+### Notes
+
+## PRIOR_GRADE_MATHEMATICS
+### Description
+States the best relevant qualification grade in Mathematics achieved by the student before enrolling.
+
+### Purpose
+Analytics
+
+### Valid Values
+Conforming with relevant qualification grade values
+
+### Format
+String (10)
+
+### Notes
+
+## INITIAL_ASSESSMENT_ENGLISH
+### Description
+States a numerical value of the institution's measure of the student's capability in English at the start of their programme of learning.
+
+### Purpose
+Analytics
+
+### Valid Values
+Any decimal
+
+### Format
+Decimal
+
+### Notes
+
+## INITIAL_ASSESSMENT_MATHEMATICS
+### Description
+States a numerical value of the institution's measure of the student's capability in Mathematics at the start of their programme of learning.
+
+### Purpose
+Analytics
+
+### Valid Values
+Any decimal
+
+### Format
+Decimal
+
+### Notes
+
+
+## ADMISSIONS_ROUTE
+### Description
+States whether the student was accepted via UCAS Clearing or via some other route.
+
+### Purpose
+Analytics
+
+### Derivation
+SRS systems
+
+### Valid Values
+ <table>
+            <tr>
+                <td>ADMISSIONS_ROUTE</td>
+                <td>DESCRIPTION (ENGLISH)</td>
+                <td>DESCRIPTION (WELSH)</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>Student was accepted onto the course via a route other than UCAS Clearing</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Student was accepted onto the course via UCAS Clearing</td>
+                <td> </td>
+            </tr>
+</table>
+
+### Format
+String (1)
+
+### Notes
+Code list may be extended in future.
+
+## COURSE_TRANSFERRED_FROM
+### Description
+Identifies the Course from which the student transferred, if there has been a course change.
+
+### Purpose
+This property indicates that a student has transferred from 1 course to another, by identifying the course from which the student transferred.
+
+### Valid Values
+Any
+
+### Format
+String (255)
+
+### Notes
+This attribute must contain the COURSE_ID of the course transferred from, as given in the student_course_membership record.

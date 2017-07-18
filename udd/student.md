@@ -1,19 +1,21 @@
-# Student
-* [STUDENT_ID](#student_id) [1] *
+# student
+* [STUDENT_ID](#student_id) [1] **
 * [ULN](#uln) [0..1]
 * [DOB](#dob) [0..1]
 * [ETHNICITY](#ethnicity) [0..1]
 * [SEXID](#sexid) [0..1]
-* [LEARN_DIF](#learn_dif) [0..1]
-* [DISABILITY1](#disability1) [0..1]
-* [DISABILITY2](#disability2) [0..1]
+* [DIFFLEARN1](#difflearn1) [0..1]
+* [DIFFLEARN2](#difflearn2) [0..1]
+* [LEARN_DIF](#learn_dif) [0..1] deprecated
+* [DISABILITY1](#disability1) [0..1] deprecated
+* [DISABILITY2](#disability2) [0..1] deprecated
 * [DOMICILE](#domicile) [0..1]
 * [TERMTIME_ACCOM](#termtime_accom) [0..1]
 * [PARENTS_ED](#parents_ed) [0..1]
 * [SOCIO_EC](#socio_ec) [0..1]
 * [OVERSEAS](#overseas) [0..1]
 * [APPSHIB_ID](#appshib_id) [0..1]
-* [VLE_ID](#vle_id) [0..*]
+* [VLE_ID](#vle_id) [0..1]
 * [HUSID](#husid) [0..1]
 * [USERNAME](#username) [0..1]
 * [LAST_NAME](#last_name) [0..1]
@@ -30,7 +32,10 @@
 * [TUTOR_STAFF_ID](#tutor_staff_id) [0..1]
 * [ENTRY_POSTCODE](#entry_postcode) [0..1]
 
-\* indicates that the property is the primary key for this entity.
+\** indicates that the property is the primary key for this entity.
+
+## Description of student entity
+A student element describes a person undertaking one or more courses.
 
 ## STUDENT_ID
 ### Description
@@ -45,7 +50,7 @@ https://www.hesa.ac.uk/collection/c16051/a/OWNSTU
 ### References
 
 ### Format
-String 255
+String (255)
 
 ### Notes
 
@@ -81,8 +86,11 @@ https://www.hesa.ac.uk/collection/c16051/a/BIRTHDTE
 
 ### References
 
+### Valid Values
+Date in ISO 8601 format - YYYY-MM-DD
+
 ### Format
-ISO8601 format of YYYY-MM-DD
+String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ### Notes
 If date of birth is not known or not supplied, this property should be omitted.
@@ -285,7 +293,7 @@ For equal opportunities monitoring within learning analytics / data modelling.
 https://www.hesa.ac.uk/collection/c16051/a/SEXID
 
 ### Format
-Int
+String (255)
 
 ### Valid Values & Mappings
 
@@ -303,9 +311,115 @@ Please Note - N/A denotes that no mapping value is applicable and the SEXID prop
 If sexid data is not supplied, this property should be omitted.
 Omitting this property may hinder the development or use of an effective analytics model.
 
+## DIFFLEARN1
+
+### Description
+This property records whether the learner consider themselves to have a learning difficulty or a condition or disability that could impact their learning. This property records what is meant to be the learner's prime difficulty.
+
+### Purpose
+For longitudinal analysis or intervention purposes, eg. Data Insight Tool
+
+### Derivation
+https://www.hesa.ac.uk/collection/c15051/a/learndif/
+
+https://www.hesa.ac.uk/collection/c16051/a/llddhealthprob/
+
+https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675/ILRSpecification2016_17_v2_April2016.pdf
+
+### Valid Values & Mappings
+
+<table>
+    <tr>
+        <td>DIFFLEARN1</td><td>Description (English)</td><td>Description (Welsh)</td><td>HESA DISABLE 15/16</td><td>HESA DISABLE 16/17</td><td>LLDDHEALTHPROB 16/17</td><td>HESA LEARNDIF 15/16</td><td>ILR 16/17</td>
+    </tr>
+    <tr>
+        <td>1</td><td>No known difficulty</td><td></td><td>00, 97, 98, 99</td><td>00</td><td>0, 98, 99</td><td>98, 99</td><td>98, 99</td>
+    </tr>
+    <tr>
+        <td>2</td><td>Visual impairment</td><td></td><td>02, 58</td><td>58</td><td>4</td><td>N/A</td><td>4</td>
+    </tr>
+    <tr>
+        <td>3</td><td>Hearing impairment</td><td></td><td>03, 57</td><td>57</td><td>5</td><td>N/A</td><td>5</td>
+    </tr>
+    <tr>
+        <td>4</td><td>Mobility impairment</td><td></td><td>04, 56</td><td>56</td><td>6</td><td>N/A</td><td>6</td>
+    </tr>
+    <tr>
+        <td>5</td><td>Health Condition</td><td></td><td>06, 55, 05, 07, 54</td><td>54, 55</td><td>9, 16, 95</td><td>N/A</td><td>9, 16, 95</td>
+    </tr>
+    <tr>
+        <td>6</td><td>Learning and communication challenge</td><td></td><td>10, 11, 51, 53</td><td>51, 53</td><td>8, 10, 11, 12, 13, 14, 15, 17, 94, 96</td><td>01, 02, 10, 11, 19, 20, 90, 97</td><td>1, 3, 8, 10, 11, 12, 13, 14, 15, 17, 94, 96</td>
+    </tr>
+    <tr>
+        <td>7</td><td>Other and multiple difficulties</td><td></td><td>08, 96</td><td>08, 96</td><td>7, 93, 97</td><td>N/A</td><td>2, 7, 93, 97</td>
+    </tr>
+</table>
+
+### Format
+String (255)
+
+### Notes
+**DIFFLEARN1 and DIFFLEARN2 are the preferred approach for recording such impacts on learning.  The additional properties of LEARN_DIF, DISABILITY1 and DISABILITY2 are included for use only where it is necessary to provid more detail in addition to DIFFLEARN1 and DIFFLEARN2.**
+If a learner's learning difficulty is unknown, then code '1' should be used for those cases.
+Omitting this property may hinder the development or use of an effective analytics model.
+Note that source values for the DIFFLEARN1 property are recorded in the [LEARN_DIF](#learndif) and [DISABILITY1](#disability1) properties.
+
+## DIFFLEARN2
+
+### Description
+This property records whether the learner consider themselves to have a learning difficulty or a condition or disability that could impact their learning. This property records what is meant to be the learner's secondary difficulty.
+
+### Purpose
+For longitudinal analysis or intervention purposes, eg. Data Insight Tool
+
+### Derivation
+https://www.hesa.ac.uk/collection/c15051/a/learndif/
+
+https://www.hesa.ac.uk/collection/c16051/a/llddhealthprob/
+
+https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/518675/ILRSpecification2016_17_v2_April2016.pdf
+
+### Valid Values & Mappings
+
+<table>
+    <tr>
+        <td>DIFFLEARN2</td><td>Description (English)</td><td>Description (Welsh)</td><td>HESA DISABLE 15/16</td><td>HESA DISABLE 16/17</td><td>LLDDHEALTHPROB 16/17</td><td>HESA LEARNDIF 15/16</td><td>ILR 16/17</td>
+    </tr>
+    <tr>
+        <td>1</td><td>No known difficulty</td><td></td><td>00, 97, 98, 99</td><td>00</td><td>0, 98, 99</td><td>98, 99</td><td>98, 99</td>
+    </tr>
+    <tr>
+        <td>2</td><td>Visual impairment</td><td></td><td>02, 58</td><td>58</td><td>4</td><td>N/A</td><td>4</td>
+    </tr>
+    <tr>
+        <td>3</td><td>Hearing impairment</td><td></td><td>03, 57</td><td>57</td><td>5</td><td>N/A</td><td>5</td>
+    </tr>
+    <tr>
+        <td>4</td><td>Mobility impairment</td><td></td><td>04, 56</td><td>56</td><td>6</td><td>N/A</td><td>6</td>
+    </tr>
+    <tr>
+        <td>5</td><td>Health Condition</td><td></td><td>06, 55, 05, 07, 54</td><td>54, 55</td><td>9, 16, 95</td><td>N/A</td><td>9, 16, 95</td>
+    </tr>
+    <tr>
+        <td>6</td><td>Learning and communication challenge</td><td></td><td>10, 11, 51, 53</td><td>51, 53</td><td>8, 10, 11, 12, 13, 14, 15, 17, 94, 96</td><td>01, 02, 10, 11, 19, 20, 90, 97</td><td>1, 3, 8, 10, 11, 12, 13, 14, 15, 17, 94, 96</td>
+    </tr>
+    <tr>
+        <td>7</td><td>Other and multiple difficulties</td><td></td><td>08, 96</td><td>08, 96</td><td>7, 93, 97</td><td>N/A</td><td>2, 7, 93, 97</td>
+    </tr>
+</table>
+
+### Format
+String (255)
+
+### Notes
+**DIFFLEARN1 and DIFFLEARN2 are the preferred approach for recording such impacts on learning.  The additional properties of LEARN_DIF, DISABILITY1 and DISABILITY2 are included for use only where it is necessary to provid more detail in addition to DIFFLEARN1 and DIFFLEARN2.**
+If a learner's learning difficulty is unknown, then code '1' should be used for those cases.
+Omitting this property may hinder the development or use of an effective analytics model.
+Note that source values for the DIFFLEARN2 property are recorded in the [LEARN_DIF](#learndif) and [DISABILITY2](#disability2) properties.
+
 ## LEARN_DIF
 ### Description
-This field records whether a learner considers themselves to have a learning difficulty.
+This field records whether a learner considers themselves to have a learning difficulty. Note: this is the v1.2.7 version; this property is deprecated in v1.3.0.
 
 ### Purpose
 For detailed analysis or intervention purposes within Learning Analytics eg. Data Insight Tool.
@@ -336,11 +450,13 @@ Int
 ### Notes
 If the learner's learning difficulty data is not supplied, this property should be omitted.
 
-As of the 2016-2017 academic year, LLDDHEALTHPROB has replaced LEARN_DIF in the HESA student returns. Also, LLDDCAT in FE ILR post 2014 has a different value space. Both of these vocabularies will be supported in a forthcoming field in v1.3. Data with HESA LLDDHEALTHPROB and LLDDCAT in FE ILR post 2014 can't, therefore, be submitted prior to UDD v1.3
+As of the 2016-2017 academic year, LLDDHEALTHPROB has replaced LEARN_DIF in the HESA student returns. Also, LLDDCAT in FE ILR post 2014 has a different value space. Both of these vocabularies will be supported in a forthcoming field in v1.3. Data with HESA LLDDHEALTHPROB and LLDDCAT in FE ILR post 2014 can't, therefore, be submitted prior to UDD v1.3.
+
+This property is deprecated.
 
 ## DISABILITY1
 ### Description
-Whether the student is indicated as being disabled, according to their own self-assessment. This will be their primary disability.
+Whether the student is indicated as being disabled, according to their own self-assessment. This will be their primary disability.  Note: this is the v1.2.7 version; this property is deprecated in v1.3.0.
 
 ### Purpose
 For equal opportunities monitoring within Learning Analytics/ Data Modelling.
@@ -477,9 +593,11 @@ If the learner's disability data is not supplied, this property should be omitte
 
 As of the 2016-2017 academic year, HESA DISABILITY has a different value space in the HESA student returns. Also, LLDDCAT in FE ILR post 2014 has a different value space from later versions. Both of these vocabularies will be supported in a forthcoming field in v1.3. Data with HESA DISABLE and LLDDCAT in FE ILR post 2014 can't, therefore, be submitted prior to UDD v1.3
 
+This property is deprecated.
+
 ## DISABILITY2
 ### Description
-Whether the student is indicated as being disabled, according to their own self-assessment. This will be their secondary disability.
+Whether the student is indicated as being disabled, according to their own self-assessment. This will be their secondary disability.  Note: this is the v1.2.7 version; this property is deprecated in v1.3.0.
 
 ### Purpose
 For equal opportunities monitoring within Learning Analytics/ Data Modelling.
@@ -615,6 +733,8 @@ Int
 If the learner's disability data is not supplied, this property should be omitted.
 
 As of the 2016-2017 academic year, HESA DISABILITY has a different value space in the HESA student returns. Also, LLDDCAT in FE ILR post 2014 has a different value space from later versions. Both of these vocabularies will be supported in a forthcoming field in v1.3. Data with HESA DISABLE and LLDDCAT in FE ILR post 2014 can't, therefore, be submitted prior to UDD v1.3
+
+This property is deprecated.
 
 ## DOMICILE
 ### Description
@@ -1532,11 +1652,6 @@ String (2)
 		<td></td>
 	</tr>
 	<tr>
-		<td>ZZ</td>
-		<td>Not known</td>
-		<td></td>
-	</tr>
-	<tr>
 		<td>PS</td>
 		<td>Occupied Palestinian Territories [Palestine, State of] {formerly West Bank (including East Jerusalem) and Gaza Strip}</td>
 		<td></td>
@@ -1959,6 +2074,7 @@ String (2)
 	<tr>
 		<td>ZZ</td>
 		<td>Unknown</td>
+		<td></td>
 	</tr>
 </table>
 
@@ -1968,7 +2084,7 @@ Omitting this property may hinder the development or use of an effective analyti
 
 ## TERMTIME_ACCOM
 ### Description
-The current term time accomodation type of student
+The current term time accommodation type of student
 
 ### Purpose
 For detailed analysis within Learning Analytics/ Data Modelling.
@@ -1993,10 +2109,10 @@ https://www.hesa.ac.uk/collection/c16051/a/TTACCOM
 Please Note - N/A denotes that no mapping value is applicable (it should not be confused with NULL), and this property should be omitted.
 
 ### Format
-Int
+String (255)
 
 ### Notes
-If current term time accomodation type data is not supplied, this property should be omitted.
+If current term time accommodation type data is not supplied, this property should be omitted.
 Omitting this property may hinder the development or use of an effective analytics model.
 
 ## PARENTS_ED
@@ -2021,7 +2137,7 @@ https://www.hesa.ac.uk/collection/c16051/a/PARED
 </table>
 
 ### Format
-Int
+String (255)
 
 ### Notes
 If parents higher education qualification data is not supplied, this property should be omitted.  This information may not be available for FE/ ILR institutions, and only HE.
@@ -2053,7 +2169,7 @@ https://www.hesa.ac.uk/collection/c16051/a/SEC
 </table>  
 
 ### Format
-Int
+String (255)
 
 ### Notes
 If the socio-economic classification data is not supplied, this property should be omitted.
@@ -2082,7 +2198,7 @@ Jisc
 </table>  
 
 ### Format
-Int
+String (255)
 
 ### Notes
 If this student classification data is not supplied, this property should be omitted.
@@ -2104,7 +2220,7 @@ https://www.internet2.edu/media/medialibrary/2013/09/04/internet2-mace-dir-edupe
 Not specified
 
 ### Format
-String (256)
+String (255)
 
 ### Notes
 There may be a more general AIM_ID property later that can be used for any UK Federation service provider ID, not just the Jisc analytics student app Shibboleth - JWT gateway.
@@ -2112,7 +2228,7 @@ There may be a more general AIM_ID property later that can be used for any UK Fe
 
 ## VLE_ID
 ### Description.
-The ID assigned to a student by the VLE.
+The ID assigned to a student by the main VLE.
 
 ### Purpose
 Analytics
@@ -2124,10 +2240,10 @@ Jisc
 Not specified
 
 ### Format
-String (256)
+String (255)
 
 ### Notes
-Note that this is not a universal user ID; there may be several VLEs, or records from other types of tools.
+Note that this is not a universal user ID; there may be several VLEs, or records from other types of tools.  For mappings of the STUDENT_ID property to the user IDs attached to a student, refer to the student_id_map entity. This VLE_ID is the IDENTIFIER value in student_id_map where the DOMAIN value = "VLE_1".
 
 
 ## HUSID
@@ -2293,17 +2409,16 @@ For display. Used by Student Success Planner
 
 ### Derivation
 Jisc
-https://www.hesa.ac.uk/collection/c16051/a/TTPCODE
+https://www.hesa.ac.uk/collection/c16051/a/TTPCODE. Extended to include overseas postal codes, for example for distance learners, those at overseas campuses of providers, and so on.
 
 ### Valid Values
-See [HESA definition for details.](https://www.hesa.ac.uk/collection/c16051/a/TTPCODE)
+Any, but for UK postcodes, see [HESA definition for details.](https://www.hesa.ac.uk/collection/c16051/a/TTPCODE)
 
 ### Format
-String (8)
+String (10)
 
 ### Notes
-This should relate to the term-time postcode of the student's residency, and NOT the entry postcode onto the student's learning instance
-
+This should relate to the term-time postcode of the student's residency, and NOT the entry postcode onto the student's learning instance.
 
 ## PRIMARY_EMAIL_ADDRESS
 ### Description
@@ -2327,7 +2442,7 @@ Will be input/ batched directly from central IT or identification management sys
 
 ## HOME_PHONE
 ### Description
-Students home telephone number. This can refer to the landline telephone number of their term-time or non term-time accomodation.
+Students home telephone number. This can refer to the landline telephone number of their term-time or non term-time accommodation.
 
 ### Purpose
 For display and contact purposes. Used by Student Success Planner
@@ -2403,21 +2518,21 @@ String(255)
 ### Notes
 This will be the unique identifier/ primary key for the member of staff who is responsible for the student (course/ year tutor) or the person responsible for receiving alerts and notifications from the Learning Analytics software suite/ tools. This will typically be the staff/ HR/ payroll number for the member of academic staff, which links to their email address in the institutions identity management system.
 
-
 ## ENTRY_POSTCODE
 ### Description.
-Identifies the postcode of the student's permanent or home address prior to entry to the course. It is not necessarily the correspondence address of the student.
+Identifies the postal code of the student's permanent or home address prior to entry to the course. It is not necessarily the correspondence address of the student.
 
 ### Purpose
-Analytics 
+Analytics
 
 ### Derivation
-https://www.hesa.ac.uk/collection/c16051/a/postcode/
+https://www.hesa.ac.uk/collection/c16051/a/postcode/. Extended to include international postal codes.
 
 ### Valid Values
-[See HESA definition for particulars](https://www.hesa.ac.uk/collection/c16051/a/postcode/)
+Any, but for UK postcodes [see HESA definition for particulars.] (https://www.hesa.ac.uk/collection/c16051/a/postcode/)
 
 ### Format
-String (8)
+String (10)
 
 ### Notes
+HESA's fields only include UK domiciled students, whereas UDD may require overseas postal codes.  Therefore, this property has been extended to 10 characters and any valid values.

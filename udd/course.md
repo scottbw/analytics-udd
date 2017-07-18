@@ -1,5 +1,5 @@
-# Course
-* [COURSE_ID](#course_id) [1] *
+# course
+* [COURSE_ID](#course_id) [1] **
 * [SUBJECT](#subject) [0..1]
 * [TITLE](#title) [0..1]
 * [COURSE_AIM](#course_aim) [0..1]
@@ -7,8 +7,15 @@
 * [INST_TIER_2](#inst_tier_2) [0..1]
 * [INST_TIER_3](#inst_tier_3) [0..1]
 * [TENANT_ID](institution.md#tenant_id) [0..1]
+* [AWARDING_BODY](#awarding_body) [0..1]
 
-\* indicates that the property is the primary key for this entity.
+\** indicates that the property is the primary key for this entity.
+
+## Description of course entity
+A course is a learning opportunity that defines a student's learning activities and aim. It is run by an institution and is usually validated to continue over several years with several intakes. A course will usually have a qualification aim.  Example: BA Honours degree in French.
+
+## Notes
+The properties of the course entity do not include start date, study mode or location, because the course is at a high level in the UDD structure.  These properties of a learning opportunity are differentiated in the course_instance, student_course_membership and student_on_course_instance entities.
 
 ## COURSE_ID
 ### Description
@@ -1210,6 +1217,7 @@ String (255)
 
 
 ## INST_TIER_2
+### Description
 Details the middle level of an institutional structure (e.g. department details)
 
 ### Purpose
@@ -1230,6 +1238,7 @@ String (255)
 
 
 ## INST_TIER_3
+### Description
 Details the lower level of an institutional structure (e.g. department details)
 
 ### Purpose
@@ -1247,3 +1256,24 @@ Any
 String (255)
 
 ### Notes
+
+## AWARDING_BODY
+### Description
+The UKPRN or trading name of the organisation responsible for the award of the qualification.
+
+### Purpose
+For display purposes and further analysis
+
+### Derivation
+UK Register of Learning Providers (UKRLP)
+
+### Valid Values
+UKPRN: 8-digit string
+Other: Any
+
+### Format
+String (255)
+
+### Notes
+Each value for an awarding body should be consistent across the data from one institution.
+If the institution running the course is also the awarding body, enter the institution's UKPRN, as given in institution.TENANT_ID.

@@ -1,16 +1,12 @@
-# Differences between UDD 1.1 and 1.2
+# Differences between UDD 1.2 and 1.3
 
-The following diagrams give an overview of all the changes that were introduced with version 1.2 of the UDD. Solid lines indicate where existing fields went. Dotted lines indicate correspondences between fields that are broadly similar, but which have changed in name or definition in 1.2. Red indicates that a field is no longer used, green indicates a new field, and beige a changed field. 
+The following spreadsheets give an overview of all the changes that were introduced with version 1.3 of the UDD. Red indicates that a property is no longer used, green indicates a new property, and beige a changed property. 
 
-### [Core](#core)
-### [Additional](#additional-1)
+## Differences
+[xls spreadsheet of 1.2.7 to 1.3.0 changes][differencesXLS] 
 
-## Core
-![diagram of core 1.1 to 1.2 changes][core]
+[ods spreadsheet of 1.2.7 to 1.3.0 changes][differencesODS]
 
-[core]: media/core.png "core"
+[differencesXLS]: media/UDD1.2-1.3.xls "differencesXLS"
 
-## Additional
-![diagram of additional 1.1 to 1.2 changes][additional]
-
-[additional]: media/additional.png "additional"
+[differencesODS]: media/UDD1.2-1.3.ods "differencesODS"
