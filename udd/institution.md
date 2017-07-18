@@ -67,9 +67,9 @@ Value will be the current version number of the UDD preceded by "v".  Example: i
 
 ## MODULE_VLE_MAP_MODE
 ### Description
-This property enables an institution to specify a 1 to many mapping between MOD_INSTANCE_ID and VLE_MOD_ID (see the module_VLE_map entity). By default, MOD_INSTANCE_ID plus VLE_MOD_ID form a unique constraint in module_VLE_map, showing that each module in the VLE maps to 1-and-only-1 module in the Student Record System. In this usual case, MODULE_VLE_MAP_MODE should be omitted from the institution entity.
+This property enables an institution to specify the type of relationship between the module_instance in the Student Record System and module information in the VLE, identified by MOD_INSTANCE_ID and VLE_MOD_ID respectively. By default, MOD_INSTANCE_ID plus VLE_MOD_ID form a unique constraint in module_VLE_map, which supports a many-to-many relationship between them. If MODULE_VLE_MAP_MODE is absent, a default value of 0 for this property will be assumed. This property value can be supplied explicitly, if desired.
 
-However, for some institutions a single VLE_MOD_ID maps to several MOD_INSTANCE_ID values, in other words an entry in the VLE is cross-listed against several modules in the Student Record System. In this case, the MOD_INSTANCE_ID values in module_VLE_map must be unique, so that several MOD_INSTANCE_ID values can map to 1 VLE_MOD_ID value. This additional constraint is implemented through setting the MODULE_VLE_MAP_MODE property to "1".
+However, for some institutions an entry in the VLE is cross-listed against several modules in the Student Record System. In other words, a single VLE_MOD_ID maps to several MOD_INSTANCE_ID values. In this case, the MOD_INSTANCE_ID values in module_VLE_map must be unique, so that several MOD_INSTANCE_ID values can map to 1 VLE_MOD_ID value. This case removes the default constraint on VLE_MOD_ID and retains the uniqueness constraint on MOD_INSTANCE_ID. This is implemented through setting the MODULE_VLE_MAP_MODE property to "1".
 
 ### Purpose
 To enable the constraints on the module_VLE_map entity to be varied between institutions.
@@ -78,10 +78,11 @@ To enable the constraints on the module_VLE_map entity to be varied between inst
 Jisc
 
 ### Valid Values
-1
+0 or 1
 
 ### Format
 Int
 
 ### Notes
-This property will be either not present, or present and set to "1".
+If this property is not present, a value of "0" will be assumed.
+Also see the [module_VLE_map](module_VLE_map.md) entity.
