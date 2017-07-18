@@ -64,6 +64,7 @@ The ASSESS_SEQ_ID number should be incremented in line with the chronological or
 The first attempt or assessment opportunity would have ASSESS_SEQ_ID = 1.
 This property relates to the number of times a student has taken, or had the opportunity to take, an assessment, not the sequence of all the assessments on a module.
 
+
 ## ASSESS_DUE_DATE
 ### Description.
 The date an assessment instance for a student was due for submission.
