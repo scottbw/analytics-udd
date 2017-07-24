@@ -10,8 +10,8 @@
 * [ASSESS_RETAKE](#assess_retake) [0..1]
 * [ASSESS_AGREED_MARK](#assess_agreed_mark) [0..1]
 * [ASSESS_ACTUAL_MARK](#assess_actual_mark) [0..1]
-* [RAW_ACTUAL_MARK](#raw_actual_mark) [0..1]
-* [RAW_AGREED_MARK](#raw_agreed_mark) [0..1]
+* [ASSESS_RAW_ACTUAL_MARK](#assess_raw_actual_mark) [0..1]
+* [ASSESS_RAW_AGREED_MARK](#assess_raw_agreed_mark) [0..1]
 * [ASSESS_AGREED_GRADE](#assess_agreed_grade) [0..1]
 * [ASSESS_ACTUAL_GRADE](#assess_actual_grade) [0..1]
 * [ASSESSMENT_CURRENT_ATTEMPT](#assessment_current_attempt) [0..1]
@@ -150,7 +150,7 @@ ASSESS_AGREED_MARK is expected to be present in any UDD compliant dataset as soo
 The value represents a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 
 
-## RAW_ACTUAL_MARK
+## ASSESS_RAW_ACTUAL_MARK
 ### Description
 The original mark scored by the student.
 
@@ -167,10 +167,10 @@ Any decimal value
 Decimal
 
 ### Notes
-Can contain any decimal value, for example "59", "162.87", and so on; this value may or may not be a percentage. ASSESS_ACTUAL_MARK contains a representation of RAW_ACTUAL_MARK explicitly as a percentage.
+Can contain any decimal value, for example "59", "162.87", and so on; this value may or may not be a percentage. ASSESS_ACTUAL_MARK contains a representation of ASSESS_RAW_ACTUAL_MARK explicitly as a percentage.
 
 
-## RAW_AGREED_MARK
+## ASSESS_RAW_AGREED_MARK
 ### Description
 The mark scored by the student after any moderation or confirmation processes, or the only recorded mark if there are no moderation or confirmation processes.
 
@@ -187,7 +187,7 @@ Any decimal value
 Decimal
 
 ### Notes
-Can contain any decimal value, for example "59", "162.87", and so on; this value may or may not be a percentage. ASSESS_AGREED_MARK contains a representation of RAW_AGREED_MARK explicitly as a percentage.
+Can contain any decimal value, for example "59", "162.87", and so on; this value may or may not be a percentage. ASSESS_AGREED_MARK contains a representation of ASSESS_RAW_AGREED_MARK explicitly as a percentage.
 
 
 ## ASSESS_ACTUAL_GRADE
