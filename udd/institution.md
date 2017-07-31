@@ -87,4 +87,4 @@ Int
 
 ### Notes
 If MODULE_VLE_MAP_MODE is absent, a default value of 0 for this property will be assumed. This property value can be supplied explicitly, if desired.
-Also see the [module_VLE_map](module_VLE_map.md) entity.
+Also see the [module_VLE_map](module_vle_map.md) entity.
