@@ -1,6 +1,6 @@
 # student_id_map
 * [STUDENT_ID_MAP_ID](#student_id_map_id) **
-* [STUDENT_ID](student.md#udd_student_id) [1] *
+* [STUDENT_ID](student.md#student_id) [1] *
 * [DOMAIN](#domain) [1] *
 * [IDENTIFIER](#identifier) [1] *
 
