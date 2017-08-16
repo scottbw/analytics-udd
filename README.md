@@ -24,7 +24,7 @@ UDD data must be UTF-8 encoded. JSON is the preferred data format, but XML data 
 When providing UDD data, supply the data for different entities in separate files, 1 file per entity, using the [UDD filename conventions](https://github.com/jiscdev/analytics-udd/blob/v1.3.1/filename_conventions.md).
 
 ## Diagram
-An [entity relation diagram of the whole UDD 1.3](diagram.md) provides a one page overview of the specification.
+2 entity-relationship diagrams provide an overview of the specification. There is a [brief E-R diagram](diagram.md) containing just the primary keys, constraints and foreign key properties, and a [full E_R diagram](diagramFull.md) with all the properties.
 
 ## Core sections
 
