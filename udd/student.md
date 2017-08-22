@@ -71,7 +71,7 @@ Skills Funding Agency: See https://www.gov.uk/government/publications/lrs-unique
 String (10)
 
 ### Notes
-The ULN should be provided as an additional point of reference. However, the STUDENT_ID will always take precedence as the unique learner / student identifier.
+The ULN should be provided as an additional point of reference for integration of other data sources with the UDD. However, the STUDENT_ID will always take precedence as the unique learner / student identifier within the UDD.
 
 
 ## DOB
