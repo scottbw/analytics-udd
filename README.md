@@ -1,7 +1,7 @@
 # Jisc Learning Analytics Unified Data Definitions v1.3.1
 
 ## Introduction
-The Unified Data Definitions (UDD) of the Jisc analytics project is a vocabulary of the chief data entities of interest to learning analytics: students, courses, modules, and so on, as well as their characteristics. The data coded with this vocabulary is typically extracted from the student record system of a particular college or university.
+The Unified Data Definitions (UDD) of the Jisc learning analytics project is a vocabulary of the chief data entities of interest to learning analytics: students, courses, modules, and so on, as well as their characteristics. The data coded with this vocabulary is typically extracted from the student record system of a particular college or university.
 
 Along with xAPI recipes, the UDD makes up the core data specification of the Jisc learning analytics architecture.
 
@@ -13,10 +13,10 @@ The main folder (jiscdev/analytics-udd) contains:
 - a link to spreadsheets listing the differences between the previous version of the UDD and version 1.3
 - a consolidated list of the descriptions of each UDD entity. 
 
-In addition to the main folder, there are 4 sub-folders. The udd sub-folder is the heart of the specification, with a file for each entity, describing its properties in detail. Refer to these files to design data for import into the Learning Records Warehouse (LRW). The media sub-folder contains various supporting files, including the E-R diagram source, the changes spreadsheet, a Guide to the relative importance of UDD properties, and a copy of the JACS3 subject classification system. The utilities sub-folder has code fragments and snippets to support the development and use of the UDD. The LRW Implementation Information sub-folder describes matters that are not part of the formal UDD specification, but are closely related to it, for example a description of the mechanism for handling unofficial extensions to properties in the UDD, and filename conventions for adding data into the LRW.
+In addition to the main folder, there are 4 sub-folders. The udd sub-folder is the heart of the specification, with a file for each entity, describing its properties in detail. Refer to these files to design data for import into the Learning Records Warehouse (LRW). The media sub-folder contains various supporting files, including the E-R diagram source, the changes spreadsheet, Guides to the relative importance of UDD properties in respect of applications, products and services that use the UDD, and a copy of the JACS3 subject classification system. The utilities sub-folder has code fragments and snippets to support the development and use of the UDD. The LRW Implementation Information sub-folder describes matters that are not part of the formal UDD specification, but are closely related to it, for example a description of the mechanism for handling unofficial extensions to properties in the UDD, and filename conventions for adding data into the LRW.
 
-## Differences between v1.2 and v1.3
-The development of v1.3 has involved a number of additions and changes. [This overview page](differences.md) provides a mapped listing of each change.
+## Differences between versions
+The development of v1.3 has involved a number of additions and changes. [This overview page](differences.md) provides a mapped listing of each change between version 1.2.7 and version 1.3.0. For differences between v1.3.0 and v1.3.1, see the [Release Notes](https://github.com/jiscdev/analytics-udd/releases).
 
 ## Data format
 UDD data must be UTF-8 encoded. JSON is the preferred data format, but XML data is also supported. Other formats are not supported.
@@ -88,17 +88,17 @@ There is provision for data extensions at the level of property (in other words,
 ## Specification development workflow
 The simplest way of contributing to the UDD is as follows:
 
-1. add an issue to the issue tracker to alert everyone to what you are working on and why
-2. tag the issue with the version milestone of which you'd like the patch to be a part
-3. make an edit or add a file in this repository, and save it to your own branch. If you prefer, you can fork the whole repository and work in your own repository
-4. send a pull request once you're done
-5. the pull request will be discussed at our fortnightly meeting and either merged, or kept in the queue, depending on whether more work is required.
+1. add an issue to the issue tracker to alert everyone to what you are working on and why.
+2. tag the issue with the version milestone of which you'd like the patch to be a part.
+3. make an edit or add a file in this repository, and save it to your own branch. If you prefer, you can fork the whole repository and work in your own repository.
+4. send a pull request once you're done.
+5. the pull request will be discussed at our regular meetings and either merged, or kept in the queue, depending on whether more work is required.
 
 You can do all this through the Github GUI, but you're welcome to use any other git tool you prefer.
 
-Particular release versions will get their own branches, but the main branch will always contain the latest agreed release. Releases will be made after the group has come to an agreement.
+Particular release versions will get their own branches, but the master branch will always contain the latest agreed release. Releases will be made after the review group has come to an agreement.
 
-Versioning is done broadly as follows: major versions (majorVersion.minorVersion.patch) indicate major datamodel changes. Minor versions denote changes that can break applications, such as the deletion of properties that were valid in earlier versions. Patches can include the addition of new properties.
+Versioning is done broadly as follows: (majorVersion.minorVersion.patch) major versions indicate major data model changes. Minor versions denote changes that can break applications, such as the deletion of properties that were valid in earlier versions. Patches can include the addition of new properties.
 
 Note that some properties will be marked as 'deprecated'. This means that the property is still valid, but will be removed by the next minor version update.
 
