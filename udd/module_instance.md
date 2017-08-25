@@ -17,7 +17,7 @@ A module_instance is the specific offer of a module to students. It therefore ha
 Institutions unique identifier for this module_instance
 
 ### Purpose
-For link a module_instance to a student
+For linking a module_instance to a student
 
 ### Derivation
 Jisc
@@ -42,7 +42,6 @@ Analytics
 Jisc
 
 ### Valid Values
-Any
 Each different code value in MOD_PERIOD should have a matching code value in period.PERIOD_CODE.
 
 ### Format
@@ -53,7 +52,7 @@ It is expected that sites / organisations will have their own code lists for MOD
 
 ## MOD_ONLINE
 ### Description
-Whether this module_instance is delivered wholly online
+Whether or not this module_instance is delivered wholly online.
 
 ### Purpose
 Analytics
@@ -76,7 +75,7 @@ Omitting this property may hinder the development or use of an effective analyti
 
 ## MOD_ACADEMIC_YEAR
 ### Description
-Academic year that this module runs within - this must represent the start year of that specific academic year eg. for 2014-15 this would be 2014
+Academic year that this module runs within - this must represent the start year of that specific academic year eg. for 2014-15 this would be 2014.
 
 ### Purpose
 Analytics
@@ -96,7 +95,7 @@ Omitting this property may hinder the development or use of an effective analyti
 
 ## MOD_OPTIONAL
 ### Description
-Whether this instance relates to an optional module or not.
+Whether or not this instance relates to an optional module.
 
 ### Purpose
 Analytics

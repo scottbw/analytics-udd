@@ -96,7 +96,7 @@ Omitting this property may hinder the development or use of an effective analyti
 
 ## MOD_LEVEL
 ### Description
-Level of credit points - indicates the level of module the student is studying. This has been initially based on the HESA field LEVELPTS, however may be utilised and adapted to also cater for FE
+Level of credit points - indicates the level of module the student is studying. This has been initially based on the HESA field LEVELPTS, however may be utilised and adapted to also cater for FE.
 
 ### Purpose
 Analytics

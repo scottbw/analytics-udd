@@ -40,7 +40,7 @@ Values should be one of the following:
 - a URL that identifies the system within which IDENTIFIER exists, for example a VLE
 
 ### Format
-String(255)
+String (255)
 
 ### Notes
 

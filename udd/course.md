@@ -19,13 +19,14 @@ The properties of the course entity do not include start date, study mode or loc
 
 ## COURSE_ID
 ### Description
-The providers own ID for the course
+The provider's own ID for the course
 
 ### Purpose
 To link relational database tables
 
 ### Derivation
 https://www.hesa.ac.uk/collection/c16051/a/owncourseid/
+
 https://www.hesa.ac.uk/collection/c16054/e/course_courseid/
 
 ### Valid Values
@@ -53,7 +54,7 @@ https://www.hesa.ac.uk/support/documentation/jacs
 [JACS3 CSV](../media/jacs3-valid-entries.csv)
 
 ### Format
-String (10) - Usually 4 characters, number followed by three digits
+String (255) - Usually 4 characters, number followed by three digits
 
 ### Notes
 The JACS3 coding will be used here initially, from the HE (HESA) model. Further discussion will be required around this, to discuss subject classifications for FE/ ILR.
@@ -1192,12 +1193,12 @@ body</td>
 String (255)
 
 ### Notes
-This field uses the HESA "COURSEAIM" codeset initially - with the addition of new code 'X98' to denote 'No formal qualification aim, below FE level' for FE equivalent denotation to HE code 'X99'. All course levels are denoted here (TBC with FE college, for final implementation). Specific use of the LARS codeset for FE (from ILR) may need to be considered, or a mapping/ amalgamation with the HESA codeset. This is to be discussed in consultation with the FE sector.
+This field uses the HESA "COURSEAIM" codeset initially - with the addition of new code 'X98' to denote 'No formal qualification aim, below FE level' for FE equivalent denotation to HE code 'X99'. All course levels are denoted here. Specific use of the LARS codeset for FE (from ILR) may need to be considered, or a mapping/ amalgamation with the HESA codeset. This is to be discussed in consultation with the FE sector.
 Omitting this property may hinder the development or use of an effective analytics model.
 
 
 ## INST_TIER_1
-Details the top level of an institutional structure (e.g. Faculty Details)
+Details the top level of an institutional structure (e.g. faculty details)
 
 ### Purpose
 For display purposes and further analysis
@@ -1269,6 +1270,7 @@ UK Register of Learning Providers (UKRLP)
 
 ### Valid Values
 UKPRN: 8-digit string
+
 Other: Any
 
 ### Format

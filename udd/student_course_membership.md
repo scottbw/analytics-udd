@@ -207,7 +207,7 @@ Where an average GCSE points score system or similar scheme is used, the institu
 
 ## COURSE_OUTCOME
 ### Description
-This field indicates the outcome/ status of the learner's current course or learning aim. This is based on the information provided by HESA via the RSNEND field, however this has been adapted with the addition of fields to cater for FE (via the ILR CompStatus field), and can be used to fully cater for the outcomes in granular detail
+This field indicates the outcome/ status of the learner's current course or learning aim. This is based on the information provided by HESA via the RSNEND field, however this has been adapted with the addition of fields to cater for FE (via the ILR CompStatus field), and can be used to fully cater for the outcomes in granular detail.
 
 ### Purpose
 For analytics
@@ -1524,7 +1524,7 @@ body</td>
 String (255)
 
 ### Notes
-All course levels are denoted here (TBC with FE college, for final implementation). Specific use of the LARS codeset for FE (from ILR) may need to be considered, or a mapping/ amalgamation with the HESA codeset. This is to be discussed in consultation with the FE sector.
+All course levels are denoted here. Specific use of the LARS codeset for FE (from ILR) may need to be considered, or a mapping/ amalgamation with the HESA codeset. This is to be discussed in consultation with the FE sector.
 
 
 ## COURSE_MARK
@@ -1543,9 +1543,10 @@ SRS Systems
 ### References
 
 ### Format
-Decimal (IEEE 754)
+Decimal
 
 ### Notes
+The value represents a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 
 
 ## COURSE_EXPECTED_END_DATE
@@ -1723,7 +1724,7 @@ A student may have sequential student_course_membership records with only 1 acti
 The institution's prediction of the final grade for the student in this course.
 
 ### Purpose
-Analysis.
+Analysis
 
 ### Derivation
 Institution
@@ -1741,7 +1742,7 @@ String (255)
 Grade acting as a target of attainment for the student.
 
 ### Purpose
-Analysis.
+Analysis
 
 ### Derivation
 Institution

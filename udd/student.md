@@ -10,7 +10,7 @@
 * [DISABILITY1](#disability1) [0..1] deprecated
 * [DISABILITY2](#disability2) [0..1] deprecated
 * [DOMICILE](#domicile) [0..1]
-* [TERMTIME_ACCOM](#termtime_accom) [0..1]
+* [TERMTIME_ACCOM](student_on_course_instance.md#termtime_accom) [0..1] deprecated
 * [PARENTS_ED](#parents_ed) [0..1]
 * [SOCIO_EC](#socio_ec) [0..1]
 * [OVERSEAS](#overseas) [0..1]
@@ -57,10 +57,10 @@ String (255)
 
 ## ULN
 ### Description
-Unique Learner Number. For initial trial and data model development for the predictive model, this field should be left out.
+Unique Learner Number
 
 ### Purpose
-For future use, tracking student journey.
+Aids identification of the student.
 
 ### Derivation
 Skills Funding Agency: See https://www.gov.uk/government/publications/lrs-unique-learner-numbers
@@ -71,7 +71,7 @@ Skills Funding Agency: See https://www.gov.uk/government/publications/lrs-unique
 String (10)
 
 ### Notes
-The ULN can be provided as an additional point of reference, however the STUDENT_ID will always take precedence as the unique learner/ student identifier.
+The ULN should be provided as an additional point of reference for integration of other data sources with the UDD. However, the STUDENT_ID will always take precedence as the unique learner / student identifier within the UDD.
 
 
 ## DOB
@@ -108,7 +108,7 @@ To allow equal opportunities monitoring, within detailed learning analytics/ dat
 https://www.hesa.ac.uk/collection/c16051/a/ETHNIC
 
 ### Format
-String (10)
+String (255)
 
 ### Valid Values & Mappings:  
 
@@ -419,7 +419,7 @@ Note that source values for the DIFFLEARN2 property are recorded in the [LEARN_D
 
 ## LEARN_DIF
 ### Description
-This field records whether a learner considers themselves to have a learning difficulty. Note: this is the v1.2.7 version; this property is deprecated in v1.3.0.
+This field records whether a learner considers themselves to have a learning difficulty. Note: this is the v1.2.7 version; this property is deprecated in v1.3.1.
 
 ### Purpose
 For detailed analysis or intervention purposes within Learning Analytics eg. Data Insight Tool.
@@ -456,7 +456,7 @@ This property is deprecated.
 
 ## DISABILITY1
 ### Description
-Whether the student is indicated as being disabled, according to their own self-assessment. This will be their primary disability.  Note: this is the v1.2.7 version; this property is deprecated in v1.3.0.
+Whether the student is indicated as being disabled, according to their own self-assessment. This will be their primary disability.  Note: this is the v1.2.7 version; this property is deprecated in v1.3.1.
 
 ### Purpose
 For equal opportunities monitoring within Learning Analytics/ Data Modelling.
@@ -597,7 +597,7 @@ This property is deprecated.
 
 ## DISABILITY2
 ### Description
-Whether the student is indicated as being disabled, according to their own self-assessment. This will be their secondary disability.  Note: this is the v1.2.7 version; this property is deprecated in v1.3.0.
+Whether the student is indicated as being disabled, according to their own self-assessment. This will be their secondary disability.  Note: this is the v1.2.7 version; this property is deprecated in v1.3.1.
 
 ### Purpose
 For equal opportunities monitoring within Learning Analytics/ Data Modelling.
@@ -2082,39 +2082,6 @@ String (2)
 If domicile country data is not supplied, this property should be omitted.
 Omitting this property may hinder the development or use of an effective analytics model.
 
-## TERMTIME_ACCOM
-### Description
-The current term time accommodation type of student
-
-### Purpose
-For detailed analysis within Learning Analytics/ Data Modelling.
-
-### Derivation
-https://www.hesa.ac.uk/collection/c16051/a/TTACCOM
-
-### Valid Values & Mappings
-
-<table>
-<tr><td>TERMTIME_ACCOM</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)</td><td>HESA(TTACCOM)</td><td>FEILR(ACCOM)  </td></tr>
-<tr><td>1</td><td>Provider maintained property</td><td></td><td>1</td><td>5  </td></tr>
-<tr><td>2</td><td>Parental/guardian home</td><td></td><td>2</td><td>N/A  </td></tr>
-<tr><td>4</td><td>Other</td><td>Arall</td><td>4</td><td>NULL  </td></tr>
-<tr><td>5</td><td>Not known</td><td>Anhysbys</td><td>5</td><td>N/A  </td></tr>
-<tr><td>6</td><td>Not in attendance at the provider</td><td></td><td>6</td><td>N/A  </td></tr>
-<tr><td>7</td><td>Own residence</td><td></td><td>7</td><td>N/A  </td></tr>
-<tr><td>8</td><td>Other rented accommodation</td><td></td><td>8</td><td>N/A  </td></tr>
-<tr><td>9</td><td>Private-sector halls</td><td></td><td>9</td><td>N/A  </td></tr>
-</table>   
-
-Please Note - N/A denotes that no mapping value is applicable (it should not be confused with NULL), and this property should be omitted.
-
-### Format
-String (255)
-
-### Notes
-If current term time accommodation type data is not supplied, this property should be omitted.
-Omitting this property may hinder the development or use of an effective analytics model.
-
 ## PARENTS_ED
 ### Description
 Whether parents have higher education qualification.
@@ -2247,7 +2214,7 @@ Note that this is not a universal user ID; there may be several VLEs, or records
 
 
 ## HUSID
-### Description.
+### Description
 A HESA student identifier unique to each student. It is intended that the identifier is to be transferred with the student to each provider of higher education he or she may attend. The objective is that the use of this number will facilitate the accurate tracking of students throughout their experience within the sector for which HESA collects data.
 
 ### Purpose
@@ -2284,7 +2251,7 @@ This will typically be imported and updated continuously from Institution identi
 
 ## LAST_NAME
 ### Description
-Students family or surname.
+Students family or surname
 
 ### Purpose
 For display. Used by Student App, Student Success Planner, Tribal Insight
@@ -2402,7 +2369,7 @@ This is usually imported from the Institution's SRS.
 
 ## POSTCODE
 ### Description
-This is the current (term-time) postcode corresponding to the student's accommodation address provided
+This is the current (term-time) postcode corresponding to the student's accommodation address provided.
 
 ### Purpose
 For display. Used by Student Success Planner
@@ -2434,10 +2401,10 @@ Jisc
 Any
 
 ### Format
-String(255)
+String (255)
 
 ### Notes
-Will be input/ batched directly from central IT or identification management systems at the institution
+Will be input/ batched directly from central IT or identification management systems at the institution.
 
 
 ## HOME_PHONE
@@ -2454,7 +2421,7 @@ Jisc
 Any
 
 ### Format
-String(255)
+String (255)
 
 ### Notes
 This is usually imported from the Institution's SRS.
@@ -2462,7 +2429,7 @@ This is usually imported from the Institution's SRS.
 
 ## MOBILE_PHONE
 ### Description
-Students mobile telephone number.
+Student's mobile telephone number
 
 ### Purpose
 For display and contact purposes. Used by Student Success Planner
@@ -2474,15 +2441,15 @@ Jisc
 Any
 
 ### Format
-String(255)
+String (255)
 
 ### Notes
-This is usually imported from the Institution's SRS.
+This is usually imported from the institution's SRS.
 
 
 ## PHOTO_URL
 ### Description
-URL link provided to a latest/ recent photo of student
+URL link provided to a latest/recent photo of the student
 
 ### Purpose
 For display purposes. Used by Student Success Planner
@@ -2502,7 +2469,7 @@ This assumes that there is a way of securing access to the photo.
 
 ## TUTOR_STAFF_ID
 ### Description
-This is the unique identification number for the learner's academic or course year supervisor/ tutor, or alternatively the id of the contact who will be responsible for handling Learning Analytics alerts and notification regarding the student
+This is the unique identification number for the learner's academic or course year supervisor/ tutor, or alternatively the id of the contact who will be responsible for handling Learning Analytics alerts and notification regarding the student.
 
 ### Purpose
 For notification and alerts purposes for Learning Analytics SSP and other software tools
@@ -2513,7 +2480,7 @@ https://www.hesa.ac.uk/collection/c15025/a/OWNSTAFFID
 ### References
 
 ### Format
-String(255)
+String (255)
 
 ### Notes
 This will be the unique identifier/ primary key for the member of staff who is responsible for the student (course/ year tutor) or the person responsible for receiving alerts and notifications from the Learning Analytics software suite/ tools. This will typically be the staff/ HR/ payroll number for the member of academic staff, which links to their email address in the institutions identity management system.
