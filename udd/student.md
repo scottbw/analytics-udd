@@ -2485,7 +2485,6 @@ String (255)
 ### Notes
 This will be the unique identifier/ primary key for the member of staff who is responsible for the student (course/ year tutor) or the person responsible for receiving alerts and notifications from the Learning Analytics software suite/ tools. This will typically be the staff/ HR/ payroll number for the member of academic staff, which links to their email address in the institutions identity management system.
 
-
 ## ENTRY_POSTCODE
 ### Description.
 Identifies the postal code of the student's permanent or home address prior to entry to the course. It is not necessarily the correspondence address of the student.

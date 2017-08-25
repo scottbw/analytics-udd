@@ -263,7 +263,6 @@ String (255)
 This grade should not be changed after subsequent attempts at the same module, as it is used in analytics.
 
 
-
 ## MOD_ACTUAL_GRADE
 ### Description
 The grade awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
@@ -378,4 +377,3 @@ String (255)
 
 ### Notes
 This data is generated internally from existing data, and does not need to be supplied by an institution.
-
