@@ -7,6 +7,7 @@
 * [MOD_INSTANCE_ID](module_instance.md#mod_instance_id) [1]
 * [STUDENT_ID](student.md#student_id) [1]
 * [ASSESS_DUE_DATE](#assess_due_date) [0..1]
+* [ASSESS_SUBMISSION_DATE](#assess_submission_date) [0..1]
 * [ASSESS_RETAKE](#assess_retake) [0..1]
 * [ASSESS_AGREED_MARK](#assess_agreed_mark) [0..1]
 * [ASSESS_ACTUAL_MARK](#assess_actual_mark) [0..1]
@@ -69,6 +70,25 @@ This property relates to the number of times a student has taken, or had the opp
 ## ASSESS_DUE_DATE
 ### Description
 The date an assessment instance for a student was due for submission.
+
+### Purpose
+Analytics and display
+
+### Derivation
+Jisc
+
+### Valid Values
+Date in ISO 8601 format - YYYY-MM-DD
+
+### Format
+String in ISO 8601 Date extended format - YYYY-MM-DD
+
+### Notes
+
+
+## ASSESS_SUBMISSION_DATE
+### Description
+The date an assessment or assignment was submitted by the student.
 
 ### Purpose
 Analytics and display
