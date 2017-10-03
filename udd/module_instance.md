@@ -4,7 +4,7 @@
 * [MOD_PERIOD](#mod_period) [0..1]
 * [MOD_ONLINE](#mod_online) [0..1]
 * [MOD_ACADEMIC_YEAR](#mod_academic_year) [0..1]
-* [MOD_OPTIONAL](#mod_optional) [0..1]
+* [MOD_OPTIONAL](#mod_optional) [0..1] deprecated
 * [MOD_LOCATION](#mod_location) [0..1]
 
 \** indicates that the property is the primary key for this entity.
@@ -96,6 +96,7 @@ Omitting this property may hinder the development or use of an effective analyti
 ## MOD_OPTIONAL
 ### Description
 Whether or not this instance relates to an optional module.
+This property is deprecated in v1.3.2 for module_instance. It properly belongs on student_on_a_module_instance instead of module_instance, and has been added there.
 
 ### Purpose
 Analytics
