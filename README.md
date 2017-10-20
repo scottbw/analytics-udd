@@ -83,7 +83,7 @@ Some code lists will be specific to one or a limited group of institutions. Thes
 ```
 
 ## Extensions
-There is provision for data extensions at the level of property (in other words, "field-level extensions"). Although not strictly part of the UDD, a separate entity is provided and described at [extension.md](extension.md).
+There is provision for data extensions at the level of property (in other words, "field-level extensions"). Although not strictly part of the UDD, a separate entity is provided and described at [extension.md](LRW%20Implementation%20Information/extension.md).
 
 ## Specification development workflow
 The simplest way of contributing to the UDD is as follows:
