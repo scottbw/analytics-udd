@@ -19,7 +19,7 @@ In addition to the main folder, there are 4 sub-folders. The udd sub-folder is t
 The development of v1.3 has involved a number of additions and changes. [This overview page](differences.md) provides a mapped listing of each change between version 1.2.7 and version 1.3.0. For differences between v1.3.0 and v1.3.1, see the [Release Notes](https://github.com/jiscdev/analytics-udd/releases).
 
 ## Data format
-UDD data must be UTF-8 encoded. JSON is the preferred data format, but XML data is also supported. Other formats are not supported.
+UDD data must be UTF-8 encoded. JSON is the preferred data format, but XML and TSV data is also supported. Other formats are not supported.
 
 When providing UDD data, supply the data for different entities in separate files, 1 file per entity, using the [UDD filename conventions](https://github.com/jiscdev/analytics-udd/blob/v1.3.1/filename_conventions.md).
 
