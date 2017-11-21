@@ -57,7 +57,6 @@ String (255)
 ### Notes
 The student_course_membership is designed to deal with the fact that some students are enrolled on more than one course in their time at a provider. Drawing together data on their student ID alone could therefore be misleading, or at least be significantly different from students who have only ever been registered on one course. STUDENT_COURSE_MEMBERSHIP_ID partitions the study careers of those who are on multiple courses, and makes them comparable to those who have only ever been enrolled on one course.
 
-
 ## WITHDRAWAL_REASON
 ### Description
 The reason a student has withdrawn from a course (if they have)
@@ -206,7 +205,6 @@ Int
 
 ### Notes
 Where an average GCSE points score system or similar scheme is used, the institution should use a single consistent scheme across all its data.  An example would be the Alps average GCSE scoring scheme.
-
 
 ## COURSE_OUTCOME
 ### Description
@@ -1594,7 +1592,6 @@ String in ISO 8601 Date extended format - YYYY-MM-DD
 ### Notes
 Note that there may be many reasons why a student leaves a course. This is recorded in WITHDRAWAL_REASON.
 
-
 ## COURSE_DURATION
 ### Description
 The expected length of time in months that the student will take to complete the course.
@@ -1615,7 +1612,6 @@ Int
 
 ### Notes
 If actual number of months is not stored in source data, then for years, multiply by 12 to give approximate months value; for weeks, divide by 4.3 and round to nearest integer to give approximate months value.
-
 
 ## COURSE_JOIN_DATE
 ### Description

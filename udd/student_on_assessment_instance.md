@@ -66,6 +66,7 @@ Int
 The ASSESS_SEQ_ID number should be incremented in line with the chronological order of assessment opportunities afforded to the student in respect of the specified assessment. The first assessment opportunity would have ASSESS_SEQ_ID = 1.
 This property relates to the number of times a student has taken, or had the opportunity to take, an assessment, not the sequence of all the assessments on a module.
 
+
 ## ASSESS_DUE_DATE
 ### Description
 The date an assessment instance for a student was due for submission.
@@ -269,10 +270,6 @@ Int
 ### Notes
 Some institutions' regulations penalise a student's second attempt under normal circumstances. Mitigating circumstances might allow a student to have an additional assessment opportunity without penalty; in which case ASSESS_CURRENT_ATTEMPT would remain as 1, with ASSESS_SEQ_ID differentiating the first and second opportunities.
 Omitting this property may hinder the development or use of an effective analytics model.
-
-## ASSESSMENT_RESULT
-### Description
-Indicates whether the student passed the assessment, didn't pass the assessment, deferred the assessment or whether this information is not known because the assessment hasn't been due yet.
 
 ### Purpose
 Analytics
