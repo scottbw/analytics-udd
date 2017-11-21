@@ -27,6 +27,7 @@
 * [INITIAL_ASSESSMENT_MATHEMATICS](#initial_assessment_mathematics) [0..1]
 * [ADMISSIONS_ROUTE](#admissions_route) [0..1]
 * [COURSE_TRANSFERRED_FROM](#course_transferred_from) [0..1]
+* [VISA](#visa) [0..1]
 
 \** indicates that the property is the primary key for this entity.
 
@@ -1905,3 +1906,33 @@ String (255)
 
 ### Notes
 This attribute must contain the COURSE_ID of the course transferred from, as given in the student_course_membership record.
+
+## VISA
+### Description
+States whether, for non-UK students, the student has leave to study in the UK, and similar scenarios.
+
+### Purpose
+Analytics and display
+
+### Derivation
+SRS systems
+
+### Valid Values
+ <table>
+            <tr>
+                <td>VISA</td>
+                <td>DESCRIPTION (ENGLISH)</td>
+                <td>DESCRIPTION (WELSH)</td>
+            </tr>
+            <tr>
+                <td>Tier4</td>
+                <td>Student has a Tier 4 visa permitting leave to study in the UK.</td>
+                <td> </td>
+            </tr>
+</table>
+
+### Format
+String (255)
+
+### Notes
+Code list may be extended in future.

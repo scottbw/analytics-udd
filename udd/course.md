@@ -6,7 +6,7 @@
 * [INST_TIER_1](#inst_tier_1) [0..1]
 * [INST_TIER_2](#inst_tier_2) [0..1]
 * [INST_TIER_3](#inst_tier_3) [0..1]
-* [TENANT_ID](institution.md#tenant_id) [0..1]
+* [TENANT_ID](institution.md#tenant_id) [0..1] Will be mandatory in v1.4.
 * [AWARDING_BODY](#awarding_body) [0..1]
 
 \** indicates that the property is the primary key for this entity.

@@ -84,6 +84,5 @@ Int
 
 ### Notes
 Could be derived, but academic year calendars may be different between institutions. This field could also be sourced directly from the SRS.
-
 Omitting this property could impair the functionality of analytics applications such as student apps or dashboards.
-
+Will be mandatory from v1.4.

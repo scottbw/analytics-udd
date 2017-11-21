@@ -22,6 +22,7 @@
 * [MOD_COMPLETED_ATTEMPT](#mod_completed_attempt) [0..1]
 * [X_MOD_NAME](#x_mod_name) [0..1]
 * [MOD_ACADEMIC_YEAR](module_instance.md#mod_academic_year) [0..1]
+* [MOD_OPTIONAL](#mod_optional) [0..1]
 
 \** indicates that the property is the primary key for this entity; if not provided by data supplier, will be LRW generated.   
 \* indicates that the property is part of a uniqueness constraint for this entity.
@@ -377,3 +378,26 @@ String (255)
 
 ### Notes
 This data is generated internally from existing data, and does not need to be supplied by an institution.
+
+## MOD_OPTIONAL
+### Description
+Whether or not this student_on_a_module_instance relates to an optional module.
+
+### Purpose
+Analytics
+
+### Derivation
+Jisc
+
+### Valid Values
+
+<table>
+<tr><td>MOD_OPTIONAL</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)  </td></tr>
+<tr><td>1</td><td>Yes</td><td>Ie  </td></tr>
+<tr><td>2</td><td>No</td><td>Na</td></tr>
+</table>  
+
+### Format
+String (255)
+
+### Notes
