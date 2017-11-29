@@ -98,6 +98,29 @@ String (255)
 
 ### Notes
 
+## MOD_TRAILING
+### Description
+Whether the student failed the module and is taking it again in the following academic year in addition to other modules, while continuing on the course.
+
+### Purpose
+Analytics
+
+### Derivation
+Jisc
+
+### Valid Values
+
+<table>
+<tr><td>MOD_TRAILING</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)</td></tr>
+<tr><td>1</td><td>Yes</td><td>Ie</td></tr>
+<tr><td>2</td><td>No</td><td>Na</td></tr>
+</table>  
+
+### Format
+String (255)
+
+### Notes
+For a retake in the same academic year, use MOD_RETAKE, not this property.
 
 ## MOD_START_DATE
 ### Description
