@@ -8,11 +8,15 @@ It is not envisaged that there will be a proliferation of extensions, but rather
 
 The CONTROLLER should record the details of the extension in the Field Guide spreadsheet that has been completed for the product or service. See the [Field Guide template](https://github.com/jiscdev/analytics-udd/blob/master/media/UDD_FieldGuide_template.xls) for details.
 
-The records in the extension entity consist of 5 parts, described here. The purpose of the record is to identify the vendor or institution that is using this extension, the entity involved, the specific record that is extended, the name of the extension property and its value. For example (using a CSV format):
+The records in the extension entity consist of 5 parts, described here. The purpose of the record is to identify the vendor or institution that is using this extension, the entity involved, the specific record that is extended, the name of the extension property and its value.
+
+For example (using a TSV format):
 
 ```
-Tribal, student, ST123456, SPORTS_TEAM_FLAG, Y
+Tribal	student	ST123456	SPORTS_TEAM_FLAG	Y
 ```
+
+Extensions data can be provided in several ways. Please refer to the Technical Guides at https://docs.analytics.alpha.jisc.ac.uk/docs/learning-records-warehouse/Home.
 
 * [CONTROLLER](#controller) [1] *
 * [ENTITY](#entity) [1] *
