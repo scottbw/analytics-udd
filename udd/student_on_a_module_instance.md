@@ -7,6 +7,7 @@
 * [STUDENT_ID](student.md#student_id) [1]
 * [MOD_RESULT](#mod_result) [0..1]
 * [MOD_RETAKE](#mod_retake) [0..1]
+* [MOD_TRAILING](#mod_trailing) [0..1]
 * [MOD_START_DATE](#mod_start_date) [0..1]
 * [MOD_END_DATE](#mod_end_date) [0..1]
 * [MOD_FIRST_MARK](#mod_first_mark) [0..1]
