@@ -164,7 +164,7 @@ This mark should not be changed after subsequent attempts at the same module, as
 
 ## MOD_ACTUAL_MARK
 ### Description
-The mark awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
+The mark awarded to the learner as first recorded in the SRS, usually but not always, prior to formal moderation and exam board confirmation. The value of MOD_ACTUAL MARK is a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 
 ### Purpose
 Analytics
@@ -179,7 +179,6 @@ Jisc
 Decimal
 
 ### Notes
-The value represents a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 MOD_ACTUAL_MARK should only be part of a UDD compliant dataset if there is a moderation process and if the result of that process is available in the source data.
 
 
@@ -209,7 +208,7 @@ MOD_AGREED_MARK is expected to be present in any UDD compliant dataset as soon a
 The original mark scored by the student.
 
 ### Purpose
-Storage of the original numerical score, typically from the VLE.
+Storage of the original numerical score.
 
 ### Derivation
 Institution
@@ -229,7 +228,7 @@ Can contain any decimal value, for example "59", "162.87", and so on; this value
 The mark scored by the student after any moderation or confirmation processes, or the only recorded mark if there are no moderation or confirmation processes.
 
 ### Purpose
-Storage of the numerical score, typically as recorded in the student record system.
+Storage of the confirmed numerical score.
 
 ### Derivation
 Institution
@@ -264,10 +263,9 @@ String (255)
 This grade should not be changed after subsequent attempts at the same module, as it is used in analytics.
 
 
-
 ## MOD_ACTUAL_GRADE
 ### Description
-The grade awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
+The grade awarded to the learner as first recorded in the SRS, usually but not always, prior to formal moderation and exam board confirmation.
 
 ### Purpose
 Analytics
