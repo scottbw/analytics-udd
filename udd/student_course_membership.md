@@ -1679,10 +1679,10 @@ String (255)
 
 ## ACTIVE_MEMBERSHIP
 ### Description
-This property indicates whether the associated student_course_membership record identifies the course a student was actively studying on, or intending to study on, at the moment the data was loaded into the LRW. 
+This property indicates whether the associated student_course_membership record identifies the course a student was actively studying on, or intending to study on, at the moment the data was loaded into the Learning Data Hub. 
 
 ### Purpose
-To identify whether or not the student was studying or enrolled to study on the course, at the time the data was loaded into the LRW.
+To identify whether or not the student was studying or enrolled to study on the course, at the time the data was loaded into the Learning Data Hub.
 
 ### Derivation
 Jisc
