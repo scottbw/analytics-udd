@@ -164,7 +164,7 @@ This mark should not be changed after subsequent attempts at the same module, as
 
 ## MOD_ACTUAL_MARK
 ### Description
-The mark awarded to the learner as first recorded in the SRS, usually but not always, prior to formal moderation and exam board confirmation. The value of MOD_ACTUAL MARK is a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
+The mark awarded to the learner as first recorded in the SRS, usually but not always, prior to formal moderation and exam board confirmation. The value of MOD_ACTUAL MARK is expressed as a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 
 ### Purpose
 Analytics

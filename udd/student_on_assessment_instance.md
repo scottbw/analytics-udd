@@ -129,7 +129,7 @@ String (255)
 
 ## ASSESS_ACTUAL_MARK
 ### Description
-The mark, expressed as a percentage, awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
+The mark, expressed as a percentage, awarded to the learner as first recorded in the SRS, usually but not always, prior to formal moderation and exam board confirmation. The value of ASSESS_ACTUAL_MARK is expressed as a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 
 ### Purpose
 Analytics
@@ -145,12 +145,11 @@ Decimal
 
 ### Notes
 ASSESS_ACTUAL_MARK should only be part of a UDD compliant dataset if there is a moderation process and if the result of that process is available in the source data.
-The value represents a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 
 
 ## ASSESS_AGREED_MARK
 ### Description
-The mark, expressed as a percentage, recorded after any moderation or confirmation processes, or the only recorded mark if there are no moderation or confirmation processes.
+The mark recorded after any moderation or confirmation processes, or the only recorded mark if there are no moderation or confirmation processes. The value is expressed as a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 
 ### Purpose
 Analytics
@@ -166,7 +165,6 @@ Decimal
 
 ### Notes
 ASSESS_AGREED_MARK is expected to be present in any UDD compliant dataset as soon as it becomes available.
-The value represents a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 
 
 ## ASSESS_RAW_ACTUAL_MARK
@@ -174,7 +172,7 @@ The value represents a percentage; for example, a value of "63.75" means 63.75%,
 The original mark scored by the student.
 
 ### Purpose
-Storage of the original numerical score, typically from the VLE.
+Storage of the original numerical score.
 
 ### Derivation
 Institution
@@ -194,7 +192,7 @@ Can contain any decimal value, for example "59", "162.87", and so on; this value
 The mark scored by the student after any moderation or confirmation processes, or the only recorded mark if there are no moderation or confirmation processes.
 
 ### Purpose
-Storage of the numerical score, typically as recorded in the student record system.
+Storage of the confirmed numerical score.
 
 ### Derivation
 Institution
@@ -211,7 +209,7 @@ Can contain any decimal value, for example "59", "162.87", and so on; this value
 
 ## ASSESS_ACTUAL_GRADE
 ### Description
-The grade awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
+The grade awarded to the learner as first recorded in the SRS, usually but not always, prior to formal moderation and exam board confirmation.
 
 ### Purpose
 Analytics
