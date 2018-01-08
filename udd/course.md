@@ -54,7 +54,7 @@ https://www.hesa.ac.uk/support/documentation/jacs
 [JACS3 CSV](../media/jacs3-valid-entries.csv)
 
 ### Format
-String (255) - Usually 4 characters, number followed by three digits
+String (255) - For JACS3: 4 characters, capital letter followed by three digits
 
 ### Notes
 The JACS3 coding will be used here initially, from the HE (HESA) model. Further discussion will be required around this, to discuss subject classifications for FE/ ILR.

@@ -68,7 +68,7 @@ https://www.hesa.ac.uk/support/documentation/jacs
 [JACS3 CSV](../media/jacs3-valid-entries.csv)
 
 ### Format
-String (255)
+String (255) - For JACS3: 4 characters, capital letter followed by three digits
 
 ### Notes
 For FE purposes, it will need be adapted to work with institutions specific codeset for Learning Activities. Details to be confirmed.
