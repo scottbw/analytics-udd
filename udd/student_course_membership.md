@@ -6,6 +6,7 @@
 * [WITHDRAWAL_REASON](#withdrawal_reason) [0..1]
 * [ENTRY_QUALS](#entry_quals) [0..1]
 * [ENTRY_POINTS](#entry_points) [0..1]
+* [AVERAGE_GCSE_SCORE](#average_gcse_score) [0..1]
 * [COURSE_OUTCOME](#course_outcome) [0..1]
 * [COURSE_GRADE](#course_grade) [0..1]
 * [COURSE_AIM_ATTAINED](#course_aim_attained) [0..1]
@@ -189,7 +190,28 @@ Omitting this property may hinder the development or use of an effective analyti
 
 ## ENTRY_POINTS
 ### Description
-This field indicates the entry points gained by the student prior to entry to the institution. This is currently based on the UCAS entry points system for HE institutions.  For FE institutions, it should be the average GCSE points score or similar numeric value where GCSEs are not relevant.
+This field indicates the entry points at Level 3 / SCQF Level 6 gained by the student prior to entry to the institution, using the UCAS Tariff points scheme introduced for courses starting in 2017.
+
+### Purpose
+For analytics
+
+### Derivation
+UCAS: https://www.ucas.com/advisers/guides-and-resources/information-new-ucas-tariff-advisers
+
+### Valid Values
+Any
+
+### Format
+Int
+
+### Notes
+Use the 2017 UCAS Tariff points scheme. This replaced the original scheme that ran from 2001 to 2016.
+ENTRY_POINTS does not include Level 2 / SCQF Level 5 or lower qualifications.
+Omitting this property may hinder the development or use of an effective analytics model.
+
+## AVERAGE_GCSE_SCORE
+### Description
+AVERAGE_GCSE_SCORE is a numeric value representing the student's achievement across all GCSE or similar qualifications. Where the provider uses an average GCSE score standard, such as Attainment 8 or ALPS, the value from this scheme should be used. A similar numeric value can be used where GCSEs are not relevant.
 
 ### Purpose
 For analytics
@@ -204,8 +226,7 @@ Any
 Int
 
 ### Notes
-Where an average GCSE points score system or similar scheme is used, the institution should use a single consistent scheme across all its data.  An example would be the Alps average GCSE scoring scheme.
-
+Where an average GCSE points score system or similar scheme is used, such as Attainment 8 or ALPS, the institution should use a single consistent scheme across all its data.
 
 ## COURSE_OUTCOME
 ### Description
