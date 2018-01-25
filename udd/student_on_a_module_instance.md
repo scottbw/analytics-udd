@@ -19,7 +19,7 @@
 * [MOD_CURRENT_ATTEMPT](#mod_current_attempt) [0..1]
 * [MOD_COMPLETED_ATTEMPT](#mod_completed_attempt) [0..1]
 * [X_MOD_NAME](#x_mod_name) [0..1]
-* [MOD_ACADEMIC_YEAR](module_instance.md#mod_academic_year) [0..1]
+* [MOD_ACADEMIC_YEAR](module_instance.md#mod_academic_year) [1]
 
 \** indicates that the property is the primary key for this entity; if not provided by data supplier, will be LRW generated.   
 \* indicates that the property is part of a uniqueness constraint for this entity.

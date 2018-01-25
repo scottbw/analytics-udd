@@ -84,3 +84,4 @@ Int
 
 ### Notes
 Could be derived, but academic year calendars may be different between institutions. This field could also be sourced directly from the SRS.
+This property is synonymous with MOD_ACADEMIC_YEAR.

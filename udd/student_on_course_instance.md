@@ -13,7 +13,7 @@
 * [PROGRESSION](#progression) [0..1]
 * [PROGRESSION_SOURCE](#progression_source) [0..1]
 * [LOCATION_OF_STUDY](#location_of_study) [0..1]
-* [ACADEMIC_YEAR](course_instance.md#academic_year) [0..1]
+* [ACADEMIC_YEAR](course_instance.md#academic_year) [1]
 
 \** indicates that the property is the primary key for this entity; if not provided by data supplier, will be LRW generated.   
 \* indicates that the property is part of a uniqueness constraint for this entity.

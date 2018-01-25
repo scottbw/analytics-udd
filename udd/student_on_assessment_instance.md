@@ -19,7 +19,7 @@
 * [X_ASSESS_DETAIL](#x_assess_detail) [0..1]
 * [X_MOD_NAME](student_on_a_module_instance.md#x_mod_name) [0..1]
 * [X_MOD_ID](#x_mod_id) [0..1]
-* [MOD_ACADEMIC_YEAR](module_instance.md#mod_academic_year) [0..1]
+* [MOD_ACADEMIC_YEAR](module_instance.md#mod_academic_year) [1]
 
 \** indicates that the property is the primary key for this entity; if not provided by data supplier, will be LRW generated.   
 \* indicates that the property is part of a uniqueness constraint for this entity.
