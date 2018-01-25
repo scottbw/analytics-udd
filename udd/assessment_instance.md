@@ -142,7 +142,7 @@ To provide a clear indication of the date and time of when the data was supplied
 Provider
 
 ### Valid Values
-Date/time in ISO 8601 format - YYYY-MM-DDTHH:MM
+Date/time in ISO 8601 format - YYYY-MM-DDThh:mm
 
 ### Format
 String in ISO 8601 Date extended format - YYYY-MM-DDThh:mm
