@@ -28,6 +28,8 @@
 \** indicates that the property is the primary key for this entity; if not provided by data supplier, will be Learning Data Hub generated.   
 \* indicates that the property is part of a uniqueness constraint for this entity.
 
+API endpoint name: **studentmoduleinstance**
+
 ## Description of student_on_a_module_instance entity
 A student_on_a_module_instance describes a student's performance on a specific module.
 

@@ -8,6 +8,8 @@
 
 \** indicates that the property is the primary key for this entity.
 
+API endpoint name: **module**
+
 ## Description of module entity
 A module is a self-contained, formally structured unit of study, with a coherent and explicit set of learning outcomes and assessment criteria.
 

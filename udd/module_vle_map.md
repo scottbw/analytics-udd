@@ -7,6 +7,8 @@
 \** indicates that the property is the primary key for this entity; if not provided by data supplier, will be Learning Data Hub generated.  
 \* indicates that the property has a uniqueness constraint for this entity. The default is that MOD_INSTANCE_ID and VLE_MOD_ID form a uniqueness constraint. For institutions where MOD_INSTANCE_ID values in module_VLE_map must be unique, see the [MODULE_VLE_MAP_MODE](institution.md#module_vle_map_mode) property in the institution entity.
 
+API endpoint name: **modulevlemap**
+
 ## Description of module_VLE_map entity
 A module_VLE_map links a module in a student record system with module materials in a VLE.
 

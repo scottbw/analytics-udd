@@ -34,6 +34,8 @@
 
 \** indicates that the property is the primary key for this entity.
 
+API endpoint name: **student**
+
 ## Description of student entity
 A student element describes a person undertaking one or more courses.
 

@@ -7,6 +7,8 @@
 \** indicates that the property is the primary key for this entity; if not provided by data supplier, will be Learning Data Hub generated.   
 \* indicates that the property is part of a uniqueness constraint for this entity.
 
+API endpoint name: **staffcourseinstance**
+
 ## Description of staff_on_course_instance entity
 A staff_on_course_instance links a member of staff to a course_instance.
 

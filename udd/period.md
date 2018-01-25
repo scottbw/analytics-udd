@@ -11,6 +11,8 @@
 
 \* indicates that the property is part of a uniqueness constraint for this entity.
 
+API endpoint name: **period**
+
 ## Description
 A period describes an institution's official start date and end date of time slices, such as academic years, terms and semesters.
 

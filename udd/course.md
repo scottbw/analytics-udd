@@ -11,6 +11,8 @@
 
 \** indicates that the property is the primary key for this entity.
 
+API endpoint name: **course**
+
 ## Description of course entity
 A course is a learning opportunity that defines a student's learning activities and aim. It is run by an institution and is usually validated to continue over several years with several intakes. A course will usually have a qualification aim.  Example: BA Honours degree in French.
 

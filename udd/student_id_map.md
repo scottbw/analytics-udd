@@ -7,6 +7,8 @@
 \** indicates that the property is the primary key for this entity; if not provided by data supplier, will be Learning Data Hub generated.   
 \* indicates that the property is part of a uniqueness constraint for this entity.
 
+API endpoint name: **studentidmap**
+
 ## Description
 The UDD student identifier entity enables efficient processing of IDs in relation to both the UDD structures and xAPI statements.
 

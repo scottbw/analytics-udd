@@ -31,6 +31,8 @@
 
 \** indicates that the property is the primary key for this entity.
 
+API endpoint name: **studentcoursemembership**
+
 ## Description of student_course_membership entity
 A student_course_membership describes a student's enrolment on a course. It is designed to handle, not only a student enrolling on a single course in their time at an institution, but also with cases where a student is enrolled on more than one course, to study either two or more courses simultaneously or one after the other.
 
