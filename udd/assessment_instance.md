@@ -10,6 +10,8 @@
 
 \** indicates that the property is the primary key for this entity.
 
+API endpoint name: **assessmentinstance**
+
 ## Description of assessment_instance entity
 An assessment_instance is any learning activity in a module, for which a student receives a grade and/or mark. The assumption is that grades and/or marks in assessment_instances are summative.
 
