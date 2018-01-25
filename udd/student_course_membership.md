@@ -28,6 +28,7 @@
 * [ADMISSIONS_ROUTE](#admissions_route) [0..1]
 * [COURSE_TRANSFERRED_FROM](#course_transferred_from) [0..1]
 * [VISA](#visa) [0..1]
+* [PROVIDED_AT](assessment_instance.md#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity.
 

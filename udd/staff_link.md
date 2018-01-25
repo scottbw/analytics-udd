@@ -6,6 +6,7 @@
 * [REF_KEY](#ref_key) [1]
 * [RELATIONSHIP](#relationship) [1]
 * [RELATIONSHIP_NAMESPACE](#relationship_namespace) [1]
+* [PROVIDED_AT](assessment_instance.md#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity.
 

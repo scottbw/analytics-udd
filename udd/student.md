@@ -31,6 +31,7 @@
 * [PHOTO_URL](#photo_url) [0..1]
 * [TUTOR_STAFF_ID](#tutor_staff_id) [0..1]
 * [ENTRY_POSTCODE](#entry_postcode) [0..1]
+* [PROVIDED_AT](assessment_instance.md#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity.
 

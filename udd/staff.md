@@ -8,6 +8,7 @@ An additional data entity
 * [PRIMARY_EMAIL_ADDRESS](#primary_email_address) [0..1]
 * [HESA_STAFF_ID](#hesa_staff_id) [0..1]
 * [DASH_SHIB_ID](#dash_shib_id) [0..1]
+* [PROVIDED_AT](assessment_instance.md#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity.
 

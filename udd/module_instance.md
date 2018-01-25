@@ -6,6 +6,7 @@
 * [MOD_ACADEMIC_YEAR](#mod_academic_year) [0..1]
 * [MOD_OPTIONAL](#mod_optional) [0..1] deprecated
 * [MOD_LOCATION](#mod_location) [0..1]
+* [PROVIDED_AT](assessment_instance.md#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity.
 

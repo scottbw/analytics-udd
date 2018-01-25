@@ -4,6 +4,7 @@
 * [START_DATE](#start_date) [0..1]
 * [END_DATE](#end_date) [0..1]
 * [ACADEMIC_YEAR](#academic_year) [0..1]
+* [PROVIDED_AT](assessment_instance.md#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity.
 
