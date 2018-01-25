@@ -145,6 +145,6 @@ Provider
 Date/time in ISO 8601 format - YYYY-MM-DDThh:mm
 
 ### Format
-String in ISO 8601 Date extended format - YYYY-MM-DDThh:mm
+String in ISO 8601 date and time format - YYYY-MM-DDThh:mm
 
 ### Notes
