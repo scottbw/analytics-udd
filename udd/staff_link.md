@@ -5,15 +5,15 @@
 * [ENTITY](#entity) [1]
 * [REF_KEY](#ref_key) [1]
 * [RELATIONSHIP](#relationship) [1]
-* [RELATIONSHIP_NAMESPACE](#relationship_namespace) [1]
 * [PROVIDED_AT](assessment_instance.md#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity.
 
 ## Description of staff_link entity
-A staff_link record relates a member of staff to any other entity in the UDD. A staff_link specifies that there is a relationship between the member of staff and the concrete entity referenced by REF_KEY. The type of relationship is described in the RELATIONSHIP property, but the meaning of the relationship, and any functionality associated with it, is not prescribed in the UDD. Instead these are defined and controlled by the organisation responsible for a particular product or service, and are further identified by the RELATIONSHIP_NAMESPACE. 
+A staff_link record relates a member of staff to any other entity in the UDD. A staff_link specifies that there is a relationship between the member of staff and the concrete entity referenced by REF_KEY. The type of relationship is described in the RELATIONSHIP property, but the meaning of the relationship, and any functionality associated with it, is not prescribed in the UDD. Instead these are defined and controlled by the organisation responsible for a particular product or service via its application, product or service. 
 
-The combination of RELATIONSHIP and RELATIONSHIP_NAMESPACE enables the owning organisation to define the meaning of the RELATIONSHIP and to limit any functionality that it provides to its own products and services. Other organisations MAY use these RELATIONSHIPs, but no system behaviour should be inferred, except when using one of their own namespaced RELATIONSHIPs.
+
+Other organisations MAY use these RELATIONSHIPs, but no system behaviour should be inferred, except when using one of their own namespaced RELATIONSHIPs.
 
 ## STAFF_LINK_ID
 
@@ -124,33 +124,22 @@ Must use the single primary key, not a composite key.
 ## RELATIONSHIP
 
 ### Description
-Code describing the nature of the link between the staff entity and the referenced entity. 
+Describes the nature of the link between the staff entity and the referenced entity through a namespace and relationship name. 
 
 ### Purpose
-Describes the nature of the link between the staff entity and the referenced entity. 
+The RELATIONSHIP is used by the organisation controlling the namespace to define the meaning of the RELATIONSHIP in that organisation's products and services, and to enable associated functionality. 
 
 ### Valid Values
 Any alphanumeric code value
-Reserved codes:
-RELATES_TO; an unspecified relationship
+
+#### Reserved values
+<table>
+<tr><td>RELATIONSHIP</td><td>DEFINITION</td></tr>
+<tr><td>http://udd.jisc.ac.uk/relates_to</td><td>an unspecified relationship</td></tr>
+</table>
 
 ### Format
 String (255)
 
 ### Notes
 The RELATIONSHIP codes are maintained by each organisation responsible for its own products and services, and are controlled via the namespace indicated in RELATIONSHIP_NAMESPACE.
-
-## RELATIONSHIP_NAMESPACE
-### Description
-A RELATIONSHIP_NAMESPACE is used by an organisation to identify RELATIONSHIP codes that define the meaning of the RELATIONSHIP in that organisation's products and services, and to enable associated functionality.
-
-### Purpose
-To identify a set of RELATIONSHIP codes.
-
-### Valid Values
-Any
-
-### Format
-String (255)
-
-### Notes
