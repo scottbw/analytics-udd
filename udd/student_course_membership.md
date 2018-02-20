@@ -17,7 +17,7 @@
 * [COURSE_JOIN_DATE](#course_join_date) [0..1]
 * [COURSE_JOIN_AGE](#course_join_age) [0..1]
 * [COHORT_ID](#cohort_id) [0..1]
-* [ACTIVE_MEMBERSHIP](#active_membership) [0..1]
+* [ACTIVE_MEMBERSHIP](#active_membership) [1]
 * [PREDICTED_OUTCOME_GRADE](#predicted_outcome_grade) [0..1]
 * [ATTAINMENT_TARGET_GRADE](#attainment_target_grade) [0..1]
 * [PREDICTED_OUTCOME_MARK](#predicted_outcome_mark) [0..1]
