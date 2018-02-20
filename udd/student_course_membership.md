@@ -1600,7 +1600,7 @@ Note that there may be many reasons why a student leaves a course. This is recor
 
 ## COURSE_DURATION
 ### Description
-The expected length of time in months that the student will take to complete the course.
+The expected length of time at course commencement in months that the student will take to complete the course.
 
 ### Purpose
 Analysis
