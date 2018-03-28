@@ -18,7 +18,7 @@
 * [ASSESSMENT_CURRENT_ATTEMPT](#assessment_current_attempt) [0..1]
 * [ASSESSMENT_RESULT](#assessment_result) [0..1]
 * [GRADE_DATE](#grade_date) [0..1]
-* [MAX_POINTS](#max_points) [0..1]
+* [MAX_POINTS](#max_points) [0..1] DEPRECATED
 * [X_ASSESS_DETAIL](#x_assess_detail) [0..1]
 * [X_MOD_NAME](student_on_a_module_instance.md#x_mod_name) [0..1]
 * [X_MOD_ID](#x_mod_id) [0..1]
@@ -318,6 +318,7 @@ This is the date when a grade has been moderated and agreed, but before exam boa
 
 ## MAX_POINTS
 ### Description
+DEPRECATED
 The maximum points that an instructor can allocate to an assessment. Used to indicate the marking scale used for an assignment.
 
 ### Purpose
@@ -333,6 +334,7 @@ Any decimal value
 Decimal
 
 ### Notes
+This property is deprecated in v1.3.3 and will be deleted in v1.4.
 This property can contain any decimal value. It will normally be an integer representing the highest mark obtainable.
 
 
