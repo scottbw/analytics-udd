@@ -212,7 +212,7 @@ Omitting this property may hinder the development or use of an effective analyti
 
 ## ENTRY_POINTS_SCHEMA
 ### Description
-This property specifies the particular UCAS Tariff points scheme used for the data in ENTRY_POINTS. 
+This property specifies the particular UCAS Tariff points scheme used for the data in ENTRY_POINTS.
 
 
 ### Purpose
@@ -234,7 +234,7 @@ UCAS: https://www.ucas.com/advisers/guides-and-resources/information-new-ucas-ta
 String (255)
 
 ### Notes
-Where the Tariff scheme for ENTRY_POINTS is unknown, use '99' (Not known). This value is used for consistency with other values of this type.
+This property is MANDATORY if ENTRY_POINTS is used. Where the Tariff scheme for ENTRY_POINTS is unknown, use '99' (Not known). This value is used for consistency with other values of this type.
 
 
 ## AVERAGE_GCSE_SCORE
