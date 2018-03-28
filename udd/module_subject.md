@@ -1,6 +1,6 @@
 # module_subject
 * [MODULE_SUBJECT_ID](#module_subject_id) [1] **
-* [MODULE_ID](module.md#module_id) [1] *
+* [MOD_ID](module.md#mod_id) [1] *
 * [SUBJECT_ID](#subject_id) [1] *
 * [SUBJECT_LABEL](#subject_label) [1]
 * [ENCODING_ID](#encoding_id) [1]
