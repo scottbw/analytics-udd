@@ -6,6 +6,7 @@
 * [WITHDRAWAL_REASON](#withdrawal_reason) [0..1]
 * [ENTRY_QUALS](#entry_quals) [0..1]
 * [ENTRY_POINTS](#entry_points) [0..1]
+* [ENTRY_POINTS_SCHEMA](#entry_points_schema) [0..1]
 * [AVERAGE_GCSE_SCORE](#average_gcse_score) [0..1]
 * [COURSE_OUTCOME](#course_outcome) [0..1]
 * [COURSE_GRADE](#course_grade) [0..1]
@@ -190,7 +191,7 @@ Omitting this property may hinder the development or use of an effective analyti
 
 ## ENTRY_POINTS
 ### Description
-This field indicates the entry points at Level 3 / SCQF Level 6 gained by the student prior to entry to the institution, using the UCAS Tariff points scheme introduced for courses starting in 2017.
+This field indicates the entry points at Level 3 / SCQF Level 6 gained by the student prior to entry to the institution, using the UCAS Tariff points scheme. 
 
 ### Purpose
 For analytics
@@ -205,9 +206,36 @@ Any
 Int
 
 ### Notes
-Use the 2017 UCAS Tariff points scheme. This replaced the original scheme that ran from 2001 to 2016.
+For courses starting in or after 2017 use the 2017 UCAS Tariff points scheme. This replaced the original scheme that ran from 2001 to 2016. Specify the specific Tariff points scheme used in ENTRY_POINTS_SCHEMA.
 ENTRY_POINTS does not include Level 2 / SCQF Level 5 or lower qualifications.
 Omitting this property may hinder the development or use of an effective analytics model.
+
+## ENTRY_POINTS_SCHEMA
+### Description
+This property specifies the particular UCAS Tariff points scheme used for the data in ENTRY_POINTS. 
+
+
+### Purpose
+For analytics
+
+### Derivation
+UCAS: https://www.ucas.com/advisers/guides-and-resources/information-new-ucas-tariff-advisers
+
+### Valid Values
+<table>
+<tr><td>ENTRY_POINTS_SCHEMA</td><td>DESCRIPTION (ENGLISH)</td><td>DESCRIPTION (WELSH)</td></tr>
+<tr><td>2017</td><td>UCAS Tariff Scheme 2017 (the "new" scheme)</td><td></td></tr>
+<tr><td>2001</td><td>UCAS Tariff Scheme 2001-20016 (the "old" scheme)</td><td></td></tr>
+<tr><td>99</td><td>Not known (DEFAULT)</td><td></td></tr>
+</table>  
+
+
+### Format
+String (255)
+
+### Notes
+Where the Tariff scheme for ENTRY_POINTS is unknown, use '99' (Not known). This value is used for consistency with other values of this type.
+
 
 ## AVERAGE_GCSE_SCORE
 ### Description
