@@ -1909,7 +1909,7 @@ Decimal
 
 ## ADMISSIONS_ROUTE
 ### Description
-States whether the student was accepted via UCAS Clearing or via some other route.
+States whether the student was accepted via the default application route, via Clearing or another specialist route.
 
 ### Purpose
 Analytics
@@ -1926,12 +1926,27 @@ SRS systems
             </tr>
             <tr>
                 <td>0</td>
-                <td>Student was accepted onto the course via a route other than UCAS Clearing</td>
+                <td>Accepted through default application route</td>
                 <td> </td>
             </tr>
             <tr>
                 <td>1</td>
                 <td>Student was accepted onto the course via UCAS Clearing</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Student was accepted onto the course via a widening participation initiative</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Student was accepted onto the course via UCAS Adjustment</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Student was accepted onto the course via UCAS Record of Prior Acceptance</td>
                 <td> </td>
             </tr>
 </table>
@@ -1941,6 +1956,7 @@ String (1)
 
 ### Notes
 Code list may be extended in future.
+Similar codes related to this property or to offer types can be specified using the extensions functionality.
 
 ## COURSE_TRANSFERRED_FROM
 ### Description
