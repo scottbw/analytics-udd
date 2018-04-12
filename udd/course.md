@@ -1,7 +1,7 @@
 # course
 * [COURSE_ID](#course_id) [1] **
 * [TENANT_ID](institution.md#tenant_id) [1]
-* [SUBJECT](#subject) [0..1]
+* [SUBJECT](#subject) [0..1] deprecated
 * [TITLE](#title) [0..1]
 * [COURSE_AIM](#course_aim) [0..1]
 * [INST_TIER_1](#inst_tier_1) [0..1]
@@ -40,6 +40,7 @@ HE guidance - this field could relate to actual HESA COURSEID field or the HE in
 ## SUBJECT
 ### Description
 Subject of study coding using JACS3.
+DEPRECATED in v1.4. Use course_subject entity for preference.
 
 ### Purpose
 For display purposes
