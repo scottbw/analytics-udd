@@ -6,6 +6,7 @@
 * [ASSESS_SEQ_ID](#assess_seq_id) [1] *
 * [MOD_INSTANCE_ID](module_instance.md#mod_instance_id) [1]
 * [STUDENT_ID](student.md#student_id) [1]
+* [ASSESSMENT_DATA_SOURCE](#assessment_data_source) [0..1]
 * [ASSESS_DUE_DATE](#assess_due_date) [0..1]
 * [ASSESS_SUBMISSION_DATE](#assess_submission_date) [0..1]
 * [ASSESS_RETAKE](#assess_retake) [0..1]
@@ -68,6 +69,26 @@ Int
 ### Notes
 The ASSESS_SEQ_ID number should be incremented in line with the chronological order of assessment opportunities afforded to the student in respect of the specified assessment. The first assessment opportunity would have ASSESS_SEQ_ID = 1.
 This property relates to the number of times a student has taken, or had the opportunity to take, an assessment, not the sequence of all the assessments on a module.
+
+## ASSESSMENT_DATA_SOURCE
+
+### Description
+Provider's label showing the source of the data recorded in ASSESS_RAW_ACTUAL_MARK.
+
+### Purpose
+To identify the data source, particularly in cases where providers have multiple sources and need to view the source in LA services.
+
+### Derivation
+Provider
+
+### Valid Values
+Any
+Control of the values of this property rests with the provider and any vendor responsible for data imported into the Learning Data Hub. Consistent values for sources should be maintained.
+
+### Format
+String (255)
+
+### Notes
 
 ## ASSESS_DUE_DATE
 ### Description
