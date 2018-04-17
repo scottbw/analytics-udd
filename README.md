@@ -62,8 +62,6 @@ Some entities have uniqueness constraints across multiple properties; for exampl
 
 ### [staff](udd/staff.md)
 
-### [staff_link](udd/staff_link.md)
-
 ### [staff_on_course_instance](udd/staff_on_course_instance.md)
 
 ### [staff_on_mod_instance](udd/staff_on_mod_instance.md)
@@ -83,8 +81,7 @@ See the [filename_conventions](implementation/filename_conventions.md) file for 
   <tr><td><a href="./udd/module_instance.md">module_instance</a></td><td>moduleinstance</td></tr>
   <tr><td><a href="./udd/module_vle_map.md">module_vle_map</a></td><td>modulevlemap</td></tr>
   <tr><td><a href="./udd/period.md">period</a></td><td>period</td></tr>
-  <tr><td><a href="./udd/staff.md">staff</a></td><td>staff</td></tr>
-  <tr><td><a href="./udd/staff_link.md">staff_link</a></td><td>stafflink</td></tr>  
+  <tr><td><a href="./udd/staff.md">staff</a></td><td>staff</td></tr> 
   <tr><td><a href="./udd/staff_on_course_instance.md">staff_on_course_instance</a></td><td>staffcourseinstance</td></tr>
   <tr><td><a href="./udd/staff_on_mod_instance.md">staff_on_mod_instance</a></td><td>staffmoduleinstance</td></tr>
   <tr><td><a href="./udd/student.md">student</a></td><td>student</td></tr>
