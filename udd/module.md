@@ -5,6 +5,7 @@
 * [MOD_CREDITS](#mod_credits) [0..1]
 * [MOD_LEVEL](#mod_level) [0..1]
 * [CREDIT_BEARING](#credit_bearing) [0..1]
+* [PROVIDED_AT](assessment_instance.md#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity.
 

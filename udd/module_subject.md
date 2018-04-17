@@ -6,6 +6,7 @@
 * [ENCODING_ID](#encoding_id) [1]
 * [PROPORTION](#proportion) [0..1]
 * [SEQUENCE_ID](#sequence_id) [0..1]
+* [PROVIDED_AT](assessment_instance.md#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity; if not provided by data supplier, will be Learning Data Hub generated.   
 \* indicates that the property is part of a uniqueness constraint for this entity.

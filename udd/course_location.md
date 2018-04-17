@@ -3,7 +3,7 @@
 * [COURSE_LOCATION_ID](#course_location_id) **
 * [COURSE_LOCATION_CODE](#course_location_code) [1] *
 * [COURSE_LOCATION_NAME](#course_location_name) [1]
-* [PROVIDED_AT](#provided_at) [0..1]
+* [PROVIDED_AT](assessment_instance.md#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity; if not provided by data supplier, will be LRW generated.   
 \* indicates that the property is part of a uniqueness constraint for this entity.
@@ -65,22 +65,3 @@ String (255)
 
 ### Notes
 
-
-## PROVIDED_AT
-
-### Description
-Date and time stamp of the provision of the entity file to the Learning Data Hub. If not provided, the timestamp of the file itself will be used.
-
-### Purpose
-To provide a clear indication of the date and time of when the data was supplied. Cf. date/time of extraction or update. 
-
-### Derivation
-Provider
-
-### Valid Values
-Date/time in ISO 8601 format - YYYY-MM-DDThh:mm
-
-### Format
-String in ISO 8601 date and time format - YYYY-MM-DDThh:mm
-
-### Notes

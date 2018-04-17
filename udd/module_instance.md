@@ -4,8 +4,8 @@
 * [MOD_PERIOD](#mod_period) [0..1]
 * [MOD_ONLINE](#mod_online) [0..1]
 * [MOD_ACADEMIC_YEAR](#mod_academic_year) [1]
-* [MOD_OPTIONAL](#mod_optional) [0..1]
 * [MOD_LOCATION](#mod_location) [0..1]
+* [PROVIDED_AT](assessment_instance.md#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity.
 
@@ -94,30 +94,6 @@ Int
 This is the starting year for the academic year.
 This property is synonymous with ACADEMIC_YEAR.
 Omitting this property may hinder the development or use of an effective analytics model.
-
-
-## MOD_OPTIONAL
-### Description
-Whether this instance relates to an optional module or not.
-
-### Purpose
-Analytics
-
-### Derivation
-Jisc
-
-### Valid Values
-
-<table>
-<tr><td>MOD_OPTIONAL</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)  </td></tr>
-<tr><td>1</td><td>Yes</td><td>Ie  </td></tr>
-<tr><td>2</td><td>No</td><td>Na</td></tr>
-</table>  
-
-### Format
-String (255)
-
-### Notes
 
 
 ## MOD_LOCATION

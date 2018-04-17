@@ -6,10 +6,14 @@
 * [ASSESS_SEQ_ID](#assess_seq_id) [1] *
 * [MOD_INSTANCE_ID](module_instance.md#mod_instance_id) [1]
 * [STUDENT_ID](student.md#student_id) [1]
+* [ASSESSMENT_DATA_SOURCE](#assessment_data_source) [0..1]
 * [ASSESS_DUE_DATE](#assess_due_date) [0..1]
+* [ASSESS_SUBMISSION_DATE](#assess_submission_date) [0..1]
 * [ASSESS_RETAKE](#assess_retake) [0..1]
-* [ASSESS_AGREED_MARK](#assess_agreed_mark) [0..1]
 * [ASSESS_ACTUAL_MARK](#assess_actual_mark) [0..1]
+* [ASSESS_AGREED_MARK](#assess_agreed_mark) [0..1]
+* [ASSESS_RAW_ACTUAL_MARK](#assess_raw_actual_mark) [0..1]
+* [ASSESS_RAW_AGREED_MARK](#assess_raw_agreed_mark) [0..1]
 * [ASSESS_AGREED_GRADE](#assess_agreed_grade) [0..1]
 * [ASSESS_ACTUAL_GRADE](#assess_actual_grade) [0..1]
 * [ASSESSMENT_CURRENT_ATTEMPT](#assessment_current_attempt) [0..1]
@@ -19,6 +23,7 @@
 * [X_MOD_NAME](student_on_a_module_instance.md#x_mod_name) [0..1]
 * [X_MOD_ID](#x_mod_id) [0..1]
 * [MOD_ACADEMIC_YEAR](module_instance.md#mod_academic_year) [1]
+* [PROVIDED_AT](assessment_instance.md#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity; if not provided by data supplier, will be LRW generated.   
 \* indicates that the property is part of a uniqueness constraint for this entity.
@@ -63,9 +68,47 @@ The ASSESS_SEQ_ID number should be incremented in line with the chronological or
 The first attempt or assessment opportunity would have ASSESS_SEQ_ID = 1.
 This property relates to the number of times a student has taken, or had the opportunity to take, an assessment, not the sequence of all the assessments on a module.
 
+## ASSESSMENT_DATA_SOURCE
+
+### Description
+Provider's label showing the source of the data recorded in ASSESS_RAW_ACTUAL_MARK.
+
+### Purpose
+To identify the data source, particularly in cases where providers have multiple sources and need to view the source in LA services.
+
+### Derivation
+Provider
+
+### Valid Values
+Any
+Control of the values of this property rests with the provider and any vendor responsible for data imported into the Learning Data Hub. Consistent values for sources should be maintained.
+
+### Format
+String (255)
+
+### Notes
+
 ## ASSESS_DUE_DATE
 ### Description.
 The date an assessment instance for a student was due for submission.
+
+### Purpose
+Analytics and display
+
+### Derivation
+Jisc
+
+### Valid Values
+Date in ISO 8601 format - YYYY-MM-DD
+
+### Format
+String in ISO 8601 Date extended format - YYYY-MM-DD
+
+### Notes
+
+## ASSESS_SUBMISSION_DATE
+### Description
+The date an assessment or assignment was submitted by the student.
 
 ### Purpose
 Analytics and display
@@ -143,6 +186,45 @@ Decimal
 
 ### Notes
 ASSESS_AGREED_MARK is expected to be present in any UDD compliant dataset as soon as it becomes available.
+
+## ASSESS_RAW_ACTUAL_MARK
+### Description
+The original mark scored by the student.
+
+### Purpose
+Storage of the original numerical score.
+
+### Derivation
+Institution
+
+### Valid Values
+Any decimal value
+
+### Format
+Decimal
+
+### Notes
+Can contain any decimal value, for example "59", "162.87", and so on; this value may or may not be a percentage. ASSESS_ACTUAL_MARK contains a representation of ASSESS_RAW_ACTUAL_MARK explicitly as a percentage.
+
+
+## ASSESS_RAW_AGREED_MARK
+### Description
+The mark scored by the student after any moderation or confirmation processes, or the only recorded mark if there are no moderation or confirmation processes.
+
+### Purpose
+Storage of the confirmed numerical score.
+
+### Derivation
+Institution
+
+### Valid Values
+Any decimal value
+
+### Format
+Decimal
+
+### Notes
+Can contain any decimal value, for example "59", "162.87", and so on; this value may or may not be a percentage. ASSESS_AGREED_MARK contains a representation of ASSESS_RAW_AGREED_MARK explicitly as a percentage.
 
 
 ## ASSESS_ACTUAL_GRADE
