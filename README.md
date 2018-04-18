@@ -97,7 +97,7 @@ There are also files of code lists extracted from the MD files for machine proce
 ### [UDD code lists in English](udd/udd_codelists_en.json)
 
 ## Mandatory and optional properties
-The properties of the UDD are required in compliant datasets to different degrees. The _Mandatory properties in the UDD guide_ outlines the different categories of UDD property. It is available as both [Excel](media/UDDmandatoryFieldGuide.xls) and [ODF](media/UDDmandatoryFieldGuide.ods) spreadsheets. In future there will be Field Guide spreadsheets for each product or service to indicate how important each property is for operation or use of the product.
+The properties of the UDD are required in compliant datasets to different degrees, dependent on the products and services that use the outputs. There will be a Field Guide spreadsheet for each product or service to indicate how important each property is for operation or use of the product. A [Field Guide template](media/UDD_FieldGuide_template.xls) is included in this version of the UDD, so that vendors and service providers can supply their own Field Guide for institutions to refer to as an aid to data preparation. The Field Guide enables the vendor or service provider to indicate data items that are MANDATORY, IMPORTANT, PREFERRED or NOT USED.
 
 ## Code lists
 Some UDD properties consist of code lists. Some have values derived from HESA tables (for HE) or ILR tables (for FE). In general these code lists are mapped to generic UDD code lists, so that they are standardised across data from multiple institutions. To extract code lists from the UDD MD files, you may wish to use the Python utility provided [here](utilities/Extract%20Code%20Lists%20from%20MD.py).
@@ -136,6 +136,7 @@ Many thanks to all contributors who have raised issues, sent pull requests, comm
 - @andrewhickey
 - @arc12
 - @christoffballard
+- @craig-petch
 - @ds10
 - @gryglbrt
 - @ht2 
