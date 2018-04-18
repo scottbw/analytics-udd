@@ -1,4 +1,4 @@
-# Jisc Learning Analytics Unified Data Definitions v1.3.3 (development version)
+# Jisc Learning Analytics Unified Data Definitions v1.3.3
 
 ## Introduction
 The Unified Data Definitions (UDD) of the Jisc learning analytics project is a vocabulary of the chief data entities of interest to learning analytics: students, courses, modules, and so on, as well as their characteristics. The data coded with this vocabulary is typically extracted from the student record system of a college or university.
@@ -16,7 +16,7 @@ The main folder (jiscdev/analytics-udd) contains:
 In addition to the main folder, there are 4 sub-folders. The udd sub-folder is the heart of the specification, with a file for each entity describing its properties in detail. Refer to these files to design data for import into the Learning Data Hub. The media sub-folder contains supporting files, including the E-R diagram source, the changes spreadsheet, Guides to the relative importance of UDD properties in respect of applications, products and services that use the UDD, and a copy of the JACS3 subject classification system. The utilities sub-folder has code fragments and snippets to support the development and use of the UDD. The implementation sub-folder describes matters that are not part of the formal UDD specification, but are closely related to it, for example a description of the mechanism for handling unofficial extensions to properties in the UDD, and filename conventions for adding data into the Learning Data Hub.
 
 ## Differences between versions
-The development of v1.3 has involved a number of additions and changes. [This overview page](differences.md) provides a mapped listing of each change between version 1.2.7 and version 1.3.0. For differences from v1.3.0 and v1.3.2, see the [Release Notes](https://github.com/jiscdev/analytics-udd/releases).
+The development of v1.3 has involved a number of additions and changes. [This overview page](differences.md) provides a mapped listing of each change between version 1.2.7 and version 1.3.0. For differences from v1.3.0 to v1.3.3, see the [Release Notes](https://github.com/jiscdev/analytics-udd/releases).
 
 ## Data format
 UDD data must be UTF-8 encoded. JSON is the preferred data format, but XML and TSV data are also supported. Other formats are not supported.
