@@ -6,10 +6,13 @@
 * [PERIOD_NAME](#period_name) [1]
 * [PERIOD_START_DATE](#period_start_date) [1]
 * [PERIOD_END_DATE](#period_end_date) [1]
+* [PROVIDED_AT](assessment_instance.md#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity; if not provided by data supplier, will be Learning Data Hub generated.
 
 \* indicates that the property is part of a uniqueness constraint for this entity.
+
+API endpoint name: **period**
 
 ## Description
 A period describes an institution's official start date and end date of time slices, such as academic years, terms and semesters.

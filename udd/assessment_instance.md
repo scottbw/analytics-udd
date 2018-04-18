@@ -7,8 +7,11 @@
 * [ASSESS_WEIGHT](#assess_weight) [0..1]
 * [MAX_MARKS](#max_marks) [0..1]
 * [MOD_ACADEMIC_YEAR](module_instance.md#mod_academic_year) [0..1]
+* [PROVIDED_AT](#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity.
+
+API endpoint name: **assessmentinstance**
 
 ## Description of assessment_instance entity
 An assessment_instance is any learning activity in a module, for which a student receives a grade and/or mark. The assumption is that grades and/or marks in assessment_instances are summative.
@@ -126,3 +129,22 @@ Decimal
 
 ### Notes
 There is also the similar MAX_POINTS property on student_on_assessment_instance. The value does not necessarily represent a percentage.
+
+## PROVIDED_AT
+
+### Description
+Date and time stamp of the provision of the entity file to the Learning Data Hub. If not provided, the timestamp of the file itself will be used.
+
+### Purpose
+To provide a clear indication of the date and time of when the data was supplied. Cf. date/time of extraction or update. 
+
+### Derivation
+Provider
+
+### Valid Values
+Date/time in ISO 8601 format - YYYY-MM-DDThh:mm
+
+### Format
+String in ISO 8601 date and time format - YYYY-MM-DDThh:mm
+
+### Notes

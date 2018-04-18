@@ -5,7 +5,7 @@ Data must be UTF-8 encoded.
 
 JSON is the preferred file type, but XML or TSV files can also be submitted.  Other formats cannot be processed.
 
-Use the following filenames, all lower case.  The only difference between the filename groups here is the suffix, json, xml or tsv, as appropriate.
+Use the following filenames, all lower case.  The first part of each filename reflects the API endpoint name of the entity. The only difference between the filename groups here is the suffix, json, xml or tsv, as appropriate.
 
 - assessmentinstance.json
 - course.json

@@ -5,8 +5,11 @@
 * [MOD_CREDITS](#mod_credits) [0..1]
 * [MOD_LEVEL](#mod_level) [0..1]
 * [CREDIT_BEARING](#credit_bearing) [0..1]
+* [PROVIDED_AT](assessment_instance.md#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity.
+
+API endpoint name: **module**
 
 ## Description of module entity
 A module is a self-contained, formally structured unit of study, with a coherent and explicit set of learning outcomes and assessment criteria.
@@ -68,7 +71,7 @@ https://www.hesa.ac.uk/support/documentation/jacs
 [JACS3 CSV](../media/jacs3-valid-entries.csv)
 
 ### Format
-String (255)
+String (255) - For JACS3: 4 characters, capital letter followed by three digits
 
 ### Notes
 For FE purposes, it will need be adapted to work with institutions specific codeset for Learning Activities. Details to be confirmed.

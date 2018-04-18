@@ -8,8 +8,11 @@
 * [INST_TIER_3](#inst_tier_3) [0..1]
 * [TENANT_ID](institution.md#tenant_id) [0..1] Will be mandatory in v1.4.
 * [AWARDING_BODY](#awarding_body) [0..1]
+* [PROVIDED_AT](assessment_instance.md#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity.
+
+API endpoint name: **course**
 
 ## Description of course entity
 A course is a learning opportunity that defines a student's learning activities and aim. It is run by an institution and is usually validated to continue over several years with several intakes. A course will usually have a qualification aim.  Example: BA Honours degree in French.
@@ -54,7 +57,7 @@ https://www.hesa.ac.uk/support/documentation/jacs
 [JACS3 CSV](../media/jacs3-valid-entries.csv)
 
 ### Format
-String (255) - Usually 4 characters, number followed by three digits
+String (255) - For JACS3: 4 characters, capital letter followed by three digits
 
 ### Notes
 The JACS3 coding will be used here initially, from the HE (HESA) model. Further discussion will be required around this, to discuss subject classifications for FE/ ILR.

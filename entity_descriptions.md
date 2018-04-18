@@ -63,6 +63,10 @@ The student_course_membership entity carries critical data about the student's c
 
 This entity is similar to a HESA Instance element and a HEDIIP Data Language Student Registration entity.
 
+# student_id_map
+## Description of student_id_map entity
+The UDD student identifier entity enables efficient processing of IDs in relation to both the UDD structures and xAPI statements.
+
 # student_on_a_module_instance
 ## Description of student_on_a_module_instance entity
 A student_on_a_module_instance describes a student's performance on a specific module.

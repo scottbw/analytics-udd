@@ -7,6 +7,7 @@
 * [STUDENT_ID](student.md#student_id) [1]
 * [MOD_RESULT](#mod_result) [0..1]
 * [MOD_RETAKE](#mod_retake) [0..1]
+* [MOD_TRAILING](#mod_trailing) [0..1]
 * [MOD_START_DATE](#mod_start_date) [0..1]
 * [MOD_END_DATE](#mod_end_date) [0..1]
 * [MOD_FIRST_MARK](#mod_first_mark) [0..1]
@@ -23,9 +24,12 @@
 * [X_MOD_NAME](#x_mod_name) [0..1]
 * [MOD_ACADEMIC_YEAR](module_instance.md#mod_academic_year) [0..1]
 * [MOD_OPTIONAL](#mod_optional) [0..1]
+* [PROVIDED_AT](assessment_instance.md#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity; if not provided by data supplier, will be Learning Data Hub generated.   
 \* indicates that the property is part of a uniqueness constraint for this entity.
+
+API endpoint name: **studentmoduleinstance**
 
 ## Description of student_on_a_module_instance entity
 A student_on_a_module_instance describes a student's performance on a specific module.
@@ -98,6 +102,28 @@ String (255)
 
 ### Notes
 
+## MOD_TRAILING
+### Description
+Whether the student failed the module and is taking it again in the following academic year in addition to other modules, while continuing on the course.
+
+### Purpose
+Analytics
+
+### Derivation
+Jisc
+
+### Valid Values
+<table>
+<tr><td>MOD_TRAILING</td><td>DESCRIPTION(ENGLISH)</td><td>DESCRIPTION(WELSH)</td></tr>
+<tr><td>1</td><td>Yes</td><td>Ie</td></tr>
+<tr><td>2</td><td>No</td><td>Na</td></tr>
+</table>  
+
+### Format
+String (255)
+
+### Notes
+For a retake in the same academic year, use MOD_RETAKE, not this property. MOD_TRAILING is a sub-set of MOD_RETAKE; if MOD_TRAILING is set to "1", then MOD_RETAKE must also be set to "1". A re-take or re-sit (indicated by MOD_RETAKE) may happen in the same academic year as the original module instance. MOD_TRAILING only happens when the student takes the trailing module alongside continuing modules in the next academic year.
 
 ## MOD_START_DATE
 ### Description
@@ -164,7 +190,7 @@ This mark should not be changed after subsequent attempts at the same module, as
 
 ## MOD_ACTUAL_MARK
 ### Description
-The mark awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
+The mark awarded to the learner as first recorded in the SRS, usually but not always, prior to formal moderation and exam board confirmation. The value of MOD_ACTUAL MARK is expressed as a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 
 ### Purpose
 Analytics
@@ -179,7 +205,6 @@ Jisc
 Decimal
 
 ### Notes
-The value represents a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 MOD_ACTUAL_MARK should only be part of a UDD compliant dataset if there is a moderation process and if the result of that process is available in the source data.
 
 
@@ -209,7 +234,7 @@ MOD_AGREED_MARK is expected to be present in any UDD compliant dataset as soon a
 The original mark scored by the student.
 
 ### Purpose
-Storage of the original numerical score, typically from the VLE.
+Storage of the original numerical score.
 
 ### Derivation
 Institution
@@ -229,7 +254,7 @@ Can contain any decimal value, for example "59", "162.87", and so on; this value
 The mark scored by the student after any moderation or confirmation processes, or the only recorded mark if there are no moderation or confirmation processes.
 
 ### Purpose
-Storage of the numerical score, typically as recorded in the student record system.
+Storage of the confirmed numerical score.
 
 ### Derivation
 Institution
@@ -266,7 +291,7 @@ This grade should not be changed after subsequent attempts at the same module, a
 
 ## MOD_ACTUAL_GRADE
 ### Description
-The grade awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
+The grade awarded to the learner as first recorded in the SRS, usually but not always, prior to formal moderation and exam board confirmation.
 
 ### Purpose
 Analytics

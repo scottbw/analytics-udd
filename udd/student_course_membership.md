@@ -28,8 +28,11 @@
 * [ADMISSIONS_ROUTE](#admissions_route) [0..1]
 * [COURSE_TRANSFERRED_FROM](#course_transferred_from) [0..1]
 * [VISA](#visa) [0..1]
+* [PROVIDED_AT](assessment_instance.md#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity.
+
+API endpoint name: **studentcoursemembership**
 
 ## Description of student_course_membership entity
 A student_course_membership describes a student's enrolment on a course. It is designed to handle, not only a student enrolling on a single course in their time at an institution, but also with cases where a student is enrolled on more than one course, to study either two or more courses simultaneously or one after the other.
@@ -1594,7 +1597,7 @@ Note that there may be many reasons why a student leaves a course. This is recor
 
 ## COURSE_DURATION
 ### Description
-The expected length of time in months that the student will take to complete the course.
+The expected length of time at course commencement in months that the student will take to complete the course.
 
 ### Purpose
 Analysis

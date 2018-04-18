@@ -3,8 +3,11 @@
 * [TENANT_NAME](#tenant_name) [0..1]
 * [UDD_VERSION](#udd_version) [1]
 * [MODULE_VLE_MAP_MODE](#module_vle_map_mode) [0..1]
+* [PROVIDED_AT](assessment_instance.md#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity.
+
+API endpoint name: **institution**
 
 ## Description of institution entity
 An institution is the overall provider of one or more courses.  Example: University of Gloucestershire.

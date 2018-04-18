@@ -1,7 +1,7 @@
-# Jisc Learning Analytics Unified Data Definitions v1.3.2
+# Jisc Learning Analytics Unified Data Definitions v1.3.3
 
 ## Introduction
-The Unified Data Definitions (UDD) of the Jisc learning analytics project is a vocabulary of the chief data entities of interest to learning analytics: students, courses, modules, and so on, as well as their characteristics. The data coded with this vocabulary is typically extracted from the student record system of a particular college or university.
+The Unified Data Definitions (UDD) of the Jisc learning analytics project is a vocabulary of the chief data entities of interest to learning analytics: students, courses, modules, and so on, as well as their characteristics. The data coded with this vocabulary is typically extracted from the student record system of a college or university.
 
 Along with xAPI recipes, the UDD makes up the core data specification of the Jisc learning analytics architecture.
 
@@ -10,13 +10,13 @@ The main folder (jiscdev/analytics-udd) contains:
 - this ReadMe file that gives an overview of the UDD
 - the details of the UDD licencing arrangements
 - a UDD entity-relationship diagram
-- a link to spreadsheets listing the differences between the previous version of the UDD and version 1.3
+- a link to spreadsheets listing the differences between the previous version of the UDD and this version
 - a consolidated list of the descriptions of each UDD entity. 
 
-In addition to the main folder, there are 4 sub-folders. The udd sub-folder is the heart of the specification, with a file for each entity, describing its properties in detail. Refer to these files to design data for import into the Learning Data Hub. The media sub-folder contains various supporting files, including the E-R diagram source, the changes spreadsheet, Guides to the relative importance of UDD properties in respect of applications, products and services that use the UDD, and a copy of the JACS3 subject classification system. The utilities sub-folder has code fragments and snippets to support the development and use of the UDD. The implementation sub-folder describes matters that are not part of the formal UDD specification, but are closely related to it, for example a description of the mechanism for handling unofficial extensions to properties in the UDD, and filename conventions for adding data into the Learning Data Hub.
+In addition to the main folder, there are 4 sub-folders. The udd sub-folder is the heart of the specification, with a file for each entity describing its properties in detail. Refer to these files to design data for import into the Learning Data Hub. The media sub-folder contains supporting files, including the E-R diagram source, the changes spreadsheet, Guides to the relative importance of UDD properties in respect of applications, products and services that use the UDD, and a copy of the JACS3 subject classification system. The utilities sub-folder has code fragments and snippets to support the development and use of the UDD. The implementation sub-folder describes matters that are not part of the formal UDD specification, but are closely related to it, for example a description of the mechanism for handling unofficial extensions to properties in the UDD, and filename conventions for adding data into the Learning Data Hub.
 
 ## Differences between versions
-The development of v1.3 has involved a number of additions and changes. [This overview page](differences.md) provides a mapped listing of each change between version 1.2.7 and version 1.3.0. For differences between v1.3.0 and v1.3.1, see the [Release Notes](https://github.com/jiscdev/analytics-udd/releases).
+The development of v1.3 has involved a number of additions and changes. [This overview page](differences.md) provides a mapped listing of each change between version 1.2.7 and version 1.3.0. For differences from v1.3.0 to v1.3.3, see the [Release Notes](https://github.com/jiscdev/analytics-udd/releases).
 
 ## Data format
 UDD data must be UTF-8 encoded. JSON is the preferred data format, but XML and TSV data are also supported. Other formats are not supported.
@@ -26,10 +26,12 @@ When providing UDD data, supply the data for different entities in separate file
 ## Diagram
 2 entity-relationship diagrams provide an overview of the specification. There is a [brief E-R diagram](diagram.md) containing just the primary keys, constraints and foreign key properties, and a [full E_R diagram](diagramFull.md) with all the properties.
 
-## Core sections
+## Entities
 
 ### Primary keys
 Some entities have uniqueness constraints across multiple properties; for example student_on_course_instance has STUDENT_COURSE_MEMBERSHIP_ID plus COURSE_INSTANCE_ID. The MD files for these entities contain a note to this effect. These entities have a single primary key for ease of processing and to enable field-level extensibility. The data supplier may choose to provide the single primary key, or may choose to leave it blank, in which case it will be generated by the Learning Data Hub loading mechanism.
+
+### List of entities
 
 ### [assessment_instance](udd/assessment_instance.md)
 
@@ -66,12 +68,36 @@ Some entities have uniqueness constraints across multiple properties; for exampl
 
 ### [student_id_map](udd/student_id_map.md)
 
+### Table of entities and corresponding API endpoint names
+See the [filename_conventions](implementation/filename_conventions.md) file for information about providing UDD data.
+
+<table>
+  <tr><td>ENTITY NAME</td><td>API ENDPOINT NAME</td></tr>
+  <tr><td><a href="./udd/assessment_instance.md">assessment_instance</a></td><td>assessmentinstance</td></tr>
+  <tr><td><a href="./udd/course.md">course</a></td><td>course</td></tr>
+  <tr><td><a href="./udd/course_instance.md">course_instance</a></td><td>courseinstance</td></tr>
+  <tr><td><a href="./udd/institution.md">institution</a></td><td>institution</td></tr>
+  <tr><td><a href="./udd/module.md">module</a></td><td>module</td></tr>
+  <tr><td><a href="./udd/module_instance.md">module_instance</a></td><td>moduleinstance</td></tr>
+  <tr><td><a href="./udd/module_vle_map.md">module_vle_map</a></td><td>modulevlemap</td></tr>
+  <tr><td><a href="./udd/period.md">period</a></td><td>period</td></tr>
+  <tr><td><a href="./udd/staff.md">staff</a></td><td>staff</td></tr> 
+  <tr><td><a href="./udd/staff_on_course_instance.md">staff_on_course_instance</a></td><td>staffcourseinstance</td></tr>
+  <tr><td><a href="./udd/staff_on_mod_instance.md">staff_on_mod_instance</a></td><td>staffmoduleinstance</td></tr>
+  <tr><td><a href="./udd/student.md">student</a></td><td>student</td></tr>
+  <tr><td><a href="./udd/student_course_membership.md">student_course_membership</a></td><td>studentcoursemembership</td></tr>
+  <tr><td><a href="./udd/student_id_map.md">student_id_map</a></td><td>studentidmap</td></tr>
+  <tr><td><a href="./udd/student_on_assessment_instance.md">student_on_assessment_instance</a></td><td>studentassessmentinstance</td></tr>
+  <tr><td><a href="./udd/student_on_a_module_instance.md">student_on_a_module_instance</a></td><td>studentmoduleinstance</td></tr>
+  <tr><td><a href="./udd/student_on_course_instance.md">student_on_course_instance</a></td><td>studentcourseinstance</td></tr>
+</table>
+
 There are also files of code lists extracted from the MD files for machine processing.
 ### [UDD code lists in Welsh](udd/udd_codelists_cy.json)
 ### [UDD code lists in English](udd/udd_codelists_en.json)
 
 ## Mandatory and optional properties
-The properties of the UDD are required in compliant datasets to different degrees. The _Mandatory properties in the UDD guide_ outlines the different categories of UDD property. It is available as both [Excel](media/UDDmandatoryFieldGuide.xls) and [ODF](media/UDDmandatoryFieldGuide.ods) spreadsheets.
+The properties of the UDD are required in compliant datasets to different degrees, dependent on the products and services that use the outputs. There will be a Field Guide spreadsheet for each product or service to indicate how important each property is for operation or use of the product. A [Field Guide template](media/UDD_FieldGuide_template.xls) is included in this version of the UDD, so that vendors and service providers can supply their own Field Guide for institutions to refer to as an aid to data preparation. The Field Guide enables the vendor or service provider to indicate data items that are MANDATORY, IMPORTANT, PREFERRED or NOT USED.
 
 ## Code lists
 Some UDD properties consist of code lists. Some have values derived from HESA tables (for HE) or ILR tables (for FE). In general these code lists are mapped to generic UDD code lists, so that they are standardised across data from multiple institutions. To extract code lists from the UDD MD files, you may wish to use the Python utility provided [here](utilities/Extract%20Code%20Lists%20from%20MD.py).
@@ -110,6 +136,7 @@ Many thanks to all contributors who have raised issues, sent pull requests, comm
 - @andrewhickey
 - @arc12
 - @christoffballard
+- @craig-petch
 - @ds10
 - @gryglbrt
 - @ht2 

@@ -1,11 +1,14 @@
 # staff_on_mod_instance
 
-*  [STAFF_ON_MOD_INSTANCE_ID](#staff_on_mod_instance_id) **
-*  [STAFF_ID](staff.md#staff_id) [1] *
-*  [MOD_INSTANCE_ID](module_instance.md#mod_instance_id) [1] *
+* [STAFF_ON_MOD_INSTANCE_ID](#staff_on_mod_instance_id) **
+* [STAFF_ID](staff.md#staff_id) [1] *
+* [MOD_INSTANCE_ID](module_instance.md#mod_instance_id) [1] *
+* [PROVIDED_AT](assessment_instance.md#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity; if not provided by data supplier, will be Learning Data Hub generated.   
 \* indicates that the property is part of a uniqueness constraint for this entity.
+
+API endpoint name: **staffmoduleinstance**
 
 ## Description of staff_on_mod_instance entity
 A staff_on_mod_instance links a member of staff to a module_instance.

@@ -6,6 +6,7 @@
 * [ASSESS_SEQ_ID](#assess_seq_id) [1] *
 * [MOD_INSTANCE_ID](module_instance.md#mod_instance_id) [1]
 * [STUDENT_ID](student.md#student_id) [1]
+* [ASSESSMENT_DATA_SOURCE](#assessment_data_source) [0..1]
 * [ASSESS_DUE_DATE](#assess_due_date) [0..1]
 * [ASSESS_SUBMISSION_DATE](#assess_submission_date) [0..1]
 * [ASSESS_RETAKE](#assess_retake) [0..1]
@@ -18,14 +19,17 @@
 * [ASSESSMENT_CURRENT_ATTEMPT](#assessment_current_attempt) [0..1]
 * [ASSESSMENT_RESULT](#assessment_result) [0..1]
 * [GRADE_DATE](#grade_date) [0..1]
-* [MAX_POINTS](#max_points) [0..1]
+* [MAX_POINTS](#max_points) [0..1] DEPRECATED
 * [X_ASSESS_DETAIL](#x_assess_detail) [0..1]
 * [X_MOD_NAME](student_on_a_module_instance.md#x_mod_name) [0..1]
 * [X_MOD_ID](#x_mod_id) [0..1]
 * [MOD_ACADEMIC_YEAR](module_instance.md#mod_academic_year) [0..1]
+* [PROVIDED_AT](assessment_instance.md#provided_at) [0..1]
 
 \** indicates that the property is the primary key for this entity; if not provided by data supplier, will be Learning Data Hub generated.   
 \* indicates that the property is part of a uniqueness constraint for this entity.
+
+API endpoint name: **studentassessmentinstance**
 
 ## Description of student_on_assessment_instance entity
 A student_on_assessment_instance describes a student's performance on a specific assessment.
@@ -66,6 +70,25 @@ Int
 The ASSESS_SEQ_ID number should be incremented in line with the chronological order of assessment opportunities afforded to the student in respect of the specified assessment. The first assessment opportunity would have ASSESS_SEQ_ID = 1.
 This property relates to the number of times a student has taken, or had the opportunity to take, an assessment, not the sequence of all the assessments on a module.
 
+## ASSESSMENT_DATA_SOURCE
+
+### Description
+Provider's label showing the source of the data recorded in ASSESS_RAW_ACTUAL_MARK.
+
+### Purpose
+To identify the data source, particularly in cases where providers have multiple sources and need to view the source in LA services.
+
+### Derivation
+Provider
+
+### Valid Values
+Any
+Control of the values of this property rests with the provider and any vendor responsible for data imported into the Learning Data Hub. Consistent values for sources should be maintained.
+
+### Format
+String (255)
+
+### Notes
 
 ## ASSESS_DUE_DATE
 ### Description
@@ -130,7 +153,7 @@ String (255)
 
 ## ASSESS_ACTUAL_MARK
 ### Description
-The mark, expressed as a percentage, awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
+The mark, expressed as a percentage, awarded to the learner as first recorded in the SRS, usually but not always, prior to formal moderation and exam board confirmation. The value of ASSESS_ACTUAL_MARK is expressed as a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 
 ### Purpose
 Analytics
@@ -146,12 +169,11 @@ Decimal
 
 ### Notes
 ASSESS_ACTUAL_MARK should only be part of a UDD compliant dataset if there is a moderation process and if the result of that process is available in the source data.
-The value represents a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 
 
 ## ASSESS_AGREED_MARK
 ### Description
-The mark, expressed as a percentage, recorded after any moderation or confirmation processes, or the only recorded mark if there are no moderation or confirmation processes.
+The mark recorded after any moderation or confirmation processes, or the only recorded mark if there are no moderation or confirmation processes. The value is expressed as a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 
 ### Purpose
 Analytics
@@ -167,7 +189,6 @@ Decimal
 
 ### Notes
 ASSESS_AGREED_MARK is expected to be present in any UDD compliant dataset as soon as it becomes available.
-The value represents a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 
 
 ## ASSESS_RAW_ACTUAL_MARK
@@ -175,7 +196,7 @@ The value represents a percentage; for example, a value of "63.75" means 63.75%,
 The original mark scored by the student.
 
 ### Purpose
-Storage of the original numerical score, typically from the VLE.
+Storage of the original numerical score.
 
 ### Derivation
 Institution
@@ -195,7 +216,7 @@ Can contain any decimal value, for example "59", "162.87", and so on; this value
 The mark scored by the student after any moderation or confirmation processes, or the only recorded mark if there are no moderation or confirmation processes.
 
 ### Purpose
-Storage of the numerical score, typically as recorded in the student record system.
+Storage of the confirmed numerical score.
 
 ### Derivation
 Institution
@@ -212,7 +233,7 @@ Can contain any decimal value, for example "59", "162.87", and so on; this value
 
 ## ASSESS_ACTUAL_GRADE
 ### Description
-The grade awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
+The grade awarded to the learner as first recorded in the SRS, usually but not always, prior to formal moderation and exam board confirmation.
 
 ### Purpose
 Analytics
@@ -314,6 +335,7 @@ This is the date when a grade has been moderated and agreed, but before exam boa
 
 ## MAX_POINTS
 ### Description
+DEPRECATED
 The maximum points that an instructor can allocate to an assessment. Used to indicate the marking scale used for an assignment.
 
 ### Purpose
@@ -329,6 +351,7 @@ Any decimal value
 Decimal
 
 ### Notes
+This property is deprecated in v1.3.3 and will be deleted in v1.4.
 This property can contain any decimal value. It will normally be an integer representing the highest mark obtainable.
 
 
