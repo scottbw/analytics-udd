@@ -37,11 +37,7 @@ Some entities have uniqueness constraints across multiple properties; for exampl
 
 ### [course_instance](udd/course_instance.md)
 
-### [course_location](udd/course_location.md)
-
 ### [course_subject](udd/course_subject.md)
-
-### [inst_tier](udd/inst_tier.md)
 
 ### [institution](udd/institution.md)
 
@@ -64,6 +60,10 @@ Some entities have uniqueness constraints across multiple properties; for exampl
 ### [student_on_course_instance](udd/student_on_course_instance.md)
 
 ## Additional sections
+### [course_location](udd/course_location.md)
+
+### [inst_tier](udd/inst_tier.md)
+
 ### [period](udd/period.md)
 
 ### [staff](udd/staff.md)
