@@ -37,11 +37,19 @@ Some entities have uniqueness constraints across multiple properties; for exampl
 
 ### [course_instance](udd/course_instance.md)
 
+### [course_location](udd/course_location.md)
+
+### [course_subject](udd/course_subject.md)
+
+### [inst_tier](udd/inst_tier.md)
+
 ### [institution](udd/institution.md)
 
 ### [module](udd/module.md)
 
 ### [module_instance](udd/module_instance.md)
+
+### [module_subject](udd/module_subject.md)
 
 ### [module_vle_map](udd/module_vle_map.md)
 
@@ -74,9 +82,13 @@ See the [filename_conventions](implementation/filename_conventions.md) file for 
   <tr><td><a href="./udd/assessment_instance.md">assessment_instance</a></td><td>assessmentinstance</td></tr>
   <tr><td><a href="./udd/course.md">course</a></td><td>course</td></tr>
   <tr><td><a href="./udd/course_instance.md">course_instance</a></td><td>courseinstance</td></tr>
+  <tr><td><a href="./udd/course_location.md">course_location</a></td><td>courselocation</td></tr>  
+  <tr><td><a href="./udd/course_subject.md">course_subject</a></td><td>coursesubject</td></tr>
+  <tr><td><a href="./udd/inst_tier.md">inst_tier</a></td><td>insttier</td></tr>
   <tr><td><a href="./udd/institution.md">institution</a></td><td>institution</td></tr>
   <tr><td><a href="./udd/module.md">module</a></td><td>module</td></tr>
   <tr><td><a href="./udd/module_instance.md">module_instance</a></td><td>moduleinstance</td></tr>
+  <tr><td><a href="./udd/module_subject.md">module_subject</a></td><td>modulesubject</td></tr>
   <tr><td><a href="./udd/module_vle_map.md">module_vle_map</a></td><td>modulevlemap</td></tr>
   <tr><td><a href="./udd/period.md">period</a></td><td>period</td></tr>
   <tr><td><a href="./udd/staff.md">staff</a></td><td>staff</td></tr> 
