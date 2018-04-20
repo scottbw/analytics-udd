@@ -93,7 +93,6 @@ Int
 ### Notes
 This is the starting year for the academic year.
 This property is synonymous with ACADEMIC_YEAR.
-Omitting this property may hinder the development or use of an effective analytics model.
 
 
 ## MOD_LOCATION
