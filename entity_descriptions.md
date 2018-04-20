@@ -1,5 +1,4 @@
 # UDD Entity descriptions
-These are draft UDD entity descriptions. Once they have been agreed, they will be transferred to each md file.
 
 # assessment_instance
 ## Description of assessment_instance entity
@@ -7,18 +6,30 @@ An assessment_instance is any learning activity in a module, for which a student
 
 # course
 ## Description of course entity
-A course is a learning opportunity that defines a student's learning activities and aim. It is run by an institution and is usually validated to continue over several years with several intakes. A course will usually have a qualification aim.  Example: BA Honours degree in French.
+A course is a learning opportunity that defines a student's learning activities and aim. It is run by an institution and is usually validated to continue over several years with several intakes. A course will usually have a qualification aim. Example: BA Honours degree in French.
 
 ## Notes
-The properties of the course entity do not include start date, study mode or location, because the course is at a high level in the UDD structure.  These properties of a learning opportunity are differentiated in the course_instance, student_course_membership and student_on_course_instance entities.
+The properties of the course entity do not include start date, study mode or location, because the course is at a high level in the UDD structure. These properties of a learning opportunity are differentiated in the course_instance, student_course_membership and student_on_course_instance entities.
 
 # course_instance
 ## Description of course_instance entity
-A course_instance is a stage of a course with a start date and an end date, often marked by a progression decision point at the end.  Example: a single academic year in a 3 year Honours degree course.
+A course_instance is a stage of a course with a start date and an end date, often marked by a progression decision point at the end. Example: a single academic year in a 3 year Honours degree course.
+
+# course_location
+## Description of course_location entity
+A course_location specifies where the learning opportunity is delivered, usually a campus.
+
+# course_subject
+## Description of course_subject entity
+A course_subject describes the subject or subjects of study of a course, using a specified subject classification system.
+
+# inst_tier
+## Description of inst_tier entity
+An inst_tier describes an organisational sub-component of the provider, for example, department, school or faculty.
 
 # institution
 ## Description of institution entity
-An institution is the overall provider of one or more courses.  Example: University of Gloucestershire.
+An institution is the overall provider of one or more courses. Example: University of Gloucestershire.
 
 # module
 ## Description of module entity
@@ -31,13 +42,17 @@ This description is the same as the description for the Module entity in the HED
 ## Description of module_instance entity
 A module_instance is the specific offer of a module to students. It therefore has a specific venue and defined assessments.
 
+# module_subject
+## Description of module_subject entity
+A module_subject describes the subject or subjects of study of a module, using a specified subject classification system.
+
 # module_VLE_map
 ## Description of module_VLE_map entity
 A module_VLE_map links a module in a student record system with module materials in a VLE.
 
 # period
 ## Description of period entity
-A period describes an institution's official start date and end date of a time slice, such as academic year, term and semester that is used in the UDD data.
+A period describes an institution's official start date and end date of time slices, such as academic years, terms and semesters.
 
 # staff
 ## Description of staff entity
@@ -57,10 +72,16 @@ A student element describes a person undertaking one or more courses.
 
 # student_course_membership
 ## Description of student_course_membership entity
-A student_course_membership describes a student's enrolment on a course.  It is designed to deal with the fact that some students are enrolled on more than one course in their time at an institution.
+A student_course_membership describes a student's enrolment on a course.  It is designed to handle, not only a student enrolling on a single course in their time at an institution, but also with cases where a student is enrolled on more than one course, to study either two or more courses simultaneously or one after the other.
 
 ## Notes
+The student_course_membership entity carries critical data about the student's current studies and also acts as a historical record of course changes and previous studies. For this reason, the WITHDRAWAL_REASON code and COURSE_END_DATE must be set when a student changes course, and typically the ACTIVE_MEMBERSHIP property is updated.
+
 This entity is similar to a HESA Instance element and a HEDIIP Data Language Student Registration entity.
+
+# student_id_map
+## Description of student_id_map entity
+The UDD student identifier entity enables efficient processing of IDs in relation to both the UDD structures and xAPI statements.
 
 # student_on_a_module_instance
 ## Description of student_on_a_module_instance entity
