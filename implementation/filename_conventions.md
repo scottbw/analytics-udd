@@ -3,9 +3,9 @@ When providing UDD data, supply the data for different entities in separate file
 
 Data must be UTF-8 encoded.
 
-JSON is the preferred file type, but XML files can also be submitted.  Other formats cannot be processed.
+JSON is the preferred file type, but XML or TSV files can also be submitted.  Other formats cannot be processed.
 
-Use the following filenames, all lower case.  The only difference between the filename groups here is the suffix, json or xml, as appropriate.
+Use the following filenames, all lower case.  The first part of each filename reflects the API endpoint name of the entity. The only difference between the filename groups here is the suffix, json, xml or tsv, as appropriate.
 
 - assessmentinstance.json
 - course.json
@@ -44,3 +44,23 @@ or
 - studentcoursemembership.xml
 - studentidmap.xml
 - studentmoduleinstance.xml
+
+or
+
+- assessmentinstance.tsv
+- course.tsv
+- courseinstance.tsv
+- institution.tsv
+- module.tsv
+- moduleinstance.tsv
+- modulevlemap.tsv
+- period.tsv
+- staff.tsv
+- staffcourseinstance.tsv
+- staffmoduleinstance.tsv
+- student.tsv
+- studentassessmentinstance.tsv
+- studentcourseinstance.tsv
+- studentcoursemembership.tsv
+- studentidmap.tsv
+- studentmoduleinstance.tsv
