@@ -1757,11 +1757,6 @@ Jisc
                 <td>not active - The student has finished the course, or has withdrawn from, left or transferred out of the course for any reason.</td>
                 <td> </td>
             </tr>
-            <tr>
-                <td>3</td>
-                <td>unknown - It is not known whether the student is 'active' or 'not active' in relation to this course.</td>
-                <td> </td>
-            </tr>
         </table>
 
 ### References
@@ -1771,6 +1766,7 @@ String (1)
 
 ### Notes
 A student may have sequential student_course_membership records with only 1 active record, or may be pursuing more than 1 course and therefore have more than 1 active record. When updating student_course_membership records, the ACTIVE_MEMBERSHIP property may need to be updated on more than one record.
+Where it is not known whether or not the student is active, "not active" should be supplied.
 
 
 ## PREDICTED_OUTCOME_GRADE
