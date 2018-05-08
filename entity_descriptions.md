@@ -15,17 +15,9 @@ The properties of the course entity do not include start date, study mode or loc
 ## Description of course_instance entity
 A course_instance is a stage of a course with a start date and an end date, often marked by a progression decision point at the end. Example: a single academic year in a 3 year Honours degree course.
 
-# course_location
-## Description of course_location entity
-A course_location specifies where the learning opportunity is delivered, usually a campus.
-
 # course_subject
 ## Description of course_subject entity
 A course_subject describes the subject or subjects of study of a course, using a specified subject classification system.
-
-# inst_tier
-## Description of inst_tier entity
-An inst_tier describes an organisational sub-component of the provider, for example, department, school or faculty.
 
 # institution
 ## Description of institution entity

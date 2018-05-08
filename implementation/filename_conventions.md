@@ -10,9 +10,7 @@ Use the following filenames, all lower case.  The first part of each filename re
 - assessmentinstance.json
 - course.json
 - courseinstance.json
-- courselocation.json
 - coursesubject.json
-- insttier.json
 - institution.json
 - module.json
 - moduleinstance.json
@@ -34,9 +32,7 @@ or
 - assessmentinstance.xml
 - course.xml
 - courseinstance.xml
-- courselocation.xml
 - coursesubject.xml
-- insttier.xml
 - institution.xml
 - module.xml
 - moduleinstance.xml
@@ -58,9 +54,7 @@ or
 - assessmentinstance.tsv
 - course.tsv
 - courseinstance.tsv
-- courselocation.tsv
 - coursesubject.tsv
-- insttier.tsv
 - institution.tsv
 - module.tsv
 - moduleinstance.tsv

@@ -60,10 +60,6 @@ Some entities have uniqueness constraints across multiple properties; for exampl
 ### [student_on_course_instance](udd/student_on_course_instance.md)
 
 ## Additional sections
-### [course_location](udd/course_location.md)
-
-### [inst_tier](udd/inst_tier.md)
-
 ### [period](udd/period.md)
 
 ### [staff](udd/staff.md)
@@ -82,9 +78,7 @@ See the [filename_conventions](implementation/filename_conventions.md) file for 
   <tr><td><a href="./udd/assessment_instance.md">assessment_instance</a></td><td>assessmentinstance</td></tr>
   <tr><td><a href="./udd/course.md">course</a></td><td>course</td></tr>
   <tr><td><a href="./udd/course_instance.md">course_instance</a></td><td>courseinstance</td></tr>
-  <tr><td><a href="./udd/course_location.md">course_location</a></td><td>courselocation</td></tr>  
   <tr><td><a href="./udd/course_subject.md">course_subject</a></td><td>coursesubject</td></tr>
-  <tr><td><a href="./udd/inst_tier.md">inst_tier</a></td><td>insttier</td></tr>
   <tr><td><a href="./udd/institution.md">institution</a></td><td>institution</td></tr>
   <tr><td><a href="./udd/module.md">module</a></td><td>module</td></tr>
   <tr><td><a href="./udd/module_instance.md">module_instance</a></td><td>moduleinstance</td></tr>
