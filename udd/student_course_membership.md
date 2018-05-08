@@ -1834,7 +1834,7 @@ String (10)
 
 ## INITIAL_ASSESSMENT_ENGLISH
 ### Description
-States a numerical value of the institution's measure of the student's capability in English at the start of their programme of learning.
+States a numerical measure of the student's capability in English at the start of their programme of learning.
 
 ### Purpose
 Analytics
@@ -1846,10 +1846,12 @@ Any decimal
 Decimal
 
 ### Notes
+The measure is typically a diagnostic assessment undertaken by the provider around the time of enrolment.
+
 
 ## INITIAL_ASSESSMENT_MATHEMATICS
 ### Description
-States a numerical value of the institution's measure of the student's capability in Mathematics at the start of their programme of learning.
+States a numerical measure of the student's capability in Mathematics at the start of their programme of learning.
 
 ### Purpose
 Analytics
@@ -1861,7 +1863,7 @@ Any decimal
 Decimal
 
 ### Notes
-
+The measure is typically a diagnostic assessment undertaken by the provider around the time of enrolment.
 
 ## ADMISSIONS_ROUTE
 ### Description
