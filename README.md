@@ -1,4 +1,6 @@
-# Jisc Learning Analytics Unified Data Definitions v1.4
+# Jisc Learning Analytics Unified Data Definitions v1.4.0
+
+_Version 1.4.0 finalised w/c 4 June 2018. For release in September 2018._
 
 ## Introduction
 The Unified Data Definitions (UDD) of the Jisc learning analytics project is a vocabulary of the chief data entities of interest to learning analytics: students, courses, modules, and so on, as well as their characteristics. The data coded with this vocabulary is typically extracted from the student record system of a college or university.
@@ -14,6 +16,8 @@ The main folder (jiscdev/analytics-udd) contains:
 - a consolidated list of the descriptions of each UDD entity. 
 
 In addition to the main folder, there are 4 sub-folders. The udd sub-folder is the heart of the specification, with a file for each entity describing its properties in detail. Refer to these files to design data for import into the Learning Data Hub. The media sub-folder contains supporting files, including the E-R diagram source, the changes spreadsheet, Guides to the relative importance of UDD properties in respect of applications, products and services that use the UDD, and copies of the JACS3 and HECoS subject classification systems. The utilities sub-folder has code fragments and snippets to support the development and use of the UDD. The implementation sub-folder describes matters that are not part of the formal UDD specification, but are closely related to it, for example a description of the mechanism for handling unofficial extensions to properties in the UDD, and filename conventions for adding data into the Learning Data Hub.
+
+For releases and version control, see [below](#Releases-and-version-control).
 
 ## Differences between v1.3 and v1.4
 The development of v1.4 has involved a number of additions and changes. [This overview page](differences.md) lists the changes in summary and provides a spreadsheet with the mapped listing of each entity and property change between v1.3.3 and v1.4.0. 
@@ -127,9 +131,15 @@ The simplest way of contributing to the UDD is as follows:
 
 You can do all this through the Github GUI, but you're welcome to use any other git tool you prefer.
 
+## Releases and version control
+
 Particular release versions will get their own branches, but the master branch will always contain the latest agreed release. Releases will be made after the review group has come to an agreement.
 
 Versioning is done broadly as follows: (majorVersion.minorVersion.patch) major versions indicate major data model changes. Minor versions denote changes that can break applications, such as the deletion of properties that were valid in earlier versions. Patches can include the addition of new properties.
+
+There will usually be a new minor version with breaking changes available for use in June of each year, in time for the next academic year. For example, from version 1.3 to version 1.4 in June 2018 for the 2018-19 academic year.
+
+All version changes will be announced in advance on the repository issue tracker and in this README file.
 
 Note that some properties will be marked as 'deprecated'. This means that the property is still valid, but will be removed by the next minor version update.
 
