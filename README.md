@@ -19,7 +19,7 @@ In addition to the main folder, there are 4 sub-folders. The udd sub-folder is t
 The development of v1.4 has involved a number of additions and changes. [This overview page](differences.md) lists the changes in summary and provides a spreadsheet with the mapped listing of each entity and property change between v1.3.3 and v1.4.0. 
 
 ## Data format
-UDD data must be UTF-8 encoded. JSON is the preferred data format, but XML and TSV data are also supported. Other formats are not supported.
+UDD data must be UTF-8 encoded. TSV is the preferred data format, but JSON and XML data are also supported. Other formats are not supported.
 
 When providing UDD data, supply the data for different entities in separate files, 1 file per entity, using the [UDD filename conventions](implementation/filename_conventions.md).
 
