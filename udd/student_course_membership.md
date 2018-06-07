@@ -196,7 +196,7 @@ Omitting this property may hinder the development or use of an effective analyti
 
 ## ENTRY_POINTS
 ### Description
-This field indicates the entry points at Level 3 / SCQF Level 6 gained by the student prior to entry to the institution, using the UCAS Tariff points scheme. 
+This field indicates the entry points gained by the student prior to entry to the course, using a recognised scheme specified in ENTRY_POINTS_SCHEMA (for example, a UCAS Tariff points scheme). 
 
 ### Purpose
 For analytics
@@ -211,14 +211,16 @@ Any
 Int
 
 ### Notes
-For courses starting in or after 2017 use the 2017 UCAS Tariff points scheme. This replaced the original scheme that ran from 2001 to 2016. Specify the specific Tariff points scheme used in ENTRY_POINTS_SCHEMA.
-ENTRY_POINTS does not include Level 2 / SCQF Level 5 or lower qualifications.
+For UCAS Tariff points: For courses starting in or after 2017 use the 2017 UCAS Tariff points scheme. This replaced the original scheme that ran from 2001 to 2016. Specify the specific Tariff points scheme used in ENTRY_POINTS_SCHEMA.
+
+See also [AVERAGE_GCSE_SCORE](#average_gcse_score).
+
 Omitting this property may hinder the development or use of an effective analytics model.
+This property is MANDATORY if ENTRY_POINTS_SCHEMA is used.
 
 ## ENTRY_POINTS_SCHEMA
 ### Description
-This property specifies the particular UCAS Tariff points scheme used for the data in ENTRY_POINTS.
-
+This property specifies the particular scheme used for the data in ENTRY_POINTS (for example, a UCAS Tariff points scheme).
 
 ### Purpose
 For analytics
@@ -229,11 +231,10 @@ UCAS: https://www.ucas.com/advisers/guides-and-resources/information-new-ucas-ta
 ### Valid Values
 <table>
 <tr><td>ENTRY_POINTS_SCHEMA</td><td>DESCRIPTION (ENGLISH)</td><td>DESCRIPTION (WELSH)</td></tr>
-<tr><td>2017</td><td>UCAS Tariff Scheme 2017 (the "new" scheme)</td><td></td></tr>
-<tr><td>2001</td><td>UCAS Tariff Scheme 2001-20016 (the "old" scheme)</td><td></td></tr>
+<tr><td>UCAS_17</td><td>UCAS Tariff Scheme 2017 (the "new" scheme)</td><td></td></tr>
+<tr><td>UCAS_01</td><td>UCAS Tariff Scheme 2001-20016 (the "old" scheme)</td><td></td></tr>
 <tr><td>99</td><td>Not known (DEFAULT)</td><td></td></tr>
 </table>  
-
 
 ### Format
 String (255)
@@ -241,6 +242,7 @@ String (255)
 ### Notes
 This property is MANDATORY if ENTRY_POINTS is used. Where the Tariff scheme for ENTRY_POINTS is unknown, use '99' (Not known). This value is used for consistency with other values of this type.
 
+When there is demand for other schemas to be available, the schemas will be added to this vocabulary.
 
 ## AVERAGE_GCSE_SCORE
 ### Description
@@ -260,6 +262,8 @@ Int
 
 ### Notes
 Where an average GCSE points score system or similar scheme is used, such as Attainment 8 or ALPS, the institution should use a single consistent scheme across all its data.
+
+See also [ENTRY_POINTS](#entry_points).
 
 ## COURSE_OUTCOME
 ### Description
