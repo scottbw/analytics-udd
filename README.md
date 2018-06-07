@@ -1,6 +1,6 @@
-# Jisc Learning Analytics Unified Data Definitions v1.4.0
+# Jisc Learning Analytics Unified Data Definitions v1.4.1 (development branch)
 
-_Version 1.4.0 finalised w/c 4 June 2018. For release in September 2018._
+_Version 1.4.1 is a development version, not yet released._
 
 ## Introduction
 The Unified Data Definitions (UDD) of the Jisc learning analytics project is a vocabulary of the chief data entities of interest to learning analytics: students, courses, modules, and so on, as well as their characteristics. The data coded with this vocabulary is typically extracted from the student record system of a college or university.
