@@ -103,7 +103,10 @@ https://www.hesa.ac.uk/collection/c16051/a/RSNEND
 String (255)
 
 ### Notes
-This property should be set when a student changes course, so that historical records can be maintained and analysed later; in addition the COURSE_END_DATE should be set accordingly.
+
+**Not withdrawn, currently active students: omit the property (leave blank in TSV).**
+
+This property should also be set when a student changes course, so that historical records can be maintained and analysed later; in addition the COURSE_END_DATE should be set accordingly.
 
 ## ENTRY_QUALS
 ### Description
@@ -366,20 +369,6 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/449779
                 <td>N/A</td>
             </tr>
             <tr>
-                <td>13</td>
-                <td>The learner is continuing or intending to continue the learning activities leading to the learning aim</td>
-                <td> </td>
-                <td>N/A</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>14</td>
-                <td>Learner has temporarily withdrawn from the aim due to an agreed break in learning</td>
-               <td> </td>
-                <td>N/A</td>
-                <td>6</td>
-            </tr>
-            <tr>
                 <td>98</td>
                 <td>Completion of course - result unknown</td>
                 <td> </td>
@@ -399,7 +388,8 @@ https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/449779
 String (255)
 
 ### Notes
-Omitting this property may hinder the development or use of an effective analytics model.
+
+**Currently active students: omit the property (leave blank in TSV).**
 
 ## COURSE_GRADE
 ### Description
@@ -1641,6 +1631,9 @@ Date in ISO 8601 format - YYYY-MM-DD
 String in ISO 8601 Date extended format - YYYY-MM-DD
 
 ### Notes
+
+**If the course has not ended: omit the property (leave blank in TSV).**
+
 Note that there may be many reasons why a student leaves a course. This is recorded in WITHDRAWAL_REASON.
 
 
