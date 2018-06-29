@@ -7,6 +7,8 @@
 
 \** indicates that the property is the primary key for this entity.
 
+API endpoint name: **institution**
+
 ## Description of institution entity
 An institution is the overall provider of one or more courses.  Example: University of Gloucestershire.
 
