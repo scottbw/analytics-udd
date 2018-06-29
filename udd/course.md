@@ -22,7 +22,7 @@ The properties of the course entity do not include start date, study mode or loc
 
 ## COURSE_ID
 ### Description
-The providers own ID for the course
+The provider's own ID for the course
 
 ### Purpose
 To link relational database tables
