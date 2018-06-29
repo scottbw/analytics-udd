@@ -9,6 +9,8 @@
 
 \** indicates that the property is the primary key for this entity.
 
+API endpoint name: **moduleinstance**
+
 ## Description of module_instance entity
 A module_instance is the specific offer of a module to students. It therefore has a specific venue and defined assessments.
 

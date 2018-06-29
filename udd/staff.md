@@ -12,6 +12,8 @@ An additional data entity
 
 \** indicates that the property is the primary key for this entity.
 
+API endpoint name: **staff**
+
 ## Description of staff entity
 A staff element identifies a member of staff at an institution.
 

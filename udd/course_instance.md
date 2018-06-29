@@ -8,6 +8,8 @@
 
 \** indicates that the property is the primary key for this entity.
 
+API endpoint name: **courseinstance**
+
 ## Description of course_instance entity
 A course_instance is a stage of a course with a start date and an end date, often marked by a progression decision point at the end.  Example: a single academic year in a 3 year Honours degree course.
 
