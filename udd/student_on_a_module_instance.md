@@ -191,7 +191,7 @@ This mark should not be changed after subsequent attempts at the same module, as
 
 ## MOD_ACTUAL_MARK
 ### Description
-The mark awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
+The mark awarded to the learner as first recorded in the SRS, usually but not always, prior to formal moderation and exam board confirmation. The value of MOD_ACTUAL MARK is expressed as a percentage; for example, a value of "63.75" means 63.75%, a value of "50" means 50%.
 
 ### Purpose
 Analytics
@@ -291,7 +291,7 @@ This grade should not be changed after subsequent attempts at the same module, a
 
 ## MOD_ACTUAL_GRADE
 ### Description
-The grade awarded to the learner after any moderation process, but before any formal confirmation process. Moderation processes typically involve multiple markers, and confirmation processes typically involve external examiners.
+The grade awarded to the learner as first recorded in the SRS, usually but not always, prior to formal moderation and exam board confirmation.
 
 ### Purpose
 Analytics
@@ -342,7 +342,7 @@ https://www.hesa.ac.uk/collection/c16051/a/crdtpts/
 Any
 
 ### Format
-Integer
+Int
 
 ### Notes
 
@@ -361,7 +361,7 @@ Jisc
 Any
 
 ### Format
-Integer
+Int
 
 ### Notes
 Omitting this property may hinder the development or use of an effective analytics model.
