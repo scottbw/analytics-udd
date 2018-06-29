@@ -56,10 +56,10 @@ String (255)
 
 ## ULN
 ### Description
-Unique Learner Number. For initial trial and data model development for the predictive model, this field should be left out.
+Unique Learner Number
 
 ### Purpose
-For future use, tracking student journey.
+Aids identification of the student.
 
 ### Derivation
 Skills Funding Agency: See https://www.gov.uk/government/publications/lrs-unique-learner-numbers
@@ -70,7 +70,7 @@ Skills Funding Agency: See https://www.gov.uk/government/publications/lrs-unique
 String (10)
 
 ### Notes
-The ULN can be provided as an additional point of reference, however the STUDENT_ID will always take precedence as the unique learner/ student identifier.
+The ULN should be provided as an additional point of reference for integration of other data sources with the UDD. However, the STUDENT_ID will always take precedence as the unique learner / student identifier within the UDD.
 
 
 ## DOB
@@ -2077,7 +2077,7 @@ Jisc
 Any
 
 ### Format
-String(255)
+String (255)
 
 ### Notes
 Will be input/ batched directly from central IT or identification management systems at the institution
@@ -2097,7 +2097,7 @@ Jisc
 Any
 
 ### Format
-String(255)
+String (255)
 
 ### Notes
 This is usually imported from the Institution's SRS.
@@ -2117,7 +2117,7 @@ Jisc
 Any
 
 ### Format
-String(255)
+String (255)
 
 ### Notes
 This is usually imported from the Institution's SRS.
@@ -2156,7 +2156,7 @@ https://www.hesa.ac.uk/collection/c15025/a/OWNSTAFFID
 ### References
 
 ### Format
-String(255)
+String (255)
 
 ### Notes
 This will be the unique identifier/ primary key for the member of staff who is responsible for the student (course/ year tutor) or the person responsible for receiving alerts and notifications from the Learning Analytics software suite/ tools. This will typically be the staff/ HR/ payroll number for the member of academic staff, which links to their email address in the institutions identity management system.

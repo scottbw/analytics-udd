@@ -22,7 +22,7 @@ The properties of the course entity do not include start date, study mode or loc
 
 ## COURSE_ID
 ### Description
-The providers own ID for the course
+The provider's own ID for the course
 
 ### Purpose
 To link relational database tables
@@ -57,7 +57,7 @@ https://www.hesa.ac.uk/support/documentation/jacs
 [JACS3 CSV](../media/jacs3-valid-entries.csv)
 
 ### Format
-String (10) - Usually 4 characters, number followed by three digits
+String (10) - For JACS3: 4 characters, capital letter followed by three digits
 
 ### Notes
 The JACS3 coding will be used here initially, from the HE (HESA) model. Further discussion will be required around this, to discuss subject classifications for FE/ ILR.

@@ -128,7 +128,6 @@ Any
 Decimal
 
 ### Notes
-There is also the similar MAX_POINTS property on student_on_assessment_instance, which is for informational purposes. It has more a permissive format and value space.
 
 ## PROVIDED_AT
 

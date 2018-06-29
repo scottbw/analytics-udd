@@ -72,7 +72,7 @@ https://www.hesa.ac.uk/support/documentation/jacs
 [JACS3 CSV](../media/jacs3-valid-entries.csv)
 
 ### Format
-String (255)
+String (255) - For JACS3: 4 characters, capital letter followed by three digits
 
 ### Notes
 For FE purposes, it will need be adapted to work with institutions specific codeset for Learning Activities. Details to be confirmed.
@@ -100,7 +100,7 @@ Omitting this property may hinder the development or use of an effective analyti
 
 ## MOD_LEVEL
 ### Description
-Level of credit points - indicates the level of module the student is studying. This has been initially based on the HESA field LEVELPTS, however may be utilised and adapted to also cater for FE
+Level of credit points - indicates the level of module the student is studying. This has been initially based on the HESA field LEVELPTS, however may be utilised and adapted to also cater for FE.
 
 ### Purpose
 Analytics
