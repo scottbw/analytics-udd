@@ -292,6 +292,10 @@ Int
 Some institutions' regulations penalise a student's second attempt under normal circumstances. Mitigating circumstances might allow a student to have an additional assessment opportunity without penalty; in which case ASSESS_CURRENT_ATTEMPT would remain as 1, with ASSESS_SEQ_ID differentiating the first and second opportunities.
 Omitting this property may hinder the development or use of an effective analytics model.
 
+## ASSESSMENT_RESULT
+### Description
+Indicates whether the student passed the assessment, didn't pass the assessment, deferred the assessment or whether this information is not known because the assessment hasn't been due yet.
+
 ### Purpose
 Analytics
 
