@@ -361,7 +361,7 @@ Jisc
 Non-zero, positive integer
 
 ### Format
-Integer
+Int
 
 ### Notes
 If the student has made no attempts, leave out this property; do not supply a value of "0".
