@@ -26,3 +26,4 @@ In summary, v1.4 release of UDD implemented the following, compared to v1.3.0:
 - Deprecated X_YEAR_AVERAGE_MARK deleted from student_on_course_instance
 - Values for ADMISSIONS_ROUTE extended to include widening participation initiatives, UCAS Adjustment, UCAS Record of Prior Acceptance.
 - Spreadsheet for entity and property changes v1.3.3 to v1.4 created
+- COURSE_OUTCOME values 13 and 14 deleted; these were added to match values on FE ISR that are confusing in relation to the definition of COURSE_OUTCOME.
