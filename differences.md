@@ -12,7 +12,7 @@ In summary, v1.4 release of UDD implemented the following, compared to v1.3.0:
 
 - HECoS vocabulary added to /media.
 - Draft course_subject and draft module_subject entities added. Note: course.SUBJECT and module.SUBJECT not deleted, but deprecated instead.
-- Removed constraint from VLE_MOD_ID in module_vle_map.
+- Documentation updated to show that uniqueness constraint on VLE_MOD_ID in module_vle_map is controlled by institution.MODULE_VLE_MAP_MODE; default is that MOD_INSTANCE_ID and VLE_MOD_ID form a uniqueness constraint.
 - TENANT_ID in course made mandatory.
 - ENTRY_POINTS split into ENTRY_POINTS (Ucas tariff) and AVERAGE_GCSE_SCORE in student_course_membership. ENTRY_POINTS labelled "Omitting this property may hinder the development or use of an effective analytics model." To encourage supply.
 - ACADEMIC_YEAR and MOD_ACADEMIC_YEAR made mandatory throughout.
