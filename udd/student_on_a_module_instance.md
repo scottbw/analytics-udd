@@ -358,12 +358,14 @@ Analytics
 Jisc
 
 ### Valid Values
-Any
+Non-zero, positive integer
 
 ### Format
 Int
 
 ### Notes
+If the student has made no attempts, leave out this property; do not supply a value of "0".
+
 Omitting this property may hinder the development or use of an effective analytics model.
 
 ## MOD_COMPLETED_ATTEMPT
@@ -377,13 +379,13 @@ Analytics
 Jisc
 
 ### Valid Values
-Any
+Non-zero, positive integer
 
 ### Format
-Integer
+Int
 
 ### Notes
-
+If the student has made no attempts, leave out this property; do not supply a value of "0".
 
 ## X_MOD_NAME
 ### Description
